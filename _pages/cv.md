@@ -9,6 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
+Master student
+12232388@mail.sustech.edu.cn
+Southern University of Science and Technology
+Shenzhen, China
+
 Education
 ======
 * Bachelor in Computer Science, South China University of Technology, 2018-2022.
