@@ -18,7 +18,7 @@ Work experience
 ======
 * Summer 2021: Software Engineer Intern
   * ByteDance
-  * Duties included: Implementation of front-end interface in Lark.
+  * Duties included: Implementation of the front page interface in Lark.
   
 Skills
 ======
