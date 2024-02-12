@@ -10,8 +10,11 @@ redirect_from:
 {% include base_path %}
 
 Master student
+
 12232388@mail.sustech.edu.cn
+
 Southern University of Science and Technology
+
 Shenzhen, China
 
 Education
