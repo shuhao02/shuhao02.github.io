@@ -17,6 +17,10 @@ Southern University of Science and Technology
 
 Shenzhen, China
 
+News
+======
+* One paper gets accepted by ICML 2024!
+
 Education
 ======
 * Bachelor in Computer Science, South China University of Technology, 2018-2022.
