@@ -33,7 +33,7 @@ Work experience
 
 Award
 =====
-* Third Class Scholarship, South China University of Technology.
+* School Scholarship, South China University of Technology.
   
 <!-- Skills
 ======
