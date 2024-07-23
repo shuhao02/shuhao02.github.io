@@ -26,10 +26,10 @@ Education
 * Bachelor in Computer Science, South China University of Technology, 2018-2022.
 * Master in Computer Science and Technology, Southern University of Science and Technology, 2022-now.
 
-Work experience
+Internships
 ======
 * Summer 2021: Software Engineer Intern, ByteDance
-  * Duties included: Implementation of the front page interface in Lark.
+* Summer 2023: Applied Research Intern, Tencent
 
 Award
 =====
