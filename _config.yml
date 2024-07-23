@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Shuhao Chen's page"
+title                    : "About Me"
 title_separator          : "-"
 name                     : &name "Shuhao Chen"
 description              : &description "Master Student in Sustech"
