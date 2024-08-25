@@ -47,7 +47,14 @@ Award
 Publications
 ======
 
-  <ul>{% for post in site.publications %}
+  <ul>{% for post in site.publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+
+Preprints
+======
+
+  <ul>{% for post in site.preprints reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
