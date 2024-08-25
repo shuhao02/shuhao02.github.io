@@ -19,7 +19,7 @@ Shenzhen, China
 
 News
 ======
-* One paper gets accepted by ICML 2024!
+* One paper was accepted by ICML 2024!
 
 Education
 ======
@@ -46,7 +46,6 @@ Award
 
 Publications
 ======
-**Preprints**
 
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
@@ -64,6 +63,9 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
   
-<!-- Service and leadership
+Academic Services
 ======
-* Currently signed in to 43 different slack teams -->
+- ICLR: 2025
+- NeurIPS: 2024
+- IEEE Transactions on Neural Networks and Learning Systems
+- IEEE Transactions on Knowledge and Data Engineering
