@@ -19,6 +19,7 @@ Shenzhen, China
 
 News
 ======
+* One paper was accepted by NeurIPS 2024!
 * One paper was accepted by ICML 2024!
 
 Education
