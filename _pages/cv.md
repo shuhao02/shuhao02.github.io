@@ -30,7 +30,7 @@ Education
 Internships
 ======
 * Summer 2021: Software Engineer Intern, ByteDance
-* Summer 2023: Applied Research Intern, Tencent
+* Summer 2024: Applied Research Intern, Tencent
 
 Award
 =====
