@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+  - /cv/
 ---
 
 
@@ -20,6 +21,7 @@ Shenzhen, China
 
 News
 ======
+* One paper was accepted by Neural Networks!
 * One paper was accepted by NeurIPS 2024!
 * One paper was accepted by ICML 2024!
 
