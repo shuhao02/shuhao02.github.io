@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "About Me"
 title_separator          : "-"
 name                     : &name "Shuhao Chen (陈澍豪)"
-description              : &description "Master Student in Sustech"
+description              : &description "PhD Student in HKUST"
 url                      : https://shuhao02.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "shuhao02.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Shuhao Chen"
   avatar           : "profile.png"
-  bio              : "Master student in Sustech"
-  location         : "Shenzhen, China"
+  bio              : "PhD student in HKUST"
+  location         : "Hong Kong, China"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com.hk/citations?user=YqX_IbAAAAAJ&hl=zh-CN"
-  email            : "12232388@mail.sustech.edu.cn"
+  email            : "shuhochen@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
