@@ -78,7 +78,7 @@ Preprints
 Academic Services
 ======
 - ICLR: 2025
-- NeurIPS: 2024
+- NeurIPS: 2024, 2025
 - ICML: 2025
 - IEEE Transactions on Neural Networks and Learning Systems
 - IEEE Transactions on Knowledge and Data Engineering
