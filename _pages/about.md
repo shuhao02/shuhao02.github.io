@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "Shuhao Chen(陈澍豪)"
 author_profile: true
 redirect_from: 
   - /about/
