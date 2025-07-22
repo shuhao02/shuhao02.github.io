@@ -11,13 +11,13 @@ redirect_from:
 
 {% include base_path %}
 
-Master student
+PhD student, supervised by Prof. James Kwok and Yu Zhang.
 
-12232388@mail.sustech.edu.cn
+shuhochen@gmail.com
 
-Southern University of Science and Technology
+The Hong Kong University of Science and Technology
 
-Shenzhen, China
+Hong Kong, China
 
 News
 ======
@@ -28,7 +28,8 @@ News
 Education
 ======
 * Bachelor in Computer Science, South China University of Technology, 2018-2022.
-* Master in Computer Science and Technology, Southern University of Science and Technology, 2022-now.
+* Master in Computer Science and Technology (advisor: Prof. Yu Zhang), Southern University of Science and Technology, 2022-2025.
+* PhD Student in Computer Science (advisor: Prof. James Kwok and Yu Zhang), The Hong Kong University of Science and Technology, 2025-now.
 
 Internships
 ======
