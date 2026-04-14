@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤患者临床用药决策 MCQ — 病历列表</title>
+<style>
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    background: #f7f9fc;
+    color: #1a202c;
+    line-height: 1.65;
+  }
+  h1 { color: #2c5282; margin-bottom: 8px; }
+  .sub { color: #718096; margin-bottom: 24px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  }
+  .card:hover {
+    border-color: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(49, 130, 206, 0.12);
+  }
+  .card .num { color: #3182ce; font-weight: 700; font-size: 15px; }
+  .card .hadm { color: #1a202c; font-weight: 600; font-size: 15px; margin: 4px 0; }
+  .card .meta { color: #718096; font-size: 13px; }
+  .phase {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .phase-early { background: #c6f6d5; color: #22543d; }
+  .phase-mid { background: #feebc8; color: #7b341e; }
+  .phase-late { background: #fed7d7; color: #742a2a; }
+</style>
+</head>
+<body>
+<h1>肿瘤患者临床用药决策 MCQ</h1>
+<p class="sub">共 26 道题目，基于 MIMIC-IV 去标识化患者数据生成</p>
+<div class="grid">
+<a class="card" href="mcq_01.html">
+  <div class="num">MCQ #1</div>
+  <div class="hadm">住院号 23201319</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2170-12-29 14:00
+  </div>
+</a>
+<a class="card" href="mcq_02.html">
+  <div class="num">MCQ #2</div>
+  <div class="hadm">住院号 27652901</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2132-09-22 08:00
+  </div>
+</a>
+<a class="card" href="mcq_03.html">
+  <div class="num">MCQ #3</div>
+  <div class="hadm">住院号 27652901</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2132-09-22 12:00
+  </div>
+</a>
+<a class="card" href="mcq_04.html">
+  <div class="num">MCQ #4</div>
+  <div class="hadm">住院号 27652901</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2132-09-22 20:00
+  </div>
+</a>
+<a class="card" href="mcq_05.html">
+  <div class="num">MCQ #5</div>
+  <div class="hadm">住院号 29868374</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2136-11-01 21:00
+  </div>
+</a>
+<a class="card" href="mcq_06.html">
+  <div class="num">MCQ #6</div>
+  <div class="hadm">住院号 29868374</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2136-11-02 08:00
+  </div>
+</a>
+<a class="card" href="mcq_07.html">
+  <div class="num">MCQ #7</div>
+  <div class="hadm">住院号 21052575</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2161-09-06 13:00
+  </div>
+</a>
+<a class="card" href="mcq_08.html">
+  <div class="num">MCQ #8</div>
+  <div class="hadm">住院号 21052575</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2161-09-09 00:00
+  </div>
+</a>
+<a class="card" href="mcq_09.html">
+  <div class="num">MCQ #9</div>
+  <div class="hadm">住院号 21052575</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2161-09-11 08:00
+  </div>
+</a>
+<a class="card" href="mcq_10.html">
+  <div class="num">MCQ #10</div>
+  <div class="hadm">住院号 26164687</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2197-08-02 04:00
+  </div>
+</a>
+<a class="card" href="mcq_11.html">
+  <div class="num">MCQ #11</div>
+  <div class="hadm">住院号 26164687</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2197-08-02 16:00
+  </div>
+</a>
+<a class="card" href="mcq_12.html">
+  <div class="num">MCQ #12</div>
+  <div class="hadm">住院号 26164687</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2197-08-05 08:00
+  </div>
+</a>
+<a class="card" href="mcq_13.html">
+  <div class="num">MCQ #13</div>
+  <div class="hadm">住院号 20920487</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2136-05-30 23:00
+  </div>
+</a>
+<a class="card" href="mcq_14.html">
+  <div class="num">MCQ #14</div>
+  <div class="hadm">住院号 20920487</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2136-06-03 15:00
+  </div>
+</a>
+<a class="card" href="mcq_15.html">
+  <div class="num">MCQ #15</div>
+  <div class="hadm">住院号 20920487</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2136-06-09 10:00
+  </div>
+</a>
+<a class="card" href="mcq_16.html">
+  <div class="num">MCQ #16</div>
+  <div class="hadm">住院号 21521264</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2184-10-05 06:00
+  </div>
+</a>
+<a class="card" href="mcq_17.html">
+  <div class="num">MCQ #17</div>
+  <div class="hadm">住院号 21521264</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2184-10-07 10:00
+  </div>
+</a>
+<a class="card" href="mcq_18.html">
+  <div class="num">MCQ #18</div>
+  <div class="hadm">住院号 21521264</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2184-10-08 06:00
+  </div>
+</a>
+<a class="card" href="mcq_19.html">
+  <div class="num">MCQ #19</div>
+  <div class="hadm">住院号 28269516</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2157-03-15 10:00
+  </div>
+</a>
+<a class="card" href="mcq_20.html">
+  <div class="num">MCQ #20</div>
+  <div class="hadm">住院号 28269516</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2157-03-20 08:00
+  </div>
+</a>
+<a class="card" href="mcq_21.html">
+  <div class="num">MCQ #21</div>
+  <div class="hadm">住院号 28269516</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2157-04-06 15:00
+  </div>
+</a>
+<a class="card" href="mcq_22.html">
+  <div class="num">MCQ #22</div>
+  <div class="hadm">住院号 21922523</div>
+  <div class="meta">
+    <span class="phase phase-early">早期</span>
+    2135-01-04 22:00
+  </div>
+</a>
+<a class="card" href="mcq_23.html">
+  <div class="num">MCQ #23</div>
+  <div class="hadm">住院号 21922523</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2135-01-05 11:00
+  </div>
+</a>
+<a class="card" href="mcq_24.html">
+  <div class="num">MCQ #24</div>
+  <div class="hadm">住院号 21922523</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2135-01-06 11:00
+  </div>
+</a>
+<a class="card" href="mcq_25.html">
+  <div class="num">MCQ #25</div>
+  <div class="hadm">住院号 21995701</div>
+  <div class="meta">
+    <span class="phase phase-mid">中期</span>
+    2195-04-24 22:00
+  </div>
+</a>
+<a class="card" href="mcq_26.html">
+  <div class="num">MCQ #26</div>
+  <div class="hadm">住院号 21995701</div>
+  <div class="meta">
+    <span class="phase phase-late">后期</span>
+    2195-04-25 16:00
+  </div>
+</a>
+</div>
+</body>
+</html>

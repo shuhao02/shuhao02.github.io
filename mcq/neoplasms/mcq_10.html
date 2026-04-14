@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ #10 — 患者病历 (26164687)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    background: #f7f9fc;
+    color: #1a202c;
+    line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white;
+    padding: 20px 28px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .disclaimer {
+    background: #fefcbf;
+    border-left: 4px solid #d69e2e;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #744210;
+  }
+  .section {
+    background: white;
+    padding: 20px 28px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    color: #2c5282;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+  }
+  .section h3 {
+    font-size: 16px;
+    color: #2d3748;
+    margin: 16px 0 8px 0;
+  }
+  pre {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 14px 18px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #2d3748;
+  }
+  .timestamp { color: #3182ce; font-weight: 600; }
+  .tag { color: #805ad5; font-weight: 600; }
+  a.home {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #3182ce;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  a.home:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<a class="home" href="./index.html">← 返回 MCQ 列表</a>
+
+<div class="header">
+  <h1>MCQ #10 — 患者病历</h1>
+  <div class="meta">住院号：26164687 &nbsp;|&nbsp; 处方时间：2197-08-02 04:00 &nbsp;|&nbsp; 阶段：early</div>
+</div>
+
+<div class="disclaimer">
+  <strong>声明</strong>：本页面内容基于 MIMIC-IV 公开数据集的去标识化患者信息，仅用于临床决策能力评估。请勿将信息用于其他用途。
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 52
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 其他
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗补助
+
+### 主要投诉
+- 意识混乱和头痛 x 3 周
+
+### 现病史
+- 患者是一名 ___ 岁男性，患有烟草使用，接受过烟草颈部手术，并出现头痛和精神错乱 x 3 周。 
+- 他向 OSH 报告，头部 CT 显示：“多个显着的实质低密度区域，涉及右额顶叶、右颞叶和左额叶区域的灰质和白质，提示血管源性水肿。不能排除叠加的亚急性梗塞。2：也有迹象表明，右颞顶叶区域可能存在高密度肿块病变，令人担忧肿瘤。”
+- 他的基线视力很差，这一点没有改变。  
+- 他患有慢性背部和颈部疼痛。  
+- 他的头痛、腹痛和 LLE 疼痛是新出现的，并且已经出现一个月了。  
+- 他一直有间歇性腹泻。  他的粪便中没有血。  
+- 他有慢性咳嗽。  
+- 他有短暂的胸痛，休息后缓解，但他不记得自己在做什么。 + 与此相关的出汗，但无恶心。  
+- 那段时间他也越来越困惑。  
+- 他的咳嗽是间歇性的。  
+- 他在一个他生活了一辈子的城市里开车___迷路了，这促使他的妻子今天带他去急诊室。  
+- 他的性格也发生了变化。  
+- 他患有 RLQ 疼痛，腹股沟处有一个凸起，当他咳嗽时，凸起会“弹出”。  
+- 去年体重减轻了 20 磅。  
+- 除上述情况外，所有其他 ROS 均为阴性。
+
+### 系统审查（准入前）
+- 头痛和意识混乱 x 3 周  
+- 基线视力不佳  
+- 慢性背部和颈部疼痛  
+- 腹痛、左下肢疼痛1个月  
+- 间歇性腹泻，无血  
+- 慢性咳嗽，间歇性咳嗽  
+- 短暂的胸痛伴出汗，无恶心  
+- 增加混乱和性格变化  
+- 右下腹疼痛，咳嗽时有“突出”的凸起  
+- 过去一年体重减轻 20 磅  
+- 除上述以外的所有其他 ROS 阴性
+
+### 既往病史
+- 肺结节伴良性支气管冲洗液
+- 疝气
+- ？在疼痛诊所看到的伴有肩部和背部疼痛的肌筋膜疼痛综合征
+- L的手麻木，据说这是由于他的脖子造成的。当他在暴风雪期间熄灯时从楼梯上摔下来时，他的头部和颈部确实受伤了。 
+- S/p 颈部融合手术并伴有慢性疼痛，为此他每天服用羟考酮。 
+- HLD
+- 吸烟
+- 慢性阻塞性肺病
+
+### 社会历史
+- ___
+
+### 家族史
+- 他的父亲在 ___ 岁时死于肺癌；他的父亲也是一名吸烟者。  
+- 他的母亲目前身体状况良好。  
+- 他的祖母患有骨癌并死于她的___。
+
+### 入学前体检
+- 生命体征：98.3 PO 100 / 51 52 18 96 Ra 
+- 缺点：他双手抱头，看起来很不舒服。 
+- HEENT：ncat 无黄疸 MMM    
+- CV：s1s2 rr 无 m/r/g - 非常遥远的心音  
+- RESP：RLL 爆裂声
+GI：+bs，软，NT，ND，无防护或反弹  
+- GU：R 腹股沟压痛，伴有可缩小的隆起；正常外生殖器
+- MSK：无 c/c/e 2+ 脉冲  
+- 皮肤：多个纹身
+- NEURO：面部对称，言语流畅； ___ 上肢和下肢力量，无辨距困难
+- 心理：冷静、合作  
+- LAD：无宫颈LAD
+
+### 入院前药物
+- 辛伐他汀 10 mg PO QPM 
+- 地西泮 5 mg PO Q12H：PRN 颈部疼痛 
+- 布洛芬 800 毫克 PO Q6H 
+- OxyCODONE（速释）20 mg PO Q6H:PRN 疼痛 - 严重 
+- 维生素 D ___ 每日 PO 单位</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2197-08-01 19:24
+[放射学]
+- 放射学笔记：调查结果：
+  右中叶有一个相对圆形的不透明突起
+  侧面图上也可以看到，尺寸约为 2.5 厘米。  条纹
+  心脏后面右侧的肺门下区域也出现混浊，
+  侧视图上可能位于心后区域。  肺部是
+  过度膨胀，但其他方面非常清晰。  心纵隔轮廓是
+  在正常范围内。  注意到前颈椎固定硬件。
+  
+  印象：
+  可能有 2.5 的右中叶结节和不规则的右肺门下混浊
+  右下叶内。  如果患者出现感染症状，应进行随访
+  可以在处理记录分辨率后获得，但是如果没有
+  此时存在令人信服的感染证据，这可能代表
+  此时建议进行潜在的原发性恶性肿瘤和 CT 扫描
+  非紧急基础。
+
+### 2197-08-01 21:36
+[放射学]
+- 放射学笔记：调查结果：
+  左侧 2 毫米保留金属碎片的磁化率伪影
+  在外部非对比头部 CT 上看到的额骨遮盖了部分
+  左前额叶和左眼眶。
+  
+  双侧幕上多发圆形强化病灶，伴
+  邻近血管源性水肿，最符合转移性疾病。  的
+  最大的病变位于右额叶，临床测量尺寸为 1.6 x 1.9 厘米
+  （系列 11，图像 12）。  在该病变的紧邻上方有一个模糊的区域
+  固体增强面积为 1.4 x 2.1 cm，这可能是由于
+  病变浸润扩展（系列 11，图像 13）。  的存在
+  梯度回波图像上该病变内的低信号灶提示
+  病灶内微出血（系列 7，图像 12）。  有适度的
+  该病变周围的血管性水肿导致局部消失
+  脑沟、右侧侧脑室部分消失、侧脑室移位 3 毫米
+  通常中线结构位于左侧。  血管源性水肿向内侧扩展
+  进入右外囊和后肢右内囊。 
+  下方，水肿延伸至颞叶。  第二大
+  病变位于左额叶前矢状面测量
+  约 1.6 x 1.5 厘米（系列 11，图像 18）。
+  
+  对比后 MP-RAGE 序列会因运动伪影而降级，因此
+  限制微小转移沉积物的检测。  在此限制内
+  至少识别出 10 个双侧幕上转移灶（系列 1000，
+  图像 113、109、102、93、92、78、76、62）。
+  
+  心室和脑沟在其他方面与年龄相适应。  没有证据
+  梗塞。  主要颅内血管血流空洞。  硬脑膜静脉
+  鼻窦是对比后 MP-RAGE 序列的专利。  有轻度粘膜
+  筛窦气室增厚。
+  
+  印象：
+  1.双侧幕上多发散在强化实质病灶
+  伴有邻近血管源性水肿，最适合转移性疾病。
+  2. 右额盖最大病变尺寸为 1.6 x 1.9 厘米，
+  与尺寸为 1.4 x 2.1 厘米的模糊增强的相邻区域相邻
+  和内部微出血灶。  周边有广阔的
+  血管源性水肿导致右侧脑室部分消失
+  正常中线结构向左移动约 3 毫米。
+
+### 2197-08-02 02:00
+[处方]
+- 氢吗啡酮（Dilaudid）； 0.5毫克；路线=IV
+- 乳酸林格氏菌； 1000毫升；路线=IV
+- 尼古丁贴片； 21毫克；路线=TD</pre>
+</div>
+
+</body>
+</html>
