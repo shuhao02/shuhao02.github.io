@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ #30 — 患者病历 (22646497)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    background: #f7f9fc;
+    color: #1a202c;
+    line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white;
+    padding: 20px 28px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .disclaimer {
+    background: #fefcbf;
+    border-left: 4px solid #d69e2e;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #744210;
+  }
+  .section {
+    background: white;
+    padding: 20px 28px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    color: #2c5282;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+  }
+  .section h3 {
+    font-size: 16px;
+    color: #2d3748;
+    margin: 16px 0 8px 0;
+  }
+  pre {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 14px 18px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #2d3748;
+  }
+  .timestamp { color: #3182ce; font-weight: 600; }
+  .tag { color: #805ad5; font-weight: 600; }
+  .question-section {
+    background: #ebf8ff;
+    border: 1px solid #90cdf4;
+  }
+  .question-text {
+    font-size: 16px;
+    color: #2c5282;
+    margin: 0 0 14px 0;
+    font-weight: 600;
+  }
+  .options {
+    background: white;
+    border-radius: 6px;
+    padding: 12px 18px;
+    border: 1px solid #cbd5e0;
+  }
+  .option {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 14px;
+  }
+  .option:last-child { border-bottom: none; }
+  .option-letter {
+    font-weight: 700;
+    color: #2c5282;
+    margin-right: 12px;
+    min-width: 22px;
+  }
+  .option-content { flex: 1; color: #2d3748; }
+  .note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #718096;
+    font-style: italic;
+  }
+  a.home {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #3182ce;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  a.home:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<a class="home" href="./index.html">← 返回 MCQ 列表</a>
+
+<div class="header">
+  <h1>MCQ #30 — 患者病历</h1>
+  <div class="meta">住院号：22646497 &nbsp;|&nbsp; 处方时间：2144-02-01 08:00 &nbsp;|&nbsp; 阶段：late</div>
+</div>
+
+<div class="disclaimer">
+  <strong>声明</strong>：本页面内容基于 MIMIC-IV 公开数据集的去标识化患者信息，仅用于临床决策能力评估。请勿将信息用于其他用途。
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 91
+- **性别：** F
+- **服务：** 妇产科
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 黑人/非裔美国人
+- **婚姻状况：** 未知
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 阴道出血、已知宫颈癌
+
+### 现病史
+- ___ 患有已知宫颈癌的女性，从 ___ ___ 转移至阴道出血。患者很少言语，因此以下病史是通过电话与孩子的讨论以及病历获得的。
+- 中风时，她最初在 ___ 接受了阴道出血和子宫内膜条纹增厚的评估。 ___ 医生于 ___ 于 ___ 的急诊室接诊她，检查发现宫颈口有一个 1.5 英寸、长 1.5 厘米的易碎息肉样肿块。该肿块的活检（也在___进行了审查）显示低分化鳞状细胞癌。诊断时，她因急性中风而功能状态不佳。
+- 她于 ___ 进行了胸部、腹部和骨盆 CT 扫描，结果显示子宫颈内有一个 5.6 厘米的肿块，符合宫颈癌，没有肾积水或淋巴结肿大的证据。她的右肾中还有一个 3.8 厘米的增强肿块，与肾细胞癌一致，左右肾中还有两个与同时性肾细胞癌相关的额外病变。胸部 CT 显示与空气滞留相关的气管和支气管塌陷，提示气管支气管软化。在推荐的后续研究中，还发现了 3 毫米以下的肺结节，并引起了注意。
+- ___ 医生于 ___ 到诊所就诊，讨论护理目标。当时，她的儿子和女儿（她的医疗保健代理人）对于母亲是否愿意寻求干预/治疗的理解存在分歧。 ___ 医生建议他们她不适合接受手术。当时，她没有阴道流血或明显疼痛的症状。 ___ 博士就这一分歧咨询了 ___ 伦理委员会。在她与家人的最后一次讨论中，___（她的女儿）计划将她转移到离她在___家较近的设施。
+- ___ 日，她从 ___ 的康复机构从凌晨 2 点开始出现大量阴道流血后，将她从 ___ 转出。 ___ 时，她的 HCT 为 23（从 ___ 基线开始），并输注了 1 单位 PRBC。她被转移到___进行进一步的评估和管理。
+- 到达___后，她可以对一些是/否问题摇头并遵循一些简单的命令（例如移动她的脚）。当被问及她是否感到疼痛、呼吸困难、胸痛或恶心时，她摇了摇头。她对大多数问题都没有口头回答，但当被问及骨盆或直肠检查时，她说“不”。根据与她的孩子和疗养院的讨论，这与患者的基线一致。
+
+### 系统审查（准入前）
+- 当被问及疼痛、呼吸困难、胸痛或恶心时，很少言语，但摇头“不”。
+
+### 既往病史
+- T2DM
+-HTN
+- ___ 的脑桥中风，每个孩子最初是非语言的，互动性极低，但最近互动性更强，有时会与他们交谈，尽管她在医疗保健环境中往往不说话
+- 宫颈癌
+- 右指骨骨折，此处由矫形师看到，建议在夜间根据需要使用___和手指夹板进行运动范围练习
+- CT 发现双侧肾脏异常，怀疑肾细胞癌
+
+### 社会历史
+- 未知
+
+### 家族史
+- 非缴费型
+
+### 入学前体检
+- VS：T 98.4 HR 71 BP 132/61 RR 17 99% RA
+- Gen - 躺在担架上，很少说话，遵循一些命令
+- HEENT - 无锁骨上 LAD
+- CV - RRR
+- 肺 - CTAB，检查时的努力有限，无劳动
+- Abd - 柔软、NT、ND、PEG 部位，无排水
+- 骨盆 - 阴唇处有少量深红色血液。儿子到场后，患者口头同意检查___，她的 HCP 也同意）。由于肢体痉挛和产妇不适，检查受到限制，阴道远端可触及坚硬易碎肿块，由于产妇不适，无法评估宫旁或进行直肠检查。无腹股沟 LAD。
+- Ext - 脚后跟两侧浅压疮
+
+### 入院前药物
+- 每日别嘌呤醇毫克
+- Norvasc 每日 10 毫克
+- 可乐定 0.3 毫克贴剂，每周一次（下次更换日期为 ___）
+- 肼屈嗪 25 mg TID
+- 雷尼替丁液体 15 mg BID
+- 科莱士 BID
+- 制霉菌素 100,000 u/ml 液体，4 ml 舌上每日两次
+- lasix 每日 20 毫克
+- 赖诺普利每日 4 毫克
+- 每天 75 毫克维布特林
+- celexa 20 毫克，每日一次
+- 阿托伐他汀 80 毫克 QPM
+- 来得时 15 毫克 QHS
+- 维生素 C 1000 毫克，每日两次
+- duoneb 吸入器 q3-4 小时 prn
+- 每日 ASA 325 毫克</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2144-01-27 00:00
+[程序]
+- 使用光子 1 - 10 MeV 进行宫颈束辐射
+
+### 2144-01-27 16:00
+[处方]
+- 肺炎球菌23价多糖疫苗； 0.5毫升；路线=IM
+
+### 2144-01-27 17:00
+[处方]
+- 胰高血糖素； 1毫克；路线=IM
+- 肝素； 5000 单位；路线=SC
+- 沙丁胺醇吸入器； 1-2 泡；路线=IH
+- 葡萄糖 50%； 12.5克；路线=IV
+- 葡萄糖凝胶； 15克；路线=PO
+
+### 2144-01-27 20:00
+[处方]
+- 多库酯钠； 100毫克；路线=NG
+- 肼屈嗪； 75毫克；路线=NG
+- 雷尼替丁（液体）； 150毫克；路线=NG
+- 制霉菌素口服混悬液； 4毫升；路线=PO
+- 抗坏血酸； 500毫克；路线=NG
+- 阿托伐他汀； 80 毫克；路线=NG
+
+### 2144-01-27 22:00
+[处方]
+- 胰岛素； 15 单位；路线=SC
+- 塞纳； 17.2毫克；路线=PO/NG
+
+### 2144-01-28 00:00
+[程序]
+- 通过自然或人工开口将营养物质引入上消化道
+
+### 2144-01-28 08:00
+[处方]
+- 呋塞米； 20毫克；路线=NG
+- 阿司匹林； 325 毫克；路线=NG
+- 安非他酮（缓释）； 75毫克；路线=PO
+- 西酞普兰； 20毫克；路线=NG
+- 赖诺普利； 40毫克；路线=NG
+- 氨氯地平； 10毫克；路线=NG
+- 多种维生素； 1 个选项卡；路线=NG
+- 别嘌呤醇； 200毫克；路线=NG
+
+### 2144-01-28 12:34
+[实验室]
+- 红细胞 [血液]（血液学）：2.86 m/uL
+- 阴离子间隙[血液]（化学）：14 mEq/L
+- 白细胞[血液]（血液学）：11.1 K/uL
+- L [血]（化学）：14
+- MCV [血液]（血液学）：92 fL
+- MCHC [血液]（血液学）：31.7 g/dL
+- RDW-SD [血液]（血液学）：46.8 fL
+- MCH [血液]（血液学）：29.0 pg
+- RDW [血液]（血液学）：13.9 %
+- 碳酸氢盐 [血液]（化学）：28 mEq/L
+- 葡萄糖[血液]（化学）：112.0 mg/dL
+- 氯化物[血液]（化学）：95 mEq/L
+- 肌酐[血液]（化学）：0.9 mg/dL
+- H [血液]（化学）：10
+- 尿素氮[血液]（化学）：37 mg/dL
+- 血红蛋白[血液]（血液学）：8.3 g/dL
+- 我[血液]（化学）：0
+- 钠[血液]（化学）：132 mEq/L
+- 钾[血液]（化学）：4.8 mEq/L
+- 镁[血液]（化学）：2.1 mg/dL
+- 磷酸盐[血液]（化学）：4.3 mg/dL
+- 总钙[血液]（化学）：9.5 mg/dL
+- 血细胞比容[血液]（血液学）：26.2 %
+- 血小板计数[血液]（血液学）：248 K/uL
+
+### 2144-01-28 14:00
+[处方结束]
+- 多种维生素； 1 个选项卡；路线=NG
+
+### 2144-01-29 14:00
+[处方结束]
+- 肼屈嗪； 75毫克；路线=NG
+- 赖诺普利； 40毫克；路线=NG
+- 氨氯地平； 10毫克；路线=NG
+- 呋塞米； 20毫克；路线=NG
+
+### 2144-01-29 20:00
+[处方]
+- 肼屈嗪； 75毫克；路线=NG
+
+### 2144-01-30 07:38
+[实验室]
+- 葡萄糖[血液]（化学）：100.0 mg/dL
+- 阴离子间隙[血液]（化学）：15 mEq/L
+- 碳酸氢盐 [血液]（化学）：28 mEq/L
+- 总钙[血液]（化学）：9.6 mg/dL
+- 氯化物[血液]（化学）：95 mEq/L
+- 肌酐[血液]（化学）：0.7 mg/dL
+- H [血液]（化学）：2
+- 我[血液]（化学）：0
+- 磷酸盐[血液]（化学）：4.3 mg/dL
+- 镁[血液]（化学）：2.0 mg/dL
+- 钠[血液]（化学）：133 mEq/L
+- RDW-SD [血液]（血液学）：45.1 fL
+- 白细胞[血液]（血液学）：8.5 K/uL
+- 红细胞 [血液]（血液学）：2.76 m/uL
+- RDW [血液]（血液学）：13.8 %
+- 钾[血液]（化学）：4.8 mEq/L
+- MCV [血液]（血液学）：91 fL
+- 血小板计数[血液]（血液学）：260 K/uL
+- MCH [血液]（血液学）：29.3 pg
+- 血红蛋白[血液]（血液学）：8.1 g/dL
+- 血细胞比容[血液]（血液学）：25.1 %
+- L [血]（化学）：12
+- 尿素氮[血液]（化学）：24 mg/dL
+- MCHC [血液]（血液学）：32.3 g/dL
+
+### 2144-01-30 08:00
+[处方]
+- 呋塞米； 20毫克；路线=NG
+- 氨氯地平； 10毫克；路线=NG
+- 赖诺普利； 40毫克；路线=NG
+
+### 2144-01-30 10:00
+[处方]
+- 可乐定贴剂 0.3 毫克/24 小时； 1 场比赛；路线=TD
+
+### 2144-01-31 20:00
+[处方结束]
+- 塞纳； 17.2毫克；路线=PO/NG
+- 抗坏血酸； 500毫克；路线=NG
+- 硫酸锌； 220 毫克；路线=NG
+
+### 2144-01-31 21:00
+[处方]
+- 抗坏血酸； 500毫克；路线=NG
+- 塞纳； 17.2毫克；路线=PO/NG</pre>
+</div>
+
+<div class="section question-section">
+<h2>问题</h2>
+<p class="question-text">时间点 <strong>2144-02-01 08:00</strong>，基于上述该患者的临床证据，应开具以下哪些药物？（可多选）</p>
+<div class="options">
+<div class="option"><span class="option-letter">A.</span><span class="option-content">Omega-3 脂肪酸； 1000毫克；路线=PO</span></div>
+<div class="option"><span class="option-letter">B.</span><span class="option-content">葡萄糖酸铜； 2毫克；路线=NG</span></div>
+<div class="option"><span class="option-letter">C.</span><span class="option-content">硫酸铁； 325 毫克；路线=NG</span></div>
+<div class="option"><span class="option-letter">D.</span><span class="option-content">硫酸锌； 220 毫克；路线=NG</span></div>
+<div class="option"><span class="option-letter">E.</span><span class="option-content">β-胡萝卜素； 25,000 国际单位；路线=NG</span></div>
+<div class="option"><span class="option-letter">F.</span><span class="option-content">维生素E； 400 国际单位；路线=NG</span></div>
+</div>
+<p class="note">请返回问卷页面填写你的答案。</p>
+</div>
+
+</body>
+</html>
