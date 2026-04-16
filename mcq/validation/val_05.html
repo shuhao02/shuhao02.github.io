@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #5 — 患者病历 (23445389)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #5 — 患者病历</h1>
+  <div class="meta">住院号：23445389 | 处方时间：2153-05-14 20:00 | 阶段：mid</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 39
+- **性别：** 男
+- **服务：** 神经科
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 亚洲
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 癫痫发作的长期监测和药物管理
+
+### 现病史
+- ___ 先生是一名 ___ 哟左撇子，在 ___ 骑摩托车时曾遭受过脑外伤。据报道，他在骑行时没有戴头盔，3天后失去意识、失去控制并陷入昏迷。他没有出现任何运动障碍，只有轻微的视力问题，并且能够继续正常工作。  
+- 在___年，他开始癫痫发作。这种情况发生在驾驶时睡眠严重不足和焦虑的时候。他觉得自己快要失去知觉了，于是把车停在了路边。当时，他被送往医院并接受了核磁共振和脑电图检查。然后他一直没有癫痫发作，直到凌晨 2:00 时他癫痫发作，从床上摔下来时撞到了头，据报道全身癫痫发作了 10 分钟。此后，他开始使用LTG。  
+- 下一次癫痫发作发生在___，当时他在办公室，全身性癫痫发作___分钟，意识混乱持续了45分钟。  
+- 在___，他经历了一个普遍的事件，导致几个晚上睡眠质量不佳。这发生在工作中，他被发现身体僵硬，翻白眼，发出咕噜声。这持续了大约2分钟。在此之前，他开始服用阿得拉 5 毫克，每日两次，后来减至每日 5 毫克。那时他就开始参加OXC。  
+- 他还曾有过其他与癫痫发作相关的发作，但被描述为非全身性惊厥。这些情节通常包括他在谈话中似乎反应迟钝，然后询问诸如他在哪里、发生了什么事以及事后失忆等问题。活动结束后，他状态良好，没有感到疲劳，并且定向力十足。  
+- 在___年，他曾在工作中大喊大叫，而不是表现自己。 ___年，他在公交车上出现过一次迷失方向的情况。在这些事件发生期间，他出现了一段持续几分钟的反应迟钝和咬脸颊内侧的症状。 ___年，他出现两次吐舌和喉音，每次持续 10 分钟。 ___年，他在开车去听一场音乐会时出现了迷失方向和混乱的情况。最近，这些事件大约每 1.5 到 2 周发生一次，最近一次发生在去年 ___，其中包括大约 20 分钟的混乱和说话困难。回想起来，___ 指出这些事件往往发生在连续几晚服用安必恩后。  
+- 这些事件中的每一个都有烦躁或焦虑的前驱症状，或者一些自动行为，例如咬脸颊内侧。  
+- 至于癫痫药物，他服用___到___，他服用低剂量LTG（每天25毫克）。他还从 ___ 到 ___ 一直服用 OXC，但由于烦躁情绪增加，因此已停止服用。然后他开始服用 750 毫克/1000 毫克的 Depakote 来控制癫痫发作和行为表现。在 ___，LTG 重新开始，每日 25 毫克，目标是断奶 VPA 并增加 LTG。  
+- 目前，他继续出现与复杂部分性癫痫发作有关的事件，并入院接受进一步的事件描述。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 临界血脂异常
+- ?双相情感障碍
+- 添加
+- 可能的创伤后应激障碍
+- 创伤性脑损伤
+
+### 社会历史
+- 未知
+
+### 家族史
+- 无癫痫家族史。
+- 妈妈有起搏器，爸爸中风了。
+
+### 入学前体检
+- **一般：** 清醒、警觉、NAD  
+- **HEENT：** 唇裂修复疤痕。右眼上方有疤痕。  
+- **心脏：** S1S2 RRR  
+- **胸部：** CTAB  
+- **腹部：** +BS，柔软，NT ND  
+- **四肢：**温暖，灌注良好，某些区域有擦伤  
+- **神经：**
+  - **精神状态：** 他清醒、警觉、定向 x3。说话很流利。病史知识完好无损。影响力合适。  
+  - **脑神经：**  
+    - II、III、IV、VI：EOMI，无法欣赏右上场剪切  
+    - V：面部感觉完好无损  
+    - VII：面部在静止和激活时是对称的  
+    - VIII：听力完好无损  
+    - IX、X、XII：上颚对称抬高。舌头突出中线  
+    - XI：SCM/斜方肌，具有正常的体积和音调  
+  - **马达：** 四肢力量十足  
+  - **感官：** 轻触时完好无损  
+  - **DTR：** 2+ 并且四肢对称，脚趾向下 b/l  
+  - **协调：** 无辨距困难或共济失调  
+  - **步态：**正常步态，脚跟/脚趾/串联行走完好无损  
+
+### 入院前药物
+- 德巴金 1000mg BID
+- Lamictal 25mg 每日一次
+- Ambien 10 毫克 qhs
+- Effexor 150mg 每日一次</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2153-05-13 10:00
+[处方]
+- 文拉法辛； 150毫克；路线=PO
+- 拉莫三嗪； 25毫克；路线=PO
+
+### 2153-05-13 17:00
+[处方]
+- 对乙酰氨基酚； 325-650毫克；路线=PO/NG
+- 流感病毒疫苗； 0.5毫升；路线=IM
+
+### 2153-05-13 18:00
+[处方]
+- 劳拉西泮； 0.5-2毫克；路线=IV
+
+### 2153-05-13 18:18
+[放射学]
+- 放射学注释：没有急性心肺异常的证据。
+
+### 2153-05-13 19:40
+[实验室]
+- 钠[血液]（化学）：141 mEq/L
+- 碳酸氢盐[血液]（化学）：31 mEq/L
+- 总胆红素[血液]（化学）：0.2 mg/dL
+- 总钙[血液]（化学）：9.3 mg/dL
+- 氯化物[血液]（化学）：101 mEq/L
+- 肌酐[血液]（化学）：1.2 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：136.0 mg/dL
+- 磷酸盐[血液]（化学）：4.2 mg/dL
+- 钾[血液]（化学）：4.3 mEq/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：30 IU/L
+- 尿素氮[血液]（化学）：18 mg/dL
+- 血细胞比容[血液]（血液学）：40.7 %
+- 血红蛋白[血液]（血液学）：14.4 g/dL
+- MCH [血液]（血液学）：32.4 pg
+- MCHC [血液]（血液学）：35.4 %
+- MCV [血液]（血液学）：91 fL
+- 血小板计数[血液]（血液学）：249 K/uL
+- RDW [血液]（血液学）：12.3 %
+- 红细胞 [血液]（血液学）：4.46 m/uL
+- 白细胞[血液]（血液学）：6.5 K/uL
+- 丙戊酸[血液]（化学）：58 ug/mL
+- 阴离子间隙[血液]（化学）：13 mEq/L
+- 镁[血液]（化学）：2.0 mg/dL
+- 白蛋白[血液]（化学）：4.4 g/dL
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：43 IU/L
+- 碱性磷酸酶[血液]（化学）：38 IU/L
+
+### 2153-05-13 20:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 多库酯钠； 100毫克；路线=PO
+- Divalproex（延迟释放）； 1000毫克；路线=PO
+
+### 2153-05-13 22:00
+[处方]
+- 酒石酸唑吡坦； 10毫克；路线=PO
+
+### 2153-05-14 04:45
+[实验室]
+- 总胆红素[血液]（化学）：0.4 mg/dL
+- 氨[血液]（化学）：46 umol/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：27 IU/L
+- 碱性磷酸酶[血液]（化学）：33 IU/L
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：36 IU/L
+
+### 2153-05-14 12:00
+[处方结束]
+- Divalproex（延迟释放）； 1000毫克；路线=PO</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2153-05-14 20:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Eslicarbazepine; 400 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">艾斯利卡西平 - 错误：它与奥卡西平具有相似的酶诱导和行为副作用，奥卡西平之前会引起烦躁，因此不适合。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Topiramate; 50 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">托吡酯 - 错误：它会加剧患者意识混乱期间已经注意到的认知减慢和言语困难，使其在临床上不合适。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Pregabalin; 150 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">普瑞巴林 - 错误：它对控制成人局灶性癫痫发作无效，并且与唑吡坦和拉莫三嗪一起使用会增加不必要的镇静作用。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Divalproex (Delayed Release); 500 mg; route=PO</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">Divalproex（延迟释放）-正确：对于先前维持较高剂量的创伤后癫痫患者，继续以减少的剂量口服 Divalproex 500 mg。治疗血清水平（58 µg/mL）和既往用药史表明，减少的目的是平衡癫痫控制与转向拉莫三嗪单药治疗的计划或在保持疗效的同时最大限度地减少长期不良反应。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

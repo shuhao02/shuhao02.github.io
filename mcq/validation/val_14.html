@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #14 — 患者病历 (25777637)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #14 — 患者病历</h1>
+  <div class="meta">住院号：25777637 | 处方时间：2189-05-28 13:00 | 阶段：late</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 55
+- **性别：** 男
+- **服务：** 手术
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 复发性切口疝的修复
+
+### 现病史
+- 该患者最初接受了直肠癌低位前切除术，随后进行了放射治疗。几年前出现肠梗阻和切口疝，并接受了手术。这次他出现了复发性切口疝以及肠梗阻的症状。这个问题解决了，他被安排进行择期手术。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 在 ___ s/p 化疗和手术切除中诊断出直肠癌。
+- PSH：低位前切除术 ___
+
+### 社会历史
+- 未知
+
+### 家族史
+- 家族中没有直肠癌病史。
+
+### 入学前体检
+- 未知
+
+### 入院前药物
+- 卡麦角林 0.5 每周两次
+- 托普罗 XL 50
+- 索利那新 10
+- 睾酮 1% 凝胶
+- ASA 325
+- MVI
+- 贝尼纤维</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2189-05-26 00:00
+[程序]
+- 使用移植物或假体进行腹腔镜切口疝修补术
+- 其他小肠部分切除术
+- 腹腔镜腹膜粘连松解术
+
+### 2189-05-26 13:21
+[实验室]
+- 血细胞比容[血液]（血液学）：49.1 %
+- 镁[血液]（化学）：2.0 mg/dL
+- 钾[血液]（化学）：4.5 mEq/L
+
+### 2189-05-26 19:00
+[处方]
+- 头孢唑林； 1克；路线=IV
+- 硫酸吗啡； 50毫克；路线=IVPCA
+- 酒石酸美托洛尔； 5毫克；路线=IV
+- LR； 1000毫升；路线=IV
+
+### 2189-05-26 22:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+
+### 2189-05-27 07:00
+[处方结束]
+- LR； 1000毫升；路线=IV
+- 酒石酸美托洛尔； 5毫克；路线=IV
+
+### 2189-05-27 07:05
+[实验室]
+- 血红蛋白[血液]（血液学）：15.4 g/dL
+- MCV [血液]（血液学）：96 fL
+- MCHC [血液]（血液学）：33.4 %
+- MCH [血液]（血液学）：32.0 pg
+- 血细胞比容[血液]（血液学）：46.2 %
+- 红细胞 [血液]（血液学）：4.82 m/uL
+- 白细胞[血液]（血液学）：8.4 K/uL
+- 阴离子间隙[血液]（化学）：13 mEq/L
+- 氯化物[血液]（化学）：102 mEq/L
+- 总钙[血液]（化学）：9.0 mg/dL
+- 血小板计数[血液]（血液学）：220 K/uL
+- 肌酐[血液]（化学）：0.9 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：118 mg/dL
+- 镁[血液]（化学）：2.1 mg/dL
+- 磷酸盐[血液]（化学）：3.2 mg/dL
+- 钾[血液]（化学）：4.7 mEq/L
+- 钠[血液]（化学）：138 mEq/L
+- 尿素氮[血液]（化学）：18 mg/dL
+- 碳酸氢盐 [血液]（化学）：28 mEq/L
+- RDW [血液]（血液学）：13.1 %
+
+### 2189-05-27 08:00
+[处方]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+
+### 2189-05-27 10:00
+[处方]
+- 琥珀酸美托洛尔 XL； 50毫克；路线=PO
+
+### 2189-05-27 18:00
+[处方结束]
+- 头孢唑林； 1克；路线=IV
+
+### 2189-05-28 09:00
+[处方结束]
+- 硫酸吗啡； 50毫克；路线=IVPCA
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+
+### 2189-05-28 10:00
+[处方]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+- 氢吗啡酮（Dilaudid）； 2-4毫克；路线=PO
+- 睾酮 5 毫克贴片； 1 场比赛；路线=TD
+
+### 2189-05-28 12:00
+[处方结束]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2189-05-28 13:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Oxycodone; 5 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">羟考酮 - 错误：氢吗啡酮已被用于此阶段；替代羟考酮会产生不必要的阿片类药物重复和复合镇静风险。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Pregabalin; 75 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">普瑞巴林 - 错误：该患者的疼痛是术后伤害性疼痛，而不是神经性疼痛，因此普瑞巴林增加了镇静作用和跌倒风险，但没有任何有意义的镇痛效果。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Tramadol; 50 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">曲马多 - 错误：在此处添加曲马多会重复氢吗啡酮已涵盖的阿片类药物/血清素能活性，并有血清素毒性的风险，而没有明显的益处。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Acetaminophen; 500-1000 mg; route=PO</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">对乙酰氨基酚 - 正确：对乙酰氨基酚是腹部大手术后缓解疼痛方案的一部分。随着静脉注射阿片类药物需求的减少和口服氢吗啡酮的引入，对乙酰氨基酚提供了无需阿片类药物的镇痛，并支持术后恢复阶段的多模式疼痛管理。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Capsaicin Patch; 1 patch (0.025%); route=TD</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">辣椒素贴片 - 错误：辣椒素会引起灼烧感和刺激，禁止用于新鲜手术部位；它在术后早期恢复中没有提供安全的镇痛作用。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

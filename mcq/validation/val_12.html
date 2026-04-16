@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #12 — 患者病历 (26048041)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #12 — 患者病历</h1>
+  <div class="meta">住院号：26048041 | 处方时间：2115-10-24 22:00 | 阶段：mid</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 54
+- **性别：** F
+- **服务：** 妇产科
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 阴道脱垂和尿失禁
+
+### 现病史
+- ___ 女士是 ___，妊娠 5 岁，第 5 段，___ 医生因阴道脱垂向我转诊。检查发现患者患有二度子宫脱垂、二度穹窿脱垂和三度直肠前突。她被转诊进行多通道尿动力学测试，结果显示她患有压力性尿失禁，伴有尿道过度活动且尿道压力低。决定继续进行手术治疗。向患者解释了手术的风险、益处和替代方案。
+
+### 系统审查（准入前）
+- 她否认曾感染衣原体、淋病、梅毒、生殖器疱疹、毛滴虫、人乳头瘤病毒 (HPV) 或艾滋病毒。
+- 她否认巴氏涂片检查结果异常。
+- 她否认乳房 X 光检查异常。
+- 她否认使用阴道雌激素霜。
+- 她否认绝经后出血。
+
+### 既往病史
+- 焦虑/抑郁
+- 关节炎
+- 高胆固醇血症
+- 腰痛
+- 围绝经期
+- 宫内节育器到位
+- 过去的产科历史：G5P___ 阴道：5 1 镊子 最大阴道分娩：9.5 磅。
+- 既往妇科病史：否认上述性病
+
+### 社会历史
+- 未知
+
+### 家族史
+- 非缴费型
+
+### 入学前体检
+- 到达楼层后：NAD，参观舒适
+- 肺部：CTAB
+- 心脏：+S1、+S2，无 M/R/G
+- 腹部：肥胖、排序、不扩张、无压痛、+BS
+- 四肢：无红斑、无水肿
+
+### 入院前药物
+- 盐酸安非他酮 300 毫克，每日
+- 丁螺环酮 5 毫克，每日两次
+- 西酞普兰 40 毫克，每天
+- 氟替卡松 50 微克 – 每天在每个鼻孔 ___ 喷雾
+- 劳拉西泮 1 毫克片剂 – 睡前口服 1 片，白天可根据焦虑需要添加 ___ 至 1 片</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2115-10-24 00:00
+[程序]
+- 取出宫内避孕器
+- 膀胱膨出和直肠膨出的修复
+- 死胡同上的其他行动
+- 耻骨上吊带手术
+- 其他和未明确的阴道子宫切除术
+- 其他膀胱镜检查
+
+### 2115-10-24 08:00
+[处方]
+- 安非他酮（缓释）； 300毫克；路线=PO
+
+### 2115-10-24 10:00
+[处方]
+- 西酞普兰； 40毫克；路线=PO/NG
+- 丙酸氟替卡松鼻塞； 2 SPRY；路线=NU
+
+### 2115-10-24 16:00
+[处方]
+- 氢吗啡酮（Dilaudid）； 0.25-1.0毫克；路线=SC
+- 布洛芬； 600 毫克；路线=PO
+- LR； 1000毫升；路线=IV
+- 酮咯酸； 30毫克；路线=IV
+- 羟考酮-对乙酰氨基酚； 1-2 个选项卡；路线=PO/NG
+
+### 2115-10-24 20:00
+[处方]
+- 多库酯钠； 100毫克；路线=PO
+- 总线PIRone； 5毫克；路线=PO
+
+### 2115-10-24 21:00
+[处方]
+- 劳拉西泮； 1毫克；路线=PO/NG</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2115-10-24 22:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option correct"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Ondansetron; 4 mg; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">昂丹司琼 - 正确：昂丹司琼 4 mg IV 用于预防或治疗广泛盆腔重建手术后的术后恶心和呕吐。患者使用阿片类药物来控制疼痛和多种麻醉危险因素使得预防性或反应性止吐治疗在临床上是合适的。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Glycopyrrolate; 0.2 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">格隆溴铵 - 错误：它没有止吐功效，并且可能会加重盆腔手术后尿潴留。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Haloperidol; 0.5 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">氟哌啶醇 - 错误：同时使用血清素和抗焦虑疗法会增加镇静和 EPS 风险，因此不建议将氟哌啶醇作为该人群中 PONV 的一线治疗药物。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Methylprednisolone; 40 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">甲基泼尼松龙 - 错误：甲基泼尼松龙缺乏预防 PONV 的一致证据，暴露了不必要的类固醇负担，并且不是该适应症的标准。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Trimethobenzamide; 200 mg; route=IM</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">三甲苯甲酰胺 - 错误：在手术环境中预防 PONV 无效，与抗焦虑药合用时可能会增强中枢神经系统和镇静作用。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Droperidol; 0.625 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">氟哌利多 - 错误：氟哌利多带有 QT 延长警告和 CNS 镇静风险，对于服用 SSRI 和苯二氮卓类药物组合的患者尤其不安全。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

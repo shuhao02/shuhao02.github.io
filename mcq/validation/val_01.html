@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #1 — 患者病历 (29797070)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #1 — 患者病历</h1>
+  <div class="meta">住院号：29797070 | 处方时间：2164-03-12 10:00 | 阶段：early</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 50
+- **性别：** F
+- **服务：** 医学
+- **过敏：** 档案中没有药物过敏信息
+- **种族：** 西班牙裔/拉丁裔 - 危地马拉
+- **婚姻状况：** 已婚
+- **语言：** 西班牙语
+- **保险：** 其他
+
+### 主要投诉
+- 腹痛
+
+### 现病史
+- ___ y/o 来自___ 的西班牙裔女性来访，主诉持续四天的腹痛。患者住在___的乡村，与鸡和牛有接触。她喝井里的水。她抱怨去年经常出现水样便，大便中没有血，但有粘液。她的儿子目前住在___，过去曾因类似的“变形虫病”症状接受过治疗。患者赞同去年减重 30 磅，但表示这是为了对抗糖尿病。然而，她没有描述任何限制饮食或运动来解释体重。就诊前四天，患者出现严重的___上腹疼痛。从那时起，她就发现大便变黑，并且感到有些头晕。她否认有任何发烧/发冷症状。她没有任何呼吸急促、胸痛或心悸的症状。为了治疗腹痛，她正在服用非甾体抗炎药。
+
+### 系统审查（准入前）
+- 腹痛、频繁水样便、粪便粘液、黑色粪便、头晕和体重减轻（有意）呈阳性。
+- 发烧、发冷、气短、胸痛或心悸呈阴性。
+
+### 既往病史
+- 子宫切除术 ___ 治疗肌瘤
+- 糖尿病
+
+### 社会历史
+- 住在 ___ 的乡村
+- 与鸡和牛接触
+- 从井里喝水
+
+### 家族史
+- 无胃肠道恶性肿瘤或其他疾病史。
+- 儿子患有___（过去曾因“阿米巴瘤”出现类似症状而接受过治疗）。
+
+### 入学前体检
+- **生命体征：** T：98.1 BP：120/84 HR：71 RR：12 O2Sat：RA 上 98%
+- **GEN：** 外表良好，营养良好，无急性不适  
+- **HEENT：** EOMI、PERRL、巩膜无黄疸、无鼻出血或鼻漏、MMM、OP 清除  
+- **颈部：** 无 JVD，颈动脉搏动轻快，无杂音，无颈部淋巴结肿大，气管中线  
+- **COR:** RRR，无 M/G/R，正常 S1 S2  
+- **PULM：** 肺部 CTAB，无 W/R/R  
+- **ABD：** 上腹部柔软、轻度压痛，ND，+BS，无 HSM，无肿块  
+- **EXT：** 无 C/C/E，无可触及的电线  
+- **神经：** 警觉，以人、地点和时间为导向。 CN II – XII 完好无损。移动所有 4 个肢体。上肢和下肢的力量___。髌骨 DTR +1。足底反射下行。无步态障碍。无小脑功能障碍。  
+- **皮肤：** 无黄疸、发绀或严重皮炎。无瘀斑。
+
+### 入院前药物
+- 二甲双胍 500mg BID
+- 格列吡嗪 5mg BID</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2164-03-11 00:00
+[程序]
+- 其他非手术呼吸测量
+
+### 2164-03-11 18:55
+[实验室]
+- MCV [血液]（血液学）：84 fL
+- 总胆红素[血液]（化学）：0.5 mg/dL
+- 氯化物[血液]（化学）：100 mEq/L
+- 肌酐[血液]（化学）：0.7 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：287 mg/dL
+- 乳酸脱氢酶 (LD) [血液]（化学）：177 IU/L
+- 脂肪酶 [血液]（化学）：60 IU/L
+- 钾[血液]（化学）：4.4 mEq/L
+- 钠[血液]（化学）：138 mEq/L
+- 尿素氮[血液]（化学）：16 mg/dL
+- 嗜碱性粒细胞[血液]（血液学）：0.7 %
+- 嗜酸性粒细胞[血液]（血液学）：1.3 %
+- 血细胞比容[血液]（血液学）：38.2 %
+- 血红蛋白[血液]（血液学）：13.1 g/dL
+- 淋巴细胞[血液]（血液学）：42.1 %
+- MCH [血液]（血液学）：28.9 pg
+- MCHC [血液]（血液学）：34.3 %
+- 单核细胞[血液]（血液学）：2.5 %
+- 中性粒细胞[血液]（血液学）：53.5 %
+- 血小板计数[血液]（血液学）：286 K/uL
+- RDW [血液]（血液学）：13.2 %
+- 红细胞 [血液]（血液学）：4.53 m/uL
+- 白细胞[血液]（血液学）：10.1 K/uL
+- 绿色顶部保持（血浆）[血液]（化学）：保持。  超过 4 小时后丢弃。
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：30 IU/L
+- 阴离子间隙[血液]（化学）：15 mEq/L
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- 白蛋白[血液]（化学）：4.6 g/dL
+- 尿液收集长度[尿液]（化学）：
+- 尿管，保持 [尿液]（化学）：保持。  样本保留 48 小时并丢弃。
+- INR(PT) [血液]（血液学）：1.0
+- 碱性磷酸酶[血液]（化学）：70 IU/L
+- PTT [血液]（血液学）：20.3 秒
+- 胆红素[尿液]（血液学）：NEG mg/dL
+- 血液[尿液]（血液学）：NEG
+- 葡萄糖[尿液]（血液学）：1000 mg/dL
+- 酮[尿液]（血液学）：NEG mg/dL
+- PT [血液]（血液学）：11.6 秒
+- 亚硝酸盐[尿液]（血液学）：NEG
+- pH [尿液]（血液学）：5.0 单位
+- 蛋白质[尿液]（血液学）：NEG mg/dL
+- 比重[尿液]（血液学）：1.04
+- 尿液外观 [尿液]（血液学）：清澈
+- 尿液颜色[尿液]（血液学）：黄色
+- 尿胆素原 [尿液]（血液学）：0.2 mg/dL
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：45 IU/L
+- 白细胞[尿液]（血液学）：NEG
+
+### 2164-03-11 19:46
+[实验室]
+- 酮[尿液]（血液学）：TR mg/dL
+- 葡萄糖[尿液]（血液学）：250 mg/dL
+- 血液[尿液]（血液学）：NEG
+- 胆红素[尿液]（血液学）：NEG mg/dL
+- 尿胆素原 [尿液]（血液学）：NEG mg/dL
+- 蛋白质[尿液]（血液学）：NEG mg/dL
+- 尿液外观 [尿液]（血液学）：清澈
+- 比重[尿液]（血液学）：1.040
+- 白细胞[尿液]（血液学）：NEG
+- pH [尿液]（血液学）：5.0 单位
+- 尿液颜色[尿液]（血液学）：黄色
+- 亚硝酸盐[尿液]（血液学）：NEG
+
+### 2164-03-12 00:00
+[程序]
+- 腹部和腹膜后超声诊断
+
+### 2164-03-12 01:24
+[放射学]
+- 放射学注意事项： 1. 肝脏回声与脂肪浸润一致。  其他形式的肝脏
+  疾病和更严重的肝脏疾病，如肝硬化或纤维化，不能
+  排除。
+  
+  2. 胆囊切除术后的状态。  无胆管异常。
+
+### 2164-03-12 05:25
+[实验室]
+- 血细胞比容[血液]（血液学）：30.5 %
+- 血红蛋白[血液]（血液学）：10.5 g/dL
+
+### 2164-03-12 09:56
+[实验室]
+- 血细胞比容[血液]（血液学）：31.5 %</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2164-03-12 10:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Bismuth Subsalicylate; 30 mL; route=PO q6h</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">碱式水杨酸铋 - 错误：碱式水杨酸铋不提供酸抑制作用，并且由于其水杨酸盐成分会加剧出血风险，疑似胃肠道出血时禁用。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Calcium Carbonate; 500 mg; route=PO q6h PRN</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">碳酸钙 - 错误：碳酸钙仅提供短期中和作用，不能维持胃部 pH 值或促进急性上消化道出血时的凝块稳定性。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Metoclopramide; 10 mg; route=IV q8h</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">甲氧氯普胺 - 错误：甲氧氯普胺不能解决消化性溃疡出血问题，并且会增加不必要的神经系统风险（锥体外系症状），且没有抑酸功效。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Misoprostol; 200 mcg; route=PO QID</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">米索前列醇 - 错误：米索前列醇经常引起腹泻和腹部绞痛，这会加重该患者的慢性水样大便症状，因此不适合用在这里。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Cimetidine; 300 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">西咪替丁 - 错误：与静脉注射质子泵抑制剂 (IV PPI) 相比，西咪替丁对急性胃肠道出血的酸抑制作用不充分，并且与多种药物相互作用，使其不适合现代实践。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Pantoprazole Sodium; 40 mg; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">泮托拉唑钠 - 正确：IV 泮托拉唑用于治疗疑似 NSAID 引起的上消化道出血，表现为上腹疼痛、黑便和血红蛋白显着下降。在疑似消化性溃疡的情况下，使用质子泵抑制剂抑制酸有助于阻止进一步出血并促进溃疡愈合。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

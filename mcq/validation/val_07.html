@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #7 — 患者病历 (27383409)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #7 — 患者病历</h1>
+  <div class="meta">住院号：27383409 | 处方时间：2196-11-11 15:00 | 阶段：mid</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 40
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 贝类
+- **种族：** 其他
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 医疗补助
+
+### 主要投诉
+- 咳嗽，能源部
+
+### 现病史
+- ___ y/o M 感染 HIV（最后已知的 CD4~350）、哮喘、出现咳嗽和 DOE x2 天。患者自诉2天前突然咳嗽，咳出浓绿色痰。还主诉胸膜炎和咳嗽时 RUQ 疼痛。赞同用力时呼吸短促，包括说话。否认近期旅行。 ？有类似症状的朋友。否认 N/V/D、胸痛、发烧。
+
+### 系统审查（准入前）
+- (+) 根据 HPI  
+- (-) 否认发烧、发冷、盗汗、近期体重减轻或增加。否认头痛、鼻窦压痛、鼻漏或充血。否认胸痛或胸闷、心悸。否认恶心、呕吐、腹泻、便秘或腹痛。最近排便或排尿习惯没有变化。无排尿困难。否认关节痛或肌痛。
+
+### 既往病史
+- HIV 感染- dx ___，atripla，？最近 CD4 减少至 350s
+- 哮喘
+
+### 社会历史
+- 未知
+
+### 家族史
+- 无反复肺部感染史
+
+### 入学前体检
+- 生命体征：99.2； 120/86； 111； 20； 92RA  
+- 一般：警觉、定向、无严重痛苦  
+- HEENT：巩膜无黄疸，MMM，口咽清晰  
+- 颈部：柔软，JVP 不升高，无 LAD  
+- 肺部：各个领域的呼吸音减弱。弥漫性哮鸣音，无干啰音或爆裂音  
+- CV：规律的速率和节律，正常S1+S2，无杂音、摩擦音、奔马音  
+- 腹部：柔软、无压痛、无膨胀、有肠鸣音、无反跳痛或肌卫感、无器官肿大  
+- 外部：温暖、灌注良好、2+ 脉冲、无杵状指、发绀或水肿
+
+### 入院前药物
+- ATRIPLA *NF*（依非韦伦-恩曲他滨-替诺福夫）___ mg 每日口服 
+- 富马酸喹硫平 100 mg PO QHS 
+- 盐酸多塞平 100 mg PO HS 
+- 萘普生 500 mg PO Q12H 
+- 布洛芬 400 毫克口服 Q8H:PRN 疼痛 
+- 丙酸氟替卡松鼻塞 1 SPRY NU BID 
+- 西酞普兰 40 毫克，每日口服 
+- 沙丁胺醇吸入器 2 PUFF IH Q4H:PRN SOB，喘息 
+- 加巴喷丁 300mg TID</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2196-11-11 05:05
+[放射学]
+- 放射学注意事项：无急性心肺过程。
+
+### 2196-11-11 10:00
+[处方]
+- 利多卡因 5% 贴剂； 2 场比赛；路线=TD
+- 0.9% 氯化钠； 1000毫升；路线=IV
+- 对乙酰氨基酚； 500毫克；路线=PO/NG
+-替诺福韦二吡呋酯（Viread）； 300毫克；路线=PO
+- OxycoDONE（立即释放）； 5毫克；路线=PO/NG
+- 西酞普兰； 40毫克；路线=PO/NG
+- 沙丁胺醇 0.083% Neb Soln； 1 个 NEB；路线=IH
+- 左氧氟沙星； 750 毫克；路线=PO/NG
+-依非韦伦； 600 毫克；路线=PO
+- 塞纳； 1 个选项卡；路线=PO/NG
+- 恩曲他滨； 200毫克；路线=PO
+- 多库酯钠； 100毫克；路线=PO/NG
+
+### 2196-11-11 11:00
+[处方]
+- 布洛芬； 400毫克；路线=PO
+
+### 2196-11-11 11:40
+[实验室]
+- MCH [血液]（血液学）：33.3 pg
+- 淋巴细胞，百分比[血液]（血液学）：4 %
+- 淋巴细胞[血液]（血液学）：3.7 %
+- 血红蛋白[血液]（血液学）：11.8 g/dL
+- 血细胞比容[血液]（血液学）：34.6 %
+- 嗜酸性粒细胞[血液]（血液学）：0.2 %
+- 嗜碱性粒细胞[血液]（血液学）：0.1 %
+- 绝对 CD8 计数 [血液]（血液学）：111 #/uL
+- CD4/CD8比率[血液]（血液学）：0.8比率
+- 绝对 CD3 计数 [血液]（血液学）：218 #/uL
+- CD4 细胞，百分比[血液]（血液学）：20 %
+- CD3 细胞，百分比[血液]（血液学）：51 %
+- 绝对 CD4 计数 [血液]（血液学）：84 #/uL
+- CD8 细胞，百分比[血液]（血液学）：26 %
+- MCHC [血液]（血液学）：34.2 %
+- RDW [血液]（血液学）：13.6 %
+- MCV [血液]（血液学）：98 fL
+- 绝对淋巴细胞计数[血液]（血液学）：428 #/uL
+- 白细胞[血液]（血液学）：10.7 K/uL
+- 红细胞 [血液]（血液学）：3.54 m/uL
+- WBC 计数 [血液]（血液学）：10.7 K/uL
+- 血小板计数[血液]（血液学）：149 K/uL
+- 中性粒细胞[血液]（血液学）：94.4 %
+- 单核细胞[血液]（血液学）：1.5 %
+
+### 2196-11-11 12:00
+[处方]
+- 磺胺甲/甲氧苄氨嘧啶 DS； 2 个选项卡；路线=PO/NG
+
+### 2196-11-11 14:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 制霉菌素口服混悬液； 5毫升；路线=PO
+
+### 2196-11-11 14:00
+[处方结束]
+- 布洛芬； 400毫克；路线=PO
+
+### 2196-11-11 14:40
+[放射学]
+- 放射学笔记：调查结果：
+  CT 血管造影：没有提示肺动脉充盈缺损
+  存在肺栓塞。  有足够的可视化
+  亚节段血管。  主动脉走行和管径正常，无
+  夹层或壁内血肿的证据。  剩下的伟大的
+  船只也并不起眼。
+  
+  软组织：可视化的甲状腺看起来正常。  有几个
+  纵隔淋巴结突出，但均不符合 CT 大小标准
+  病理性增大。  边缘隆突下淋巴结尺寸为 11 毫米
+  在短轴上 (4:107)。  双侧肺门病理性增大
+  淋巴结，右侧尺寸为 25 x 18 毫米，左侧尺寸为 18 x
+  8 毫米（4:106）。  没有锁骨上或腋窝淋巴结肿大。  这个
+  研究并未针对膈下结构的评估进行优化。  内
+  这些限制，最小的非特异性双侧肾周脂肪绞合是
+  看到了。  胃因摄入的物质而轻度扩张。  没有
+  其他上腹部肉眼可见的异常。
+  
+  肺部：可以看到纵隔气肿从右肺门开始延伸
+  到中线并沿着食管和前壁向下追踪
+  主动脉的一部分 (4:134, 102, 601B:32)。  没有气胸或
+  心包积气。  双侧支气管壁弥漫性增厚
+  （4:135）。  此外，还有___结节性周边混浊，
+  主要位于下肺区，左侧更广泛（4:203，
+  135）。   未见胸腔积液。
+  
+  肌肉骨骼：左侧肋骨有陈旧性骨折 (2:27)，但没有局灶性骨折
+  与恶性肿瘤有关的骨病变。
+  
+  印象：
+  1.没有肺栓塞或急性主动脉综合征的证据。
+  2.弥漫性支气管炎和下叶为主的细支气管炎表现为
+  ___ 不透明，这表明感染过程。  的
+  特征缺乏 PCP 中常见的广泛毛玻璃样混浊。 
+  虽然这可能是一种常见的细菌感染，但有一些特征
+  引起对急性结核病或其他非典型肺炎的关注。  的
+  双侧淋巴结肿大可能是反应性肥大。
+  3. 纵隔积气，可能是自发性的。
+  
+  注：调查结果已通过 ___ 博士的电话传达给 ___ 博士
+  ___ 下午 3:49</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2196-11-11 15:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option correct"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Ibuprofen; 600 mg; route=PO</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">布洛芬 - 正确：布洛芬 600 mg 口服，用于为支气管炎和纵隔积气引起的胸膜炎性胸部不适提供更强的镇痛和抗炎缓解作用。药物选择的依据包括持续的疼痛、排除栓塞或心脏原因的正常影像学、对 NSAID 的耐受性以及观察到 400 mg 较低剂量的缓解效果不充分。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Meperidine; 50 mg; route=IM</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">哌替啶 - 错误：由于存在血清素综合征的风险，哌替啶禁用于血清素能药物（西酞普兰、多塞平），并且不适用于轻度炎性疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Cyclobenzaprine; 10 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">环苯扎林 - 错误：这里的胸痛是炎症性的而不是肌肉性的；环苯扎林不能缓解胸膜炎或支气管炎不适，并且会增加西酞普兰和喹硫平的镇静风险。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Acetaminophen-Codeine; 300 mg/30 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">对乙酰氨基酚-可待因 - 错误：阿片类药物组合不能治疗炎性胸膜炎性疼痛，会造成支气管炎呼吸抑制的风险，并与患者的中枢神经系统抑制疗法产生危险的相互作用。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Diclofenac Gel; 2 g; route=TD</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">双氯芬酸凝胶 - 错误：外用双氯芬酸对深部胸膜炎的覆盖不足，并且不能解决此处所需的全身炎症疼痛。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

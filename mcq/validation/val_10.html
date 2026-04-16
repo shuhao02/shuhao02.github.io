@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #10 — 患者病历 (29123011)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #10 — 患者病历</h1>
+  <div class="meta">住院号：29123011 | 处方时间：2114-06-25 08:00 | 阶段：mid</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 85
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 右肩肿胀
+
+### 现病史
+- 患有 CKDIV、DM2、高血压、痛风和慢性右肩疼痛的 ___ M，最近在 ___ 因跌倒并伴有严重的肩袖撕裂而入院，现在因明显的右肩红斑和肿胀从 OSH 转至 ___ 急诊室。此前，他曾在 ___ 接受过骨科创伤服务，X 光检查和 MRI 发现右肩肿胀，显示右肩有大量积聚，但没有关节内受累，并且肩袖有大片撕裂。当时他接受了诊断抽检，结果显示白细胞数为 39k，但培养结果呈阴性，并且在没有使用抗生素的情况下病情有所改善。 ___ 医生刚刚于 ___ 就诊他的右侧肩袖撕裂，由于没有任何疼痛，因此决定进行保守治疗。他说，过去1周以来，他的右肩肿胀和发红明显恶化，比以前严重得多。他偶尔会自觉发冷，但没有发烧，也没有其他感染症状。
+
+### 系统审查（准入前）
+- 否认发烧、发冷、胸痛、呼吸困难。
+- 他的右肩有轻微的压痛。
+
+### 既往病史
+- 2 型糖尿病  
+  * C/b 型糖尿病视网膜病变  
+  * C/b型糖尿病肾病  
+- 血脂异常  
+- 高血压  
+- 冠状动脉疾病  
+- 慢性肾病，第四期  
+- 痛风性关节炎  
+- 胃食管反流病  
+- 皮肤癌  
+
+### 社会历史
+- 未知
+
+### 家族史
+- 非霍奇金淋巴瘤  
+- 患有糖尿病的母亲、父亲和兄弟。  
+
+### 入学前体检
+- VS：T 98.5 BP 124/78 HR 86 RR 18 Spo2 100% RA  
+- 一般：相貌健康的老人  
+- 恩特：EOMI  
+颈部：无 JVD  
+- RESP：CTAB  
+- CV：RRR，微弱 SEM  
+- ABD：柔软，不柔软  
+- 外部：右肩出现棒球大小的波动性肿块，呈红斑，但有轻微压痛。  
+- 神经：A&amp;Ox3。  
+
+### 入院前药物
+- 别嘌呤醇 ___ mg PO 每日  
+- 氨氯地平 5 毫克，每日口服  
+- 奥美沙坦 40 毫克，每日口服  
+- 雷尼替丁 150 mg PO BID  
+- 瑞舒伐他汀钙 40 mg PO QPM  
+- 特拉唑嗪 2 mg PO QHS  
+- 格列本脲 5 mg PO BID  
+- 法莫替丁 20 毫克，每日口服</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2114-06-22 22:30
+[实验室]
+- 葡萄糖[血液]（化学）：183.0 mg/dL
+- RDW [血液]（血液学）：15.9 %
+- 血小板计数[血液]（血液学）：243 K/uL
+- 中性粒细胞[血液]（血液学）：71.1 %
+- 单核细胞[血液]（血液学）：11.8 %
+- MCV [血液]（血液学）：79 fL
+- MCHC [血液]（血液学）：34.3 %
+- MCH [血液]（血液学）：27.2 pg
+- 淋巴细胞[血液]（血液学）：15.2 %
+- 血红蛋白[血液]（血液学）：8.3 g/dL
+- 血细胞比容[血液]（血液学）：24.1 %
+- 嗜酸性粒细胞[血液]（血液学）：1.6 %
+- 嗜碱性粒细胞[血液]（血液学）：0.3 %
+- 浅绿色顶部固定[血]（化学）：
+- 尿管，保持 [尿液]（化学）：保持。  样本保留 48 小时并丢弃。
+- 尿液收集长度[尿液]（化学）：
+- 碳酸氢盐 [血液]（化学）：23 mEq/L
+- C-反应蛋白[血液]（化学）：241.5 mg/L
+- 氯化物[血液]（化学）：97 mEq/L
+- 肌酸激酶 (CK) [血液]（化学）：46.0 IU/L
+- 红细胞 [血液]（血液学）：3.04 m/uL
+- 肌酐[血液]（化学）：2.2 mg/dL
+- 白细胞[血液]（血液学）：6.6 K/uL
+- 胆红素[尿液]（血液学）：mg/dL
+- Uhold [尿液]（化学）：保持。
+- 尿液收集长度[尿液]（化学）：
+- 酵母[尿液]（血液学）：无
+- WBC [尿液]（血液学）：2 #/hpf
+- 尿胆素原 [尿液]（血液学）：mg/dL
+- 尿液粘液[尿液]（血液学）：
+- 尿液颜色[尿液]（血液学）：
+- 尿液外观[尿液]（血液学）：
+- 比重[尿液]（血液学）：1.010
+- RBC [尿液]（血液学）：1 #/hpf
+- 蛋白质[尿液]（血液学）：30 mg/dL
+- pH [尿液]（血液学）：6.0 单位
+- 亚硝酸盐[尿液]（血液学）：
+- 白细胞[尿液]（血液学）：
+- 酮[尿液]（血液学）：mg/dL
+- 透明管型 [尿液]（血液学）：2 #/lpf
+- 葡萄糖[尿液]（血液学）：150 mg/dL
+- 上皮细胞 [尿液]（血液学）：#/hpf
+- 血液[尿液]（血液学）：
+- 细菌[尿液]（血液学）：
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 钾[血液]（化学）：4.0 mEq/L
+- 钠[血液]（化学）：135 mEq/L
+- 蓝色顶部保持[血液]（化学）：保持。  超过 24 小时请丢弃。
+- 阴离子间隙[血液]（化学）：19 mEq/L
+- 尿素氮[血液]（化学）：38 mg/dL
+
+### 2114-06-22 22:46
+[实验室]
+- 乳酸[血液]（血气）：1.3 mmol/L
+
+### 2114-06-22 23:38
+[实验室]
+- Anat Path Hold [其他体液]（化学）：
+- 关节晶体，数量[关节液]（血液学）：无
+- 淋巴细胞[关节液]（血液学）：0 %
+- 单核细胞[关节液]（血液学）：12 %
+- Polys [关节液]（血液学）：88 %
+- 红细胞，关节液 [关节液]（血液学）：1500 #/uL
+- 总有核细胞，关节[关节液]（血液学）：102500 #/uL
+- 葡萄糖，关节液[关节液]（化学）：61 mg/dL
+- 总蛋白，关节液 [关节液]（化学）：4.9 g/dL
+
+### 2114-06-23 00:00
+[程序]
+- 其他软组织的抽吸
+- 其他关节切开术，肩部
+
+### 2114-06-23 05:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 胰高血糖素； 1毫克；路线=IM
+- 0.45% 氯化钠； 1000毫升；路线=IV
+- 葡萄糖凝胶； 15克；路线=PO
+- 万古霉素； 1000毫克；路线=IV
+- 葡萄糖 50%； 12.5克；路线=IV
+- 胰岛素； 0 单位；路线=SC
+- 多库酯钠； 100毫克；路线=PO
+- 特拉唑嗪； 2毫克；路线=PO
+- 对乙酰氨基酚； 650 毫克；路线=PO/NG
+- 瑞舒伐他汀钙； 40毫克；路线=PO
+
+### 2114-06-23 05:00
+[处方结束]
+- 奥美沙坦； 40毫克；路线=口头
+
+### 2114-06-23 05:50
+[实验室]
+- MCV [血液]（血液学）：81 fL
+- 红细胞 [血液]（血液学）：2.86 m/uL
+- RDW [血液]（血液学）：15.2 %
+- 白细胞[血液]（血液学）：5.6 K/uL
+- 血小板计数[血液]（血液学）：242 K/uL
+- MCHC [血液]（血液学）：32.5 %
+- 尿素氮[血液]（化学）：35 mg/dL
+- 血红蛋白[血液]（血液学）：7.5 g/dL
+- 血细胞比容[血液]（血液学）：23.2 %
+- 尿酸[血液]（化学）：2.9 mg/dL
+- 钾[血液]（化学）：4.0 mEq/L
+- 葡萄糖[血液]（化学）：143.0 mg/dL
+- 肌酐[血液]（化学）：2.1 mg/dL
+- 氯化物[血液]（化学）：100 mEq/L
+- 碳酸氢盐 [血液]（化学）：26 mEq/L
+- 阴离子间隙[血液]（化学）：13 mEq/L
+- MCH [血液]（血液学）：26.3 pg
+- 钠[血液]（化学）：135 mEq/L
+
+### 2114-06-23 08:00
+[处方]
+- 氨氯地平； 5毫克；路线=PO/NG
+- 法莫替丁； 20毫克；路线=PO/NG
+- 别嘌呤醇； 300毫克；路线=PO/NG
+- 奥美沙坦； 40毫克；路线=口头
+
+### 2114-06-23 11:00
+[处方结束]
+- 肝素； 5000 单位；路线=SC
+
+### 2114-06-23 12:00
+[处方]
+- 硫酸吗啡； 1-2毫克；路线=IV
+- OxycoDONE（立即释放）； 2.5毫克；路线=PO/NG
+
+### 2114-06-23 13:00
+[处方结束]
+- OxycoDONE（立即释放）； 2.5毫克；路线=PO/NG
+
+### 2114-06-23 14:00
+[处方]
+- OxycoDONE（立即释放）； 2.5毫克；路线=PO/NG
+
+### 2114-06-23 15:00
+[处方结束]
+- 0.45% 氯化钠； 1000毫升；路线=IV
+
+### 2114-06-24 06:23
+[实验室]
+- PT [血液]（血液学）：12.5 秒
+- 尿素氮[血液]（化学）：33 mg/dL
+- 钠[血液]（化学）：137 mEq/L
+- 钾[血液]（化学）：3.6 mEq/L
+- 氯化物[血液]（化学）：102 mEq/L
+- 镁[血液]（化学）：2.2 mg/dL
+- 葡萄糖[血液]（化学）：78.0 mg/dL
+- 肌酐[血液]（化学）：1.9 mg/dL
+- 总钙[血液]（化学）：8.7 mg/dL
+- 磷酸盐[血液]（化学）：3.4 mg/dL
+- INR(PT) [血液]（血液学）：1.1
+- 嗜碱性粒细胞[血液]（血液学）：0.3 %
+- 嗜酸性粒细胞[血液]（血液学）：3.2 %
+- 血细胞比容[血液]（血液学）：20.6 %
+- 血红蛋白[血液]（血液学）：6.9 g/dL
+- 淋巴细胞[血液]（血液学）：21.6 %
+- MCH [血液]（血液学）：26.9 pg
+- MCHC [血液]（血液学）：33.7 %
+- MCV [血液]（血液学）：80 fL
+- 单核细胞[血液]（血液学）：8.3 %
+- 中性粒细胞[血液]（血液学）：66.6 %
+- 血小板计数[血液]（血液学）：166.0 K/uL
+- 血小板涂片[血液]（血液学）：
+- RDW [血液]（血液学）：15.7 %
+- 红细胞 [血液]（血液学）：2.59 m/uL
+- 白细胞[血液]（血液学）：4.9 K/uL
+- PTT [血液]（血液学）：27.5 秒
+- 阴离子间隙[血液]（化学）：15 mEq/L
+- 碳酸氢盐 [血液]（化学）：24 mEq/L
+- % 血红蛋白 A1c [血液]（化学）：8.4 %
+- eAG [血液]（化学）：194.0 mg/dL
+
+### 2114-06-24 08:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+
+### 2114-06-25 00:00
+[程序]
+- 在指导下放置中心静脉导管
+
+### 2114-06-25 00:48
+[实验室]
+- MCH [血液]（血液学）：27.7 pg
+- 血细胞比容[血液]（血液学）：23.4 %
+- 血红蛋白[血液]（血液学）：7.8 g/dL
+- MCV [血液]（血液学）：83 fL
+- MCHC [血液]（血液学）：33.4 %
+- RDW [血液]（血液学）：15.2 %
+- 红细胞 [血液]（血液学）：2.83 m/uL
+- 白细胞[血液]（血液学）：5.1 K/uL
+- 血小板计数[血液]（血液学）：228 K/uL
+
+### 2114-06-25 05:31
+[实验室]
+- RDW [血液]（血液学）：15.1 %
+- 总钙[血液]（化学）：9.1 mg/dL
+- 阴离子间隙[血液]（化学）：19 mEq/L
+- 万古霉素[血液]（化学）：5.5 ug/mL
+- 白细胞[血液]（血液学）：6.1 K/uL
+- 红细胞 [血液]（血液学）：3.35 m/uL
+- 碳酸氢盐 [血液]（化学）：23 mEq/L
+- 血小板涂片[血液]（血液学）：
+- MCV [血液]（血液学）：83 fL
+- 氯化物[血液]（化学）：99 mEq/L
+- 葡萄糖[血液]（化学）：106.0 mg/dL
+- 镁[血液]（化学）：2.2 mg/dL
+- 磷酸盐[血液]（化学）：3.2 mg/dL
+- 血小板计数[血液]（血液学）：205.0 K/uL
+- 肌酐[血液]（化学）：2.1 mg/dL
+- 钾[血液]（化学）：4.0 mEq/L
+- 尿素氮[血液]（化学）：39 mg/dL
+- 血细胞比容[血液]（血液学）：27.8 %
+- 血红蛋白[血液]（血液学）：9.1 g/dL
+- MCH [血液]（血液学）：27.3 pg
+- MCHC [血液]（血液学）：32.9 %
+- 钠[血液]（化学）：137 mEq/L
+- 肌酸激酶 (CK) [血液]（化学）：49.0 IU/L</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2114-06-25 08:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Olopatadine Ophthalmic Solution; 1 drop; route=BOTH EYES</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">奥洛他定滴眼液 - 错误：不存在过敏性结膜炎；抗组胺药滴剂是不必要的，可能会导致进一步的干燥和不适。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Timolol Ophthalmic Solution; 1 drop; route=BOTH EYES</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">噻吗洛尔眼用溶液 - 错误：噻吗洛尔治疗青光眼，而不是治疗干燥，考虑到患者的年龄和心脏病史，可能会导致全身性心动过缓或低血压。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Tobramycin Ophthalmic Solution; 1 drop; route=BOTH EYES</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">妥布霉素滴眼液 - 错误：如果没有细菌性结膜炎或角膜炎的证据，抗生素滴眼液是不合适的，可能会导致不必要的接触和耐药。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Artificial Tears; 1-2 DROP; route=BOTH EYES</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">人工泪液 - 正确：一位老年住院患者因年龄、全身性疾病和活动能力下降而住院时间较长且有较高的干眼风险，因此需要使用人工泪液来保护眼表。该决定反映了标准支持护理，以防止不适或潜在的眼表损伤。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Prednisolone Acetate Ophthalmic Suspension; 1 drop; route=BOTH EYES</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">醋酸泼尼松龙眼用混悬液 - 错误：外用皮质类固醇可能会加重或加速感染，在没有眼科监督的情况下是不安全的，并且不适用于单纯的干燥。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Naphazoline Ophthalmic Solution; 1 drop; route=BOTH EYES</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">萘甲唑啉滴眼液 - 错误：血管收缩剂滴眼液可减少化妆品发红，但会导致老年患者出现充血反弹并加重眼部干燥。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>
