@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #7 — 患者病历 (22574016)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #7 — 患者病历</h1>
+  <div class="meta">住院号：22574016 | 处方时间：2190-04-15 18:00 | 阶段：late</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 59
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** Percocet
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 无痛性黄疸
+
+### 现病史
+- 患有高血压、高脂血症和胃食管反流病 (GERD) 的男性，在 USOGH 住院直到大约 ___ 中旬，当时他注意到自己的尿液颜色变深。过去 ___（6 天的 PTA），患者见了他的 PCP，PCP 检查了 LFT，发现 LFT 显着升高。第二天，他的姐姐注意到他出现黄疸。在 PCP 获得 LFT 结果后，他在 ___ 住院进行进一步评估。他接受了腹部 CT 检查，（根据报告）显示胰头有肿块，伴有胆道梗阻和胆道扩张至 1.8 厘米。他于 ___ 出院，并转诊接受 ERCP。
+
+### 系统审查（准入前）
+-+：有意17#减肥/1个月；减少碳水化合物的摄入。食欲依然良好。  
+- ROS 评分为 10 分，否则为负面。
+
+### 既往病史
+- 高脂血症  
+-HTN  
+- 胃炎/溃疡  
+- 胃食管反流病
+
+### 社会历史
+- 未知
+
+### 家族史
+- 母亲 - 肺癌（重度吸烟者）  
+- 弟弟 - 死于心律失常（室颤）
+
+### 入学前体检
+- VS：97.6 160/74 P56 R16 97RA  
+- GEN：AAOx3。令人愉快的。黄疸了。  
+- HEENT：eomi、perrl、MMM。 +黄疸。  
+- 颈部：无小伙子。 JVP WNL。  
+- RESP：CTA B。无 WRR。  
+- 简历：RRR。没有先生。  
+- ABD：+BS。软，NT/ND。  
+- 分机：无中东欧。  
+- 神经：CN ___ 完好无损。
+
+### 入院前药物
+- 赖诺普利 40 毫克，每日一次，口服  
+- 硝苯地平 XR 90 毫克，每日一次，口服  
+- 奥美拉唑 20 毫克，每日一次，口服  
+- 阿司匹林 EC 81 毫克，每天一次 - 由 PCP 停止___  
+- 鱼油___毫克胶囊口服BID  
+- 辛伐他汀 - 由 PCP 停止___</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2190-04-15 00:00
+[程序]
+- 内窥镜将支架（管）插入胆管
+- 内窥镜乳头括约肌切开术和乳头切开术
+
+### 2190-04-15 16:00
+[处方]
+- 0.45% 氯化钠； 1000毫升；路线=IV
+
+### 2190-04-15 17:00
+[处方]
+- 昂丹司琼； 4毫克；路线=IV
+- 硫酸吗啡； 1-2毫克；路线=IV
+- 流感病毒疫苗； 0.5毫升；路线=IM
+- 0.9% 氯化钠； 1000毫升；路线=IV
+- 劳拉西泮； 0.5毫克；路线=IV</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2190-04-15 18:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Promethazine; 25 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">异丙嗪 - 错误：异丙嗪 IV 对于因外渗造成的严重组织损伤（包括坏死）有黑框警告，并且还会与最近的吗啡和劳拉西泮复合镇静作用，使其在这种情况下不安全。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Erythromycin; 250 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">红霉素 - 错误：红霉素是一种促胃动素激动剂，而非止吐药，在昂丹司琼 4 mg IV 后合用会增加可避免的 QT 延长风险，但不会解决恶心问题。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Aprepitant; 125 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">阿瑞匹坦 - 错误：阿瑞匹坦（NK1 拮抗剂）适用于化疗引起的或 PONV 预防，不适用于非化疗住院期间 ERCP 后恶心的急性治疗。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Chlorpromazine; 25 mg; route=IM</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">氯丙嗪 - 错误：肌内注射氯丙嗪具有明显的 α 肾上腺素能阻滞作用，导致低血压，并且与胆汁淤积性黄疸有特定的强相关性，因此不适合用于胰头肿块引起的梗阻性黄疸；直肠止吐药可以避免这些肠外风险。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Zolpidem Tartrate; 5 mg; route=PO</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">酒石酸唑吡坦 - 正确：唑吡坦 5 mg PO 被处方用于治疗当天 ERCP 和支架置入后的失眠。该药物支持手术压力和夜间住院后的睡眠启动，促进夜间休息和恢复。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Temazepam; 30 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">替马西泮 - 错误：替马西泮 30 mg PO 剂量较高，近期给予劳拉西泮 0.5 mg IV 和吗啡 1-2 mg IV，今晚对该患者造成过度镇静和呼吸抑制的过高风险。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">G.</span><span class="option-drug">Prochlorperazine; 25 mg; route=PR</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">丙氯拉嗪 - 正确：在 ERCP 和胆管支架置入后，经直肠开出丙氯拉嗪，以控制与侵入性操作相关的恶心或呕吐。它补充了先前的昂丹司琼给药，确保术后恶心持续时有效缓解症状。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

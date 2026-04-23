@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #16 — 患者病历 (25777637)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #16 — 患者病历</h1>
+  <div class="meta">住院号：25777637 | 处方时间：2189-05-26 19:00 | 阶段：early</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 55
+- **性别：** 男
+- **服务：** 手术
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 复发性切口疝的修复
+
+### 现病史
+- 该患者最初接受了直肠癌低位前切除术，随后进行了放射治疗。几年前出现肠梗阻和切口疝，并接受了手术。这次他出现了复发性切口疝以及肠梗阻的症状。这个问题解决了，他被安排进行择期手术。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 在 ___ s/p 化疗和手术切除中诊断出直肠癌。
+- PSH：低位前切除术 ___
+
+### 社会历史
+- 未知
+
+### 家族史
+- 家族中没有直肠癌病史。
+
+### 入学前体检
+- 未知
+
+### 入院前药物
+- 卡麦角林 0.5 每周两次
+- 托普罗 XL 50
+- 索利那新 10
+- 睾酮 1% 凝胶
+- ASA 325
+- MVI
+- 贝尼纤维</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2189-05-26 00:00
+[程序]
+- 使用移植物或假体进行腹腔镜切口疝修补术
+- 其他小肠部分切除术
+- 腹腔镜腹膜粘连松解术
+
+### 2189-05-26 13:21
+[实验室]
+- 血细胞比容[血液]（血液学）：49.1 %
+- 镁[血液]（化学）：2.0 mg/dL
+- 钾[血液]（化学）：4.5 mEq/L</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2189-05-26 19:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Clindamycin; 900 mg; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">克林霉素 - 错误：克林霉素单一疗法缺乏对肠道手术有氧革兰氏阴性菌的覆盖，并且没有记录到β-内酰胺过敏，首选一线β-内酰胺预防药物，例如头孢唑林。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Dextrose; 1000 mL of 5% solution in water; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">葡萄糖 - 错误：5% 的葡萄糖水溶液提供不含电解质的游离水，不适合术后立即补充容量和电解质，有低钠血症的风险。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">LR; 1000 mL; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">LR - 正确：腹部手术后输注乳酸林格氏溶液以提供等渗补液，确保术后恢复期间有足够的血管内容量和电解质平衡。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Morphine Sulfate; 50 mg; route=IVPCA</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">硫酸吗啡 - 正确：通过 IV PCA 注射吗啡用于治疗腹部手术后的中度至重度术后疼痛，允许患者控制剂量以有效缓解疼痛，同时减轻护理负担。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Atenolol; 50 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">阿替洛尔 - 错误：术后立即口服给药可能不可靠，如果改用其他 β 受体阻滞剂而不是继续静脉注射家用药物，则可能存在控制不足和反弹的风险。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Metoprolol Tartrate; 5 mg; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">酒石酸美托洛尔 - 正确：静脉注射美托洛尔是为了维持手术后长期口服美托洛尔的患者的 β 阻滞作用，预防由于交感神经过度活跃或突然停药导致的围手术期心血管并发症。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">G.</span><span class="option-drug">CefazoLIN; 1 g; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">头孢唑林 - 正确：在网状切口疝修补术和肠切除术后静脉注射头孢唑林，以针对常见皮肤和肠道病原体提供围术期抗生素预防，并降低术后伤口感染风险。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">H.</span><span class="option-drug">Vancomycin; 1 g; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">万古霉素 - 错误：万古霉素单一疗法缺乏肠道手术所需的革兰氏阴性菌和厌氧活性，并且，如果不存在 β-内酰胺过敏，则首选 β-内酰胺预防；保留万古霉素用于记录的适应症或联合使用。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">I.</span><span class="option-drug">Fentanyl; 25 mcg/hr; route=transdermal</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">芬太尼 - 错误：透皮芬太尼起效延迟，并且由于安全风险而禁忌用于急性术后疼痛，因此与滴定静脉注射 PCA 相比不合适。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

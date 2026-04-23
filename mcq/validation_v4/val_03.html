@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #3 — 患者病历 (24109779)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #3 — 患者病历</h1>
+  <div class="meta">住院号：24109779 | 处方时间：2133-06-05 03:00 | 阶段：early</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 63
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 中枢神经系统淋巴瘤，定期化疗
+
+### 现病史
+- ___ 先生是一位 ___ 岁的绅士，具有混合霍奇金/NH 淋巴瘤 s/p 对 R-mBACOD 完全全身反应的远期病史，他的淋巴瘤出现中枢神经系统复发，为此他接受了多个周期的利妥昔单抗/HD-MTX。他今天入院参加 HD-MTX 第 43 周期。  
+- 他一直感觉良好，没有任何抱怨。  
+- 到达楼层后，患者报告没有新的投诉。  
+
+### 系统审查（准入前）
+- 患者否认发烧/发冷、盗汗、头痛、视力改变、头晕/头晕、虚弱/麻木、气短、咳嗽、咯血、胸痛、心悸、腹痛、恶心/呕吐、腹泻、吐血、便血/黑便、排尿困难、血尿和新发皮疹。
+
+### 既往病史
+- 混合霍奇金淋巴瘤和非霍奇金淋巴瘤 s/p 对 R-mBACOD 的完全全身反应  
+- 多周期利妥昔单抗/HD-MTX治疗淋巴瘤的中枢神经系统复发  
+- 立体定向脑活检，发现左额叶肿块符合淋巴瘤  
+- 高剂量甲氨蝶呤化疗：5 个诱导周期，随后 19 个维持剂量（最后 11 个使用利妥昔单抗）  
+- 中枢神经系统淋巴瘤复发，左壳核质量增强，用大剂量甲氨蝶呤和利妥昔单抗重新诱导（5个周期），随后完全缓解  
+- 每月一次维持利妥昔单抗和大剂量甲氨蝶呤治疗方案，然后每 2 个月、3 个月和 4 个月间隔一次  
+- 肾结核（于___诊断并用利福平、异烟肼和乙胺丁醇治疗___年）  
+- 高脂血症  
+- 眩晕  
+- 高血压  
+- 胃食管反流病
+
+### 社会历史
+- ___
+
+### 家族史
+- 他的父亲患有冠状动脉疾病。  
+- 他的两个兄弟也患有冠状动脉疾病。
+
+### 入学前体检
+- **VS：** 97.5 PO 148 / 94 77 18 99% RA  
+- **一般：** 仪表堂堂的绅士，躺在床上没有任何痛苦，很舒服。  
+- **HEENT：** 无黄疸，PERLL，粘膜湿润，OP 透明。  
+- **心脏：** 心率和节律正常，心音正常，无杂音、摩擦音或奔马律。  
+- **肺部：** 无呼吸窘迫症状，双侧听诊清晰，无爆裂音、喘息音或干啰音。  
+- **ABD：** 不扩张，肠鸣音正常，软，无压痛，无防护，无可触及的肿块，无器官肿大。  
+- **外部：** 温暖，灌注良好。下肢无水肿。无红斑或压痛。  
+- **NEURO：** A&amp;Ox3，良好的注意力和线性思维，CN II-XII 完好无损。浑身力量十足。轻触感觉完好无损。  
+- **皮肤：** 无明显皮疹。
+
+### 入院前药物
+- 氨氯地平 5 毫克，每日口服  
+- 奥美拉唑 20 mg PO BID  
+- 阿司匹林 81 毫克，每日口服</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>（没有之前的事件）</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2133-06-05 03:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Furosemide; 40 mg every 12 hours; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">速尿 - 错误：速尿不会碱化尿液，并可能导致血容量不足，可能使甲氨蝶呤在肾小管中浓缩，并增加血容量正常患者的肾毒性。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Tromethamine; 0.3 M solution, 500 mL once; route=IV</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">氨丁三醇 - 错误：氨丁三醇可以碱化血液，但不能可靠地碱化尿液，并且会带来风险（例如低血糖、呼吸抑制），并且不能防止管内甲氨蝶呤沉淀。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Sodium Bicarbonate; 1300 mg; route=PO</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">碳酸氢钠 - 正确：碳酸氢钠 1300 mg PO 被处方为高剂量甲氨蝶呤化疗的支持药物。它碱化尿液，减少甲氨蝶呤的肾小管沉淀，并在治疗期间保护肾功能。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Ascorbic Acid; 1,000 mg three times daily; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">抗坏血酸 - 错误：抗坏血酸会酸化尿液，这与防止甲氨蝶呤结晶所需的相反，从而增加肾毒性风险。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Ammonium Chloride; 1 g every 6 hours; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">氯化铵 - 错误：氯化铵会酸化尿液，从而促进甲氨蝶呤和代谢物结晶并加剧肾毒性。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Probenecid; 500 mg every 6 hours; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">丙磺舒 - 错误：丙磺舒通过 OAT 转运蛋白抑制肾小管分泌甲氨蝶呤，降低 MTX 清除率并显着增加毒性。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #6 — 患者病历 (25758585)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct {
+    background: #f0fff4; border-left-color: #38a169;
+  }
+  .option.incorrect {
+    background: #fff5f5; border-left-color: #e53e3e;
+  }
+  .option-header {
+    display: flex; align-items: center; margin-bottom: 6px;
+  }
+  .option-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px;
+  }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 4px; padding-left: 34px;
+  }
+  .note {
+    margin-top: 16px; font-size: 13px; color: #718096; font-style: italic;
+  }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="./index.html">← 返回列表</a>
+<div class="header">
+  <h1>验证 #6 — 患者病历</h1>
+  <div class="meta">住院号：25758585 | 处方时间：2127-03-25 21:00 | 阶段：mid</div>
+</div>
+
+<div class="section">
+<h2>患者基本资料</h2>
+<pre>### 患者信息
+- **年龄：** 44
+- **性别：** 男
+- **服务：**骨科
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 西班牙裔或拉丁裔
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 其他
+
+### 主要投诉
+- 右手食指重罪犯
+
+### 现病史
+- ___ 岁右手优势男性，有 MRSA 病史，于 ___ 到急诊科就诊，有大约 1 周的右手食指尖肿胀、发红和搏动性疼痛的病史。 Pt 最近有剪指甲的经历，然后将手指放入热水中，他认为自己可能被烫伤了。疼痛和肿胀不断加重，但没有发烧、发冷或盗汗史。 ___ 患者刺破了食指尖，排出了少量脓液。
+
+### 系统审查（准入前）
+- 无发烧、发冷或盗汗史。
+
+### 既往病史
+- 记录了过去 MRSA 拭子的历史，PT 不记得为什么这样做
+
+### 社会历史
+- 未知
+
+### 家族史
+- 非缴费型
+
+### 入学前体检
+- 无发烧
+- 右食指尖垫肿胀、紧张，甲膜皱襞周围肿胀发红，DIP 关节远端，感觉和功能完好
+
+### 入院前药物
+- 盐酸安非他酮 150 毫克缓释片剂签名：一 (1) 片缓释片剂 PO BID（每日 2 次）。</pre>
+</div>
+
+<div class="section">
+<h2>住院临床时间线</h2>
+<pre>### 2127-03-25 00:00
+[程序]
+- 其他需要引流皮肤和皮下组织的切口
+
+### 2127-03-25 20:00
+[处方]
+- 万古霉素； 1000毫克；路线=IV</pre>
+</div>
+
+<div class="section">
+<h2>问题与答案</h2>
+<p style="font-weight:600; color:#2c5282;">
+时间点 <strong>2127-03-25 21:00</strong>，基于该患者的临床证据，应开具以下哪些药物？
+</p>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Meperidine; 75 mg; route=IM</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">哌替啶 - 错误：哌替啶的神经毒性代谢物（去甲哌替啶）会增加癫痫发作风险，对于服用安非他酮的患者尤其不合适，使其成为不良且不安全的镇痛选择。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Oxycodone Extended-Release; 20 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">羟考酮缓释剂 - 错误：由于滴定延迟和过量风险，缓释羟考酮不适合用于急性术后疼痛的初始治疗，因为缓释阿片类药物专门用于治疗慢性、全天候疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Tramadol; 50 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">曲马多 - 错误：曲马多会增加癫痫发作的风险，患者同时服用安非他酮会放大癫痫发作的风险，因此在这里不安全。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Oxycodone-Acetaminophen; 1-2 TAB; route=PO/NG</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">羟考酮-对乙酰氨基酚 - 正确：羟考酮-对乙酰氨基酚口服处方作为切开引流手术后的辅助或过渡性疼痛控制。当患者术后情况稳定时，它可以补充静脉注射吗啡以进行持续镇痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Fentanyl; 25 mcg/hr; route=transdermal</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">芬太尼 - 错误：透皮芬太尼起效延迟，仅适用于阿片类药物耐受的慢性疼痛，因此对于急性 I&amp;D 疼痛不安全且无效。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Morphine Sulfate; 2-4 mg; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation">硫酸吗啡 - 正确：通过静脉注射硫酸吗啡来控制右食指重罪犯切口和引流引起的急性术后疼痛和感染相关疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">G.</span><span class="option-drug">Methadone; 10 mg; route=PO</span><span class="option-tag tag-incorrect">错误</span></div><div class="option-explanation">美沙酮 - 错误：美沙酮的半衰期长且多变，且有迟发性呼吸抑制的风险，因此不适合用于可滴定的、立即急性手术后镇痛。</div></div>
+<p class="note">请返回问卷页面对以上答案和解释进行评估。</p>
+</div>
+</body>
+</html>
