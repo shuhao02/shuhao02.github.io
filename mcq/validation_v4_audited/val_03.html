@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #3 — 患者病历 (23760035)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #3：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 23760035 | 时间点 2131-04-26 14:00 | 阶段 mid | 1 个正确 / 6 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 72
+- **性别：** F
+- **服务：** 神经外科
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 左颈内动脉瘤
+
+### 现病史
+- ___ 是一名 ___ 岁女性，患有已知的左侧 ICA 动脉瘤，于 ___ 择期进行脑血管造影以进行管道栓塞。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 憩室
+- 血脂异常
+- 青光眼
+- 吸烟史，于___年戒烟
+- 高血压
+- 双膝骨关节炎
+- 骨质减少
+- 2 个血管发育不良病变的 S/p 夹闭
+- ___ 胸部神经鞘瘤 S/p 切除术
+- ___ 的 S/p 全腹部子宫切除术
+
+### 社会历史
+- 未知
+
+### 家族史
+- 没有已知的脑血管畸形家族史。
+
+### 入学前体检
+- 未知
+
+### 入院前药物
+- 阿司匹林 325mg 口服，每日一次
+- 阿托伐他汀 40mg 口服，每日一次
+- 氯吡格雷 75mg 口服，每日一次
+- 拉坦前列素 0.005% 滴眼液 1 滴 ___
+- 赖诺普利 10mg 口服，每日一次
+- 琥珀酸美托洛尔 ER 50mg 口服，每日一次
+- 米氮平 7.5mg PO ___</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2131-04-26 00:00
+[程序]
+- 使用腔内装置限制颅内动脉，经皮入路
+
+### 2131-04-26 13:00
+[处方]
+- 羟考酮--对乙酰氨基酚（5mg-325mg）； 1 个选项卡；路线=PO/NG
+- 氯化钠 0.9%； 1000毫升；路线=IV</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Sumatriptan; 50 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 由于脑血管收缩和缺血风险，曲坦类药物在脑血管疾病和动脉瘤治疗后禁用。  [为什么看起来合理] 术后头痛可能会被误解为偏头痛，而舒马普坦通常用于治疗偏头痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Meperidine; 50 mg; route=IM</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 哌替啶不适合老年人和神经外科患者，因为神经毒性代谢物会引起谵妄/癫痫发作，并且肌内注射使可靠的神经系统评估变得复杂。  [为什么看起来合理] 如果在羟考酮-对乙酰氨基酚后需要更多镇痛，替代阿片类药物似乎是合理的。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Acetaminophen; 650 mg; route=PO/NG</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 神经外科血管内手术后，患者需要术后镇痛。最初使用羟考酮和对乙酰氨基酚组合来控制疼痛；随后 14:00 的对乙酰氨基酚订单可能反映了继续控制疼痛，同时最大限度地减少老年患者阿片类药物的暴露。这与颅内手术后的标准多模式镇痛策略一致。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Aspirin; 650 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 她已经每天接受 325 毫克阿司匹林进行支架治疗；增加 650 毫克镇痛剂量会显着增加颅内干预后出血的风险。  [为什么看起来合理]阿司匹林是一种非阿片类镇痛药，有些人可能会替代对乙酰氨基酚来控制疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Ketorolac; 30 mg; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 最近的神经外科/血管内手术以及接受双重抗血小板治疗的高出血风险患者是禁忌的。  [为什么看起来合理]酮咯酸是一种有效的阿片类药物节省剂，通常添加用于治疗术后急性疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Ibuprofen; 600 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 在服用阿司匹林和氯吡格雷期间放置颅内支架后，布洛芬会增加出血风险，并可能削弱阿司匹林的抗血小板作用，使其不安全。  [为什么看起来合理] 作为多模式镇痛的一部分，非甾体抗炎药通常用于治疗术后疼痛。</div></div>
+</div>
+</body>
+</html>

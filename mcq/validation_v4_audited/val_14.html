@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #14 — 患者病历 (28705770)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #14：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 28705770 | 时间点 2182-05-16 08:00 | 阶段 late | 1 个正确 / 6 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 56
+- **性别：** F
+- **服务：**骨科
+- **过敏：** 羟考酮/度洛西汀
+- **种族：** 黑人/非裔美国人
+- **婚姻状况：** 丧偶
+- **语言：** 英语
+- **保险：** 医疗补助
+
+### 主要投诉
+- 左臀部疼痛
+
+### 现病史
+- ___ 岁女性，患有左髋骨关节炎，在这里与 ___ 医生一起进行选择性左全髋关节置换术。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 哮喘
+- 肥胖
+- 子宫内膜异位症
+
+### 社会历史
+- 未知
+
+### 家族史
+- 非缴费型
+
+### 入学前体检
+- 未知
+
+### 入院前药物
+- 对乙酰氨基酚 1000 mg PO Q8H
+- 氯沙坦钾 100 毫克，每日口服
+- 氢氯噻嗪 12.5 mg 每日口服
+- 沙丁胺醇 0.083% Neb Soln 1 NEB IH Q6H:PRN 喘息/抽泣
+- 沙丁胺醇吸入器 ___ PUFF IH Q4H:PRN 喘息/抽泣</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2182-05-15 14:02
+[放射学]
+- 放射学笔记：调查结果：
+  患者接受左全髋关节置换术后，整体解剖结构接近
+  对齐。  没有证据表明硬件相关的并发症或
+  前列腺周围骨折。  肿胀和皮下气肿是相容的
+  最近接受过手术。  周围也注意到严重的退行性变化
+  右髋关节间隙丧失、软骨下硬化和囊性病变作为证据
+  改变。
+  
+  印象：
+  新的左髋假体，总体上接近解剖学对齐。
+
+### 2182-05-15 16:00
+[处方]
+- 0.9% 氯化钠； 100毫升；路线=IV
+- 头孢唑林； 3克；路线=IV
+
+### 2182-05-15 17:00
+[处方]
+- 昂丹司琼； 4毫克；路线=IV
+- 酮咯酸； 15毫克；路线=IV
+- 氯沙坦钾； 100毫克；路线=PO/NG
+- 沙丁胺醇吸入器； 1-2 泡；路线=IH
+- 沙丁胺醇 0.083% Neb Soln； 1 个 NEB；路线=IH
+- 氢吗啡酮（Dilaudid）； 0.125毫克；路线=IV
+- 乳酸林格氏菌； 1000毫升；路线=IV
+- 对乙酰氨基酚； 1000毫克；路线=PO/NG
+- 氢吗啡酮（Dilaudid）； 2-4毫克；路线=PO/NG
+- 氢氯噻嗪； 12.5毫克；路线=PO/NG
+
+### 2182-05-15 18:00
+[处方]
+- 昂丹司琼； 4毫克；路线=IV
+
+### 2182-05-15 20:00
+[处方]
+- 多库酯钠； 100毫克；路线=PO/NG
+- 塞纳； 8.6毫克；路线=PO/NG
+
+### 2182-05-16 00:00
+[程序]
+- 用聚乙烯合成替代品上的陶瓷替代左髋关节，非骨水泥，开放式入路
+
+### 2182-05-16 07:40
+[实验室]
+- 血红蛋白[血液]（血液学）：8.9 g/dL
+- 血细胞比容[血液]（血液学）：29.3 %
+- L [血液]（化学）：5
+- 我[血液]（化学）：1
+- H [血液]（化学）：6
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 肌酐[血液]（化学）：0.6 mg/dL</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Tranexamic Acid; 1 g once; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 氨甲环酸是一种抗纤维蛋白溶解剂，用于减少出血，并且不能在 THA 后提供 VTE 预防作用，因此用它代替抗凝药物无法预防 VTE。  [为什么看起来合理]术后贫血可能会促使优先考虑出血控制策略，而不是开始抗凝治疗。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Apixaban; 2.5 mg; route=PO/NG</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 阿哌沙班 2.5 mg PO 用于预防选择性全髋关节置换术术后静脉血栓栓塞。患者的肥胖和手术性质使她面临 VTE 的高风险，并且她稳定的术后血红蛋白表明没有抗凝禁忌症。阿哌沙班是一种指南支持的口服药物，用于预防全髋关节置换术后的 VTE。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Enoxaparin; 1 mg/kg every 12 hours; route=SC</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 每 12 小时 1 mg/kg 的依诺肝素是已确定的 VTE 的治疗剂量，而不是 THA 术后的预防剂量，并且会增加出血风险。  [为什么看起来合理] 由于肥胖会增加 VTE 风险，基于体重的 LMWH 方案对于确保充分的抗凝治疗似乎是明智的。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Rivaroxaban; 20 mg daily; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 利伐沙班每天 20 mg 是治疗剂量，而不是 THA 后预防方案，会使患者面临不必要的出血风险。  [为什么看起来合理]考虑到肥胖和术后 VTE 风险升高，人们可能会过度升级至治疗强度 DOAC 以提供额外保护。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Dabigatran; 150 mg twice daily; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 达比加群 150 毫克每天两次是一种治疗/房颤治疗方案，而不是适当的 THA 后预防剂量，会增加不必要的出血风险。  [为什么看起来合理]因为它是像阿哌沙班一样的 DOAC，处方者可能会错误地认为术后预防的可互换性。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Clopidogrel; 75 mg daily; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 氯吡格雷是一种抗血小板药物，不能在 THA 后提供有效的 VTE 预防，并且会增加出血风险，且没有静脉抗凝功效。  [为什么看起来合理] 在进行高 VTE 风险手术后，临床医生可能会错误地认为任何抗血栓药物（包括抗血小板药物）足以预防。</div></div>
+</div>
+</body>
+</html>

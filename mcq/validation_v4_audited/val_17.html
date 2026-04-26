@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #17 — 患者病历 (24493538)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #17：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 24493538 | 时间点 2126-06-08 01:00 | 阶段 early | 2 个正确 / 7 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 45
+- **性别：** 男
+- **服务：**骨科
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 黑人/非裔美国人
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 医疗补助
+
+### 主要投诉
+- 右髋骨关节炎
+
+### 现病史
+- ___ y/o M，有右髋骨关节炎病史，保守措施失败并选择接受明确的手术治疗。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 2型糖尿病
+- 高脂血症
+- 骨关节炎，右髋
+
+### 社会历史
+- 未知
+
+### 家族史
+- 非缴费型
+
+### 入学前体检
+- 身体状况良好，无急性不适  
+- 无发热且生命体征稳定  
+- 疼痛得到良好控制  
+- 呼吸系统：CTAB  
+- 心血管：RRR  
+- 胃肠道：NT/ND  
+- 泌尿生殖系统：独立排尿  
+- 神经系统：完好无损，无局灶性缺陷  
+- 精神科：愉快，A&amp;O x3  
+- 下肢肌肉骨骼：  
+  * 切口用钉书钉愈合良好  
+  * 大腿饱满但柔软  
+  * 小腿无压痛  
+  * ___ 强度  
+  * 远端 SILT、NVI  
+  * 脚趾温暖
+
+### 入院前药物
+- 阿托伐他汀 40 mg PO QPM 
+- 非诺贝特 145 毫克，每日口服 
+- 二甲双胍（格华止）500 毫克，每日口服</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2126-06-08 00:00
+[程序]
+- 用聚乙烯合成替代品上的陶瓷替代右髋关节，开放式入路</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Lidocaine; 5% patch (1 patch); route=transdermal</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 5% 利多卡因贴片仅具有表面渗透性，对深部髋关节置换术疼痛无效，并且不应将其贴在带有钉书钉的新手术切口上方或附近。  [为什么看起来合理] 局部麻醉剂有时用于治疗神经性疼痛，可考虑减轻术后疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Oxycodone Extended-Release; 20 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]缓释羟考酮不适合治疗未使用过阿片类药物的患者术后急性疼痛，因为它的滴定性较差，并且会增加过度镇静和呼吸抑制的风险。  [为什么看起来合理] 全髋关节置换术后严重的术后疼痛可能会导致人们选择强效阿片类药物进行镇痛。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Acetaminophen; 1000 mg; route=PO</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 对乙酰氨基酚 1000 mg 口服，作为右全髋关节置换术后疼痛管理的一部分。考虑到预期的手术疼痛以及对节省阿片类药物的多模式镇痛方法的需求，对乙酰氨基酚提供了基线镇痛，在没有禁忌症的情况下具有良好的安全性。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Amitriptyline; 75 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]阿米替林镇痛起效延迟，并且在围术期具有显着的抗胆碱能和镇静风险，不会立即带来益处，并且术后副作用增加。  [为什么看起来合理] 糖尿病会增加神经性疼痛的敏感性，三环类抗抑郁药可用于治疗神经性疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Naltrexone; 50 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 纳曲酮是一种纯阿片类拮抗剂，没有镇痛作用，会在术后立即阻止任何所需的阿片类药物救援，从而恶化疼痛控制。  [为什么看起来合理]阿片类药物相关药物可能被错误地认为可以通过调节阿片类药物途径来帮助控制预期的术后疼痛。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Pregabalin; 75 mg; route=PO/NG</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 选择普瑞巴林 75 mg PO/NG 作为右髋关节置换术后多模式疼痛治疗方案的一部分。它针对与大型骨科手术和糖尿病患者相关的神经病理性和中枢敏化机制，从而提高镇痛效果并帮助最大限度地减少阿片类药物的需求。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">G.</span><span class="option-drug">Meperidine; 100 mg; route=IM</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 由于神经毒性代谢物（去甲哌啶）的积累和安全性较差，不鼓励使用哌替啶用于术后镇痛，而肌内注射是一种可以避免的、痛苦的途径。  [为什么看起来合理] 作为一种阿片类镇痛药，哌替啶似乎适合缓解术后急性疼痛。</div></div>
+</div>
+</body>
+</html>

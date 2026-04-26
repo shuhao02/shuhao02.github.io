@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #20 — 患者病历 (20167599)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #20：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 20167599 | 时间点 2193-10-30 21:00 | 阶段 early | 3 个正确 / 8 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 54
+- **性别：** 男
+- **服务：** 心胸科
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 亚治疗INR
+
+### 现病史
+- ___ 先生是一名 ___ 男性 s/p Bentall，患有 A 型解剖 ___。他的术后病程很顺利，并于术后第六天出院，INR 为 2.3。 Coumadin 由___ 博士管理。今天检查了他的INR，发现为1.6。随后，他被送往急诊室，并重新入院接受静脉注射肝素。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- A 型主动脉夹层、s/p 修复病史  
+- 高血压  
+- 高脂血症  
+- s/p胆囊切除术  
+- s/p跟腱修复
+
+### 社会历史
+- 未知
+
+### 家族史
+- 父亲患有A型解剖
+
+### 入学前体检
+- **脉搏：** 78  
+- **回复：** 14  
+- **氧气饱和度：** 99  
+- **BP 右：** 156/80  
+- **左血压：** 157/82  
+- **一般：** NAD 中的 WDWN  
+- **皮肤：** 干燥 [x] 完好无损 [x]  
+- **HEENT：** PERRLA x[x] EOMI [x]  
+- **颈部：** 柔软 [x] 完整 ROM [x]  
+- **胸部：** 双侧肺部清晰 [x]  
+- **心：** RRR [x] 不规则 [] 杂音 - 清脆的咔哒声  
+- **腹部：** 软 [xx] 不膨胀 x[] 无压痛 x[] 肠鸣音 + [x]  
+- **四肢：** 温暖 [x]，灌注良好 [x] 水肿 [] 静脉曲张：无 [x]  
+- **神经：** 完好无损 [x]  
+- **脉冲：**  
+  股骨右：2 左：2  
+  - DP 右：2 左：2  
+  - ___ 右：2 左：2  
+  径向右：2 左：2  
+
+### 入院前药物
+- 赖诺普利每日 5 毫克  
+- 每日 5 毫克香豆素  
+- 每天 81 毫克 ASA  
+- Percocet prn  
+- 辛伐他汀每日 10 毫克  
+- Lopressor 25mg TID  
+- 胺碘酮 400mg BID</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2193-10-30 10:00
+[处方]
+- 赖诺普利； 10毫克；路线=PO/NG
+- 赖诺普利； 5毫克；路线=PO/NG
+
+### 2193-10-30 18:02
+[放射学]
+- 放射学笔记：调查结果：
+  可能存在未改变的轻微左侧心后混浊
+  代表肺不张。  双侧胸膜轻度增厚。轻度
+  心脏扩大，但无肺水肿。二尖瓣置换术后的状态。
+  
+  印象：
+  未改变的轻度心后混浊可能代表
+  肺不张。  没有肺炎的证据。
+
+### 2193-10-30 20:00
+[处方]
+- 酒石酸美托洛尔； 25毫克；路线=PO/NG
+- 胺碘酮； 400毫克；路线=PO/NG
+- 多库酯钠； 100毫克；路线=PO</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Heparin; 5,000 units; route=SC</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 预防性皮下肝素剂量不足以进行高风险机械瓣膜桥接，需要连续治疗性静脉注射肝素滴定至 aPTT。  [为什么看起来合理] 它提供抗凝预防作用，可能会被误认为是亚治疗 INR 的充分桥接。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">5% Dextrose; 250 mL; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 订购 5% 葡萄糖 IV 作为连续肝素输注的兼容载体。它为肠外给药提供等渗液体，无禁忌条件。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Rivaroxaban; 20 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 直接口服抗凝剂（如利伐沙班）对于机械人工心脏瓣膜患者是禁忌的，并且不应在这种情况下用于桥接。  [为什么看起来合理] 作为一种口服抗凝剂，它可能被视为亚治疗华法林期间的方便替代品。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Heparin Sodium; 25,000 UNIT; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 对于一名 INR 低于目标值的机械主动脉瓣患者，开始静脉输注肝素钠作为桥接抗凝治疗。它确保持续防止血栓栓塞，直到华法林效果恢复到治疗范围。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Lactated Ringer's; 250 mL; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 肝素与含钙溶液（如乳酸林格氏液）不相容，有沉淀和失去活性的风险；应使用D5W或生理盐水。  [为什么看起来合理]它是一种常用的晶体，有些人可能认为它可以与肝素载体互换。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Influenza Virus Vaccine; 0.5 mL; route=IM</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 一名患有心血管疾病、心脏手术后康复的中年男性订购了流感疫苗作为预防性免疫接种。它可以降低无禁忌症患者发生流感相关发病率和术后并发症的风险。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">G.</span><span class="option-drug">Alteplase; 100 mg; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]没有诊断出血栓；进行全身溶栓会使患者面临不必要的出血风险，并且 INR 较低时不宜进行。  [为什么看起来合理]它是一种用于治疗急性血栓形成的有效抗血栓药，当血栓形成风险突出时，这似乎是合适的。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">H.</span><span class="option-drug">Influenza Vaccine Live Attenuated; 0.2 mL; route=IN</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 鼻内减毒活疫苗禁用于患有慢性心血管疾病的成人，也不推荐用于住院患者；应使用灭活肌注疫苗。  [为什么看起来合理]它实现了流感季节住院期间相同的流感预防目标。</div></div>
+</div>
+</body>
+</html>

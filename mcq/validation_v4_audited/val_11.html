@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #11 — 患者病历 (27472757)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #11：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 27472757 | 时间点 2142-11-16 21:00 | 阶段 early | 1 个正确 / 6 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 91
+- **性别：** 男
+- **服务：** 医学
+- **过敏：**氢可酮-乙酰氨基酚/蜜蜂/唑吡坦
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- s/p ercp
+
+### 现病史
+- ___ 先生是一位 ___ 功能强大的社区居住男性，患有严重 AS、HFpEF，服用 Coumadin 后没有心房颤动（在本演示之前），最初患有胆总管结石/胆管炎和脓毒症，需要短期升压药。 ERCP ___ 远端 CBD 结石。给予抗凝状态，取出结石并放置支架，无需进行括约肌切开术。他提出进行支架移除和 Coumadin 括约肌切开术。 S/p ERCP 包括括约肌切开术、结石和污泥清除。先前放置的支架已自行排出。到达楼层后，他没有报告恶心、呕吐、胸痛、气短、排尿困难或其他与性有关的症状。作者与他的女儿交谈，女儿证实，患者出院回家后，从使用助行器行走到独立行走，取得了持续的进步。她证实，正如他所描述的那样，他在家里非常活跃。
+
+### 系统审查（准入前）
+- HPI 中指出的相关积极因素和消极因素。所有其他系统均经过审查，结果是否定的。
+
+### 既往病史
+- 服用华法林的慢性心房颤动
+- 严重主动脉瓣狭窄 ___ 0.9 cm2)
+- HFpEF
+- 高胆固醇血症 
+- 骨关节炎，局部，膝关节 
+- 青光眼 
+- 对毒液过敏或中毒反应 
+- 前列腺肥大，良性 
+- PSA升高 
+- 季节性过敏
+
+### 社会历史
+- ___
+
+### 家族史
+- 非缴费型
+
+### 入学前体检
+- 一般：警报和
+- 眼睛：无黄疸 
+- CV：心 RRR 
+- RESP：肺部 CTAB
+- 胃肠道：腹部柔软、不膨胀、触诊无压痛。存在肠鸣音。 
+- GU：无耻骨上丰满度或触诊压痛
+- MSK：颈部柔软
+- 皮肤：未发现皮疹或溃疡
+- 神经：警觉、定向、面部对称、目光与 EOMI 共轭、言语流利、四肢活动、轻触感觉始终完好无损
+- 心理：愉快、适当
+
+### 入院前药物
+- 琥珀酸美托洛尔 XL 50 毫克，每日口服 
+- 托塞米 10 毫克，每日口服 
+- 华法林 2.5 毫克，每日口服 16</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>（没有之前的事件）</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Dextrose; 1000 mL of 5% solution IV infusion; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] D5W 是低渗且缺乏电解质，对于需要等渗维持的老年 ERCP 术后患者来说，存在低钠血症和补充不足的风险。  [为什么看起来合理] 作为手术后的维护液，可以考虑使用含葡萄糖的溶液进行水合作用。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Albumin; 100 mL of 25% solution (25 g) IV infusion; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 没有低白蛋白血症或肝硬化等迹象，高渗白蛋白不能满足日常维护需求，并可能导致不必要的液体转移。  [为什么看起来合理]白蛋白可能被视为一种在最近患重病后体弱的老年人中用较少的总液体来增加血浆容量的方法。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Sodium Chloride; 2000 mL of 0.9% solution IV bolus; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 他目前病情稳定，患有严重主动脉瓣狭窄和 HFpEF，因此 2 L 推注可能会在没有指征的情况下导致急性容量超负荷和肺水肿。  [为什么看起来合理]考虑到他最近的败血症和先前的血流动力学压力，大量等渗盐水推注可能看起来是谨慎的，以防止不稳定。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Furosemide; 20 mg IV push; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]他需要温和的补水而不是利尿，对于稳定的 ERCP 后患者，呋塞米可能会导致血容量不足、肾脏灌注不足和低血压。  [为什么看起来合理] 考虑到 HFpEF 和高龄患者对液体超负荷的担忧，小剂量的利尿剂似乎可以在术后起到预防作用。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Lactated Ringers; 1000 mL; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 一名 91 岁男性从先前的胆管炎和败血症中恢复过来，在 ERCP 括约肌切开术后，将乳酸林格氏 IV 用作维持液。考虑到他最近接受的侵入性手术、高龄和短暂的血流动力学不稳定病史，使用等渗平衡溶液进行温和的水化适合维持循环稳定性并促进康复。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Hydroxyethyl Starch; 500 mL of 6% solution IV infusion; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 羟乙基淀粉与急性肾损伤和凝血病有关，此处未指出，特别是在有出血风险且无休克的括约肌切开术后。  [为什么看起来合理] 为了有效地支持脓毒症后易受伤害的人的血管内容量，像 HES 这样的胶体可能看​​起来很有吸引力。</div></div>
+</div>
+</body>
+</html>

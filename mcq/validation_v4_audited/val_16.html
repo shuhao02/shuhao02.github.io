@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #16 — 患者病历 (29147495)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #16：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 29147495 | 时间点 2140-10-31 08:00 | 阶段 early | 1 个正确 / 6 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 37
+- **性别：** 男
+- **服务：** 精神病学
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- “我的艺术让我来到这里”
+
+### 现病史
+- ___ 先生，患有抑郁症和焦虑症，由妻子在 PCP 转诊时导致，在最近开始服用西酞普兰 (___) 的情况下，情绪高涨、睡眠不佳和行为异常，持续了 ___ 周。他目前表示，他有很多项目正在进行，但他不确定自己为什么来这里。他说他“在___方面变得更有创造力”，但从未拥有“他现在拥有的灵感或能量”。他否认 SI/SA。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 既往病史：否认
+
+### 社会历史
+- 未知
+
+### 家族史
+- 患者报告有酗酒、关节炎、胃癌、淋巴瘤、皮肤癌、抑郁症、高血压、高胆固醇、精神疾病和溃疡的家族史。  
+- 关于他的精神疾病家族史，他确实报告了抑郁症和双向情感障碍病史。  
+- 他还报告了他的家族有自杀史。
+
+### 入学前体检
+- *VS:* 血压：146/90 心率：69 温度：98.3 呼吸：16 氧饱和度：99% RA 体重：171  
+- *一般外观：* NAD  
+- *HEENT：* NC/AT、PERRL、EOMI，无眼球震颤，口腔粘膜粉红色且湿润  
+- *颈部：*无 LAD  
+- *CV:* RRR 无 m/r/g  
+- *肺：* CTA B  
+- *腹部：* 柔软，NT，ND，+BS  
+- *四肢：*无水肿  
+- *神经系统：*步态稳定、平衡；正常语气，自始至终强度； CN II-XII 完好无损  
+- *外观：*整洁，穿着病号服，指甲下有污垢  
+- *行为：*合作，但很健谈，当他偏离主题时他会停下来  
+- *情绪和情感：*“困惑”，情感是欣快的  
+- *思维过程：*有时离题  
+- *思想内容：*否认当前的AH或VH，否认SI/HI，宏大的想法  
+- *判断力和洞察力：*差/差  
+- *认知：*警报，Ox3； Serial 7 和 DOWB 完好无损； 1.75 美元=7 个季度；正确解释两句谚语  
+- *言语：*有压力，正常音量和语气  
+- *语言：*流利
+
+### 入院前药物
+- 每日西酞普兰 20 毫克（开始___）</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2140-10-30 08:00
+[处方]
+- 尼古丁贴片； 14毫克；路线=TD
+
+### 2140-10-30 22:00
+[处方]
+- 氢氧化铝镁.-西甲硅油； 30毫升；路线=PO
+- 尼古丁 Polacrilex； 1 个 STCK；路线=PO
+- 劳拉西泮； 1毫克；路线=PO/NG
+- 氧化镁乳； 30毫升；路线=PO
+- 对乙酰氨基酚； 650 毫克；路线=PO
+- 酒石酸唑吡坦； 5毫克；路线=PO</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Nortriptyline; 25 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 去甲替林是一种抗抑郁药，会加剧躁狂，不适合在急性躁狂发作期间开始戒烟。  [为什么看起来合理] 去甲替林有一些戒烟证据，因此在开始 NRT 治疗时可以用它来替代。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Varenicline; 1 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 在急性精神不稳定（躁狂）期间以维持剂量开始伐尼克兰而不进行滴定是不合适的，并且存在神经精神不良反应的风险。  [为什么看起来合理] 14 mg 控制不充分后升级治疗可能会被误读为需要改用伐尼克兰等一线非 NRT 选项。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Nicotine Patch; 21 mg; route=TD</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 前一天初始治疗后，尼古丁贴片透皮剂量从 14 mg 增加至 21 mg。这可能反映了滴定以实现足够的尼古丁替代以戒烟或管理尼古丁依赖，确保住院期间控制戒断症状。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Clonidine; 0.2 mg/24 hr; route=TD</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]可乐定不是治疗尼古丁依赖的指定或有效的主要疗法，并且会增加低血压/镇静风险，而无法解决烟瘾。  [为什么看起来合理] 由于尼古丁戒断会导致自主神经症状，临床医生可能会考虑可乐定来减弱这些影响。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Bupropion; 150 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 安非他酮是一种抗抑郁药，可引发或加重躁狂，不适合在急性躁狂发作期间使用。  [为什么看起来合理] 如果 14 毫克还不够，临床医生可能会认为添加安非他酮等非尼古丁药物可以更好地控制烟瘾。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Nicotine; 7 mg; route=TD</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 由于对 14 毫克的控制不充分，减少到 7 毫克的贴片将无法充分治疗戒断和烟瘾。  [为什么看起来合理] 有人可能会误解剂量阶梯，并认为在评估症状时逐渐减少到 7 毫克更安全。</div></div>
+</div>
+</body>
+</html>

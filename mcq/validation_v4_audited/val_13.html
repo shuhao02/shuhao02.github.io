@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #13 — 患者病历 (26720982)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #13：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 26720982 | 时间点 2172-12-15 15:00 | 阶段 mid | 1 个正确 / 6 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 59
+- **性别：** F
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 其他
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 黑色凳子
+
+### 现病史
+- ___ 患有肌瘤，HL，最近评估梗阻性黄疸，带支架的 s/p ERCP，出现黑色粪便 x 1 天。  自从接受 ERCP 以来，除了持续的腹胀之外，她的情况良好。  她避免吃固体食物，而是坚持流质饮食。  她表示，自出院以来，她没有出现任何发烧/发冷、全身疼痛、恶心/呕吐的症状。  她说，今天上午她出现了两次小量的“黑便”。  她否认粪便中有清澈/纯血。  她否认 BM、CP/SOB、触诊或头晕疼痛。  这以前从未发生过。  她在这里提出进一步评估。  值得注意的是，她否认任何新药物。
+
+### 系统审查（准入前）
+- 除上述情况外，ROS 阴性 10 分
+
+### 既往病史
+- 胆道梗阻和可能的壶腹肿块，s/p ERCP 支架置入 ___
+- 间歇性头痛 - 使用非处方药 Excedrin 或类似药物改善
+- 高脂血症——吃鱼油
+- 子宫肌瘤病史——未进行干预
+- 乳房微钙化
+- 甲状腺囊肿——患者无法表达此 dx
+
+**既往手术史：**
+- s/p R 卵巢切除术于 ___ 于 ___ 治疗卵巢囊肿
+- 否认其他手术
+
+### 社会历史
+- ___
+
+### 家族史
+- 否认任何癌症病史
+- 母亲患有高血压
+- 家族中没有其他疾病
+
+### 入学前体检
+- VS：T 98.8，BP 128/70，HR 64，RR 16，100%RA
+- Gen：在 NAD 中表现出色
+- HEENT：OP 透明，无合并苍白，EOMI
+- 颈部：柔软，无 LAD
+- 心：RRR 没有 mrg
+- 肺：CTAb 无喘息或爆裂音
+- Abd：柔软，NT，轻度膨胀，缺乏 BS，无反弹或防护
+- 外部：温暖，灌注良好，无水肿
+- 皮肤：无瘀斑或皮疹
+- 神经：CN II-XII 完整，注意力良好，力量自始至终对称完整
+
+### 入院前药物
+- 羟嗪 25 mg PO Q6H:PRN 止痒 
+- Excedrin 偏头痛*NF*（阿司匹林-乙酰氨基酚-咖啡因）250-250-65 mg 每日口服：PRN 头痛 
+- 鱼油（欧米伽 3）1000 毫克，每日口服 
+- 维生素 D ___ 每日 PO 单位 
+- 氢化可的松乙酸 *NF* ___ % ___ 耳朵发痒</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2172-12-15 10:00
+[处方]
+- 维生素D； 2000 单位；路线=PO/NG
+- 鱼油（欧米伽3）； 1000毫克；路线=PO</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option incorrect"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">Desmopressin; 0.3 mcg/kg; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 去氨加压素不会逆转阿司匹林在胃肠道出血中的抗血小板作用，因此不推荐用于阿司匹林相关的 UGIB，同时会带来低钠血症风险，但没有经过证实的益处。  [为什么看起来合理]阿司匹林暴露会损害血小板功能，表明去氨加压素可能有助于改善血小板粘附。</div></div>
+<div class="option correct"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Pantoprazole; 40 mg; route=IV</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 泮托拉唑 IV 用于治疗疑似上消化道出血且表现为黑色大便的患者。患者近期接受 ERCP 的病史和间歇性使用含阿司匹林的药物会增加粘膜损伤的风险。静脉注射 PPI 疗法可减轻潜在出血部位与酸相关的降解，并与疑似上消化道出血的循证初始治疗相一致。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Octreotide; 50 mcg bolus, then 50 mcg/hour infusion; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]指南保留奥曲肽用于疑似静脉曲张出血，不推荐用于非静脉曲张性上消化道出血，因为这里没有文件表明静脉曲张的来源。  [为什么看起来不错] Melena 提示存在上消化道出血，这可能会促使考虑使用血管活性疗法治疗胃肠道出血。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Bismuth Subsalicylate; 524 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]碱式水杨酸铋含有水杨酸盐，会加重出血，使大便颜色变深，模糊对持续出血的评估，并且它不能治疗 UGIB。  [为什么看起来不错] 黑色粪便可能被误认为是良性消化不良或腹泻，需要进行对症止泻治疗。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Piperacillin-Tazobactam; 3.375 g every 6 hours; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 她没有发烧，也没有腹痛，抗生素不能治疗胃肠道出血引起的黑便，因此哌拉西林-他唑巴坦不适合本次介绍。  [为什么看起来合理] 最近的 ERCP 引起了对需要广谱抗生素的术后胆管炎或胆道感染的担忧。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Tranexamic Acid; 1 g; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 大型随机试验和指南显示氨甲环酸对胃肠道出血没有益处，并且有癫痫和血栓形成等潜在危害，因此不应将其用于疑似 UGIB。  [为什么看起来合理] 活动性胃肠道出血可能导致使用抗纤维蛋白溶解剂来增强止血。</div></div>
+</div>
+</body>
+</html>

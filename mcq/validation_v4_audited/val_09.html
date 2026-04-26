@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证 #9 — 患者病历 (24568861)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4a73 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.9; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .option {
+    padding: 12px 16px; margin-bottom: 8px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+  .option-letter { font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 24px; }
+  .option-drug { font-weight: 600; font-size: 14px; }
+  .option-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .option-explanation {
+    font-size: 13px; color: #4a5568; margin-top: 6px; padding-left: 34px;
+  }
+  .option-explanation .label { font-weight: 600; color: #2d3748; }
+  a.home {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<a class="home" href="index.html">← 返回索引</a>
+<div class="header">
+  <h1>验证 #9：临床用药决策 MCQ</h1>
+  <div class="meta">住院号 24568861 | 时间点 2157-11-28 08:00 | 阶段 early | 1 个正确 / 6 个选项</div>
+</div>
+
+<div class="section">
+  <h2>患者信息</h2>
+  <pre>### 患者信息
+- **年龄：** 64
+- **性别：** 男
+- **服务：** 手术
+- **过敏：** 类固醇/乳胶
+- **种族：** 黑人/非裔美国人
+- **婚姻状况：** 离婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 慢性阑尾炎
+
+### 现病史
+- 患者是一名 ___ 男性，有阑尾炎穿孔病史。他接受了___引流管放置和抗生素治疗。在办公室随访期间，他的引流管被拔除，现在他正在接受术前评估。在讨论了所有风险、益处和可能的结果后，患者被安排进行选择性阑尾切除术。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 二甲双胍和 SSI 的 DMII
+- 糖尿病神经病变
+- 哮喘
+-HTN
+- 持续气道正压通气 (CPAP) 上的 OSA
+
+### 社会历史
+- 未知
+
+### 家族史
+- 常闭
+
+### 入学前体检
+- VS：99.2、95、130/84、18、95% RA
+- GEN：NAD，愉快 
+- CV：RRR，无 m/r/g
+- 普尔：CTAB
+- ABD：柔软、膨胀。用U形钉和c/d/i将右侧肋下和脐周切口开放至空气中。
+- EXTR：温暖，无 c/c/i
+
+### 入院前药物
+- 赖诺普利 10 毫克，每日口服 
+- 二甲双胍（格华止）500 mg PO BID 
+- 沙丁胺醇吸入器 1 口 IH 每日：PRN 喘息 
+- 丙酸氟替卡松鼻塞 1 SPRY NU DAILY 
+- 氢氯噻嗪 12.5 mg 每日口服 
+- 阿司匹林 81 毫克，每日口服 
+- 氯雷他定 10 毫克，每日口服</pre>
+</div>
+
+<div class="section">
+  <h2>住院期间临床时间线</h2>
+  <pre>### 2157-11-27 00:00
+[程序]
+- 其他阑尾切除术
+
+### 2157-11-27 21:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 赖诺普利； 10毫克；路线=PO/NG
+- 胰高血糖素； 1毫克；路线=IM
+- 葡萄糖凝胶； 15克；路线=PO
+- 乳酸林格氏菌； 1000毫升；路线=IV
+- 昂丹司琼； 4毫克；路线=IV
+- 葡萄糖 50%； 12.5克；路线=IV
+- 0.9% 氯化钠； 100毫升；路线=IVPCA
+- 氢吗啡酮； 20毫克；路线=IVPCA
+
+### 2157-11-27 22:00
+[处方]
+- 二甲双胍（格华止）； 500毫克；路线=PO
+- 胰岛素； 0 单位；路线=SC
+
+### 2157-11-28 02:00
+[处方结束]
+- 二甲双胍（格华止）； 500毫克；路线=PO
+
+### 2157-11-28 07:00
+[处方结束]
+- 乳酸林格氏菌； 1000毫升；路线=IV
+- 氢吗啡酮； 20毫克；路线=IVPCA
+- 0.9% 氯化钠； 100毫升；路线=IVPCA</pre>
+</div>
+
+<div class="section">
+  <h2>用药选项及解释</h2>
+  <div class="option correct"><div class="option-header"><span class="option-letter">A.</span><span class="option-drug">OxycoDONE (Immediate Release); 5 mg; route=PO/NG</span><span class="option-tag tag-correct">正确</span></div><div class="option-explanation"><span class="label">理由:</span> 选择性阑尾切除术后，随着患者恢复并能耐受经口摄入，停止静脉注射 PCA 镇痛。为了在从静脉注射治疗过渡到口服治疗期间维持术后疼痛控制，速释羟考酮 5 mg PO 被处方为适当的口服阿片类镇痛药，用于治疗中度手术疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">B.</span><span class="option-drug">Morphine; 30 mg ER; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错]缓释吗啡不适用于未使用过阿片类药物的患者的急性术后疼痛，并且会增加用药过量/呼吸抑制的风险，尤其是 OSA。  [为什么看起来合理] 长效阿片类药物似乎可以在手术后提供持续镇痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">C.</span><span class="option-drug">Naltrexone; 50 mg; route=PO</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 纳曲酮会阻断必要的阿片类镇痛，并在术后立即引发不受控制的疼痛。  [为什么看起来合理]阻断阿片受体似乎是减少手术后阿片类药物相关不良反应的一种策略。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">D.</span><span class="option-drug">Dexamethasone; 8 mg; route=IV</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 患者有类固醇过敏记录，地塞米松不是治疗术后急性疼痛的合适主要镇痛药。  [为什么看起来合理]围手术期类固醇可能被误解为有助于缓解术后炎症和疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">E.</span><span class="option-drug">Fentanyl; 50 mcg/hr; route=TD</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 由于起效延迟和呼吸抑制的高风险，透皮芬太尼禁用于急性术后疼痛和未使用过阿片类药物的患者（尤其是 OSA）。  [为什么看起来合理]阿片类镇痛药似乎适合治疗手术病房持续的术后疼痛。</div></div>
+<div class="option incorrect"><div class="option-header"><span class="option-letter">F.</span><span class="option-drug">Meperidine; 100 mg; route=IM</span><span class="option-tag tag-incorrect">干扰项(错)</span></div><div class="option-explanation"><span class="label">解释:</span> [为什么错] 由于神经毒性代谢物积累和中枢神经系统毒性，不建议使用哌替啶用于术后镇痛，并且一旦耐受 PO，它就会忽略降级至口服治疗。  [为什么看起来合理] 如果停止 IV PCA 后仍需要控制疼痛，继续肠外阿片类药物似乎是合理的。</div></div>
+</div>
+</body>
+</html>
