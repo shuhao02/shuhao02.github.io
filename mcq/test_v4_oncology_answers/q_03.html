@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 3 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 3 题 — 答案及解析</h1>
+  <div class="meta">住院号 21202051 · 决策时间 2163-02-12 10:00 · 共 7 个选项 · 2 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> A, C
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 31
+- **性别：** F
+- **服务：** 手术
+- **过敏：**乳糖
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 怀疑甲状腺乳头状癌。
+
+### 现病史
+- 患者是一名 ___ 女性，多年来一直因多结节性甲状腺肿而接受随访。在最近的一次超声检查中，在甲状腺右叶发现了一个新的、更明显的结节，直径为 1.3 厘米。此外，患者左侧有一个较小的优势结节，最大直径为 0.7 厘米。已对右侧甲状腺结节进行超声引导下细针抽吸活检，细胞学检查怀疑甲状腺乳头状癌。在讨论了不同的治疗方案后，患者今天提出进行甲状腺全切除术。与该程序相关的风险和收益已被详细讨论，并已签署同意书。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 甲状腺功能减退症
+- 多结节性甲状腺肿
+- 运动诱发哮喘
+- 癫痫症
+- PSH：c-sxn x2
+
+### 社会历史
+- 未知
+
+### 家族史
+- 一位患有甲状腺癌的表弟。
+
+### 入学前体检
+- VS：98.8 83 98/63 18 98%RA
+- GEN：A&amp;O、NAD
+- HEENT：无巩膜黄疸，粘膜湿润
+- 切口清洁、干燥且完好。无分泌物
+CV：RRR，无 M/G/R
+- PULM：听诊 b/l 清晰，无 W/R/R
+- ABD：柔软、无膨胀、无压痛、无反跳或警戒音、肠鸣音正常、无可触及肿块
+- 外部：无 ___ 水肿，___ 温暖且灌注良好
+
+### 入院前药物
+- 沙丁胺醇吸入器 2 PUFF IH Q6H:PRN SOB
+- keppra XR 3克
+- 左旋甲状腺素 75 微克，每日口服
+-柠檬醛+D
+- 叶酸
+
+=== 院内临床时间表 ===
+### 2163-02-11 00:00
+[程序]
+- 术中神经生理学监测
+- 完整的甲状腺切除术
+- 区域淋巴结切除术
+
+### 2163-02-11 19:00
+[处方]
+- 沙丁胺醇吸入器； 2 泡；路线=IH
+- 氢吗啡酮（Dilaudid）； 0.25毫克；路线=IV
+- OxycoDONE（立即释放）； 5-10毫克；路线=PO/NG
+- 对乙酰氨基酚； 1000毫克；路线=PO/NG
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+
+### 2163-02-11 20:00
+[处方]
+- 昂丹司琼； 4毫克；路线=IV
+
+### 2163-02-11 22:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+
+### 2163-02-11 22:13
+[实验室]
+- 总钙[血液]（化学）：8.1 mg/dL
+
+### 2163-02-12 01:00
+[处方]
+- 葡萄糖酸钙； 2克；路线=IV
+- 0.9% 氯化钠； 1袋；路线=IV
+
+### 2163-02-12 04:15
+[实验室]
+- 总钙[血液]（化学）：9.0 mg/dL
+
+### 2163-02-12 09:00
+[处方]
+- 左旋甲状腺素钠； 112 微克；路线=PO/NG
+- 碳酸钙； 1500毫克；路线=PO/NG</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Calcitriol; 0.25 mcg; route=PO</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 骨化三醇用于治疗甲状腺全切除术后可能出现的暂时性甲状旁腺功能减退症的低钙血症。初始静脉钙校正和口服钙开始后，添加活性维生素D以改善肠道钙吸收并维持血清钙水平，直至甲状旁腺功能恢复。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Calcitonin; 200 IU; route=IN</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 名称相似性和内分泌背景可能会导致将降钙素与骨化三醇用于钙管理混淆。</div>
+    <div class="row"><span class="label">为何错误:</span> 降钙素会降低血清钙水平，并会加重该术后患者的低钙血症。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Calcium Carbonate; 3000 mg; route=PO/NG</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 甲状腺切除术相关的低钙血症后，增加碳酸钙剂量以维持正常钙血症。在用静脉钙纠正短暂的低钙水平后，持续口服钙剂并同时服用骨化三醇，可在术后甲状旁腺恢复期间支持稳定的钙平衡。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Ergocalciferol; 50,000 IU weekly; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 甲状腺切除术相关的低钙血症后，补充维生素 D 似乎可以增强钙的吸收。</div>
+    <div class="row"><span class="label">为何错误:</span> 麦角钙化醇需要转化为活性维生素 D，且起效缓慢，因此对于需要骨化三醇的甲状旁腺功能减退症导致的立即低钙血症无效。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Zoledronic Acid; 4 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 抗骨吸收剂用于治疗恶性肿瘤相关的高钙血症，并且可能会被错误地应用于癌症患者。</div>
+    <div class="row"><span class="label">为何错误:</span> 唑来膦酸会降低血清钙，对于有记录的术后低钙血症不适用，有出现严重症状性低钙血症的风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Cinacalcet; 30 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 当甲状腺手术后钙调节异常时，可以考虑使用调节甲状旁腺激素的药物。</div>
+    <div class="row"><span class="label">为何错误:</span> 西那卡塞会降低 PTH 和血清钙，在低钙血症中禁用，这会使患者本来就低的钙水平进一步恶化。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">G.</span>
+    <span class="opt-drug">Furosemide; 20 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 静脉钙校正后，可以选择袢利尿剂来减轻静脉输液造成的液体超负荷。</div>
+    <div class="row"><span class="label">为何错误:</span> 呋塞米会增加肾钙排泄，并会加剧该患者的低钙血症和潜在的低血压。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

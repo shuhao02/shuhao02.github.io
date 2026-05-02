@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 12 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 12 题 — 答案及解析</h1>
+  <div class="meta">住院号 23818187 · 决策时间 2146-05-30 08:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> F
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 46
+- **性别：** F
+- **服务：** 手术
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 亚洲
+- **婚姻状况：** 丧偶
+- **语言：** 中文
+- **保险：** 医疗补助
+
+### 主要投诉
+- 右腹股沟滑膜肉瘤
+
+### 现病史
+- ___ 女士是一位 ___ ___ 女性，在 ___ 处出现疼痛性右腹股沟肿块。 CT 扫描显示，她的股总动脉上有一个 3.7 厘米的软组织肿块。空心针活检显示单相型滑膜肉瘤。她接受了约 ___ 周前剂量为 5000 cGy 的术前放射治疗。她此时提出对该肉瘤进行彻底的手术切除。术前咨询了整形外科博士，以计划旋转皮瓣覆盖软组织缺损。在翻译的帮助下，与患者详细讨论了手术的风险和益处，并签署了同意书。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- Graves dz s/p RAI、甲状腺功能减退症、HTN、单相型高级滑膜肉瘤
+
+### 社会历史
+- 未知
+
+### 家族史
+- 对她妈妈的糖尿病很重要
+
+### 入学前体检
+- 不发热，VSS  
+- NAD、A 和 O x3  
+- HEENT：北卡罗来纳州、北领地  
+胸部：CTAB  
+- CV：RRR，-MRG  
+- Abd：软/NT/ND，+BS  
+- RLE：右侧腹股沟的汇合质量
+
+### 入院前药物
+- 左旋甲状腺素
+
+=== 院内临床时间表 ===
+### 2146-05-26 00:00
+[程序]
+- 肌肉或筋膜移植
+- 切除血管并替换下肢动脉
+- 滑膜切除术，其他指定部位
+- 其他部位的其他皮肤移植
+- 腹壁的其他修复
+
+### 2146-05-26 10:00
+[处方]
+- 左旋甲状腺素钠； 50 微克；路线=PO
+- 阿司匹林； 81 毫克；路线=PO
+
+### 2146-05-26 11:45
+[实验室]
+- 淋巴细胞[血液]（血液学）：3.5 %
+- 血小板计数[血液]（血液学）：283 K/uL
+- 血小板涂片[血液]（血液学）：
+- 异红细胞增多症 [血液]（血液学）：
+- 色素减退症[血液]（血液学）：
+- RDW [血液]（血液学）：13.0 %
+- 红细胞 [血液]（血液学）：3.87 m/uL
+- 中性粒细胞[血液]（血液学）：95.6 %
+- 白细胞[血液]（血液学）：12.8 K/uL
+- 多色症[血液]（血液学）：
+- 单核细胞[血液]（血液学）：0.7 %
+- MCHC [血液]（血液学）：34.6 %
+- MCV [血液]（血液学）：80 fL
+- MCH [血液]（血液学）：27.7 pg
+- 大细胞[血液]（血液学）：
+- 红细胞大小不均[血液]（血液学）：
+- 带[血液]（血液学）：0％
+- 嗜碱性粒细胞[血液]（血液学）：0 %
+- 嗜酸性粒细胞[血液]（血液学）：0.1 %
+- 血细胞比容[血液]（血液学）：31.0 %
+- 血红蛋白[血液]（血液学）：10.7 g/dL
+- 小细胞[血液]（血液学）：
+
+### 2146-05-26 12:59
+[实验室]
+- 碱过剩[血液]（血气）：0 mEq/L
+- 计算得出的总 CO2 [血液]（血气）：25 mEq/L
+- 血红蛋白[血液]（血气）：10.1 g/dL
+- 游离钙[血液]（血气）：1.11 mmol/L
+- 葡萄糖[血液]（血气）：165 mg/dL
+- 血细胞比容，计算[血液]（血气）：30 %
+- 乳酸[血液]（血气）：2.0 mmol/L
+- pCO2 [血液]（血气）：35 毫米汞柱
+- pH值[血液]（血气）：7.44单位
+- pO2 [血液]（血气）：133 mm Hg
+- 钾，全血[血液]（血气）：3.6 mEq/L
+- 钠，全血[血液]（血气）：136 mEq/L
+- 氯化物，全血[血液]（血气）：108 mEq/L
+
+### 2146-05-26 16:52
+[实验室]
+- 钠，全血[血液]（血气）：136 mEq/L
+- 钾，全血[血液]（血气）：3.9 mEq/L
+- pO2 [血液]（血气）：202 mm Hg
+- pH值[血液]（血气）：7.44单位
+- pCO2 [血液]（血气）：33 毫米汞柱
+- 乳酸[血液]（血气）：2.7 mmol/L
+- 氯化物，全血[血液]（血气）：105 mEq/L
+- 血细胞比容，计算[血液]（血气）：30 %
+- 葡萄糖[血液]（血气）：138 mg/dL
+- 游离钙[血液]（血气）：1.02 mmol/L
+- 计算得出的总 CO2 [血液]（血气）：23 mEq/L
+- 碱过剩[血液]（血气）：0 mEq/L
+- 血红蛋白[血液]（血气）：10.1 g/dL
+- 样本类型[血液]（血气）：ART。
+
+### 2146-05-26 18:27
+[放射学]
+- 放射学注释：指示：仪器计数。
+  
+  腹部，一张视图：上腹部未成像。  在这个限制内，
+  可以看到两个可能的引流管，右侧引流管附近有一个夹子
+  朝向中线。  可以看到一系列剪辑投射到右侧
+  髂骨和髋骨。  右侧髂骨上方可见另一个管状混浊
+  波峰。  肠气模式是非特异性的。  无明显骨异常。
+
+### 2146-05-26 19:59
+[实验室]
+- RDW [血液]（血液学）：12.9 %
+- PT [血液]（血液学）：11.5 秒
+- PTT [血液]（血液学）：26.4 秒
+- 阴离子间隙[血液]（化学）：18 mEq/L
+- 碳酸氢盐 [血液]（化学）：20 mEq/L
+- 总钙[血液]（化学）：9.2 mg/dL
+- 氯化物[血液]（化学）：103 mEq/L
+- 肌酐[血液]（化学）：0.6 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：194 mg/dL
+- 镁[血液]（化学）：1.7 mg/dL
+- 磷酸盐[血液]（化学）：5.5 mg/dL
+- 钾[血液]（化学）：4.6 mEq/L
+- INR(PT) [血液]（血液学）：1.0
+- 钠[血液]（化学）：136 mEq/L
+- 带[血液]（血液学）：0％
+- 嗜碱性粒细胞[血液]（血液学）：0 %
+- 嗜酸性粒细胞[血液]（血液学）：0.1 %
+- 血细胞比容[血液]（血液学）：33.3 %
+- 血红蛋白[血液]（血液学）：11.0 g/dL
+- 淋巴细胞[血液]（血液学）：6.1 %
+- MCH [血液]（血液学）：27.0 pg
+- MCHC [血液]（血液学）：32.9 %
+- MCV [血液]（血液学）：82 fL
+- 单核细胞[血液]（血液学）：2.4 %
+- 中性粒细胞[血液]（血液学）：91.4 %
+- 血小板计数[血液]（血液学）：281 K/uL
+- 尿素氮[血液]（化学）：10 mg/dL
+- 红细胞 [血液]（血液学）：4.06 m/uL
+- 白细胞[血液]（血液学）：14.4 K/uL
+
+### 2146-05-26 20:00
+[处方]
+- 多库酯钠； 100毫克；路线=PO
+- 肝素； 5000 单位；路线=SC
+
+### 2146-05-26 20:27
+[实验室]
+- 样本类型[血液]（血气）：ART。
+- pO2 [血液]（血气）：119 mm Hg
+- 碱过剩[血液]（血气）：-4 mEq/L
+- pH [血液]（血气）：7.29 单位
+- pCO2 [血液]（血气）：45 毫米汞柱
+- 插管[血液]（血气）：未插管。
+- 计算得出的总 CO2 [血液]（血气）：23 mEq/L
+
+### 2146-05-26 21:00
+[处方]
+- 昂丹司琼； 4毫克；路线=IV
+- 胰岛素； 0 单位；路线=SC
+- 法莫替丁； 20毫克；路线=IV
+- 头孢唑林； 1克；路线=IV
+- 氢吗啡酮（Dilaudid）； 12.5毫克；路线=IVPCA
+- 对乙酰氨基酚； 325-650毫克；路线=PO
+- LR； 1000毫升；路线=IV
+
+### 2146-05-27 04:57
+[实验室]
+- 碳酸氢盐 [血液]（化学）：25 mEq/L
+- 白细胞[血液]（血液学）：9.9 K/uL
+- 红细胞 [血液]（血液学）：3.66 m/uL
+- RDW [血液]（血液学）：13.4 %
+- 血小板计数[血液]（血液学）：224 K/uL
+- MCV [血液]（血液学）：80 fL
+- MCHC [血液]（血液学）：34.1 %
+- MCH [血液]（血液学）：27.3 pg
+- 血细胞比容[血液]（血液学）：29.4 %
+- 血红蛋白[血液]（血液学）：10.0 g/dL
+- 钠[血液]（化学）：136 mEq/L
+- 钾[血液]（化学）：4.2 mEq/L
+- 阴离子间隙[血液]（化学）：12 mEq/L
+- 镁[血液]（化学）：1.7 mg/dL
+- 葡萄糖[血液]（化学）：130 mg/dL
+- 肌酐[血液]（化学）：0.5 mg/dL
+- 氯化物[血液]（化学）：103 mEq/L
+- 总钙[血液]（化学）：9.0 mg/dL
+- 尿素氮[血液]（化学）：11 mg/dL
+- 磷酸盐[血液]（化学）：3.5 mg/dL
+
+### 2146-05-27 16:00
+[处方结束]
+- LR； 1000毫升；路线=IV
+
+### 2146-05-27 17:00
+[处方]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+- 硫酸镁； 2克；路线=IV
+
+### 2146-05-27 20:00
+[处方结束]
+- 昂丹司琼； 4毫克；路线=IV
+
+### 2146-05-27 21:00
+[处方]
+- OxycoDONE（立即释放）； 5-10毫克；路线=PO
+- 氢吗啡酮（Dilaudid）； 0.125-0.5毫克；路线=IV
+- 昂丹司琼； 4毫克；路线=IV
+- LR； 1000毫升；路线=IV
+
+### 2146-05-27 21:00
+[处方结束]
+- 氢吗啡酮（Dilaudid）； 0.125-0.5毫克；路线=IV
+
+### 2146-05-27 22:00
+[处方]
+- 氢吗啡酮（Dilaudid）； 12.5毫克；路线=IVPCA
+
+### 2146-05-28 04:00
+[处方结束]
+- LR； 1000毫升；路线=IV
+- 氢吗啡酮（Dilaudid）； 12.5毫克；路线=IVPCA
+- 硫酸镁； 2克；路线=IV
+
+### 2146-05-28 05:00
+[处方]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+
+### 2146-05-28 06:50
+[实验室]
+- 氯化物[血液]（化学）：101 mEq/L
+- 肌酐[血液]（化学）：0.5 mg/dL
+- 葡萄糖[血液]（化学）：114 mg/dL
+- 磷酸盐[血液]（化学）：2.3 mg/dL
+- 钾[血液]（化学）：4.1 mEq/L
+- 钠[血液]（化学）：136 mEq/L
+- 尿素氮[血液]（化学）：7 mg/dL
+- MCH [血液]（血液学）：28.1 pg
+- 血红蛋白[血液]（血液学）：9.9 g/dL
+- 总钙[血液]（化学）：8.5 mg/dL
+- MCHC [血液]（血液学）：35.1 %
+- MCV [血液]（血液学）：80 fL
+- 血小板计数[血液]（血液学）：190 K/uL
+- RDW [血液]（血液学）：13.1 %
+- 红细胞 [血液]（血液学）：3.51 m/uL
+- 白细胞[血液]（血液学）：7.3 K/uL
+- 血细胞比容[血液]（血液学）：28.1 %
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- 镁[血液]（化学）：2.2 mg/dL
+- 阴离子间隙[血液]（化学）：12 mEq/L
+
+### 2146-05-28 10:00
+[处方结束]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+- 氢吗啡酮（Dilaudid）； 12.5毫克；路线=IVPCA
+
+### 2146-05-28 11:00
+[处方]
+- 氢吗啡酮（Dilaudid）； 0.125-0.5毫克；路线=IV
+
+### 2146-05-28 11:00
+[处方结束]
+- 对乙酰氨基酚； 325-650毫克；路线=PO
+
+### 2146-05-28 12:00
+[处方]
+- 对乙酰氨基酚； 325-650毫克；路线=PO
+
+### 2146-05-28 15:00
+[处方]
+- Neutra-Phos； 1 包；路线=PO
+
+### 2146-05-28 20:00
+[处方结束]
+- 昂丹司琼； 4毫克；路线=IV
+
+### 2146-05-29 08:10
+[实验室]
+- 血细胞比容[血液]（血液学）：32.3 %
+
+### 2146-05-29 14:00
+[处方结束]
+- Neutra-Phos； 1 包；路线=PO
+
+### 2146-05-29 21:30
+[实验室]
+- 氯化物[血液]（化学）：99 mEq/L
+- 总钙[血液]（化学）：9.3 mg/dL
+- 碳酸氢盐 [血液]（化学）：25 mEq/L
+- 阴离子间隙[血液]（化学）：14 mEq/L
+- 肌酐[血液]（化学）：0.6 mg/dL
+- 尿素氮[血液]（化学）：11 mg/dL
+- 钠[血液]（化学）：134 mEq/L
+- 葡萄糖[血液]（化学）：120 mg/dL
+- 钾[血液]（化学）：4.0 mEq/L
+- 磷酸盐[血液]（化学）：2.7 mg/dL
+- 镁[血液]（化学）：2.2 mg/dL
+
+### 2146-05-30 06:40
+[实验室]
+- 血细胞比容[血液]（血液学）：32.3 %
+
+### 2146-05-30 07:00
+[处方结束]
+- 法莫替丁； 20毫克；路线=IV
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Sucralfate; 1 g every 6 hours; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 当从静脉注射治疗过渡到口服治疗时，口腔粘膜保护剂似乎是一种可接受的替代品。</div>
+    <div class="row"><span class="label">为何错误:</span> 硫糖铝 1 g Q6H 可以结合并减少左旋甲状腺素（一种家庭药物）的吸收，其铝含量会加重低磷血症（2146-05-28 磷酸盐为 2.3 mg/dL），因此不适合该患者。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Misoprostol; 200 mcg four times daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 误读“术后胃保护”可能会导致替代任何胃保护剂。</div>
+    <div class="row"><span class="label">为何错误:</span> 米索前列醇用于预防 NSAID 引起的溃疡，不推荐用于常规应激性溃疡预防；频繁的腹泻会使术后恢复和伤口护理复杂化，特别是在大腹股沟皮瓣重建后。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Hydrocortisone; 100 mg every 8 hours; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 大手术后的“压力”一词可能会被误解为使用压力剂量类固醇的指征。</div>
+    <div class="row"><span class="label">为何错误:</span> 氢化可的松不能为应激性溃疡预防提供抑酸作用，并且会加重该患者的术后高血糖（例如，2146-05-26 19:59 血糖为 194 mg/dL），增加感染和伤口愈合风险，但没有任何益处。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Octreotide; 50 mcg IV bolus, then 50 mcg/hour infusion; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 对术后出血的担忧可能会被错误地用来选择内脏血管收缩剂。</div>
+    <div class="row"><span class="label">为何错误:</span> 奥曲肽输注适用于肝硬化/门静脉高压引起的静脉曲张出血——该患者的 PMH 中未列出的病症（格雷夫斯病 s/p RAI、甲状腺功能减退、HTN、滑膜肉瘤）——并且不用于应激性溃疡预防。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Esomeprazole; 80 mg IV bolus, then 8 mg/hour infusion; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 大手术后维持抑酸可能会被误读为有效 PPI 治疗方案的合理性。</div>
+    <div class="row"><span class="label">为何错误:</span> 连续埃索美拉唑输注（80 mg IV 推注，然后 8 mg/小时）用于急性上消化道出血，对于已经耐受口服药物（例如对乙酰氨基酚和羟考酮 PO）的稳定术后患者来说是不必要的，这使得 IV 输注与第 3 步口服过渡不一致。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Famotidine; 20 mg; route=PO</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 手术恢复后，随着患者从静脉注射药物转为口服药物，继续口服法莫替丁。它支持在重大软组织和血管手术期间在围手术期启动的应激性溃疡预防，现在由于患者耐受 PO 摄入而维持口服形式。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

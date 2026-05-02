@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 2 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 2 题 — 答案及解析</h1>
+  <div class="meta">住院号 20496177 · 决策时间 2172-01-09 10:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> E
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 71
+- **性别：** F
+- **服务：**泌尿科
+- **过敏：** 美林/羟考酮
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 右侧输尿管肿块
+
+### 现病史
+- ___ 进行检查，发现右侧输尿管肿块，且左肾萎缩。考虑到她左侧的萎缩和潜在的肾功能障碍，经皮肾造口术并未显着改善，肾切除术被认为是一个糟糕的选择，但分段输尿管切除术是实现患者肾脏保留和功能性肾清除的最佳选择。 
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 高血压
+- 糖尿病
+- 周围血管疾病 s/p LLE 血运重建
+- 高脂血症
+- 甲状腺功能减退症
+- 良性乳房肿瘤切除术
+- 左卵巢切除术
+
+### 社会历史
+- 未知
+
+### 家族史
+- 父亲患有不明癌症。
+- 母亲于___年死于胃癌。
+- 姐姐于___ 死于乳腺癌。
+- 没有已知的肾脏问题家族史。
+
+### 入学前体检
+- ___，AVSS
+- 互动、合作
+- 腹部柔软，切口处有适当的压痛
+- 四肢无水肿或凹陷，并且没有报告小腿深部触诊疼痛
+- 她没有 JP 排水管，现场看起来很稳定，有无菌带
+
+### 入院前药物
+- 奥美沙坦 40 mg 口服，每日一次 
+- 二甲双胍（格华止）500 毫克，每日口服 
+- 辛伐他汀 40 毫克，每日口服 
+- 对乙酰氨基酚 w/可待因 1 TAB PO Q4H:PRN 疼痛 
+- TraMADOL (Ultram) 50 mg PO Q6H:PRN 疼痛 
+- 左氧氟沙星 250 mg PO Q24H 
+- 阿司匹林 81 毫克，每日口服 
+- 左旋甲状腺素钠 88 微克，每日口服 
+- 叶酸 1 毫克，每日口服 
+
+=== 院内临床时间表 ===
+### 2172-01-08 00:00
+[程序]
+- 肾固定术
+- 输尿管部分切除术
+- 腹腔镜机器人辅助手术
+
+### 2172-01-08 16:44
+[放射学]
+- 放射学注意事项： 1. 注意到右侧输尿管支架和另一个医源性射线不透性。 
+  需要临床相关性。
+  
+  2. 腹部两侧及近端可见条纹状空气
+  大腿。  同样，全面评估需要临床相关性。
+
+### 2172-01-08 20:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 多库酯钠； 100毫克；路线=PO
+
+### 2172-01-08 21:00
+[处方]
+- 对乙酰氨基酚； 650 毫克；路线=PO
+- 苯海拉明； 25-50毫克；路线=PO
+- D5LR； 1000毫升；路线=IV
+- 昂丹司琼； 4毫克；路线=IV
+- 氢氧化铝镁.-西甲硅油； 15-30毫升；路线=PO
+- 氢吗啡酮（Dilaudid）； 20毫克；路线=IVPCA
+
+### 2172-01-08 23:00
+[处方]
+- 人工泪液； 1-2 次掉落；路线=双眼
+
+### 2172-01-09 06:30
+[实验室]
+- 红细胞 [血液]（血液学）：3.38 m/uL
+- 白细胞[血液]（血液学）：6.9 K/uL
+- 阴离子间隙[血液]（化学）：13 mEq/L
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- 氯化物[血液]（化学）：101 mEq/L
+- 肌酐[血液]（化学）：2.0 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：160.0 mg/dL
+- 钾[血液]（化学）：4.8 mEq/L
+- 钠[血液]（化学）：136 mEq/L
+- 尿素氮[血液]（化学）：35 mg/dL
+- RDW [血液]（血液学）：14.0 %
+- 血小板计数[血液]（血液学）：201 K/uL
+- MCV [血液]（血液学）：92 fL
+- MCHC [血液]（血液学）：33.5 %
+- 血红蛋白[血液]（血液学）：10.4 g/dL
+- 血细胞比容[血液]（血液学）：31.0 %
+- MCH [血液]（血液学）：30.8 pg</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Meperidine; 50 mg; route=IM</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 当避免使用非甾体抗炎药时，可以考虑使用哌替啶作为阿片类镇痛药。</div>
+    <div class="row"><span class="label">为何错误:</span> 在患有肾功能障碍的 71 岁老人中，哌替啶的神经毒性代谢物（去甲哌替啶）会积累并增加癫痫/中枢神经系统毒性风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Oxycodone-Acetaminophen; 5-325 mg 1 tab; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 口服阿片类药物/对乙酰氨基酚组合是 PCA 治疗中度术后疼痛的常见降压方法。</div>
+    <div class="row"><span class="label">为何错误:</span> 该患者有羟考酮过敏记录，因此禁用羟考酮-对乙酰氨基酚。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Fentanyl; 25 mcg/hr; route=Transdermal</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 透皮阿片类药物似乎可以在 PCA 降级期间提供持续的疼痛控制。</div>
+    <div class="row"><span class="label">为何错误:</span> 透皮芬太尼适用于阿片类药物耐受患者的慢性持续性疼痛，但起效延迟且滴定性差，因此不适合治疗术后急性疼痛。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Ketorolac; 30 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 酮咯酸等非甾体抗炎药通常用于节省阿片类药物的术后镇痛。</div>
+    <div class="row"><span class="label">为何错误:</span> 她对 NSAID（美林/布洛芬）过敏并导致肾功能下降 (Cr 2.0 mg/dL)，酮咯酸会增加术后出血和肾毒性风险。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Hydrocodone-Acetaminophen; 5mg-325mg, 1-2 TAB; route=PO</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 氢可酮-对乙酰氨基酚用于控制输尿管部分切除术和肾固定术后的口腔疼痛。随着康复的进展，患者从静脉注射 PCA 阿片类药物转为口服治疗。鉴于她对非甾体抗炎药和羟考酮过敏以及潜在的肾功能损害，氢可酮-对乙酰氨基酚提供了有效的镇痛和可接受的肾脏安全性。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Morphine; 15 mg ER; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 从 PCA 过渡到预定的口服阿片类药物对于维持镇痛似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 缓释吗啡不适合治疗急性术后疼痛，其活性代谢物会在肾功能损害中积聚，增加毒性风险。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

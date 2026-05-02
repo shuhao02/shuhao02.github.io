@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 9 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 9 题 — 答案及解析</h1>
+  <div class="meta">住院号 22312077 · 决策时间 2187-06-11 20:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> D
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 70
+- **性别：** F
+- **服务：** 医学
+- **过敏：**青霉素/可待因/磺胺类药物
+- **种族：** 白色
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 右上肢无力、呼吸困难
+
+### 现病史
+- ___ yo F，患有 DM、COPD、转移性乳腺 CA s/p 阿霉素/环磷酰胺第 1 周期 ___ 正在等待 ___ 周期，最近在 ___ 诊所就诊，并注意到有持续的 RUE 无力。 MRI C 脊柱显示 C5-C7 发生代谢紊乱，导致脊髓中度受压。她于___入院进行脊柱评估和治疗。她开始服用类固醇。 Pt 在 ___ 下午因低血压、低 UOP 和缺氧而触发。 Pt 拒绝干预。开始使用宽幅腹肌，据报道已稳定下来。
+- 今晚，服用 6 升水后，她出现缺氧 85%。她“很难被唤醒”。 NRB 使 O2 饱和度得到改善。 VBG 显示 7.44/47/47 w 乳酸 1.0。对先前承认的审查表明，她几乎每晚都发生了变化，直到使用 BiPAP 进行治疗，成功治疗了她的性行为。在地板上尝试过这种方法，但患者出现缺氧并且无法忍受面罩。她住进 ICU，接受 BiPAP 治疗和治疗。
+- 目前，她报告说她想一个人呆着。她否认任何CP、SOB、abd痛苦。
+- 值得注意的是，她上次入院时出现缺氧症状。当时，病因尚不清楚。人们认为___肿瘤淋巴管扩散。也考虑 PE（尽管 CTA 阴性）和填塞（尽管 echo 不是 c/w hd sig 填塞）。也考虑到液体超负荷，她似乎通过利尿有所改善。最终人们认为睡眠呼吸暂停是主要原因。她每晚接受 BiPap 治疗，精神状态显着改善。
+
+### 系统审查（准入前）
+- 否认有任何胸痛、气短、腹痛。
+
+### 既往病史
+- 1. 糖尿病。随后在___。她最后一次糖化血红蛋白为 6.0，发生在 ___。
+- 2. 高胆固醇血症/高血压
+- 3. 分裂情感障碍。 ___ 医生对患者进行随访，并服用 Clozaril，并进行了 1 个月的全血细胞计数 (CBC)
+- 4.慢性阻塞性肺病/哮喘。为此，患者继续服用 Advair 和沙丁胺醇。她确实表示，她大约每天使用一次沙丁胺醇。她最后一次肺功能检查是在___。
+- 5. h/o 瀑布
+- 6. 背痛
+- 7。？严重睡眠呼吸暂停：如上所述和最近的 d/c 摘要。上个月在单位使用 BiPAP 后情况有所改善。
+- 乳腺钙史：
+  - dx 呼吸困难、缺氧、右乳房肿块跌倒
+  - ___：环磷酰胺、阿霉素、neupogen、emend、类固醇
+
+### 社会历史
+- ___
+
+### 家族史
+- 患者的祖母患有冠状动脉疾病。她的父母死于宫颈癌和中风。
+
+### 入学前体检
+- VS：96.8 HR 97 94/43 20 100% NRB 和 60% FiO2 上的 94%
+- 手动血压 126/60 w 脉搏 ___
+- Gen：很困但很兴奋。
+- Neuro：针对人、地点、情况、时间的 AAO。话说到一半就睡着了。定位于声音，撤回/定位于疼痛。
+  - cn：PERRLA、EOMI，尽管由于缺乏协作性而受到限制。脸对称。
+  - 电机：___ 强度 RUEx，___ LUEx。尽管至少___ bilat，但较低的ex受到努力的限制。
+  - 脚趾相当于bilat。 1+ 踝关节和膝关节训练
+Heent：干MM，JVP平
+- 卡：RRR 无 MGR
+- 肺部：无啰音，CTAB
+- Abd：肥胖，弥漫性轻度压痛。没有篮板或防守
+- 外部：全身水肿
+
+### 入院前药物
+- 沙丁胺醇 IH q ___ 小时 prn
+- 阿司匹林每天 81 毫克
+- 氯氮平 125 毫克，每日一次，100 毫克，每日PM
+- 推荐 250-50 出价
+- 布洛芬 600 毫克，每日一次
+- 赖诺普利每日 10 毫克
+- 昂丹司琼 4mg q8 prn
+- 羟考酮 5 mg 每 4 小时 prn
+- 吡格列酮每天 45 毫克
+- 每天 spiriva 1 口
+- 对乙酰氨基酚 prn
+- 比沙可啶 prn
+- 多库酯钠 bid
+- NPH 上午 75 单位，___ 34 单位
+- 奥美拉唑每日 20 毫克
+- 维生素 D 每天 800 毫克
+
+=== 院内临床时间表 ===
+### 2187-06-10 08:00
+[处方]
+- 氯氮平； 100毫克；路线=PO
+- 氯氮平； 25毫克；路线=PO
+
+### 2187-06-10 09:55
+[放射学]
+- 放射学笔记：调查结果：
+  该研究受到患者运动的限制。  有增强群众
+  在 C5 至 C7 的椎体中，伴有相关的椎体塌陷，
+  C5 和 C7 为重度，C6 为中度。  肿块延伸至前部
+  硬膜外腔，使前脊髓变平，导致中度
+  椎管狭窄。  在没有轴向 T2 加权和后加权的情况下
+  钆 T1 加权图像，尚不清楚群众是否明确
+  延伸至神经孔。  然而，所涉及的神经孔
+  水平被缩小。 
+  
+  C3椎体内有一增强肿块，无相关
+  塌陷或硬膜外扩张。  内有 T2 高信号肿块
+  T3 椎体，不包含在矢状位对比后图像中，
+  似乎延伸到右侧椎弓根。
+  
+  脊髓信号的评估受到伪影的限制。
+  
+  大脑的成像部分有多个增强肿块。  一个
+  同期头部 MRI 单独报告。
+  
+  印象：
+  1.颈椎评估相对有限。
+  
+  2. 累及 C5 至 C7 椎体的转移瘤，伴有椎体
+  塌陷和硬膜外延伸，导致脊髓变平
+  以及中度椎管狭窄。  可能涉及神经
+  孔。
+  
+  3. C3 和 T3 处有额外转移，无塌陷。
+  
+  4.颅内多发转移瘤。  请参考同期头部MRI
+  报告以获取更多详细信息。
+
+### 2187-06-10 10:00
+[处方]
+- 奥美拉唑； 20毫克；路线=PO
+- 依诺肝素钠； 40毫克；路线=SC
+- 噻托溴铵； 1 个 CAP；路线=IH
+- 赖诺普利； 10毫克；路线=PO
+- 利多卡因 5% 贴剂； 1 场比赛；路线=TD
+- 吡格列酮； 45毫克；路线=PO
+- 维生素D； 800 单位；路线=PO
+- 阿司匹林； 81 毫克；路线=PO
+
+### 2187-06-10 20:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 氟替卡松-沙美特罗 (250/50) ； 1 异烟肼；路线=IH
+
+### 2187-06-10 21:00
+[处方]
+- 芬太尼贴剂； 25微克/小时；路线=TP
+- 对乙酰氨基酚； 325-650毫克；路线=PO
+- 达克宁粉剂 2%； 1 份申请；路线=TP
+- OxycoDONE（立即释放）； 5毫克；路线=PO
+- 沙丁胺醇 MDI； 1-2 泡；路线=IH
+- 多库酯钠； 100毫克；路线=PO
+- 昂丹司琼 ODT； 4毫克；路线=PO
+
+### 2187-06-10 21:00
+[处方结束]
+- 依诺肝素钠； 40毫克；路线=SC
+- 芬太尼贴剂； 25微克/小时；路线=TP
+
+### 2187-06-10 22:00
+[处方]
+- 氯氮平； 100毫克；路线=PO
+
+### 2187-06-10 22:36
+[放射学]
+- 放射学注意事项：无急性心肺过程。  稳定的右中肺线性
+  疤痕和肺不张。
+
+### 2187-06-11 06:50
+[实验室]
+- INR(PT) [血液]（血液学）：1.4
+- PT [血液]（血液学）：16.0 秒
+- 尿素氮[血液]（化学）：12 mg/dL
+- PTT [血液]（血液学）：34.3 秒
+- MCH [血液]（血液学）：26.0 pg
+- 血红蛋白[血液]（血液学）：8.3 g/dL
+- 氯化物[血液]（化学）：102 mEq/L
+- MCHC [血液]（血液学）：30.7 %
+- MCV [血液]（血液学）：85 fL
+- 血小板计数[血液]（血液学）：526 K/uL
+- 钠[血液]（化学）：140 mEq/L
+- 葡萄糖[血液]（化学）：178 mg/dL
+- 红细胞 [血液]（血液学）：3.19 m/uL
+- 白细胞[血液]（血液学）：11.0 K/uL
+- 肌酐[血液]（化学）：0.5 mg/dL
+- 阴离子间隙[血液]（化学）：11 mEq/L
+- 碳酸氢盐[血液]（化学）：31 mEq/L
+- 血细胞比容[血液]（血液学）：27.0 %
+- RDW [血液]（血液学）：22.3 %
+- 钾[血液]（化学）：3.8 mEq/L
+
+### 2187-06-11 10:03
+[放射学]
+- 放射学笔记：调查结果：
+  颅内有大量强化肿块，与
+  转移。  右侧顶骨周围有大量水肿
+  质量，尺寸为 1.1 厘米（系列 8 和系列 4 的图像 15）。  许多
+  其他较小的幕上肿块可能是软脑膜的。  无数的群众
+  也存在于小脑中，其中许多可能是软脑膜的。  的
+  涉及右侧蚓部和小脑半球的最大质量为 2.4
+  横向厘米 x 2.2 厘米前部 x 约 1.6 厘米头尾部，中等
+  相关的水肿。没有证据表明血液制品与
+  群众。心室和脑沟的大小和结构正常。  的
+  主要血管血流空隙看起来不明显。
+  
+  右额叶硬膜外有一个约 3 厘米的肿块（系列
+  1000 B，图像 49)。  颅骨内有多处强化病灶。
+  
+  矢状位 T1 加权图像上存在异常低信号
+  C3椎体。
+  
+  印象：
+  1.幕上和幕下颅内多发转移瘤，多发
+  其中可能是软脑膜的。
+  
+  2.右额叶硬膜外大转移灶。
+  
+  3.颅骨多发转移。  建议进一步骨扫描
+  如果之前没有进行过骨骼评估。
+  
+  4.C3椎体信号异常。  请参阅
+  并发颈椎 MRI 报告以获取更多详细信息。
+- 放射学注意事项：请参阅 ___ 日期的颈椎 MRI 报告。
+
+### 2187-06-11 15:00
+[处方]
+- 国民服役； 1000毫升；路线=IV
+
+### 2187-06-11 16:13
+[放射学]
+- 放射学笔记：调查结果：
+  与___的研究相比，变化不大。 
+  右中部再次出现线状肺不张或疤痕
+  肺部，但没有急性局灶性肺炎的证据。  纵隔增宽
+  根据之前的 CT 研究，可能是由于脂肪增多所致。
+
+### 2187-06-11 18:00
+[处方]
+- 地塞米松； 4毫克；路线=IV
+- 哌拉西林-他唑巴坦钠； 4.5克；路线=IV</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Cefepime; 2 g; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 增加了针对疑似严重医疗保健相关感染的抗假单胞菌广谱覆盖范围。</div>
+    <div class="row"><span class="label">为何错误:</span> 患者已经在服用哌拉西林-他唑巴坦，而头孢吡肟会复制革兰氏阴性菌覆盖率，但不会增加 MRSA 覆盖率，这就是使用万古霉素的原因。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Azithromycin; 500 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 如果患有慢性阻塞性肺病（COPD）和轻度白细胞增多的缺氧患者怀疑非典型肺炎，可以考虑。</div>
+    <div class="row"><span class="label">为何错误:</span> 阿奇霉素单一疗法不涵盖 MRSA 或典型的医院病原体，并且与氯氮平一起增加 QT 延长风险，使其不适合 ICU 脓毒症情况。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Cefazolin; 2 g; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 选择为高风险住院患者的疑似葡萄球菌感染增加革兰氏阳性覆盖范围。</div>
+    <div class="row"><span class="label">为何错误:</span> 头孢唑林缺乏 MRSA 活性，因此在这种经验性脓毒症环境中无法提供预期的扩大革兰氏阳性覆盖率。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Vancomycin; 1000 mg; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 添加万古霉素作为经验性治疗，用于治疗患有转移性癌症且最近入住 ICU 的高危免疫功能低下患者的疑似医院获得性或脓毒症相关感染。它补充了哌拉西林-他唑巴坦，以确保 MRSA 覆盖，同时在临床稳定或培养结果之前提供全面的经验性抗菌保护。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Ertapenem; 1 g; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 碳青霉烯类药物似乎适合覆盖高危 ICU 患者中的耐药医院微生物。</div>
+    <div class="row"><span class="label">为何错误:</span> 厄他培南缺乏针对假单胞菌和 MRSA 的活性，未能满足所需的 MRSA 覆盖范围，并不适当地缩小了革兰氏阴性菌覆盖范围。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Trimethoprim-Sulfamethoxazole; 15 mg/kg/day (TMP component); route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 涵盖多种 MRSA 菌株，对于免疫功能低下、接受医疗保健的患者，可考虑检测 MRSA。</div>
+    <div class="row"><span class="label">为何错误:</span> 该患者有磺胺过敏记录，因此甲氧苄氨嘧啶-磺胺甲恶唑是禁忌且不安全的。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

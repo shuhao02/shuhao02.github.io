@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 15 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 15 题 — 答案及解析</h1>
+  <div class="meta">住院号 25053269 · 决策时间 2159-02-08 14:00 · 共 7 个选项 · 2 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> E, F
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 69
+- **性别：** 男
+- **服务：** 神经外科
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 脊柱病变
+
+### 现病史
+- 69岁男性，患有高血压、糖尿病，表现为T3-T5病变。患者报告在过去 3 个月内，患者出现双足麻木，右腿无力，并经常跌倒。最初，患者将他的右腿无力归因于骨关节炎，他接受了物理治疗，但症状没有改善。一位神经科医生给他看诊，建议他进行胸椎和腰椎 MRI 检查，结果发现有 T3-T5 病变。  
+- 院外 MRI 发现新的 T3-T5 脊柱病变后，患者直接入院神经外科服务。入院时，他双侧髋关节屈曲间歇性无力，并自觉下肢麻木，但感觉测试正常。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- 吸烟  
+-HTN  
+- 既往滥用乙醇  
+- 糖尿病
+
+### 社会历史
+- 未知
+
+### 家族史
+- 肺癌史叔叔
+
+### 入学前体检
+- 双侧髋关节屈曲间歇性无力  
+- 主观下肢麻木  
+- 感觉测试正常  
+
+### 入院前药物
+- 地塞米松 2mg BID  
+- 赖诺普利每日 20 毫克  
+- 雷尼替丁 150mg BID  
+- 对乙酰氨基酚
+
+=== 院内临床时间表 ===
+### 2159-02-06 00:00
+[程序]
+- 胸椎切除术，开放式手术
+
+### 2159-02-06 08:00
+[处方]
+- 赖诺普利； 20毫克；路线=PO/NG
+
+### 2159-02-06 20:00
+[处方]
+- 雷尼替丁； 150毫克；路线=PO/NG
+- 多库酯钠； 100毫克；路线=NG
+- 多库酯钠； 100毫克；路线=PO
+
+### 2159-02-06 22:00
+[处方]
+- 胰高血糖素； 1毫克；路线=IM
+- 比沙可啶； 10毫克；路线=公关
+- 比沙可啶； 10毫克；路线=PO
+- 肼屈嗪； 10-20毫克；路线=IV
+- 塞纳； 17.2毫克；路线=NG
+- 羟考酮（立即释放）； 5-10毫克；路线=PO
+- 地西泮； 2毫克；路线=PO/NG
+- 氯化钠 0.9%； 1000毫升；路线=IV
+- 头孢唑啉； 1克；路线=IV
+- 塞纳； 17.2毫克；路线=PO
+- 羟考酮（立即释放）； 5-10毫克；路线=NG
+- 胰岛素； 0 单位；路线=SC
+- 对乙酰氨基酚； 325-650毫克；路线=PO
+- 昂丹司琼； 4毫克；路线=IV
+- 葡萄糖 50%； 12.5克；路线=IV
+- 地塞米松； 4毫克；路线=IV
+- 硫酸吗啡； 1-4毫克；路线=IV
+- 对乙酰氨基酚； 325-650毫克；路线=NG
+- 葡萄糖凝胶； 15克；路线=PO
+
+### 2159-02-07 07:10
+[实验室]
+- 镁[血液]（化学）：2.0 mg/dL
+- 我[血液]（化学）：2
+- H [血液]（化学）：7
+- 葡萄糖[血液]（化学）：227.0 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 氯化物[血液]（化学）：94 mEq/L
+- 磷酸盐[血液]（化学）：3.5 mg/dL
+- 总钙[血液]（化学）：9.1 mg/dL
+- 阴离子间隙[血液]（化学）：11.0 mEq/L
+- PT [血液]（血液学）：13.0 秒
+- 肌酐[血液]（化学）：0.8 mg/dL
+- 钾[血液]（化学）：4.4 mEq/L
+- 碳酸氢盐 [血液]（化学）：29 mEq/L
+- 尿素氮[血液]（化学）：16 mg/dL
+- PTT [血液]（血液学）：23.7 秒
+- L [血]（化学）：7
+- 血细胞比容[血液]（血液学）：42.8 %
+- 血红蛋白[血液]（血液学）：14.6 g/dL
+- MCH [血液]（血液学）：31.9 pg
+- MCHC [血液]（血液学）：34.1 g/dL
+- MCV [血液]（血液学）：93 fL
+- 血小板计数[血液]（血液学）：202 K/uL
+- RDW [血液]（血液学）：16.8 %
+- 红细胞 [血液]（血液学）：4.58 m/uL
+- 白细胞[血液]（血液学）：17.8 K/uL
+- 钠[血液]（化学）：134.0 mEq/L
+- RDW-SD [血液]（血液学）：56.6 fL
+- INR(PT) [血液]（血液学）：1.2
+
+### 2159-02-07 10:00
+[处方结束]
+- 硫酸吗啡； 1-4毫克；路线=IV
+
+### 2159-02-07 13:00
+[处方结束]
+- 地塞米松； 4毫克；路线=IV
+
+### 2159-02-07 14:00
+[处方]
+- 地塞米松； 4毫克；路线=PO
+
+### 2159-02-07 16:00
+[处方结束]
+- 头孢唑啉； 1克；路线=IV
+- 肝素； 5000 单位；路线=SC
+
+### 2159-02-07 19:00
+[处方结束]
+- 雷尼替丁； 150毫克；路线=PO/NG
+
+### 2159-02-07 20:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+
+### 2159-02-08 01:00
+[处方结束]
+- 地塞米松； 4毫克；路线=PO
+
+### 2159-02-08 05:50
+[实验室]
+- 钾[血液]（化学）：5.3 mEq/L
+- 磷酸盐[血液]（化学）：3.6 mg/dL
+- 红细胞 [血液]（血液学）：4.65 m/uL
+- 我[血液]（化学）：2
+- H [血液]（化学）：8
+- 尿素氮[血液]（化学）：16 mg/dL
+- 葡萄糖[血液]（化学）：245.0 mg/dL
+- 肌酐[血液]（化学）：0.7 mg/dL
+- 钠[血液]（化学）：135.0 mEq/L
+- 镁[血液]（化学）：2.1 mg/dL
+- RDW [血液]（血液学）：17.2 %
+- 碳酸氢盐 [血液]（化学）：28 mEq/L
+- 白细胞[血液]（血液学）：17.4 K/uL
+- 血小板计数[血液]（血液学）：207 K/uL
+- MCV [血液]（血液学）：95 fL
+- MCHC [血液]（血液学）：33.4 g/dL
+- MCH [血液]（血液学）：31.6 pg
+- 总钙[血液]（化学）：9.5 mg/dL
+- 血细胞比容[血液]（血液学）：44.0 %
+- 血红蛋白[血液]（血液学）：14.7 g/dL
+- L [血]（化学）：10
+- PTT [血液]（血液学）：23.4 秒
+- PT [血液]（血液学）：14.2 秒
+- INR(PT) [血液]（血液学）：1.3
+- RDW-SD [血液]（血液学）：59.3 fL
+- 阴离子间隙[血液]（化学）：11.0 mEq/L
+- 氯化物[血液]（化学）：96 mEq/L
+
+### 2159-02-08 10:00
+[处方结束]
+- 肝素； 5000 单位；路线=SC
+
+### 2159-02-08 13:00
+[处方结束]
+- 胰岛素； 0 单位；路线=SC</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Ketorolac; 30 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 抗炎镇痛药似乎可以解决脊柱手术后的术后炎症和疼痛。</div>
+    <div class="row"><span class="label">为何错误:</span> 酮咯酸会增加脊柱手术后立即出血的风险，并且不能替代皮质类固醇对脊髓水肿的作用。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Loperamide; 4 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 阿片类药物治疗会引起胃肠道症状，这可能会促使临床医生考虑减少肠蠕动。</div>
+    <div class="row"><span class="label">为何错误:</span> 洛哌丁胺是一种止泻药，会减少蠕动，并会加重该术后患者阿片类药物引起的便秘。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Neostigmine; 2 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 术后运动减少可能会被误读为需要促动力干预的肠梗阻。</div>
+    <div class="row"><span class="label">为何错误:</span> 新斯的明适用于急性结肠假性梗阻，而不是简单的阿片类药物相关便秘，并且会带来严重心动过缓等风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Prednisone; 60 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 术后从静脉注射改为口服皮质类固醇以继续抗炎治疗似乎是合适的。</div>
+    <div class="row"><span class="label">为何错误:</span> 泼尼松 60 mg PO 与最近的地塞米松不同，剂量递增会加重高血糖，并且不太适合治疗脊髓水肿。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Dexamethasone; 3 mg; route=PO</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 地塞米松 3 mg PO 继续术后皮质类固醇治疗以治疗脊柱病变，同时逐渐减少之前较高的静脉注射和口服剂量。目标是控制脊髓炎症并预防胸部病变切除后恢复期间的神经功能缺损。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Fleet Enema (Saline); 1 Enema; route=PR</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 舰队灌肠可能是由于术后对先前的大便软化剂（多库酯）和兴奋剂（番泻叶、比沙可啶）反应不足，而患者仍使用阿片类镇痛药物。灌肠代表肠道治疗方案的升级，以控制或预防与阿片类药物使用和活动受限相关的术后便秘。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">G.</span>
+    <span class="opt-drug">Sodium Phosphate; 45 mL; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 鉴于已经订购了多种泻药，升级到更强的“盐水”选择似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 口服磷酸钠溶液不适用于老年人的常规便秘，并且具有电解质紊乱和急性磷酸盐肾病的显着风险。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

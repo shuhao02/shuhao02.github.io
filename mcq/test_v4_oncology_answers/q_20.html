@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 20 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 20 题 — 答案及解析</h1>
+  <div class="meta">住院号 26859476 · 决策时间 2157-08-11 14:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> E
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 61
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 萘丁美酮/替扎尼定/加巴喷丁
+- **种族：** 黑人/非裔美国人
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- IIIA期皮肤滤泡性淋巴瘤
+
+### 现病史
+- ___ 男性，患有 IIIA 级皮肤滤泡性淋巴瘤，已知胸椎和腰椎有转移性病变，出现腿部无力和跌倒，发现脊髓持续受压。开始使用地塞米松，症状有所改善。还启动了姑息 XRT，总共将接受 14 次治疗。 ___ 对患者进行了评估，准备出院，并已回家 ___。等待出院计划，包括出院前预先批准止痛药。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- IIIA级皮肤滤泡性淋巴瘤  
+  - ___ 六个周期的 R-CHOP 化疗，随后进行系列 PET 和 CT 扫描  
+  - 左腋窝淋巴结活检，反应性滤泡增生  
+  - ___ 的 PET 扫描显示颈部、纵隔、腋窝和腹部盆腔淋巴结没有明显的间隔变化。有一种新的小FDG狂热肠系膜腺病  
+  - ___ 腹膜后淋巴结活检：免疫表型结果与表达 CD19dim、CD20、CD10 和 CD45 的 B 细胞淋巴瘤相关  
+  - ___ R-ICE 治疗复发  
+  - ___ 高剂量环磷酰胺和自体干细胞移植  
+  - ___ - Bx 椎旁病变，不幸显示复发性弥漫性大 B 细胞淋巴瘤。患者拒绝治疗  
+  - ___ - 右骨盆和腿部剧烈疼痛。当时的 MRI 显示右侧髂前上棘撕脱性骨折，周围有明显的软组织肿块。他对该区域进行了姑息放射治疗，剂量为 30 Gy，分 12 次，完成于 ___  
+  - 下肢无力和反复跌倒 - 躯干 CT 扫描显示广泛的淋巴结病，包括左肺门、左主动脉旁和腋窝病变，骨病变包括 T4 后部、右后第八肋骨、L2 椎体和多个骨盆骨。脊柱 MRI 显示软组织肿块增强，涉及 T4 椎体的左后部，并伴有该水平脊髓的硬膜外伸展和压缩；还有一个增强的软组织肿块，涉及 L2 椎体和右侧椎旁软组织和后部元件，鞘囊前部凹陷，侵犯右侧神经孔，压迫退出的 L2 神经根  
+  - ___ - 从 T2 到 T5 以及从 L1 到 L3 对脊柱进行紧急放射治疗 - 分五次进行 20 Gy。还接受了利妥昔单抗  
+  - ___ MRI T/L 脊柱：涉及 T4 后部元件的左侧椎旁软组织肿块几乎完全消退，无硬膜外延伸；在腰椎中，L2 处的大软组织病变几乎完全消退，该水平的右侧椎旁区域残留组织极少；存在广泛的转移灶，涉及骶骨和髂后翼，且稳定  
+  - ___ - 医生用利妥昔单抗或苯达莫司汀治疗 - 但患者当时推迟了治疗  
+- 复发性淋巴瘤 s/p 自体 SCT  
+- 结节病：其次是 ___ 医生（最后一次见到 ___ - 他过去曾接受过类固醇治疗，并接受过连续胸部 CT 检查  
+-HTN  
+- DM，8.2% 在___  
+- 血脂异常  
+- 背痛  
+- 发作性睡病  
+- 右脚第一跖骨截骨术，螺钉固定  
+- 近端指间关节置换术，右第二脚趾克氏针
+
+### 社会历史
+- 未知
+
+### 家族史
+- 父亲：患有未知的癌症  
+- 兄弟姐妹：5 个兄弟和 3 个姐妹。哥哥患有不明肝癌
+
+### 入学前体检
+- GEN：NAD，RAS -1  
+- 生命体征：97.8 146/74 90 16 97%RA  
+- HEENT：MMM，无 OP 病变，无颈椎、锁骨上 LAD  
+- CV：RR、NL S1S2 无 S3S4 MRG  
+- 普尔：CTAB  
+- ABD：BS+，软，NTND，无肿块或肝脾肿大  
+- 四肢：无水肿、杵状指、震颤或扑翼样震颤；无腹股沟淋巴结肿大  
+- 皮肤：无皮疹或皮肤破损  
+- 神经：___，EOMI，面部对称，无眼球震颤，大腿内侧迟钝，两侧脚/腿感觉完好。全肩耸肩，手握bilat。脚趾和足部完全背屈，但无法将腿抬离床。需要帮助才能走到床边，但随后可以在帮助下站立。
+
+### 入院前药物
+1. 阿昔洛韦 400 mg PO Q8H  
+2. 别嘌呤醇 ___ 毫克 每日口服  
+3. 地西泮 5 mg PO Q12H：PRN 焦虑  
+4. 丙酸氟替卡松鼻用 3 SPRY NU DAILY  
+5. 赖诺普利 10 毫克，每日口服  
+6. 二甲双胍（格华止）1000 mg PO BID  
+7. 利多卡因 5% 贴剂 1 PTCH TD QAM 背痛  
+8. OxycoDONE（速释）30 mg PO Q4H：PRN 疼痛  
+9.吗啡缓释剂（MS ___ 100 mg PO Q8H  
+10. 甘精胰岛素 17 单位睡前胰岛素 SC 使用 HUM 胰岛素滑动量表  
+11. 对乙酰氨基酚 1000 mg PO Q8H  
+12. 氯化钠鼻腔 ___ SPRY NU QID:PRN 充血
+
+=== 院内临床时间表 ===
+### 2157-08-10 18:50
+[实验室]
+- 嗜碱性粒细胞[血液]（血液学）：1 %
+- 白蛋白[血液]（化学）：4.5 g/dL
+- 碱性磷酸酶[血液]（化学）：189 IU/L
+- 阴离子间隙[血液]（化学）：22 mEq/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：300 IU/L
+- 碳酸氢盐 [血液]（化学）：25 mEq/L
+- 总胆红素[血液]（化学）：0.1 mg/dL
+- 总钙[血液]（化学）：10.9 mg/dL
+- 氯化物[血液]（化学）：97 mEq/L
+- 肌酐[血液]（化学）：0.8 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：108.0 mg/dL
+- 脂肪酶 [血液]（化学）：19 IU/L
+- 镁[血液]（化学）：1.4 mg/dL
+- 磷酸盐[血液]（化学）：4.6 mg/dL
+- 钾[血液]（化学）：4.7 mEq/L
+- 钠[血液]（化学）：139 mEq/L
+- 肌钙蛋白 T [血液]（化学）：0.01 ng/mL
+- 尿素氮[血液]（化学）：14 mg/dL
+- INR(PT) [血液]（血液学）：1.0
+- PT [血液]（血液学）：10.7 秒
+- PTT [血液]（血液学）：28.3 秒
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：144 IU/L
+- 白细胞[血液]（血液学）：7.1 K/uL
+- 红细胞大小不均[血液]（血液学）：
+- 非典型淋巴细胞[血液]（血液学）：0 %
+- RDW [血液]（血液学）：18.3 %
+- 多色症[血液]（血液学）：
+- 异红细胞增多症 [血液]（血液学）：
+- 血小板涂片[血液]（血液学）：
+- 血小板计数[血液]（血液学）：306 K/uL
+- 卵圆细胞[血液]（血液学）：
+- 中性粒细胞[血液]（血液学）：58 %
+- 骨髓细胞[血液]（血液学）：0 %
+- 单核细胞[血液]（血液学）：8 %
+- 小细胞[血液]（血液学）：
+- 绿色顶部保持（血浆）[血液]（化学）：保持。  超过 4 小时后丢弃。
+- 后髓细胞[血液]（血液学）：0 %
+- MCHC [血液]（血液学）：33.1 %
+- MCH [血液]（血液学）：27.0 pg
+- 大细胞[血液]（血液学）：
+- 淋巴细胞[血液]（血液学）：30 %
+- 色素减退症[血液]（血液学）：
+- 血红蛋白[血液]（血液学）：10.0 g/dL
+- 血细胞比容[血液]（血液学）：30.1 %
+- 嗜酸性粒细胞[血液]（血液学）：3 %
+- 泪滴细胞[血液]（血液学）：
+- 带[血液]（血液学）：0％
+- MCV [血液]（血液学）：82 fL
+- 红细胞 [血液]（血液学）：3.69 m/uL
+- 靶细胞[血液]（血液学）：
+
+### 2157-08-10 21:10
+[实验室]
+- 亚硝酸盐[尿液]（血液学）：
+- pH [尿液]（血液学）：6.0 单位
+- 酵母[尿液]（血液学）：无
+- WBC [尿液]（血液学）：#/hpf
+- 尿胆素原 [尿液]（血液学）：mg/dL
+- 尿液粘液[尿液]（血液学）：
+- 尿液颜色[尿液]（血液学）：
+- 尿液外观[尿液]（血液学）：
+- 比重[尿液]（血液学）：1.009
+- RBC [尿液]（血液学）：1 #/hpf
+- 上皮细胞 [尿液]（血液学）：0 #/hpf
+- Uhold [尿液]（化学）：保持。
+- 细菌[尿液]（血液学）：
+- 胆红素[尿液]（血液学）：mg/dL
+- 血液[尿液]（血液学）：
+- 蛋白质[尿液]（血液学）：30 mg/dL
+- 葡萄糖[尿液]（血液学）：mg/dL
+- 酮[尿液]（血液学）：mg/dL
+- 尿液收集长度[尿液]（化学）：
+- 白细胞[尿液]（血液学）：
+
+### 2157-08-11 06:00
+[处方]
+- OxycoDONE（立即释放）； 30毫克；路线=PO/NG
+- 葡萄糖 50%； 12.5克；路线=IV
+- 胰岛素； 0 单位；路线=SC
+- 阿昔洛韦； 400毫克；路线=PO/NG
+- 胰高血糖素； 1毫克；路线=IM
+- 多库酯钠； 100毫克；路线=PO/NG
+- 赖诺普利； 10毫克；路线=PO/NG
+- 塞纳； 8.6毫克；路线=PO/NG
+- 缓释吗啡（MS Contin）； 100毫克；路线=PO
+- 依诺肝素钠； 40毫克；路线=SC
+- 地塞米松； 8毫克；路线=IV
+- 利多卡因 5% 贴剂； 1 场比赛；路线=TD
+- 葡萄糖凝胶； 15克；路线=PO
+- 别嘌呤醇； 300毫克；路线=PO/NG
+
+### 2157-08-11 07:00
+[处方结束]
+- 缓释吗啡（MS Contin）； 100毫克；路线=PO
+- 地塞米松； 8毫克；路线=IV
+
+### 2157-08-11 08:00
+[处方]
+- 氯化钠鼻用； 1-2 SPRY；路线=NU
+- 硫酸镁； 2克；路线=IV
+- 硫酸镁； 4克；路线=IV
+
+### 2157-08-11 09:20
+[实验室]
+- 钠[血液]（化学）：138 mEq/L
+- 钾[血液]（化学）：4.3 mEq/L
+- 乳酸脱氢酶 (LD) [血液]（化学）：979 IU/L
+- 碱性磷酸酶 [血液]（化学）：207 IU/L
+- 肌酐[血液]（化学）：0.8 mg/dL
+- 血细胞比容[血液]（血液学）：32.8 %
+- 血红蛋白[血液]（血液学）：10.5 g/dL
+- MCH [血液]（血液学）：25.8 pg
+- MCHC [血液]（血液学）：32.0 %
+- MCV [血液]（血液学）：80 fL
+- 血小板计数[血液]（血液学）：328 K/uL
+- 葡萄糖[血液]（化学）：186.0 mg/dL
+- RDW [血液]（血液学）：18.0 %
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：129 IU/L
+- 阴离子间隙[血液]（化学）：17 mEq/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：217 IU/L
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- 总胆红素[血液]（化学）：0.2 mg/dL
+- 氯化物[血液]（化学）：98 mEq/L
+- 白细胞[血液]（血液学）：6.6 K/uL
+- 红细胞 [血液]（血液学）：4.08 m/uL
+- 尿酸[血液]（化学）：6.3 mg/dL
+- 尿素氮[血液]（化学）：14 mg/dL
+
+### 2157-08-11 12:00
+[处方]
+- 地塞米松； 4毫克；路线=IV</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Methadone; 10 mg twice daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 美沙酮有时被用作长效阿片类药物，用于治疗严重的癌症疼痛和阿片类药物轮换。</div>
+    <div class="row"><span class="label">为何错误:</span> 美沙酮 10 毫克，每天两次，作为唯一的基线阿片类药物，对于以前服用大剂量吗啡的人来说剂量明显不足，并且存在无法控制的疼痛和戒断风险；它还需要仔细的转换和 QTc 监测，此处未提及。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Fentanyl; 25 mcg/hr patch; route=TD</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 症状改善后改用芬太尼贴剂似乎是合理的阿片类药物轮换并减少剂量。</div>
+    <div class="row"><span class="label">为何错误:</span> 25 微克/小时的芬太尼贴剂每天提供大约 60-90 毫克口服吗啡当量，远低于该患者的既定需求（约 270-300 毫克/天），存在严重不受控制的疼痛和戒断风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Nalbuphine; 10 mg every 4 hours; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 在医院使用注射阿片类药物对于癌症疼痛的急性治疗似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 纳布啡是一种混合激动剂-拮抗剂，可促使维持高剂量全激动剂阿片类药物的患者戒断，并且不能提供适当的长效基线镇痛。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Tramadol; 100 mg ER daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 鉴于地塞米松和放疗可改善症状，减少使用较弱的镇痛药似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 每天 100 mg 的曲马多缓释片是一种弱阿片类药物，对于需要大剂量长效阿片类药物的阿片类药物耐受患者来说严重不足，导致疼痛控制不良和戒断。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Morphine SR (MS Contin); 90 mg; route=PO</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 吗啡SR 90 mg PO用于维持对脊柱转移性淋巴瘤引起的慢性剧烈疼痛的控制。患者入院前的治疗方案和持续的肿瘤性疼痛证明继续长效阿片类药物治疗是合理的。剂量从 100 毫克略微减少至 90 毫克，表明在类固醇和放射治疗后症状控制得到改善后进行了重新评估。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Buprenorphine; 10 mcg/hr patch; route=TD</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 另一种长效阿片类药物似乎适合需要基线镇痛的慢性癌症疼痛。</div>
+    <div class="row"><span class="label">为何错误:</span> 透皮丁丙诺啡是一种部分激动剂，不适用于需要高剂量全激动剂阿片类药物的患者，并且在低剂量下会导致戒断并提供不充分的镇痛。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

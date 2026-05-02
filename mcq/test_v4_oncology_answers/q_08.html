@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 8 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 8 题 — 答案及解析</h1>
+  <div class="meta">住院号 28142407 · 决策时间 2151-06-07 20:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> C
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 64
+- **性别：** 男
+- **服务：** 手术
+- **过敏：**头孢呋辛/碘；含碘
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 小肠胃肠道间质瘤。
+- 巨大的切口疝。
+
+### 现病史
+- ___ 先生是一名 ___，出现腹痛，CT 扫描显示存在与胃肠道间质瘤一致的大小肠肿瘤。针刺活检证实 c-Kit 呈阳性，患者开始服用格列卫。他之前还接受过穿孔憩室炎手术，后来进行了结肠造口术。他在中线切口处出现腹侧疝气，在结肠造口和拆卸部位出现巨大的左侧疝气。他提出进行胃肠道间质瘤切除术和腹部疝气修复术。
+
+### 系统审查（准入前）
+- 未知
+
+### 既往病史
+- DM 类型 2
+-HTN
+- 憩室炎
+- 胃肠道间质瘤
+
+### 社会历史
+- 未知
+
+### 家族史
+- 未知
+
+### 入学前体检
+- 98.8 98 130/78 18 92% 相对湿度  
+- Gen：A 和 O x 3  
+- 心脏：RRR 无 MRGC  
+- 普尔：CTA B  
+- 腹部：腹部柔软、无压痛、切口无扩张 c/d/i  
+- 外部：温暖+脉冲
+
+### 入院前药物
+- 西酞普兰 20&#x27;
+- 辛伐他汀 20&#x27;
+- 格列本脲 2.5&quot;
+- 二甲双胍 1000&quot;
+- 赖诺普利 10&#x27;
+
+=== 院内临床时间表 ===
+### 2151-06-05 00:00
+[程序]
+- 其他小肠部分切除术
+- 切口疝修补术
+
+### 2151-06-05 10:00
+[处方]
+- 辛伐他汀； 20毫克；路线=PO
+- 氢溴酸西酞普兰； 20毫克；路线=PO
+- 雷尼替丁； 150毫克；路线=PO
+- 赖诺普利； 10毫克；路线=PO
+
+### 2151-06-05 15:38
+[实验室]
+- 插管[血液]（血气）：插管。
+- 血红蛋白[血液]（血气）：10.1 g/dL
+- 样本类型[血液]（血气）：VEN。
+- 钠，全血[血液]（血气）：135 mEq/L
+- 钾，全血[血液]（血气）：4.1 mEq/L
+- pO2 [血液]（血气）：113 mm Hg
+- pH值[血液]（血气）：7.31单位
+- 乳酸[血液]（血气）：2.4 mmol/L
+- 碱过剩[血液]（血气）：-2 mEq/L
+- 计算得出的总 CO2 [血液]（血气）：25 mEq/L
+- 氯化物，全血[血液]（血气）：101 mEq/L
+- 游离钙[血液]（血气）：1.14 mmol/L
+- 葡萄糖[血液]（血气）：181 mg/dL
+- 血细胞比容，计算[血液]（血气）：30 %
+- pCO2 [血液]（血气）：48 毫米汞柱
+
+### 2151-06-05 16:34
+[实验室]
+- 计算碳酸氢盐，全血 [血液]（血气）：25 mEq/L
+- 氯化物，全血[血液]（血气）：102 mEq/L
+- 葡萄糖[血液]（血气）：199 mg/dL
+- 血细胞比容，计算[血液]（血气）：28 %
+- 插管[血液]（血气）：插管。
+- 乳酸[血液]（血气）：2.6 mmol/L
+- pH值[血液]（血气）：7.33单位
+- 钾，全血[血液]（血气）：4.3 mEq/L
+- 钠，全血[血液]（血气）：133 mEq/L
+- 样本类型[血液]（血气）：VEN。
+- 游离钙[血液]（血气）：1.09 mmol/L
+- 血红蛋白[血液]（血气）：9.3 g/dL
+
+### 2151-06-05 18:16
+[实验室]
+- 纤维蛋白原，功能性[血液]（血液学）：355 mg/dL
+- INR(PT) [血液]（血液学）：1.2
+- PT [血液]（血液学）：13.6 秒
+- PTT [血液]（血液学）：24.3 秒
+- 镁[血液]（化学）：1.4 mg/dL
+- 钾[血液]（化学）：4.5 mEq/L
+- 血细胞比容[血液]（血液学）：31.0 %
+
+### 2151-06-05 20:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 对乙酰氨基酚； 1000毫克；路线=PO
+- 胰岛素； 0 单位；路线=SC
+- 多库酯钠； 100毫克；路线=PO
+- LR； 1000毫升；路线=IV
+- 氢吗啡酮（Dilaudid）； 12.5毫克；路线=IVPCA
+
+### 2151-06-05 21:00
+[处方]
+- 硫酸镁； 4克；路线=IV
+
+### 2151-06-06 09:00
+[处方结束]
+- LR； 1000毫升；路线=IV
+
+### 2151-06-06 11:10
+[实验室]
+- 总钙[血液]（化学）：7.9 mg/dL
+- 氯化物[血液]（化学）：104 mEq/L
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：198 mg/dL
+- 镁[血液]（化学）：2.3 mg/dL
+- 磷酸盐[血液]（化学）：4.4 mg/dL
+- 钾[血液]（化学）：4.6 mEq/L
+- 尿素氮[血液]（化学）：22 mg/dL
+- 血细胞比容[血液]（血液学）：31.5 %
+- 血红蛋白[血液]（血液学）：9.5 g/dL
+- MCH [血液]（血液学）：26.2 pg
+- MCHC [血液]（血液学）：30.2 %
+- MCV [血液]（血液学）：87 fL
+- 血小板计数[血液]（血液学）：299 K/uL
+- RDW [血液]（血液学）：16.2 %
+- 红细胞 [血液]（血液学）：3.64 m/uL
+- 白细胞[血液]（血液学）：9.7 K/uL
+- 钠[血液]（化学）：137 mEq/L
+- 碳酸氢盐 [血液]（化学）：21 mEq/L
+- 肌酐[血液]（化学）：1.5 mg/dL
+- 阴离子间隙[血液]（化学）：17 mEq/L
+
+### 2151-06-06 18:00
+[处方]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+
+### 2151-06-06 20:00
+[处方结束]
+- 硫酸镁； 4克；路线=IV
+
+### 2151-06-07 08:00
+[实验室]
+- 镁[血液]（化学）：2.3 mg/dL
+- 阴离子间隙[血液]（化学）：12 mEq/L
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- 总钙[血液]（化学）：7.9 mg/dL
+- 氯化物[血液]（化学）：101 mEq/L
+- 肌酐[血液]（化学）：1.7 mg/dL
+- 磷酸盐[血液]（化学）：2.3 mg/dL
+- 钾[血液]（化学）：4.9 mEq/L
+- 钠[血液]（化学）：135 mEq/L
+- 尿素氮[血液]（化学）：21 mg/dL
+- 葡萄糖[血液]（化学）：190 mg/dL
+
+### 2151-06-07 08:00
+[处方]
+- 二甲双胍（格华止）； 1000毫克；路线=PO
+- 格列本脲； 2.5毫克；路线=PO
+
+### 2151-06-07 08:00
+[处方结束]
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+
+### 2151-06-07 19:26
+[放射学]
+- 放射学注释：检查原因：恶心和呕吐。 
+  
+  接受广泛腹部手术后的患者。
+  
+  回顾了卧位和腹部的两个 AP 视图。  两人离开
+  腹部引流管已就位。  记录皮肤缝合线。  有弥漫性
+  结肠在盲肠处扩张达 7 厘米，在盲肠处扩张达 6 厘米
+  横结肠水平。  没有显示空气-液体水平。 
+  直肠乙状结肠内可见空气。  整体画面是一致的
+  伴有肠梗阻，并不代表肠梗阻，随访是
+  推荐。</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Dextrose 5%; 1000 mL; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 在 NPO 的同时提供静脉注射葡萄糖似乎可以满足肠梗阻期间的基础葡萄糖需求。</div>
+    <div class="row"><span class="label">为何错误:</span> D5W缺乏电解质，低渗；在 Na 135 mEq/L 和肌酐升高的情况下，它会加重低钠血症，并且不能提供适当的维持电解质。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Sodium Chloride 3%; 100 mL; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 轻度低钠血症可能需要进行旨在提高血清钠水平的治疗。</div>
+    <div class="row"><span class="label">为何错误:</span> 3%氯化钠用于严重或有症状的低钠血症；在没有临床指征的情况下，给予 Na 135 mEq/L 的高渗盐水可能会导致快速过度矫正和渗透性脱髓鞘。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">D5 1/2NS; 1000 mL; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 患者出现术后肠梗阻，无法安全耐受口服补液或营养。实验室异常表明轻度肾功能损害和低钠血症，需要持续的肠外液体支持。 D5 1/2NS IV 用于维持液体平衡并在肠道功能恢复时提供葡萄糖。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Insulin Regular; 10 units; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 190 mg/dL 的葡萄糖可能会被误读为需要立即进行药理学校正。</div>
+    <div class="row"><span class="label">为何错误:</span> 对于术后 NPO 患者的轻度高血糖，静脉推注胰岛素可能会引发低血糖，尤其是在计划维持葡萄糖时，并且不能满足平衡维持液体的主要需求。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Neostigmine; 2 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 放射学显示弥漫性结肠扩张，这可能被误读为急性结肠假性梗阻，提示使用促动力/胆碱能药物。</div>
+    <div class="row"><span class="label">为何错误:</span> 该研究明确支持术后肠梗阻（而不是奥美肠梗阻），因此没有使用新斯的明，并且在不解决水合需求的情况下存在心动过缓和其他不良反应的风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Potassium Chloride; 40 mEq; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 停止含钾液体可能会促使术后恢复钾以“维持”水平。</div>
+    <div class="row"><span class="label">为何错误:</span> 血清钾已为 4.9 mEq/L，肌酐为 1.7 mg/dL；在肾脏清除率降低的情况下，额外静脉注射钾可能会导致高钾血症。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

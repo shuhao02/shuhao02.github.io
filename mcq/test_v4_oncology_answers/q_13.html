@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 13 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 13 题 — 答案及解析</h1>
+  <div class="meta">住院号 24568689 · 决策时间 2171-01-30 06:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> D
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 58
+- **性别：** F
+- **服务：** 医学
+- **过敏：**青霉素/红霉素碱/磺胺（磺胺类抗生素）/四环素/可待因/络活喜/乳胶，天然橡胶/阿司匹林/碘/赖诺普利/丙氧芬
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 左下肢无力、跌倒
+
+### 现病史
+- ___ 是一名 ___ 右手女性，有糖尿病、高血压、高胆固醇血症病史，偶尔因 URI、胃食管反流病、膀胱过度活动症、子宫肌瘤切除术和扁桃体切除术而喘息，以及在 ___ 新诊断的囊性胶质母细胞瘤 S/P 切除术。  
+- 她今天到急诊室就诊，因为上周她感到臀部以下的 LLE 虚弱。她感觉自己被东西绊倒了，上周已经摔倒过几次，甚至险些摔倒。  
+- 今天在急诊室调用了 Code Cord，CTL 脊柱 MRI 未显示脊髓受压的证据。神经外科医生给她看诊，认为她没有任何导致她症状的病变。  
+- 在这里的地板上，她感觉很好。无新症状。否认头痛或视力变化。据报道，过去两天她的左侧背部疼痛，随着活动而加剧，但没有其他症状。否认尿失禁或尿潴留。肛周无麻木感。
+
+### 系统审查（准入前）
+- 否认头痛  
+- 否认视力变化  
+- 报告过去 2 天左侧背痛随着运动而恶化  
+- 否认尿失禁或尿潴留  
+- 否认肛周区域麻木  
+
+### 既往病史
+- 胶质母细胞瘤 – 在 ___ ___ 切除 L 额叶肿瘤后于 ___ 诊断  
+- 高血压  
+- 膀胱过度活动症  
+- 糖尿病  
+- 偏头痛  
+- 中风  
+- 胃食管反流病  
+- 高胆固醇血症  
+- 偶尔因 URI 而喘息  
+- 过去拔除的所有牙齿  
+- 子宫肌瘤肿瘤切除术  
+- 扁桃体切除术  
+- 对___的子宫肿瘤进行了重要手术，该肿瘤是良性的  
+
+### 社会历史
+- 未知
+
+### 家族史
+- 对于___岁患有心脏病的母亲来说意义重大  
+- 父亲在___岁的时候自杀了  
+
+### 入学前体检
+- 一般：NAD  
+- 生命体征：98.2 PO 114 / 70 L 躺着 72 20 96  
+- HEENT：NC AT，嗯。没有鹅口疮。  
+- CV：RR、NL S1S2 无 S3S4 MRG。  
+- 普尔：CTAB。  
+- ABD：BS+、软、NTND。  
+- 四肢：无水肿、杵状指、震颤。  
+- 皮肤：无皮疹或皮肤破损。  
+- NEURO：B/L 髌骨反射相等且 2+。下肢无传感器丢失。力量——两条腿非常相似且强壮。背屈期间观察到 LLE 非常轻微的无力。
+
+### 入院前药物
+1. 对乙酰氨基酚 325-650 mg PO Q6H:PRN 发烧或疼痛  
+2. 加巴喷丁 600 mg PO QHS  
+3.左旋乙拉西坦 500 mg PO BID  
+4. 琥珀酸美托洛尔 XL 200 mg PO QHS  
+5. 琥珀酸美托洛尔 XL 50 mg PO 每日 QAM  
+6. 奥美拉唑 80 mg PO QHS  
+7.瑞舒伐他汀钙 40 mg PO QPM  
+8. Vesicare（索利那新）5毫克口服QHS  
+9. 羟考酮（速释）5 mg PO Q12H:PRN 疼痛 - 中度  
+10. 维生素 D 每日 1000 单位 PO  
+11. 地塞米松 3 mg PO Q12H  
+12.雌二醇0.01%（0.1毫克/克）阴道Q24H  
+13. 甘精胰岛素 12 单位 睡前服用  
+14. 劳拉西泮 1 mg PO ASDIR  
+15.昂丹司琼 8 mg PO Q12H:PRN 恶心/呕吐  
+16. 丙氯拉嗪 10 mg PO DAILY：PRN 化疗  
+17. 利扎曲坦 10 mg 口服每日：PRN 偏头痛  
+18. 环苯扎林 10 mg PO TID:PRN 背痛  
+19. 硫糖铝 100 mg/mL 口服 TID  
+20. 替莫唑胺 140 毫克，每日口服  
+21. 塞来昔布 200 mg 口服 BID
+
+=== 院内临床时间表 ===
+### 2171-01-29 16:36
+[放射学]
+- 放射学笔记：调查结果：
+  宫颈：
+  颈椎的排列得以保持。  椎体高度
+  和磁盘空间被保留。  骨髓信号呈弥漫性异质性
+  无可疑局灶性病变。  未见异常强化。  有
+  脊髓结构正常，无脊髓畸形或异常
+  增强。
+  
+  C2-C3 和 C3-C4：无椎管或神经孔狭窄。
+  
+  C4-C5、C5-C6 和 C6-C7：有轻度中央椎间盘突出，伴有轻度
+  腹侧鞘囊消失，无椎管狭窄、脊髓
+  畸形或脊髓信号强度异常。  没有显着的
+  神经孔狭窄。
+  
+  C7-T1：无椎管或神经孔狭窄。
+  
+  胸部：
+  保持胸椎的对齐。  椎体高度
+  和磁盘空间被保留。  血管瘤散在分布较多，
+  T1、T5、T10 和 T11 椎体内明显的血管瘤。  的
+  骨髓信号呈弥漫性异质性，无明确的局灶性可疑
+  病变，尽管 T9 的左下终板确实表现出 T1
+  低信号病变，伴有轻度 STIR 高信号（系列 5，图像 8），
+  可能代表非典型血管瘤。  没有明确的可疑之处
+  发现局灶性骨髓病变。  脊柱结构正常
+  脊髓无脊髓畸形或异常强化。
+  
+  T5-T6 处中央有一个椎间盘突出，椎间盘轻度凹陷
+  腹侧鞘囊无明显椎管狭窄或神经
+  椎间孔变窄。  胸椎的其余水平表明
+  无明显椎管狭窄或神经孔狭窄。  有
+  无异常强化。
+  
+  腰椎：
+  保持腰椎的对齐。  椎体高度
+  和磁盘空间被保留。  有散在的血管瘤；例如
+  L2 和 L4 椎体。  没有可疑的骨髓替代病变或
+  异常增强。  圆锥终止于 L1-L2 水平。  脊柱
+  脊髓形态正常，无脊髓畸形或异常
+  增强。
+  
+  L1-L2、L2-L3 和 L3-L4：无椎管或神经孔狭窄。  轻度
+  可见小关节病变和黄韧带增厚。
+  
+  L4-L5：有一个小的椎间盘凸起，腹侧有轻微的凹陷
+  鞘囊。  有轻度双侧小关节病变和黄韧带
+  无椎管增厚或神经孔狭窄。
+  
+  L5-S1：无椎管或神经孔狭窄。  轻度双侧小关节
+  可见关节病和黄韧带增厚。
+  
+  其他：顺便说一句，在极间区域内有一个小囊肿。
+  左肾。  对比后 1 cm T2 低信号、T1 高信号
+序列囊肿对应于先前描述的 CT 腹部骨盆病变
+  左肾，可能代表出血性囊肿，尽管
+  如果没有 T1 预对比序列，则特征不完全。  以前
+  本研究中未显示所描述的肝脏病变；请参考CT
+  腹部骨盆日期为___以了解更多详细信息。
+  
+  印象：
+  1. 没有脐带受压或脐带信号强度异常的证据。  否
+  液体收集提示脓肿。  无异常强化。
+  2.无椎管或神经孔的轻度退行性改变
+  狭窄。
+  3. T1 低信号轻微增强左侧 STIR 高信号病灶
+  下 T9 终板可能代表非典型血管瘤。  注意
+  建议跟进。
+  4. 不完全表征 1 cm T2 低信号 T1 高信号囊肿
+  左肾，可能代表出血性囊肿，尽管不完全
+  特点。  之前在 ___ 的 CT 检查中可以看到这一点。  建议密切关注后续情况。
+  5. 本研究未显示先前描述的肝脏病变；请
+  请参阅 ___ 日期的腹部骨盆 CT 检查了解更多详情。
+
+### 2171-01-29 16:40
+[放射学]
+- 放射学笔记：调查结果：
+  肺容量低且支气管血管纹理拥挤。有
+  无局灶性实变、渗出或明确水肿。  心纵隔
+  轮廓在正常范围内。  无急性骨异常。
+  
+  印象：
+  无急性心肺过程。
+
+### 2171-01-29 19:53
+[放射学]
+- 放射学笔记：调查结果：
+  没有急性区域梗塞或出血的证据。有一个
+  右额叶上叶有类似的血管性水肿模式。  那里
+  轻度脑沟消失与右侧肿块效应相关
+  心室，与之前相似。  中线左移最小（~4mm）
+  注意到结构也没有变化。
+  
+  右额叶开颅手术再次见到改变。  没有证据表明
+  骨折。  鼻旁窦、乳突气室的可视化部分，
+  和中耳腔清晰。  轨道的可视化部分是
+  不起眼的。
+  
+  印象：
+  无出血。  右额叶水肿的总体模式相似
+  正如最近 MRI 上的详细信息。
+
+### 2171-01-30 05:00
+[处方]
+- 对乙酰氨基酚； 325-650毫克；路线=PO/NG
+- 加巴喷丁； 600 毫克；路线=PO/NG
+- 胰高血糖素； 1毫克；路线=IM
+-左旋ETIR乙酰胺； 500毫克；路线=PO
+- 葡萄糖凝胶； 15克；路线=PO
+- 盐酸环丙沙星； 500毫克；路线=PO/NG
+- 葡萄糖 50%； 12.5克；路线=IV
+- 硫糖铝； 1克；路线=PO/NG
+- 多库酯钠； 100毫克；路线=PO/NG
+- 瑞舒伐他汀钙； 40毫克；路线=PO
+- 胰岛素； 0 单位；路线=SC
+- 维生素D； 1000 单位；路线=PO/NG
+- 塞纳； 17.2毫克；路线=PO/NG
+- 奥美拉唑； 40毫克；路线=PO
+- 羟考酮（立即释放）； 5毫克；路线=PO/NG
+
+### 2171-01-30 05:00
+[处方结束]
+- 地塞米松； 1毫克；路线=PO/NG</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Mannitol; 0.5 g/kg; route=IV bolus</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 甘露醇是一种渗透剂，常用于快速降低脑水肿患者的颅内压。</div>
+    <div class="row"><span class="label">为何错误:</span> 她的影像学显示轻度、稳定的血管源性肿瘤水肿，没有急性颅内高压的迹象，因此不需要渗透性利尿，并且存在液体转移和肾损伤的风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Acetazolamide; 250 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 乙酰唑胺用于通过减少特发性颅内高压患者脑脊液的产生来降低颅内压。</div>
+    <div class="row"><span class="label">为何错误:</span> 她的水肿是由肿瘤引起的血管源性水肿，而不是由于脑脊液过量产生，因此乙酰唑胺不能解决病理生理学问题，并且对于磺胺类抗生素过敏的患者还具有磺胺类药物相关的过敏风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Methylprednisolone; 1 g; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 高剂量甲基强的松龙用于治疗某些急性神经系统疾病，以迅速减少炎症。</div>
+    <div class="row"><span class="label">为何错误:</span> 脉冲剂量甲基泼尼松龙（1克/天）不适用于肿瘤相关的血管源性水肿，并且会引起不必要的毒性（严重高血糖、免疫抑制），而中等剂量地塞米松是标准方法。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Dexamethasone; 4 mg; route=PO/NG</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 2171-01-29 的影像显示右额叶持续存在血管源性水肿，与患者的胶质母细胞瘤部位相对应，并有轻度神经功能缺损。鉴于持续的脑肿胀和对先前较低剂量的反应不足，地塞米松增加至 4 mg PO/NG，以改善颅内水肿管理和神经系统稳定性。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Prednisone; 60 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 泼尼松是一种全身性皮质类固醇，可以减轻炎症，可能有助于缓解脑水肿。</div>
+    <div class="row"><span class="label">为何错误:</span> 对于肿瘤相关的血管源性水肿，首选地塞米松，其中枢神经系统渗透性较好，盐皮质激素作用较低；在这种情况下，泼尼松的效果较差，并且更有可能导致液体潴留和高血糖。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Bevacizumab; 10 mg/kg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 已知贝伐珠单抗可减少胶质母细胞瘤的瘤周水肿和类固醇需求。</div>
+    <div class="row"><span class="label">为何错误:</span> 它专门用于治疗类固醇难治性水肿或复发性疾病，而不是用于轻度、稳定的水肿，并且对这位高血压术后患者构成重大风险（例如高血压、血栓形成、伤口愈合受损）。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

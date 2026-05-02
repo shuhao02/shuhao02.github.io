@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 16 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 16 题 — 答案及解析</h1>
+  <div class="meta">住院号 25214278 · 决策时间 2154-11-27 14:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> C
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 52
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 可待因
+- **种族：** 白色
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 颈部质量
+
+### 现病史
+- ___ 先生是一名 ___，没有明显的 PMH，他从 ___ 就诊，进一步评估颈部肿块，现在需要紧急气管切开术。  
+- 根据报告，自___以来，他的声音发生了变化，由于缺乏健康保险而未进行评估。  
+- 他出现体重减轻、吞咽困难、吞咽痛。  
+- 大约 6 周前开始注意到颈前部肿胀。  
+- 他终于找到了工作/保险，并于今天进行了评估。  
+- 评估的全部细节不清楚；然而，据报道，PT 去了___，并被转移到___。  
+- 在___，他接受了 NPL，结果显示 R 扁桃体肿块。  
+- 他接受了 20 毫克 Decadron 治疗，并接受了颈部 CT 检查，结果显示“右侧扁桃体肿块、后咽下咽肿块和颈部淋巴结肿大”。  
+- 在使用类固醇后，他再次接受了 NPL，但变化很小。  
+- 建议他进行紧急气管切开术，但 pt 犹豫不决，因为 pt 的父亲因 ___ 接受了气管切开术。  
+- 他请求调动以征求___意见，因此来到___。  
+
+### 系统审查（准入前）
+- 声音变化、体重减轻、吞咽困难、吞咽痛、颈部肿胀。
+
+### 既往病史
+- 无
+
+### 社会历史
+- 未知
+
+### 家族史
+- 患有喉癌的父亲
+
+### 入学前体检
+- 未知
+
+### 入院前药物
+- 无
+
+=== 院内临床时间表 ===
+### 2154-11-26 00:00
+[程序]
+- 通过自然或人工内窥镜检查喉部
+- 使用气管造口装置绕过气管至皮肤，开放式方法
+- 扁桃体切除术，经皮方法，诊断
+
+### 2154-11-26 04:08
+[放射学]
+- 放射学笔记：调查结果：
+  没有实变、胸腔积液或气胸。 
+  心纵隔和肺门轮廓是正常大小。  有一些
+  基底动脉亚段肺不张。  右侧肋骨骨折已愈合
+  看到了。
+  
+  印象：
+  无急性心肺过程。
+
+### 2154-11-26 22:00
+[处方]
+- 塞纳； 8.6毫克；路线=PO
+- 四价流感疫苗； 0.5毫升；路线=IM
+- 比沙可啶； 10毫克；路线=PO
+- 异丙酚； 1000毫克；路线=静脉滴注
+- D5 1/2NS； 1000毫升；路线=IV
+- 利多卡因 1%； 2.5毫升；路线=IH
+- 硫酸吗啡； 1-5毫克；路线=IV
+- 比沙可啶； 10毫克；路线=公关
+
+### 2154-11-27 04:09
+[实验室]
+- 尿素氮[血液]（化学）：13 mg/dL
+- 钠[血液]（化学）：140.0 mEq/L
+- L [血液]（化学）：5
+- 钾[血液]（化学）：3.7 mEq/L
+- 磷酸盐[血液]（化学）：2.4 mg/dL
+- H [血]（化学）：19
+- 我[血液]（化学）：1
+- 血细胞比容[血液]（血液学）：40.2 %
+- 葡萄糖[血液]（化学）：131.0 mg/dL
+- 肌酐[血液]（化学）：0.6 mg/dL
+- 氯化物[血液]（化学）：102 mEq/L
+- 总钙[血液]（化学）：8.2 mg/dL
+- 碳酸氢盐 [血液]（化学）：29 mEq/L
+- 阴离子间隙[血液]（化学）：9.0 mEq/L
+- 镁[血液]（化学）：2.1 mg/dL
+- 血红蛋白[血液]（血液学）：13.7 g/dL
+- MCV [血液]（血液学）：93 fL
+- MCHC [血液]（血液学）：34.1 g/dL
+- MCH [血液]（血液学）：31.8 pg
+- 血小板计数[血液]（血液学）：132 K/uL
+- RDW-SD [血液]（血液学）：43.7 fL
+- RDW [血液]（血液学）：12.6 %
+- 红细胞 [血液]（血液学）：4.31 m/uL
+- 白细胞[血液]（血液学）：6.7 K/uL
+
+### 2154-11-27 08:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+
+### 2154-11-27 13:00
+[处方结束]
+- D5 1/2NS； 1000毫升；路线=IV
+- 利多卡因 1%； 2.5毫升；路线=IH
+- 硫酸吗啡； 1-5毫克；路线=IV</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Ketorolac; 30 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 酮咯酸是一种有效的肠外镇痛药，通常用于减少术后急性疼痛的阿片类药物需求。</div>
+    <div class="row"><span class="label">为何错误:</span> 最近的扁桃体切除术后，酮咯酸的血小板抑制作用会增加术后出血风险，通常在扁桃体切除术后立即避免使用。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Oxycodone Er; 20 mg q12h; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 当预期重复给药时，缓释阿片类药物似乎可以合理地提供持续的疼痛控制。</div>
+    <div class="row"><span class="label">为何错误:</span> 由于用药过量风险和缺乏快速滴定，缓释羟考酮不适用于从未使用过阿片类药物的患者术后急性疼痛，并且考虑到吞咽困难，口服使用可能会出现问题。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Morphine Sulfate; 1-8 mg; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 继续静脉注射硫酸吗啡并滴定至 1-8 mg，以控制气管切开术和扁桃体切除术后的疼痛。先前的低剂量吗啡订单已停止，表明对疼痛控制需求进行了重新评估。考虑到患者的可待因过敏，吗啡可提供有效的阿片类镇痛，且无需禁忌药物。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Acetaminophen-Codeine; 300/30 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 对乙酰氨基酚与弱阿片类药物的组合通常用于缓解中度术后疼痛。</div>
+    <div class="row"><span class="label">为何错误:</span> 该患者有可待因过敏记录，因此禁止使用任何含可待因的产品。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Ibuprofen; 600 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 布洛芬是术后镇痛多模式治疗方案的常见组成部分。</div>
+    <div class="row"><span class="label">为何错误:</span> 非选择性非甾体抗炎药（如布洛芬）会增加扁桃体切除术后出血的风险，应在术后立即避免使用。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Buprenorphine (Transdermal); 10 mcg/hr; route=TD</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 透皮镇痛药对于持续控制疼痛而不需要频繁静脉给药似乎很有吸引力。</div>
+    <div class="row"><span class="label">为何错误:</span> 丁丙诺啡贴剂用于治疗慢性疼痛，起效延迟，并且可以减弱阿片类药物激动剂的作用，因此不适合治疗未使用过阿片类药物的患者气管切开术/扁桃体切除术后的急性疼痛。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

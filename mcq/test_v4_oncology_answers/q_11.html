@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 11 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 11 题 — 答案及解析</h1>
+  <div class="meta">住院号 22848282 · 决策时间 2166-10-02 07:00 · 共 7 个选项 · 2 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> D, F
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 48
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 患者记录为没有已知的药物过敏
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 多发性骨髓瘤入院接受高剂量化疗和自体干细胞救援
+
+### 现病史
+- ___ 先生是一名患有多发性骨髓瘤的 ___ 男性。他的主要肿瘤科医生是___ 博士。他之前曾接受过 Revlimid、Velcade 和地塞米松治疗，随后又接受 Revlimid、Velcade、地塞米松和 Cytoxan 治疗，添加 Cytoxan 后，反应有所改善。由于持续的骨髓受累（CD138 约 30%），他接受了单剂量的 Cytoxan 1500 mg/m2。随后进行 Cytoxan、Revlimid、Velcade 和地塞米松的单周期治疗。 ___ 中的骨髓活检显示抽吸物中约有 10% 为浆细胞，CD138 染色显示约 30% 为浆细胞。目前 UPEP 的 ___ 蛋白呈阴性，SPEP 显示低丙种球蛋白血症，并且血清游离 kappa 和游离 kappa lambda 比率持续升高。 ___ 先生还患有持续性肾功能不全，肌酐在 1.5 至 1.7 之间。由于他似乎已经达到反应平台，因此决定进行自体干细胞移植。他接受了移植前疫苗（方案 ___ 于 ___）。他因高剂量 Cytoxan 于___入院，随后收集了 485 万个干细胞。今天他感觉很好。自从 ___ 出院以来，患者情况一直良好。他胃口很好，并且控制了饮水量。起初他有些疲劳，但最近一周他的精力水平很好。他一直与两个年幼的孩子共度时光。
+
+### 系统审查（准入前）
+- 否认发烧、发冷、体重减轻、盗汗、流鼻涕、鼻塞、喉咙痛、胸痛、抽搐、咳嗽、腹痛、恶心、呕吐、腹泻、腿部肿胀、头痛、皮疹、瘀伤。
+
+### 既往病史
+- **肿瘤病史：**
+  - 多发性骨髓瘤：目前正在进行___方案，肿瘤融合疫苗与自体干细胞移植相结合
+  - 已完成最初的 RVD 治疗，随后是 3 个周期的 CRVD，最后一剂 RVD 于 ___ 给药，最后一剂环磷酰胺于 ___ 给药
+  - 由于___的___疾病，他的右髋部也接受了放射治疗，效果良好。
+- **其他 PMH：**
+  - CHF 病史，EF 下降，射血分数现在 &gt;55%（TTE ___）
+  - 肾功能不全（基线肌酐 1.6-1.7）
+  - 低丙种球蛋白血症 - 最后一剂 IVIG 给予 ___
+  - 腹部鳞状细胞癌
+
+### 社会历史
+- 未知
+
+### 家族史
+- 他的母亲还健在。他的父亲还活着。他确实接受了与 BPH 相关的肾移植手术。他没有兄弟姐妹。据他所知，家里没有癌症或血液疾病。
+
+### 入学前体检
+- **VS：** Tc 98.0 BP 134/78 RR 18 HR 88 100%RA  
+- **将军：** NAD，仪表堂堂，令人愉快的绅士  
+- **皮肤：**温暖，无皮疹，无瘀斑或瘀点  
+- **HEENT：** 无黄疸巩膜，MMM，OP 透明  
+- **颈部：** 柔软，无淋巴结肿大  
+- **心脏：** RRR，nl S1 S2，无 m/r/g  
+- **肺部：** 呼吸做功、CTAB 没有增加，没有喘息或爆裂音  
+- **腹部：** +BS，柔软，NTND，无反弹或防护  
+- **四肢：** 没有 ___，WWP  
+- **NEURO：** A&amp;Ox3，CN II-XII 完好无损  
+
+### 入院前药物
+- 赖诺普利 10 毫克，每日口服
+- 维艾夫特
+- 维生素B12
+- 劳拉西泮 prn 失眠
+
+=== 院内临床时间表 ===
+### 2166-09-30 00:00
+[程序]
+- 静脉导管插入术，未分类
+- 癌症化疗物质的注射或输注
+
+### 2166-09-30 14:45
+[实验室]
+- 碳酸氢盐 [血液]（化学）：23 mEq/L
+- 总胆红素[血液]（化学）：0.1 mg/dL
+- 总钙[血液]（化学）：9.4 mg/dL
+- 氯化物[血液]（化学）：108 mEq/L
+- 肌酐[血液]（化学）：1.7 mg/dL
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：19 IU/L
+- 血细胞比容[血液]（血液学）：25.1 %
+- 镁[血液]（化学）：2.0 mg/dL
+- 磷酸盐[血液]（化学）：4.6 mg/dL
+- 钾[血液]（化学）：4.1 mEq/L
+- 总蛋白质[血液]（化学）：6.3 g/dL
+- 钠[血液]（化学）：140 mEq/L
+- 尿素氮[血液]（化学）：25 mg/dL
+- 乳酸脱氢酶 (LD) [血液]（化学）：173 IU/L
+- 葡萄糖[血液]（化学）：92.0 mg/dL
+- 球蛋白[血液]（化学）：1.8 g/dL
+- 碱性磷酸酶[血液]（化学）：77 IU/L
+- 阴离子间隙[血液]（化学）：13 mEq/L
+- 嗜碱性粒细胞[血液]（血液学）：0.5 %
+- 嗜酸性粒细胞[血液]（血液学）：0.3 %
+- 血红蛋白[血液]（血液学）：8.8 g/dL
+- 淋巴细胞[血液]（血液学）：13.8 %
+- MCHC [血液]（血液学）：35.1 %
+- MCV [血液]（血液学）：90 fL
+- 单核细胞[血液]（血液学）：8.1 %
+- MCH [血液]（血液学）：31.5 pg
+- 中性粒细胞[血液]（血液学）：77.2 %
+- 血小板计数[血液]（血液学）：381 K/uL
+- RDW [血液]（血液学）：15.2 %
+- 红细胞 [血液]（血液学）：2.81 m/uL
+- 白细胞[血液]（血液学）：5.6 K/uL
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：14 IU/L
+- 白蛋白[血液]（化学）：4.5 g/dL
+
+### 2166-09-30 16:55
+[实验室]
+- RBC [尿液]（血液学）：0 #/hpf
+- 尿胆素原 [尿液]（血液学）：mg/dL
+- 尿液粘液[尿液]（血液学）：
+- 尿液颜色[尿液]（血液学）：
+- 尿液外观[尿液]（血液学）：
+- 比重[尿液]（血液学）：1.012
+- WBC [尿液]（血液学）：1 #/hpf
+- 蛋白质[尿液]（血液学）：30 mg/dL
+- 细菌[尿液]（血液学）：
+- 亚硝酸盐[尿液]（血液学）：
+- 白细胞[尿液]（血液学）：
+- 酮[尿液]（血液学）：mg/dL
+- 葡萄糖[尿液]（血液学）：mg/dL
+- 上皮细胞 [尿液]（血液学）：0 #/hpf
+- 血液[尿液]（血液学）：
+- 胆红素[尿液]（血液学）：mg/dL
+- 酵母[尿液]（血液学）：无
+- pH [尿液]（血液学）：6.0 单位
+
+### 2166-09-30 18:00
+[处方结束]
+- 马法兰； 189 毫克；路线=IV
+- 国民服役； 500毫升；路线=IV
+
+### 2166-09-30 19:00
+[处方]
+- 0.9% 氯化钠； 250毫升；路线=IV
+- 对乙酰氨基酚； 650 毫克；路线=PO
+- 0.9% 氯化钠； 1袋；路线=IV
+- 葡萄糖酸钙； 2克；路线=IV
+- 氯化钾； 80 毫当量；路线=PO
+- 硫酸镁； 2-4克；路线=IV
+- 苯海拉明； 25-50毫克；路线=PO
+- 苯海拉明； 25-50毫克；路线=IV
+- 碳酸氢钠； 50毫当量；路线=IV
+- 硫酸镁； 4克；路线=IV
+- 叶绿素钾 20 mEq / 1000 mL D5 1/2 NS； 1000毫升；路线=IV
+- 磷酸钾； 15毫摩尔；路线=IV
+- 钙替代（肿瘤学）； 1克；路线=IV
+- 氢氧化铝悬浮液； 30毫升；路线=PO
+- 硫酸镁； 2克；路线=IV
+- 劳拉西泮； 0.5-2毫克；路线=IV
+- 劳拉西泮； 0.5-2毫克；路线=PO
+- 氯化钾； 60 毫当量；路线=PO
+- 氯化钾； 60 毫当量；路线=IV
+- 氯化钾； 40毫当量；路线=IV
+- 葡萄糖酸钙； 3克；路线=IV
+- 昂丹司琼； 8毫克；路线=IV
+- 氯化钾； 40毫当量；路线=PO
+- 氯化钾； 80 毫当量；路线=IV
+- 洛哌丁胺； 2毫克；路线=PO
+- 哌替啶； 25-50毫克；路线=IV
+
+### 2166-09-30 19:47
+[放射学]
+- 放射学笔记：调查结果：
+  右锁骨下导管终止于上腔静脉。  心和
+  纵隔均在正常范围内。  肺部是清澈的。
+  
+  印象：
+  胸部无活动性疾病。  右锁骨下导管终止于
+  上腔静脉。
+
+### 2166-09-30 20:00
+[处方]
+- 格尔克莱尔； 15毫升；路线=口头
+
+### 2166-09-30 22:00
+[处方]
+- 卡福索尔； 30毫升；路线=口头
+- 制霉菌素口服混悬液； 5毫升；路线=PO
+- 氟化钠（牙科凝胶）； 1 份申请；路线=TP
+
+### 2166-09-30 23:00
+[处方]
+- OxycoDONE（立即释放）； 5毫克；路线=PO/NG
+
+### 2166-10-01 00:00
+[实验室]
+- 血细胞比容[血液]（血液学）：22.9 %
+- 钠[血液]（化学）：140 mEq/L
+- 碳酸氢盐 [血液]（化学）：23 mEq/L
+- 钾[血液]（化学）：3.8 mEq/L
+- 磷酸盐[血液]（化学）：3.5 mg/dL
+- 镁[血液]（化学）：2.1 mg/dL
+- INR(PT) [血液]（血液学）：1.0
+- PT [血液]（血液学）：12.3 秒
+- PTT [血液]（血液学）：23.6 秒
+- 嗜碱性粒细胞[血液]（血液学）：0.3 %
+- 乳酸脱氢酶 (LD) [血液]（化学）：143 IU/L
+- 尿素氮[血液]（化学）：27 mg/dL
+- 血红蛋白[血液]（血液学）：7.9 g/dL
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：18 IU/L
+- MCH [血液]（血液学）：31.1 pg
+- 阴离子间隙[血液]（化学）：11 mEq/L
+- 碱性磷酸酶[血液]（化学）：65 IU/L
+- 总胆红素[血液]（化学）：0.1 mg/dL
+- 总钙[血液]（化学）：8.9 mg/dL
+- 白蛋白[血液]（化学）：4.1 g/dL
+- 淋巴细胞[血液]（血液学）：14.9 %
+- 氯化物[血液]（化学）：110 mEq/L
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：12 IU/L
+- 肌酐[血液]（化学）：1.5 mg/dL
+- 白细胞[血液]（血液学）：4.2 K/uL
+- 红细胞 [血液]（血液学）：2.54 m/uL
+- RDW [血液]（血液学）：15.5 %
+- 嗜酸性粒细胞[血液]（血液学）：0.6 %
+- 葡萄糖[血液]（化学）：129.0 mg/dL
+- 单核细胞[血液]（血液学）：12.8 %
+- MCV [血液]（血液学）：90 fL
+- 中性粒细胞[血液]（血液学）：71.4 %
+- MCHC [血液]（血液学）：34.7 %
+- 血小板计数[血液]（血液学）：325 K/uL
+
+### 2166-10-01 09:00
+[处方]
+- 国民服役； 500毫升；路线=IV
+- 马法兰； 189 毫克；路线=IV
+- 0.9% 氯化钠； 500毫升；路线=IV
+
+### 2166-10-01 10:00
+[处方]
+- 呋塞米； 20毫克；路线=IV
+- 昂丹司琼； 24毫克；路线=IV
+- 地塞米松； 20毫克；路线=IV
+- 5% 葡萄糖； 50毫升；路线=IV
+
+### 2166-10-02 00:10
+[实验室]
+- 阴离子间隙[血液]（化学）：9 mEq/L
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：13 IU/L
+- MCHC [血液]（血液学）：32.9 %
+- MCV [血液]（血液学）：96 fL
+- 单核细胞[血液]（血液学）：6.4 %
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：15 IU/L
+- 白细胞[血液]（血液学）：5.9 K/uL
+- MCH [血液]（血液学）：31.4 pg
+- 红细胞 [血液]（血液学）：2.59 m/uL
+- RDW [血液]（血液学）：15.9 %
+- 中性粒细胞[血液]（血液学）：85.9 %
+- 血小板计数[血液]（血液学）：345 K/uL
+- 总胆红素[血液]（化学）：0.2 mg/dL
+- 血红蛋白[血液]（血液学）：8.1 g/dL
+- 总钙[血液]（化学）：8.9 mg/dL
+- 氯化物[血液]（化学）：109 mEq/L
+- 肌酐[血液]（化学）：1.3 mg/dL
+- 葡萄糖[血液]（化学）：155.0 mg/dL
+- 乳酸脱氢酶 (LD) [血液]（化学）：128 IU/L
+- 镁[血液]（化学）：1.8 mg/dL
+- 磷酸盐[血液]（化学）：2.8 mg/dL
+- 钠[血液]（化学）：136 mEq/L
+- 尿素氮[血液]（化学）：18 mg/dL
+- 尿酸[血液]（化学）：5.1 mg/dL
+- 嗜碱性粒细胞[血液]（血液学）：0 %
+- 嗜酸性粒细胞[血液]（血液学）：0.1 %
+- 粒细胞计数 [血液]（血液学）：5040 #/uL
+- 碳酸氢盐 [血液]（化学）：22 mEq/L
+- 血细胞比容[血液]（血液学）：24.8 %
+- 淋巴细胞[血液]（血液学）：7.6 %
+- 钾[血液]（化学）：4.3 mEq/L
+- 碱性磷酸酶[血液]（化学）：62 IU/L</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Diphenoxylate-Atropine; 1 tablet (2.5 mg/0.025 mg); route=PO QID</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 化疗会引起腹泻，因此止泻药似乎可以起到预防作用。</div>
+    <div class="row"><span class="label">为何错误:</span> 地芬诺酯-阿托品会加重阿片类药物相关的便秘风险，并可能在接受羟考酮但没有活动性腹泻的患者中引发肠梗阻。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Cefepime; 2 g; route=IV q8h</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 广谱抗假单胞菌 IV β-内酰胺类药物通常用于中性粒细胞减少的癌症患者。</div>
+    <div class="row"><span class="label">为何错误:</span> 头孢吡肟仅用于发热性中性粒细胞减少症的经验性治疗，而不是非发热性预防，不必要的使用会增加艰难梭菌和耐药风险，而无需当前中性粒细胞减少性发热。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Nitrofurantoin; 100 mg; route=PO BID</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 作为一种用于预防泌尿道感染的抗生素，可以考虑将其用于免疫抑制患者的感染预防。</div>
+    <div class="row"><span class="label">为何错误:</span> 呋喃妥因仅在尿液中浓缩，对中性粒细胞减少症的全身抗菌预防无效，肾功能下降进一步限制了其疗效和安全性。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Senna; 1 TAB; route=PO/NG</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 番泻叶 1 片 PO 被作为肠道治疗方案的一部分，用于对抗阿片类药物引起的便秘以及化疗期间与镇痛和镇静剂使用相关的胃肠道蠕动下降。患者没有基线腹泻并且使用羟考酮，这支持了采取这种预防措施的必要性。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Trimethoprim-Sulfamethoxazole; 1 tablet (160 mg/800 mg); route=PO BID</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 由于预计会出现中性粒细胞减少症，因此针对免疫功能低下患者使用抗生素预防剂似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 甲氧苄氨嘧啶-磺胺甲恶唑用于预防耶氏肺孢子虫植入后，对于即将出现严重中性粒细胞减少并肾功能不全的患者，会增加骨髓抑制和高钾血症的风险。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Ciprofloxacin HCl; 500 mg; route=PO/NG</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 环丙沙星 500 mg PO 开始作为抗菌预防，以预防自体干细胞移植大剂量美法仑调理后出现中性粒细胞减少症和粘膜屏障破坏。不存在药物过敏且目前骨髓功能充足但短暂，支持选择标准氟喹诺酮预防方案。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">G.</span>
+    <span class="opt-drug">Cholestyramine; 4 g; route=PO BID</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 如果化疗被误认为会导致腹泻，那么减少排便次数可能会有所帮助。</div>
+    <div class="row"><span class="label">为何错误:</span> 消胆胺不适用于没有胆汁酸腹泻的患者，它会显着加重便秘，并与许多口服药物结合，这在移植护理期间会出现问题。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

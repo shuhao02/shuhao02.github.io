@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 6 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 6 题 — 答案及解析</h1>
+  <div class="meta">住院号 21841522 · 决策时间 2160-12-18 10:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> B
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 70
+- **性别：** F
+- **服务：** 医学
+- **过敏：**硫酸钡/碘/Bactrim
+- **种族：** 黑人/非裔美国人
+- **婚姻状况：** 单身
+- **语言：** 英语
+- **保险：** 医疗补助
+
+### 主要投诉
+- 胸痛
+
+### 现病史
+- ___ 女士是一位 ___ 女性，有特发性跌倒发作、高血压、不依赖 O2 的慢性阻塞性肺病病史，___ 诊断为原发于脑部 s/p 开颅手术的未知转移性腺癌，目前正在接受射波刀治疗，并出现胸痛。
+- 患者表示，过去几个月她一直断断续续地感到胸痛。但在过去 24 小时内，情况变得越来越严重。目前，并且一直以来，疼痛都是从右上胸部放射到腋窝，呈尖锐、刺痛、呈波浪状。触诊也不会更糟。没有与之相关的呼吸困难。她否认有任何咳嗽或发烧症状。没有头痛、N/V、腹泻、其他疼痛。
+- 据报道，她过去有碘对​​比剂过敏史。然而她不记得这一点。她说她以前对钡造影剂过敏，导致便秘。
+- 值得注意的是，她于 ___ 因呼吸困难被从 ___ 送往急诊室，但抵达后问题得到解决，因此她被送回家。 
+- 新 PCP ___ 于 ___ 接诊了患者。患者现在仍在等待最初的肿瘤内科和姑息治疗预约（疼痛管理）。
+
+### 系统审查（准入前）
+- 过去几个月断断续续的胸痛，在过去 24 小时内加剧；尖锐、刺痛，右上胸放射至腋窝，呈波浪状。
+- 无呼吸困难、咳嗽或发烧。
+- 没有头痛、恶心、呕吐、腹泻或腹痛。
+
+### 既往病史
+- 特发性掉落攻击
+-HTN
+- COPD 不依赖于 O2
+- 原发性不明的脑部转移性腺癌 s/p 开颅手术和射波刀治疗
+- 左顶枕脑损伤史，伴有水肿和中线移位；进行了开颅手术
+- 右上叶大肿块向腋窝方向穿透胸壁并破坏第一和第二肋骨；关注肺部原发性而非继发性肿瘤
+- 脑活检：转移性腺癌（原发部位染色无法诊断）
+- 脑部 MRI，除空洞外共有 6 个病变；开始射波刀治疗
+
+### 社会历史
+- 未知
+
+### 家族史
+- **母亲：** 活着
+- **父亲：** ___
+- **妹妹：** 生活
+- **兄弟：** 活着
+
+### 入学前体检
+- 生命体征：无发热且生命体征稳定（参见 eFlowsheet）
+- 一般：警觉并且没有明显的痛苦
+- 眼睛：无黄疸，瞳孔同样圆
+- 耳鼻喉科：耳朵和鼻子没有明显的红斑、肿块或创伤
+- CV：心脏正常，无杂音。胸部触诊无可重复的压痛
+- RESP：肺部听诊清晰
+- 胃肠道：腹部柔软、不膨胀、触诊无压痛。存在肠鸣音
+- GU：无耻骨上丰满度或触诊压痛
+- MSK：颈部柔软，活动四肢
+- PSYCH：愉快、适当的情感
+- 神经系统：精神状态：警觉且合作。以人、地点和时间为导向
+
+### 入院前药物
+- 对乙酰氨基酚 325-650 mg PO Q6H:PRN 疼痛 - 轻度
+- 氨氯地平 7.5 毫克，每日口服
+- 地塞米松 2 mg PO Q12H
+- 多库酯钠 100 mg PO BID
+- 法莫替丁 20 毫克，每日口服
+- LevETIRAcetam 500 mg PO BID
+- 尼古丁贴片 14 毫克 每日 TD
+- 番泻叶 17.2 毫克 PO QHS
+- 度洛西汀 30 毫克，每日口服
+- 羟考酮（速释）5 mg PO Q6H:PRN 疼痛 - 严重
+
+=== 院内临床时间表 ===
+### 2160-12-14 22:51
+[实验室]
+- 单核细胞[血液]（血液学）：5.5 %
+- 淋巴细胞[血液]（血液学）：17.5 %
+- 血红蛋白[血液]（血液学）：11.7 g/dL
+- 血细胞比容[血液]（血液学）：34.2 %
+- 嗜酸性粒细胞[血液]（血液学）：0.0 %
+- 嗜碱性粒细胞[血液]（血液学）：0.3 %
+- 绝对淋巴细胞计数[血液]（血液学）：1.30 K/uL
+- L [血液]（化学）：5
+- 尿素氮[血液]（化学）：12 mg/dL
+- 钠[血液]（化学）：132.0 mEq/L
+- 钾[血液]（化学）：3.5 mEq/L
+- NTproBNP [血液]（化学）：286.0 pg/mL
+- 我[血液]（化学）：1
+- H [血]（化学）：27
+- 葡萄糖[血液]（化学）：91.0 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 肌酐[血液]（化学）：0.6 mg/dL
+- 氯化物[血液]（化学）：90 mEq/L
+- MCH [血液]（血液学）：32.7 pg
+- 碳酸氢盐 [血液]（化学）：25 mEq/L
+- MCHC [血液]（血液学）：34.2 g/dL
+- 中性粒细胞[血液]（血液学）：75.8 %
+- 绿色顶部保持（血浆）[血液]（化学）：保持。  超过 4 小时后丢弃。
+- 蓝色顶部保持[血液]（化学）：保持。  超过 24 小时请丢弃。
+- L [血]（化学）：11
+- 肌钙蛋白 T [血液]（化学）：ng/mL
+- 浅绿色顶部固定[血]（化学）：
+- 我[血液]（化学）：1
+- H [血液]（化学）：10
+- RDW-SD [血液]（血液学）：52.2 fL
+- 未成熟粒细胞[血液]（血液学）：0.9 %
+- 绝对中性粒细胞计数 [血液]（血液学）：5.63 K/uL
+- 绝对单核细胞计数[血液]（血液学）：0.41 K/uL
+- 绝对嗜酸性粒细胞计数 [血液]（血液学）：0.00 K/uL
+- 绝对嗜碱性粒细胞计数 [血液]（血液学）：0.02 K/uL
+- 白细胞[血液]（血液学）：7.4 K/uL
+- 红细胞 [血液]（血液学）：3.58 m/uL
+- RDW [血液]（血液学）：14.8 %
+- 血小板计数[血液]（血液学）：332 K/uL
+- MCV [血液]（血液学）：96 fL
+- 阴离子间隙[血液]（化学）：17.0 mEq/L
+
+### 2160-12-15 04:00
+[处方]
+- 塞纳； 17.2毫克；路线=PO/NG
+- 氨氯地平； 7.5毫克；路线=PO/NG
+- 甲基泼尼松龙钠 Succ； 40毫克；路线=IV
+-左旋ETIR乙酰胺； 500毫克；路线=PO
+- 肝素； 5000 单位；路线=SC
+- 多库酯钠； 100毫克；路线=PO/NG
+- 地塞米松； 2毫克；路线=PO/NG
+- 尼古丁贴片； 14毫克；路线=TD
+- 苯海拉明； 50毫克；路线=IV
+- 四价流感疫苗； 0.5毫升；路线=IM
+- 法莫替丁； 20毫克；路线=PO/NG
+- 对乙酰氨基酚； 500毫克；路线=PO/NG
+- 度洛西汀； 30毫克；路线=PO
+- 硫酸吗啡； 2毫克；路线=IV
+- 羟考酮（立即释放）； 5-10毫克；路线=PO/NG
+
+### 2160-12-15 05:43
+[放射学]
+- 放射学笔记：调查结果：
+  心脏和脉管系统：肺脉管系统对心脏来说是完全不透明的。
+  亚节段水平无充盈缺损提示肺栓塞。的
+  胸主动脉管径正常，无夹层证据或
+  壁内血肿。  心脏、心包和大血管都在里面
+  正常限度。未见心包积液。
+  
+  腋窝、肺门和纵隔：无腋窝、纵隔或锁骨上
+  存在淋巴结肿大。  突出的右肺门淋巴结尺寸 1.1 x
+  1.8 厘米，与之前相似。  无纵隔肿块。
+  
+  胸膜腔：无胸腔积液或气胸。
+  
+  肺/气道：双侧严重的间隔旁气肿，伴有大泡
+  再次注意到双侧肺尖。  重新演示8.8 x 9.0 x 8.0
+  cm 左上叶不均匀增强肿块伴胸壁侵犯 
+  先前相邻的右第二和第三肋骨被破坏
+  尺寸为 8.2 x 8.5 厘米（5；41）。  还有第一个右边的包裹
+  肋骨，无明显破坏。  毛玻璃变化明显低于
+  质量。  气道通向双侧节段支气管。  那里
+  是轻度双基底肺不张。
+  
+  颈部底部：颈部底部的可视部分未显示异常。
+  
+  腹部：上腹部的内含部分呈扩张状
+  食道..
+  
+  骨骼：右侧第二和第三肋骨发生破坏性变化
+  再次注意到与之前类似的上叶质量。  右边的包裹
+  注意到第一肋骨没有破坏性溶解变化的证据。  有
+  无急性骨折。  存在弥漫性骨质减少。
+  
+  印象：
+  1. 无肺栓塞或主动脉异常的证据。
+  2. 再次演示右上叶9.0 cm肿块侵犯胸部
+  右侧第二和第三肋骨的壁破坏与之前类似。
+
+### 2160-12-15 10:39
+[实验室]
+- 上皮细胞[尿液]（血液学）：5 #/hpf
+- 酵母[尿液]（血液学）：无/hpf
+- WBC [尿液]（血液学）：3 #/hpf
+- 尿胆素原 [尿液]（血液学）：mg/dL
+- 尿液颜色[尿液]（血液学）：
+- 尿液外观[尿液]（血液学）：
+- 移行上皮细胞 [尿液]（血液学）：#/hpf
+- 比重[尿液]（血液学）：1.050
+- RBC [尿液]（血液学）：2 #/hpf
+- 蛋白质[尿液]（血液学）：30 mg/dL
+- pH [尿液]（血液学）：6.0 单位
+- 亚硝酸盐[尿液]（血液学）：
+- 白细胞[尿液]（血液学）：
+- 酮[尿液]（血液学）：mg/dL
+- 葡萄糖[尿液]（血液学）：mg/dL
+- 胆红素[尿液]（血液学）：
+- 细菌[尿液]（血液学）：/hpf
+- 血液[尿液]（血液学）：
+
+### 2160-12-15 11:15
+[实验室]
+- H [血液]（化学）：3
+- 我[血液]（化学）：1
+- L [血液]（化学）：6
+- 肌钙蛋白 T [血液]（化学）：ng/mL
+
+### 2160-12-15 12:00
+[处方结束]
+- 苯海拉明； 50毫克；路线=IV
+- 甲基泼尼松龙钠 Succ； 40毫克；路线=IV
+
+### 2160-12-15 18:00
+[处方结束]
+- 羟考酮（立即释放）； 5-10毫克；路线=PO/NG
+- 硫酸吗啡； 2毫克；路线=IV
+
+### 2160-12-15 19:00
+[处方]
+- 羟考酮（立即释放）； 5-10毫克；路线=PO/NG
+
+### 2160-12-16 07:20
+[实验室]
+- 我[血液]（化学）：0
+- 阴离子间隙[血液]（化学）：14.0 mEq/L
+- 氯化物[血液]（化学）：94 mEq/L
+- 肌酐[血液]（化学）：0.5 mg/dL
+- 葡萄糖[血液]（化学）：161.0 mg/dL
+- H [血液]（化学）：10
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- RDW-SD [血液]（血液学）：54.2 fL
+- 白细胞[血液]（血液学）：7.7 K/uL
+- 红细胞 [血液]（血液学）：3.39 m/uL
+- L [血]（化学）：8
+- 血细胞比容[血液]（血液学）：32.9 %
+- 血红蛋白[血液]（血液学）：11.0 g/dL
+- MCH [血液]（血液学）：32.4 pg
+- 钠[血液]（化学）：135.0 mEq/L
+- 尿素氮[血液]（化学）：13 mg/dL
+- MCHC [血液]（血液学）：33.4 g/dL
+- 血小板计数[血液]（血液学）：382 K/uL
+- RDW [血液]（血液学）：15.2 %
+- MCV [血液]（血液学）：97 fL
+- 钾[血液]（化学）：4.0 mEq/L
+
+### 2160-12-16 08:00
+[处方]
+- 聚乙二醇； 17克；路线=PO/NG
+
+### 2160-12-16 10:55
+[实验室]
+- 钠，尿液 [尿液]（化学）：41 mEq/L
+- 渗透压，尿液 [尿液]（化学）：286 mOsm/kg
+- 尿液收集长度[尿液]（化学）：
+
+### 2160-12-16 12:00
+[处方结束]
+- 聚乙二醇； 17克；路线=PO/NG
+
+### 2160-12-16 20:00
+[处方]
+- 聚乙二醇； 17克；路线=PO/NG
+
+### 2160-12-17 23:18
+[放射学]
+- 放射学笔记：调查结果：
+  患者处于左顶骨开颅手术和左侧切除术后的状态
+  顶下小叶和枕叶切除术。  与之前相比
+  检查发现该区域有较严重的脑软化症。  硬脑膜
+  可能存在 2 mm 轴外低密度增厚可能反映
+  术后变化。  该区域复发的评估仅限于
+  目前的研究。  左侧广泛血管源性水肿
+  顶枕叶已大部分消退，有证据显示 1.1 厘米
+  左侧中央前回高密度 (04:30)，可能对应于
+  在 ___ 的 MRI 上看到的增强病变。  没有证据表明
+  大面积梗塞或急性颅内出血。  心室和
+  脑沟的大小和形态稳定。
+  
+  鼻旁窦、乳突气室和中脉的可视化部分
+  耳腔清晰。  轨道的可视化部分是
+  不起眼的。
+  
+  印象：
+  1. 左顶骨开颅手术和间隔切除术后的状态
+  切除腔内出现脑软化症。  评价为
+  该地区的复发仅限于当前的模式，并且更好
+  通过对比增强 MRI 进行评估。
+  2. 左额叶轻微高密度，可能与
+  先前 MRI 上发现的已知转移性病变来自___。</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Sodium Phosphate; 45 mL once; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 盐水导泻剂似乎适合顽固性便秘的快速排便。</div>
+    <div class="row"><span class="label">为何错误:</span> 由于存在严重电解质紊乱和磷酸盐肾病的风险，口服磷酸钠在老年人中是禁忌的，并且不适用于常规缓解便秘。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Magnesium Citrate; 300 mL; route=PO</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 柠檬酸镁 300 mL PO 用于治疗可能继发于慢性阿片类药物治疗的顽固性便秘。患者之前正在进行的肠道治疗方案（多库酯、番泻叶、聚乙二醇）不足，柠檬酸镁提供渗透性泻药作用，刺激肠道排空并缓解不适。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Mineral Oil; 30 mL daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 在对现有药物反应不足后，升级到不同类别（例如润滑剂泻药）似乎是合理的下一步。</div>
+    <div class="row"><span class="label">为何错误:</span> 由于误吸风险和类脂性肺炎，矿物油对老年人来说是不安全的，尤其是患有神经系统疾病和使用阿片类药物的人，因此不适合使用。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Psyllium; 3.4 g daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 添加温和的非处方纤维补充剂似乎可以补充她现有的大便软化剂和兴奋剂疗法。</div>
+    <div class="row"><span class="label">为何错误:</span> 洋车前子是一种散装泻药，对阿片类药物引起的便秘无效，并且当蠕动减慢时会加重腹胀或导致粪便嵌塞。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Loperamide; 4 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 她有与阿片类药物相关的肠道症状，因此，如果便秘被误认为是腹泻，那么影响胃肠道蠕动的药物似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 洛哌丁胺是一种止泻药，会减慢肠道运输速度，并会加重阿片类药物引起的便秘。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Linaclotide; 145 mcg daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 当标准泻药不能充分缓解症状时，品牌便秘剂似乎是一个合理的补充。</div>
+    <div class="row"><span class="label">为何错误:</span> 利那洛肽不适用于阿片类药物引起的便秘，并且可能导致老年患者严重腹泻和脱水。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

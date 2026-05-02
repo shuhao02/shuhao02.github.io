@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 5 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 5 题 — 答案及解析</h1>
+  <div class="meta">住院号 21368100 · 决策时间 2178-01-16 22:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> E
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 65
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 泰诺
+- **种族：** 白色
+- **婚姻状况：** 离婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- 黄疸
+
+### 现病史
+- ___ 岁患有 DM 的男性，最近一次 HgbA1C = 4.4，在 ___ 就诊后因 ___ 下肢肿胀 4 周而到急诊室就诊。他还被指出患有黄疸。他还患有瘙痒症。他没有出现过无意识的体重减轻。在急诊室，他发烧至 100.4 度，但在家中没有发烧。他否认：不适、疲劳、胸部、呼吸急促、咳嗽、恶心、呕吐或腹泻、粪便颜色变化、视力变化、喉咙痛、排尿困难、MSK/关节痛。 + 深色尿液。
+
+### 系统审查（准入前）
+- 否认不适、疲劳、胸痛、气短、咳嗽、恶心、呕吐、腹泻、粪便颜色变化、视力变化、喉咙痛、排尿困难、肌肉骨骼/关节疼痛。
+- 报告瘙痒和深色尿液。
+- 没有无意识的体重减轻。
+- 家里没有发烧。
+
+### 既往病史
+- 眼压过高
+- 色素分散综合症
+- 前列腺炎，UNSPEC
+- 高脂血症 LDL 目标 &lt; 100
+- 弱视，UNSPEC
+- 前列腺结节
+- 肥胖
+- 肱骨骨折 - ___
+- II 型 DM（糖尿病）未受控制，伴有肾脏表现 - ___ 内最后 HgbA1C = 13.8
+- 小腿肌肉跛行
+- s/p___
+
+### 社会历史
+- ___
+
+### 家族史
+- 他的父亲于___岁因年老去世，他的母亲于___岁因年老去世。他是独生子。
+
+### 入学前体检
+- 坐在椅子上，焦躁不安。明显有黄疸。
+- HEENT：嗯，+巩膜黄疸。
+- 肺部：听诊清晰___。
+- ___：RRR S1、S2 存在。
+- Abd：软，不嫩，肥胖，难以欣赏HSM。
+- 外部：+2 水肿 ___ 并伴有一些色素沉着过度。
+- 神经：AAOx3。
+
+### 入院前药物
+- 阿托伐他汀 40 毫克，每日口服 
+- 晚餐前 30 分钟口服格列美脲 1 mg 
+- 酒石酸溴莫尼定 0.15% 眼科药物。 1 双眼出价 
+- 甘精胰岛素 25 单位睡前胰岛素 SC 使用 HUM 胰岛素滑动量表
+- 多种维生素每日 1 TAB PO 
+- 氯雷他定 10 毫克，每日口服 
+- 阿司匹林 81 毫克，每日口服 
+- 鱼油（Omega 3）剂量未知 PO DAILY 
+- 每日口服维生素 D 剂量未知
+
+=== 院内临床时间表 ===
+### 2178-01-15 20:32
+[实验室]
+- 细菌[尿液]（血液学）：
+- 尿液颜色[尿液]（血液学）：
+- 尿液外观[尿液]（血液学）：
+- 比重[尿液]（血液学）：1.015
+- RBC [尿液]（血液学）：1 #/hpf
+- 蛋白质[尿液]（血液学）：mg/dL
+- pH [尿液]（血液学）：6.5 单位
+- 亚硝酸盐[尿液]（血液学）：
+- 白细胞[尿液]（血液学）：
+- 酮[尿液]（血液学）：mg/dL
+- 尿液收集长度[尿液]（化学）：
+- 尿管，保持 [尿液]（化学）：保持。  样本保留 48 小时并丢弃。
+- 尿液收集长度[尿液]（化学）：
+- Uhold [尿液]（化学）：保持。
+- 葡萄糖[尿液]（血液学）：mg/dL
+- 胆红素[尿液]（血液学）：mg/dL
+- 尿液粘液[尿液]（血液学）：
+- 尿胆素原 [尿液]（血液学）：mg/dL
+- WBC [尿液]（血液学）：19 #/hpf
+- 酵母[尿液]（血液学）：无
+- 血液[尿液]（血液学）：
+- 上皮细胞[尿液]（血液学）：1 #/hpf
+
+### 2178-01-15 20:33
+[实验室]
+- 白蛋白[血液]（化学）：2.9 g/dL
+- 碱性磷酸酶[血液]（化学）：1136 IU/L
+- 阴离子间隙[血液]（化学）：19 mEq/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：227 IU/L
+- 碳酸氢盐 [血液]（化学）：23 mEq/L
+- 胆红素，直接[血液]（化学）：6.8 mg/dL
+- 绿色顶部保持（血浆）[血液]（化学）：保持。  超过 4 小时后丢弃。
+- 总胆红素[血液]（化学）：9.2 mg/dL
+- 氯化物[血液]（化学）：96 mEq/L
+- 肌酐[血液]（化学）：0.6 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 葡萄糖[血液]（化学）：73.0 mg/dL
+- 脂肪酶 [血液]（化学）：101 IU/L
+- 钾[血液]（化学）：3.5 mEq/L
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：148 IU/L
+- 胆红素，间接[血液]（化学）：2.4 mg/dL
+- 淋巴细胞[血液]（血液学）：32 %
+- INR(PT) [血液]（血液学）：1.5
+- 白细胞[血液]（血液学）：8.0 K/uL
+- 靶细胞[血液]（血液学）：
+- 红细胞 [血液]（血液学）：3.04 m/uL
+- RDW [血液]（血液学）：14.8 %
+- 多色症[血液]（血液学）：
+- 异红细胞增多症 [血液]（血液学）：
+- 血小板涂片[血液]（血液学）：
+- 血小板计数[血液]（血液学）：822 K/uL
+- 中性粒细胞[血液]（血液学）：60 %
+- 骨髓细胞[血液]（血液学）：0 %
+- 单核细胞[血液]（血液学）：7 %
+- 小细胞[血液]（血液学）：
+- 后髓细胞[血液]（血液学）：0 %
+- 钠[血液]（化学）：134 mEq/L
+- MCV [血液]（血液学）：91 fL
+- MCH [血液]（血液学）：26.0 pg
+- 大细胞[血液]（血液学）：
+- 色素减退症[血液]（血液学）：
+- 血红蛋白[血液]（血液学）：7.9 g/dL
+- 血细胞比容[血液]（血液学）：27.5 %
+- 嗜酸性粒细胞[血液]（血液学）：0 %
+- 嗜碱性粒细胞[血液]（血液学）：0 %
+- 带[血液]（血液学）：1 %
+- 非典型淋巴细胞[血液]（血液学）：0 %
+- 红细胞大小不均[血液]（血液学）：
+- 浅绿色顶部固定[血]（化学）：
+- PTT [血液]（血液学）：41.5 秒
+- PT [血液]（血液学）：16.1 秒
+- MCHC [血液]（血液学）：28.7 %
+- 尿素氮[血液]（化学）：15 mg/dL
+
+### 2178-01-16 00:02
+[放射学]
+- 放射学注释：未见结节或肿块。
+
+### 2178-01-16 06:40
+[实验室]
+- 尿素氮[血液]（化学）：14 mg/dL
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：116 IU/L
+- 淀粉酶[血液]（化学）：77 IU/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：171 IU/L
+- 总胆红素[血液]（化学）：7.8 mg/dL
+- 氯化物[血液]（化学）：103 mEq/L
+- 肌酐[血液]（化学）：0.5 mg/dL
+- 铁蛋白[血液]（化学）：39 ng/mL
+- 葡萄糖[血液]（化学）：117.0 mg/dL
+- 触珠蛋白 [血液]（化学）：305 mg/dL
+- 铁[血液]（化学）：13 ug/dL
+- 铁结合能力，总[血液]（化学）：441 ug/dL
+- 乳酸脱氢酶 (LD) [血液]（化学）：215 IU/L
+- 脂肪酶 [血液]（化学）：79 IU/L
+- 钾[血液]（化学）：3.5 mEq/L
+- 钠[血液]（化学）：135 mEq/L
+- 转铁蛋白[血液]（化学）：339 mg/dL
+- INR(PT) [血液]（血液学）：1.6
+- PT [血液]（血液学）：16.8 秒
+- PTT [血液]（血液学）：40.7 秒
+- 血细胞比容[血液]（血液学）：24.4 %
+- 血红蛋白[血液]（血液学）：7.0 g/dL
+- MCH [血液]（血液学）：25.6 pg
+- MCHC [血液]（血液学）：28.6 %
+- MCV [血液]（血液学）：90 fL
+- 血小板计数[血液]（血液学）：760 K/uL
+- RDW [血液]（血液学）：15.3 %
+- 红细胞 [血液]（血液学）：2.72 m/uL
+- 网织红细胞计数，手动[血液]（血液学）：7.8 %
+- 白细胞[血液]（血液学）：7.7 K/uL
+- 白蛋白[血液]（化学）：2.4 g/dL
+- 碱性磷酸酶[血液]（化学）：939 IU/L
+
+### 2178-01-16 07:00
+[处方]
+- 阿司匹林； 81 毫克；路线=PO/NG
+- 胰岛素； 0 单位；路线=SC
+- 葡萄糖 50%； 12.5克；路线=IV
+- 氯化钠 0.9%； 1000毫升；路线=IV
+- 多种维生素； 1 个选项卡；路线=PO/NG
+- 肺炎球菌23价多糖疫苗； 0.5毫升；路线=IM
+- 胰高血糖素； 1毫克；路线=IM
+- 流感病毒疫苗； 0.5毫升；路线=IM
+- 硫酸吗啡； 2-4毫克；路线=IV
+- 葡萄糖凝胶； 15克；路线=PO
+- 氨苄西林-舒巴坦； 3克；路线=IV
+
+### 2178-01-16 08:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 氯雷他定； 10毫克；路线=PO
+
+### 2178-01-16 09:21
+[放射学]
+- 放射学笔记：调查结果：
+  左右有正常的压缩性、流动性和增强性
+  股总静脉、股浅静脉和腘静脉。正常颜色流动
+  胫骨和腓骨后部具有可压缩性
+  静脉。
+  
+  双侧股总静脉存在正常的呼吸变化。
+  
+  没有证据表明腘窝内侧 (___) 囊肿。
+  
+  印象：
+  左右下肢无深静脉血栓形成证据
+  静脉。
+
+### 2178-01-16 14:23
+[放射学]
+- 放射学注释：1. 7.6 x 6.9 x 7.9 cm 胰头肿块，主干大量扩张
+  胰管和肝内、肝外胆管，MR 特征最多
+  与IPMN的恶性变性相容。  错误的定义
+  邻接十二指肠内侧壁与局部侵犯有关。
+  
+  2.肝门淋巴结肿大。
+  
+  3. 整个肝实质内动脉过度强化，边界不清，
+  可能与急性肝内胆管扩张有关。  无离散质量
+  检测到。
+  
+  4.胆石症和胆总管结石。胆囊扩张，无 MR
+  胆囊炎的证据。
+  
+  5. 原生脾脏缺失，左上腹脾肿大。  关联于
+  任何既往手术或外伤史。
+  
+  6. 追踪双侧胸腔积液。
+  
+  ___ 博士与 ___ 博士通过电话讨论了初步结果
+  翻译时，下午 3 点在 ___。
+
+### 2178-01-16 17:00
+[处方]
+- 植物萘二酮； 5毫克；路线=PO/NG
+
+### 2178-01-16 17:00
+[处方结束]
+- 氯化钠 0.9%； 1000毫升；路线=IV</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Glyburide; 5 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 由于患者在家中服用磺酰脲类药物（格列美脲 1 毫克），因此继续使用类似的促分泌剂似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 最近在 07:00 接受 D50 和胰高血糖素治疗，并且在 06:40 血糖接近正常值 117 mg/dL，表明存在低血糖脆弱性；格列本脲具有长期低血糖的高风险，特别是在可能降低药物清除率的肝胆汁淤积的情况下。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Metformin; 1000 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 鉴于 2 型糖尿病历史上控制不佳，人们可能会寻求标准的口服药物来改善血糖控制。</div>
+    <div class="row"><span class="label">为何错误:</span> 在此情况下，开始使用二甲双胍是不安全的，因为存在明显的胆汁淤积性肝功能障碍（直接胆红素 6.8 mg/dL，总胆红素 9.2/7.8 mg/dL，ALP 1136/939 IU/L，MRI 上显示梗阻性胆道扩张），这会增加急症住院患者乳酸性酸中毒的风险。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Glucagon; 1 mg; route=IM</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 胰高血糖素早些时候被订购用于低血糖预防措施，因此如果人们假设持续存在风险，那么重复这一点似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 胰高血糖素用于急性严重低血糖；目前，患者并未出现低血糖（06:40 时血糖为 117 mg/dL），因此给予该药会导致血糖不适当地升高，因此不适用。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Pioglitazone; 30 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 对于长期患有不受控制的糖尿病的患者来说，添加另一种口服药物来治疗慢性高血糖似乎很有吸引力。</div>
+    <div class="row"><span class="label">为何错误:</span> 吡格列酮会引起液体潴留，且起效缓慢；该患者在检查时已出现+2 下肢水肿，需要可滴定的住院患者控制，因此 TZD 现在不合适。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Insulin; 15 UNIT; route=SC</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 长期患有控制不佳的 2 型糖尿病的患者在病情稳定后重新开始皮下注射胰岛素。由于低血糖和肝功能障碍导致的早期低血糖风险需要暂时控制，但一旦血糖恢复到接近预期范围，就恢复 15 单位 SC 胰岛素剂量，以维持血糖控制与长期管理需求一致。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Dextrose; 10% at 75 mL/hr; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 由于 D50 和胰高血糖素较早使用，人们可能认为持续的葡萄糖支持仍然是有必要的。</div>
+    <div class="row"><span class="label">为何错误:</span> 目前血糖为 117 mg/dL (06:40)，并计划恢复胰岛素，因此不需要连续输注 D10，并且会抵消血糖控制。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

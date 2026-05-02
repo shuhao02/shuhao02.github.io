@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 19 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 19 题 — 答案及解析</h1>
+  <div class="meta">住院号 26799982 · 决策时间 2176-09-12 15:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> D
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 61
+- **性别：** F
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 私人
+
+### 主要投诉
+- 咯血
+
+### 现病史
+- 这是一名 61 岁的女性，有复发性转移性非小细胞肺癌脑部病史，现就诊接受进一步咯血评估。  
+- 该患者最近于 ___ 号诊所就诊，在那里她接受了 DF/HCC 方案 ___ 筛查（MM-121 与厄洛替尼联合治疗三组非小细胞肺癌患者的 ___ 期试验），这是一项特罗凯 + MM-121 试验，这是一种继发于特罗凯疾病进展的抗 ErbB3 人单克隆抗体。  
+- 值得注意的是，她因放置支气管内支架（因远端中间支气管显着狭窄而放置 ___）后呼吸短促和喘息而于 ___ 从 ___ 入院。入院期间，她在 ___ 上接受了支架取出术（继发于支架移位），并进行了左右胸腔穿刺术抽取渗出液。她还患有肠球菌 (Amp-S) 血流感染，为此她完成了 14 天的静脉注射抗生素疗程。  
+- 该患者还于___在急诊室就诊，以评估排尿困难，为此她接受了经验性 Bactrim 疗程。  
+- 患者称，晚饭后___ ___ 7:30 左右，她咳嗽___ 次，咳出少量鲜红色血液，随后出现少量血块。因为她被告知如果发生这种情况就要去急诊室，所以她立即去了急诊室。在急诊室，她再次咳嗽，但有清白痰。  
+- 一位门诊患者进行 ___ 超声检查显示“中度心包积液，无心包填塞迹象”。  
+- 患者否认出现任何发烧、发冷、恶心、呕吐、头痛、腹痛或皮疹。她患有特罗凯腹泻。几周来，她因劳累而呼吸困难加剧。她不使用家用氧气。她患有慢性干咳。没有胸痛。她在家睡在两个枕头上（长期）。她睡觉时可以平躺。
+
+### 系统审查（准入前）
+- 否认发烧、发冷、恶心、呕吐、头痛、腹痛或皮疹。  
+- 特罗凯腹泻呈阳性。  
+- 几周内运动时呼吸困难加重呈阳性。  
+- 否认胸痛。  
+- 慢性干咳呈阳性。  
+- 在家睡在两个枕头上（慢性）。  
+- 睡觉时可以平躺。  
+- 拒绝使用家用氧气。
+
+### 既往病史
+- 复发性、转移性非小细胞肺癌（NSCLC）脑部  
+- 远端中间支气管狭窄的支气管内支架置入和移除史  
+- 既往肠球菌 (Amp-S) 血流感染，已完成 14 天静脉注射抗生素  
+- 高胆固醇血症  
+- 痔疮  
+- 反流病  
+- D&amp;C 后的状态  
+- 慢性间歇性左腹股沟疼痛被认为是继发于结肠痉挛
+
+**既往肿瘤病史（根据 OMR）：**
+-___：出现吞咽困难；胸部 CT 显示小 RUL 肺结节，随后进行 ___ 年连续成像，直到发现生长  
+- ___：IA期中分化肺腺癌楔形切除术  
+- ___：PET CT 显示 RLL 结节以及多个纵隔和颈部淋巴结中有 FDG 摄取  
+- ___：颈部淋巴结活检显示低分化腺癌  
+- ___：开始试验厄洛替尼（特罗凯）___；由于颈部淋巴结肿大而退出，但继续厄洛替尼停止研究直至___  
+- ___：开始使用卡铂/紫杉醇/贝伐单抗；完成6个周期；继续贝伐珠单抗单药治疗，共 10 个周期  
+- 出现流感样症状且 CT 显示右侧心尖大空洞病变后停用贝伐珠单抗；微生长的泛敏感假单胞菌，自___以来用莫西沙星治疗  
+- ___：由于症状和影像学改善而停止莫西沙星  
+- ___：恢复厄洛替尼单药治疗  
+- ___：开始第 1 周期培美曲塞（并持续使用厄洛替尼）治疗腋窝淋巴结肿大； 2个周期后腋窝/胸肌下淋巴结显示出反应  
+- ___ CT：淋巴结肿大进一步减少，间隔增厚，右上叶空洞性肺病灶/囊性结构结节性增加，与真菌球有关  
+- ___ 支气管镜检查/BAL 曲霉菌半乳甘露聚糖阴性  
+- ___ CT：病变壁增厚增加，SVC 淋巴结侵犯，隆突下淋巴结增大  
+- ___支气管镜检查：R上叶支气管内病变； 7号站 TBNA 病理显示 NS___  
+- ___ PET CT：混合反应，新的 4 毫米右锁骨上淋巴结和右肺尖新的 FDG 亲合力  
+- ___ MRI 头：无转移性疾病  
+- ___ 对右上叶病变进行高剂量姑息 XRT  
+- ___：恢复厄洛替尼，CEA 下降  
+- ___：右侧锁骨上淋巴结和 CEA 增加； PET-CT 疾病进展  
+- ___：重新分期 MRI 脑部：多个小而广泛的可能转移结节；最大 ~6 x 7 毫米右中央前回  
+- ___：全脑辐射  
+- ___：锁骨上活检证实 EGFR L858R 突变，无耐药突变  
+- ___：停止了特罗凯  
+- ___：参加 PI3K 和 MEK 抑制剂组合试验（Genentech）  
+- ___：CT躯干疾病稳定  
+- ___：躯干 CT 疾病进展  
+- ___：休学___  
+- ___：重新启动特罗凯  
+- ___：MRI 头：疾病稳定，无新病灶  
+-___：因大量胸腔积液、恶性胸腔积液阳性、氨苄西林敏感肠球菌菌血症入院；新发肾积水（病因不明）
+
+### 社会历史
+- 未知
+
+### 家族史
+- 父亲因喉癌去世  
+- 母亲死于肺栓塞  
+- 患有肝癌和结肠癌的兄弟  
+- 母亲一方的多名家庭成员有血栓（尽管患者的高凝检查呈阴性）
+
+### 入学前体检
+- **生命体征：** T：98.5，血压：144/82，HR：未知，RR：28，O2 sat：2L  
+- **一般：** NAD  
+- **皮肤：**温暖且灌注良好，无擦伤或病变，无皮疹  
+- **HEENT：** AT/NC、EOMI、PERRLA、无黄疸巩膜、粉红色结膜、鼻孔未闭、MMM、良好牙列、无压痛柔软颈部、无 LAD  
+- **心脏：** RRR，S1/S2，无 mrg  
+- **肺：** 左侧有足够的呼吸音； + RUL 中出现干爆裂声，从中右背部和右下背部开始呼吸音减弱；敲击钝的区域  
+- **腹部：**不膨胀，+BS，所有象限无压痛，无反弹/守卫，无肝脾肿大  
+- **肌肉骨骼：** 四肢活动良好，双侧出现水肿  
+- **脉冲：** 2+ DP 双边脉冲  
+- **神经：** CN II-XII 完好，患者移动所有四肢
+
+### 入院前药物
+1. 赖诺普利 10mg 每日  
+2. 阿仑膦酸钠 70 毫克，每周一次 (___)  
+3. 双环胺 10 毫克 ___ 胶囊，每天最多两次  
+4.厄洛替尼（特罗凯）150mg，每日 1 片  
+5.洛伐他汀每天10毫克  
+6. 羟考酮 5 毫克胶囊 每天 ___ 粒  
+7. 睡前服用雷尼替丁 150mg  
+8. 对乙酰氨基酚 650 毫克 #1 片，根据需要每___小时服用一次，以缓解疼痛  
+9.阿司匹林每天81毫克  
+10.碳酸钙-维生素D3-患者最近服用过这个  
+11.鱼油一天两次  
+12. 镁每日250毫克
+
+=== 院内临床时间表 ===
+### 2176-09-11 23:00
+[实验室]
+- 葡萄糖[血液]（化学）：103.0 mg/dL
+- 钠[血液]（化学）：128 mEq/L
+- 钾[血液]（化学）：4.4 mEq/L
+- 渗透压，测量[血液]（化学）：263 mOsm/kg
+- MCH [血液]（血液学）：30.8 pg
+- 肌酐[血液]（化学）：1.0 mg/dL
+- 氯化物[血液]（化学）：91 mEq/L
+- 碳酸氢盐 [血液]（化学）：24 mEq/L
+- 尿素氮[血液]（化学）：13 mg/dL
+- 阴离子间隙[血液]（化学）：17 mEq/L
+- 蓝色顶部保持[血液]（化学）：保持。  超过 24 小时请丢弃。
+- 白细胞[血液]（血液学）：5.9 K/uL
+- 红细胞 [血液]（血液学）：3.88 m/uL
+- RDW [血液]（血液学）：15.3 %
+- 血小板计数[血液]（血液学）：441 K/uL
+- 中性粒细胞[血液]（血液学）：79.9 %
+- 单核细胞[血液]（血液学）：5.8 %
+- 绿色顶部保持（血浆）[血液]（化学）：保持。  超过 4 小时后丢弃。
+- MCV [血液]（血液学）：92 fL
+- 浅绿色顶部固定[血]（化学）：
+- 血细胞比容[血液]（血液学）：35.6 %
+- 嗜碱性粒细胞[血液]（血液学）：0.5 %
+- 嗜酸性粒细胞[血液]（血液学）：1.6 %
+- 血红蛋白[血液]（血液学）：12.0 g/dL
+- 淋巴细胞[血液]（血液学）：12.2 %
+- MCHC [血液]（血液学）：33.6 %
+
+### 2176-09-12 00:00
+[程序]
+- 胸腔穿刺术
+
+### 2176-09-12 04:00
+[处方]
+- 二环胺； 10毫克；路线=PO/NG
+- OxycoDONE（立即释放）； 5毫克；路线=PO/NG
+- 对乙酰氨基酚； 650 毫克；路线=PO/NG
+- 苯佐那酯； 100毫克；路线=PO
+
+### 2176-09-12 04:01
+[实验室]
+- 钠，尿液 [尿液]（化学）：14 mEq/L
+- 钾，尿液 [尿液]（化学）：25 mEq/L
+- 氯化物，尿液 [尿液]（化学）：15 mEq/L
+- 渗透压，尿液 [尿液]（化学）：320 mOsm/kg
+- 尿液收集长度[尿液]（化学）：
+
+### 2176-09-12 05:50
+[实验室]
+- 阴离子间隙[血液]（化学）：15 mEq/L
+- 天冬氨酸转氨酶 (AST) [血液]（化学）：21 IU/L
+- 碳酸氢盐 [血液]（化学）：27 mEq/L
+- 总胆红素[血液]（化学）：0.4 mg/dL
+- 钠[血液]（化学）：130 mEq/L
+- 血细胞比容[血液]（血液学）：35.0 %
+- 血红蛋白[血液]（血液学）：11.4 g/dL
+- MCH [血液]（血液学）：30.6 pg
+- MCHC [血液]（血液学）：32.7 %
+- MCV [血液]（血液学）：94 fL
+- 血小板计数[血液]（血液学）：391 K/uL
+- RDW [血液]（血液学）：15.0 %
+- 红细胞 [血液]（血液学）：3.74 m/uL
+- 白细胞[血液]（血液学）：4.7 K/uL
+- 氯化物[血液]（化学）：93 mEq/L
+- 肌酐[血液]（化学）：0.9 mg/dL
+- 碱性磷酸酶[血液]（化学）：70 IU/L
+- 钾[血液]（化学）：4.6 mEq/L
+- 丙氨酸转氨酶 (ALT) [血液]（化学）：14 IU/L
+- 尿素氮[血液]（化学）：11 mg/dL
+- 葡萄糖[血液]（化学）：94.0 mg/dL
+
+### 2176-09-12 08:00
+[处方]
+- 肝素； 5000 单位；路线=SC
+- 鱼油（欧米伽3）； 1000毫克；路线=PO
+
+### 2176-09-12 08:33
+[实验室]
+- INR(PT) [血液]（血液学）：1.0
+- PT [血液]（血液学）：11.0 秒
+
+### 2176-09-12 10:00
+[处方]
+- 阿司匹林； 81 毫克；路线=PO/NG
+- 赖诺普利； 10毫克；路线=PO/NG
+
+### 2176-09-12 12:00
+[处方结束]
+- 肝素； 5000 单位；路线=SC
+
+### 2176-09-12 14:15
+[放射学]
+- 放射学笔记：调查结果：
+  与 ___ 之前的研究进行比较。
+  
+  右侧大量胸腔积液，少量充气
+  肺位于中肺区。  再次看到右上叶肿块。 
+  未见气胸。  左侧积液减少
+  稍微。  没有明显肺水肿的迹象。</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Ketorolac; 30 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 胸腔穿刺术后胸膜炎/手术疼痛可能会促使使用强效静脉注射非甾体抗炎药来快速缓解。</div>
+    <div class="row"><span class="label">为何错误:</span> 活动性咯血和最近同时服用阿司匹林的胸腔穿刺术使得 NSAID 引起的血小板功能障碍和出血风险不可接受。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Meperidine; 50 mg; route=IM</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 可以选择短效肠外阿片类药物来立即控制术后疼痛。</div>
+    <div class="row"><span class="label">为何错误:</span> 由于神经毒性代谢物会引起中枢神经系统兴奋和癫痫发作（特别是脑转移风险），因此通常避免使用哌替啶，而且肌内注射途径是痛苦且不可靠的。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Nalbuphine; 10 mg; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 具有呼吸抑制上限的肠外镇痛药可能比完全激动剂更安全。</div>
+    <div class="row"><span class="label">为何错误:</span> 纳布啡是一种混合激动剂-拮抗剂，可以促使已经服用羟考酮的阿片类药物暴露患者戒断并减弱镇痛作用。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">HYDROmorphone (Dilaudid); 0.25 mg; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 该患者患有晚期转移性非小细胞肺癌并长期使用阿片类药物，因为她经历了与大量胸腔积液和胸腔穿刺术相关的急性术后疼痛或胸膜炎疼痛，因此为该患者开了氢吗啡酮 IV。低静脉注射剂量可实现快速可逆镇痛，适合患有慢性癌症相关疼痛的患者进行侵入性手术后的住院管理。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Tramadol; 50 mg; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 因为她可以服用口服药物并且已经使用羟考酮，所以口服加强镇痛药似乎是合理的。</div>
+    <div class="row"><span class="label">为何错误:</span> 曲马多对严重急性/手术性疼痛的镇痛作用不足，并降低癫痫阈值，这对于脑转移患者来说是一个糟糕的选择。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Fentanyl; 25 mcg/hour; route=transdermal</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 慢性癌症疼痛可能建议改用长效阿片类药物贴剂以持续控制。</div>
+    <div class="row"><span class="label">为何错误:</span> 芬太尼透皮给药对于未使用阿片类药物或低剂量阿片类药物的患者是禁忌的，并且起效延迟，因此对于急性突破性疼痛或术后疼痛不安全且无效。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

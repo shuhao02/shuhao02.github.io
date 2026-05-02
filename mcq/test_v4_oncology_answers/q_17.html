@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 17 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 17 题 — 答案及解析</h1>
+  <div class="meta">住院号 26371133 · 决策时间 2120-02-13 16:00 · 共 7 个选项 · 2 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> B, G
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 89
+- **性别：** F
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 丧偶
+- **语言：** 西班牙语
+- **保险：** 医疗补助
+
+### 主要投诉
+- 癫痫发作和右上肢无力
+
+### 现病史
+- 89 岁女性，患有转移性外阴癌，目前正在接受放射治疗，未接受化疗，且有宫颈癌病史，在出现癫痫发作和右上肢无力后从另一家医院转院。患者要求她的女儿接收医疗信息并代表她做出决定。据了解，她在入院前患有许多双侧肺部结节和癌病，但没有呼吸道症状。 
+
+### 系统审查（准入前）
+- 转移前报告癫痫发作和右侧无力。
+- 尽管有肺部结节，但没有呼吸道症状。
+- 入院前出现阴道和身体瘙痒症。
+
+### 既往病史
+- 目前正在接受放射治疗（而非化疗）的转移性外阴癌
+- 宫颈癌远期病史
+- 2 型糖尿病
+- 胃食管反流病（GERD）
+- 抑郁症
+
+### 社会历史
+- 丧偶
+- 西班牙语
+- 家人（女儿）根据患者的要求充当医疗决策者
+
+### 家族史
+- 未知
+
+### 入学前体检
+- 入院前发现右侧无力
+
+### 入院前药物
+- 奥美拉唑 20 毫克，每日口服
+- 二甲双胍（格华止）500 mg PO BID
+- 西酞普兰 10 毫克，每日口服
+
+=== 院内临床时间表 ===
+### 2120-02-12 18:30
+[放射学]
+- 放射学笔记：调查结果：
+  无对比的 CT 头：
+  增强 2.5 x 2.3 厘米左顶叶质量，周围有大血管源
+  左侧顶枕区水肿。  小于3个的较小病变
+  毫米位于左侧基底神经节区。  也是一种基于硬脑膜的增强
+  病变以左侧小脑幕为中心，伴上蚓部血管源性病变
+  水肿。
+  
+  没有出血或梗塞的证据。  基底水箱是专利的。
+  左枕骨区域的钙化肿块似乎是基于硬脑膜的，
+  尺寸为 1.6 x 1.3 厘米，可能代表钙化脑膜瘤或硬脑膜
+  牌匾 (02:20)。
+  
+  心室和脑沟的大小和结构正常。
+  
+  左上颌窦内壁有小粘膜保留囊肿。 
+  否则;其他鼻窦的可视化部分，乳突空气
+  细胞、中耳腔清晰。轨道的可视化部分
+  是不起眼的。
+  
+  CTA 负责人：
+  ___ 环的血管及其主要颅内分支
+  看起来正常，没有狭窄、闭塞或动脉瘤。  硬脑膜静脉
+  鼻窦是专利的。左横窦、乙状窦和上窦
+  左颈内静脉发育不全。
+  
+  CTA 颈部：
+  双侧颈动脉和椎动脉起源是公开的。
+  根据 NASCET 标准，没有颈内动脉狭窄的证据。
+  颈动脉和椎动脉及其主要分支表现正常
+  没有狭窄或闭塞的证据。
+  
+  其他：
+  右侧甲状腺结节有一个 6 毫米的高密度，左侧有一个 5 毫米的低密度
+  甲状腺叶结节。
+   根据 CT 大小标准，没有淋巴结肿大。  用于胸腔内发现
+  请参阅 ___ 完成的胸部 CT 报告。
+  
+  印象：
+  1.多发性左脑轴内及左小脑幕硬脑膜为主
+  增强肿块病变，周围有左额顶大血管源性
+  水肿；建议通过 MRI 对比进行进一步评估。
+  2. ___ 的专利圈没有狭窄、闭塞或动脉瘤的证据。
+  3.双侧颈动脉和椎动脉未闭，无证据
+  狭窄、闭塞或夹层。
+  4. 右侧甲状腺结节有一个 6 毫米的高密度，左侧有一个 5 毫米的低密度
+  甲状腺叶结节。
+
+### 2120-02-12 23:21
+[放射学]
+- 放射学笔记：调查结果：
+  在此限制范围内，图像因患者运动而显着降低：
+  
+  左侧顶叶轴内 T2 低信号坏死病灶
+  对比后表现出强烈的不规则结节强化
+  给药、广泛的病灶周围水肿和肿块效应消失
+  邻近的脑沟，并取代枕叶室角。  有
+  T2 低信号区域相关的边缘扩散限制
+  可能与细胞增多有关，但与中心坏死成分有关。  有
+  没有潜在的基底池消失或踝关节突出。  没有
+  中线移位。  增强肿块病变尺寸为 2.3 x 2.8 x 2.6 cm（AP、TVS
+  和 SI 方向；分别）。
+  
+  还有另一种类似的信号特征，具有扩散限制和
+  左豆状核附近强化，周围血管源性增强
+  水肿；怀疑卫星病变。
+  
+  左侧小脑幕中心有硬脑膜强化病灶，
+  潜在的上蚓部血管源性水肿。
+  
+  左枕骨存在可疑的扩散限制区域
+  颅外区；可能与磁敏感伪影有关，而不是
+  在其他序列中清晰可见。
+  
+  没有急性脑积水。无脑实质疝出。
+  无急性颅内出血、梗塞或积液。
+  
+  左侧后顶叶钙化脑膜瘤（系列13，图片16
+  和系列 13，图像 17)，最大的是左旁矢状面测量
+  横向尺寸约为 11 x 16 毫米，脑膜瘤较小
+  向左，横向尺寸约为 6 x 5 毫米
+  周围无明显水肿。
+  
+  印象：
+  1. 考虑到本次考试的局限性
+  运动伪影；至少有 2 个轴内细胞增多病变
+  左顶叶和左基底神经节区域强烈的对比后增强
+  怀疑肿瘤形成过程。
+  2.以左侧小脑幕为中心有硬脑膜强化病灶
+  伴有潜在的上蚓部血管源性水肿。
+  3. 左侧小幕多发性和硬脑膜病变有利于转移
+  病因学；然而，神经胶质肿瘤属于鉴别诊断范畴。
+  4. 左枕骨有可疑的扩散限制区域
+  颅外区；可能与磁化率伪影有关。
+  5. 如上所述的左后顶叶钙化脑膜瘤，无
+  周围水肿的证据。</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Hydrocortisone; 100 mg every 8 hours; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 氢化可的松是一种皮质类固醇，可能被认为可以减轻脑水肿。</div>
+    <div class="row"><span class="label">为何错误:</span> 与地塞米松相比，氢化可的松在中枢神经系统中的糖皮质激素效力较低，盐皮质激素活性较高，因此对于血管源性脑水肿无效，因此不推荐用于该适应症。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">LORazepam; 0.5-2 mg; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 给予劳拉西泮 IV 是为了控制可能由转移性脑损伤和相关脑水肿引起的癫痫发作活动。它提供立即的抗惊厥作用，而皮质类固醇治疗可解决导致癫痫风险的潜在水肿。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Mannitol; 1 g/kg; route=IV bolus</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 甘露醇等渗透剂可以急剧降低颅内压，有时用于治疗脑水肿。</div>
+    <div class="row"><span class="label">为何错误:</span> 她的脑转移引起的血管源性水肿没有即将发生脑疝的迹象，因此甘露醇只能提供短暂的益处并增加渗透/肾脏风险，而皮质类固醇是指定治疗方法。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Alteplase; 0.9 mg/kg (10% bolus, remainder over 60 minutes); route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 右侧无力可能会被误解为需要溶栓的急性缺血性中风。</div>
+    <div class="row"><span class="label">为何错误:</span> 神经影像显示无梗死的颅内肿块病变，而颅内肿瘤是阿替普酶的禁忌症，使得溶栓不安全且不合适。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Fludrocortisone; 0.1 mg daily; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 作为一种“类固醇”，氟氢可的松似乎可以与糖皮质激素互换以减轻肿胀。</div>
+    <div class="row"><span class="label">为何错误:</span> 氟氢可的松是一种盐皮质激素，不能治疗脑血管源性水肿，可能会加重液体潴留和高血压。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Diazepam; 5 mg once; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 地西泮是一种具有抗惊厥特性的苯二氮卓类药物。</div>
+    <div class="row"><span class="label">为何错误:</span> 口服地西泮起效延迟且不可靠，不适合急性癫痫发作控制，需要静脉注射苯二氮卓类药物（如劳拉西泮）。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">G.</span>
+    <span class="opt-drug">Dexamethasone; 4 mg; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 地塞米松 IV 用于减轻 CT 和 MRI 上发现的转移性脑病灶引起的血管源性脑水肿，这些病灶会导致癫痫发作和右侧无力。皮质类固醇旨在降低颅内压并改善神经功能。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

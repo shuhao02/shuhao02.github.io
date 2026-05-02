@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤科 第 14 题 — 答案及解析</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    max-width: 920px; margin: 0 auto; padding: 24px 20px 60px;
+    background: #f7f9fc; color: #1a202c; line-height: 1.65;
+  }
+  .home-link {
+    display: inline-block; margin-bottom: 16px; color: #3182ce;
+    text-decoration: none; font-size: 14px;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .header {
+    background: linear-gradient(135deg, #b7791f 0%, #8a5d18 100%);
+    color: white; padding: 20px 28px; border-radius: 10px; margin-bottom: 24px;
+  }
+  .header h1 { margin: 0 0 6px 0; font-size: 22px; }
+  .header .meta { font-size: 14px; opacity: 0.95; }
+  .section {
+    background: white; padding: 20px 28px; margin-bottom: 18px;
+    border-radius: 8px; border: 1px solid #e2e8f0;
+  }
+  .section h2 {
+    margin: 0 0 14px 0; font-size: 18px; color: #2c5282;
+    border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;
+  }
+  pre {
+    background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 14px 18px; overflow-x: auto; white-space: pre-wrap;
+    font-size: 13px; line-height: 1.55; color: #2d3748;
+  }
+  .gold-banner {
+    background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169;
+    padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .gold-banner b { color: #22543d; }
+  .option {
+    padding: 14px 18px; margin-bottom: 12px; border-radius: 6px;
+    border-left: 4px solid #e2e8f0;
+  }
+  .option.correct { background: #f0fff4; border-left-color: #38a169; }
+  .option.incorrect { background: #fff5f5; border-left-color: #e53e3e; }
+  .option-header { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .opt-letter {
+    font-weight: 700; font-size: 15px; margin-right: 10px; min-width: 28px;
+    color: #2d3748;
+  }
+  .opt-drug { font-weight: 600; font-size: 14px; color: #2d3748; }
+  .opt-tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 10px;
+  }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale {
+    font-size: 13.5px; color: #4a5568; margin-top: 8px; padding-left: 38px;
+  }
+  .opt-rationale .label {
+    font-weight: 700; color: #2d3748; display: inline-block; min-width: 78px;
+  }
+  .opt-rationale .row { margin: 4px 0; }
+</style>
+</head>
+<body>
+<a class="home-link" href="../test_v4_answers_index.html">← 返回答案索引</a>
+
+<div class="header">
+  <h1>肿瘤科 第 14 题 — 答案及解析</h1>
+  <div class="meta">住院号 24931441 · 决策时间 2124-12-05 04:00 · 共 6 个选项 · 1 个正确</div>
+</div>
+
+<div class="gold-banner">
+  <b>正确答案:</b> D
+</div>
+
+<div class="section">
+  <h2>患者资料及临床时间线</h2>
+  <pre>=== 患者概况 ===
+### 患者信息
+- **年龄：** 78
+- **性别：** 男
+- **服务：** 医学
+- **过敏：** 无已知过敏/药物不良反应
+- **种族：** 白色
+- **婚姻状况：** 已婚
+- **语言：** 英语
+- **保险：** 医疗保险
+
+### 主要投诉
+- LLE 弱点。
+
+### 现病史
+- ___ 先生是一位 ___ 岁的绅士，有肾细胞癌病史，并伴有膀胱、肺和脑部的代谢紊乱。他的脑部代谢综合征是在 ___ 和 MRI 上诊断出来的，这是在他描述 LLE 虚弱状况恶化后进行的。影像显示有两处病变，一处位于右侧额顶叶区域，另一处位于左侧枕骨区域，伴有水肿。他的肿瘤科医生去看了他，并开始服用地塞米松，并开始进行全脑放射治疗。他的虚弱状况正在改善，他的类固醇开始逐渐减少，然后____在公共汽车上试图去洗手间时，他的左腿从他身下垮掉了。他向 ___ 提出评估，与之前的 CT 和 MRI 报告相比，重复成像结果稳定，因此确定他应转移到 ___ 进行神经外科的进一步评估和评估。在离开 ___ 之前，他接受了地塞米松 10 毫克 x1 剂。他否认头痛、恶心、呕吐、头晕、视力、听力或言语变化、肠或膀胱功能变化。他报告说，自 ___ 服用 Decadron 以来，他感觉好多了。
+
+### 系统审查（准入前）
+- (+) 根据 HPI  
+- (-) 否认发烧、发冷、盗汗、近期体重减轻或增加。否认头痛、鼻窦压痛、鼻漏或充血。否认咳嗽、气短。否认胸痛或胸闷、心悸。否认恶心、呕吐、腹泻、便秘或腹痛。最近排便或排尿习惯没有变化。无排尿困难。否认关节痛或肌痛。所有其他系统审查都是负面的。  
+- 全面的 10 个系统审查，否则除上述情况外均为负面。
+
+### 既往病史
+- 转移性肾细胞，伴有mets至肺、膀胱（通过TURBT对病灶进行s/p手术切除）和脑。  
+- HTN。  
+- 血尿。  
+- 胆囊切除术。  
+- 疝气修复。  
+- 慢性肾病。
+
+### 社会历史
+- 未知
+
+### 家族史
+- 无癌症史。
+
+### 入学前体检
+- 生命体征：T 98.2 BP 160/86 HR 57 RR 16 O2 99%RA  
+- 一般：警觉、定向、无严重痛苦  
+- HEENT：巩膜无黄疸，MMM，口咽清晰  
+- 颈部：柔软，JVP 不升高，无 LAD  
+- 肺部：双侧听诊清晰，无哮鸣音、罗音、啰音  
+- CV：规律的速率和节律，正常S1+S2，无杂音、摩擦音、奔马音  
+- 腹部：柔软、无压痛、无膨胀、有肠鸣音、无反跳痛或肌卫感、无器官肿大  
+- 外部：温暖，无水肿  
+- 脑神经：  
+  - I：未测试  
+  - II：瞳孔同样圆且对光有反应  
+  - III、IV、VI：双侧眼外运动完好，无眼球震颤  
+  - V、VII：面部力量和感觉完好且对称  
+  - VIII：听力完好无损  
+  - IX、X：未测试  
+  - XI：胸锁乳突肌和斜方肌双侧正常  
+  - XII：舌中线无肌束颤动  
+- 电机：双侧体积和音调正常。无异常动作、震颤。使上肢和下肢充满力量___。
+
+### 入院前药物
+- 托普醇 50 毫克，每日  
+- 索坦（疗程和剂量需要与外部肿瘤科医生确认）  
+- 多种维生素
+
+=== 院内临床时间表 ===
+### 2124-12-04 22:24
+[实验室]
+- 血小板计数[血液]（血液学）：221 K/uL
+- 血红蛋白[血液]（血液学）：11.6 g/dL
+- 淋巴细胞[血液]（血液学）：9.3 %
+- MCH [血液]（血液学）：32.9 pg
+- MCHC [血液]（血液学）：33.7 %
+- MCV [血液]（血液学）：98 fL
+- 单核细胞[血液]（血液学）：3.4 %
+- 中性粒细胞[血液]（血液学）：86.9 %
+- 钠[血液]（化学）：138 mEq/L
+- 血细胞比容[血液]（血液学）：34.3 %
+- RDW [血液]（血液学）：15.8 %
+- 白细胞[血液]（血液学）：11.5 K/uL
+- 浅绿色顶部固定[血]（化学）：
+- 绿色顶部保持（血浆）[血液]（化学）：保持。  超过 4 小时后丢弃。
+- 阴离子间隙[血液]（化学）：21 mEq/L
+- 碳酸氢盐 [血液]（化学）：19 mEq/L
+- 氯化物[血液]（化学）：103 mEq/L
+- 肌酐[血液]（化学）：2.0 mg/dL
+- 估计 GFR（MDRD 方程）[血液]（化学）：
+- 红细胞 [血液]（血液学）：3.52 m/uL
+- 葡萄糖[血液]（化学）：112.0 mg/dL
+- 嗜酸性粒细胞[血液]（血液学）：0.2 %
+- 尿素氮[血液]（化学）：52 mg/dL
+- 嗜碱性粒细胞[血液]（血液学）：0.2 %
+- 钾[血液]（化学）：5.3 mEq/L
+- 蓝色顶部保持[血液]（化学）：保持。  超过 24 小时请丢弃。</pre>
+</div>
+
+<div class="section">
+  <h2>选项及解析</h2>
+  <div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">Levetiracetam; 1000 mg q12h; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 脑转移瘤具有很高的癫痫发作风险，因此抗癫痫药似乎可以预防神经系统事件。</div>
+    <div class="row"><span class="label">为何错误:</span> 左乙拉西坦不能减轻血管源性水肿或改善当前的局灶性无力，不建议对无癫痫发作的脑肿瘤患者进行常规癫痫发作预防。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">Sodium Chloride 3%; 150 mL once; route=IV bolus</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 在急性神经系统恶化的情况下，高渗疗法有时用于快速控制 ICP。</div>
+    <div class="row"><span class="label">为何错误:</span> 该患者没有急性颅内高压或脑疝的迹象，并且患有 CKD（Cr 2.0 mg/dL，BUN 52 mg/dL）的高渗盐水存在钠/水超负荷的风险，而不能像皮质类固醇那样有效地解决潜在的血管性水肿。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">Hydrocortisone; 50 mg q6h; route=IV</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 氢化可的松是一种皮质类固醇，因此临床医生可能会认为它同样会减轻与肿瘤相关的脑水肿。</div>
+    <div class="row"><span class="label">为何错误:</span> 氢化可的松的盐皮质激素活性可以促进钠/水潴留，这对于血压升高 (160/86) 是不利的，并且可能使 ICP 恶化，并且由于盐皮质激素作用最小，指南特别倾向于使用地塞米松治疗肿瘤血管源性水肿。</div>
+  </div>
+</div>
+<div class="option correct">
+  <div class="option-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">Dexamethasone; 4 mg; route=IV</span>
+    <span class="opt-tag tag-correct">正确</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为什么正确:</span> 地塞米松 4mg IV 用于控制继发于脑转移导致虚弱的脑水肿。该患者先前表现出使用该药物的临床改善，并且在逐渐减量后症状复发，表明在住院期间持续需要皮质类固醇治疗。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">Aspirin; 325 mg once; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 急性局灶性无力可能提示缺血性中风，对此通常考虑抗血小板负荷。</div>
+    <div class="row"><span class="label">为何错误:</span> 他的症状可归因于肿瘤相关的血管性水肿，重复影像学报告显示稳定（无急性缺血），而颅内肿瘤（尤其是易于出血的肾细胞癌转移）会增加颅内出血风险，因此阿司匹林负荷在此不合适。</div>
+  </div>
+</div>
+<div class="option incorrect">
+  <div class="option-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">Acetazolamide; 250 mg q12h; route=PO</span>
+    <span class="opt-tag tag-incorrect">错误</span>
+  </div>
+  <div class="opt-rationale">
+    <div class="row"><span class="label">为何似是而非:</span> 乙酰唑胺可以通过减少脑脊液的产生来降低颅内压，并且可能对脑水肿有帮助。</div>
+    <div class="row"><span class="label">为何错误:</span> 脑转移引起的血管源性水肿并不是由于脑脊液过度产生，并且在 CKD 加上低碳酸氢盐 (19 mEq/L) 的情况下，乙酰唑胺可能会加重代谢性酸中毒，而不会改善其缺陷。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>
