@@ -34,12 +34,25 @@
   .options { margin-top: 24px; }
   .opt-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px;
                padding: 16px 20px; margin-bottom: 14px;
-               box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
-  .opt-card.completed { border-left: 4px solid #38a169; }
-  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.04); border-left-width: 4px; }
+  .opt-card.gold-correct { border-left-color: #38a169; background: #f8fff9; }
+  .opt-card.gold-incorrect { border-left-color: #e53e3e; background: #fffafa; }
+  .opt-card.completed { box-shadow: 0 0 0 2px rgba(56,161,105,0.25), 0 1px 2px rgba(0,0,0,0.04); }
+  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;
                  flex-wrap: wrap; }
   .opt-letter { font-weight: 700; font-size: 16px; color: #b7791f; min-width: 24px; }
-  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; }
+  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; flex: 1; }
+  .opt-tag { display: inline-block; padding: 2px 10px; border-radius: 10px;
+              font-size: 11px; font-weight: 700; }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale { background: rgba(255,255,255,0.7); padding: 10px 14px;
+                    border-radius: 4px; margin: 8px 0 12px;
+                    font-size: 13px; color: #4a5568; line-height: 1.55; }
+  .opt-rationale .row { margin: 4px 0; }
+  .opt-rationale .label { font-weight: 700; color: #2d3748; display: inline-block;
+                            min-width: 90px; }
+  .rating-divider { border-top: 1px dashed #e2e8f0; margin: 12px 0 8px; }
   .rating-group { margin-top: 10px; padding-left: 32px; }
   .rating-q { font-size: 13.5px; color: #4a5568; margin-bottom: 6px; }
   .rating-q b { color: #2d3748; font-weight: 600; }
@@ -311,13 +324,16 @@
 
 <h2>请评判每个选项</h2>
 <div class="options">
-<div class="opt-card" data-letter="A">
+<div class="opt-card gold-incorrect" data-letter="A">
   <div class="opt-header">
     <span class="opt-letter">A.</span>
     <span class="opt-drug">美沙酮； 10 毫克，每日两次；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 美沙酮有时被用作长效阿片类药物，用于治疗严重的癌症疼痛和阿片类药物轮换。</div><div class="row"><span class="label">为何错误:</span> 美沙酮 10 毫克，每天两次，作为唯一的基线阿片类药物，对于以前服用大剂量吗啡的人来说剂量明显不足，并且存在无法控制的疼痛和戒断风险；它还需要仔细的转换和 QTc 监测，此处未提及。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_rating" value="should"> 应该开</label>
       <label><input type="radio" name="A_rating" value="depends"> 视情况</label>
@@ -325,20 +341,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_context" value="yes"> 是</label>
       <label><input type="radio" name="A_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="B">
+<div class="opt-card gold-incorrect" data-letter="B">
   <div class="opt-header">
     <span class="opt-letter">B.</span>
     <span class="opt-drug">芬太尼； 25 微克/小时贴剂；路线=TD</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 症状改善后改用芬太尼贴剂似乎是合理的阿片类药物轮换并减少剂量。</div><div class="row"><span class="label">为何错误:</span> 25 微克/小时的芬太尼贴剂每天提供大约 60-90 毫克口服吗啡当量，远低于该患者的既定需求（约 270-300 毫克/天），存在严重不受控制的疼痛和戒断风险。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_rating" value="should"> 应该开</label>
       <label><input type="radio" name="B_rating" value="depends"> 视情况</label>
@@ -346,20 +365,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_context" value="yes"> 是</label>
       <label><input type="radio" name="B_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="C">
+<div class="opt-card gold-incorrect" data-letter="C">
   <div class="opt-header">
     <span class="opt-letter">C.</span>
     <span class="opt-drug">纳布啡；每 4 小时 10 毫克；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 在医院使用注射阿片类药物对于癌症疼痛的急性治疗似乎是合理的。</div><div class="row"><span class="label">为何错误:</span> 纳布啡是一种混合激动剂-拮抗剂，可促使维持高剂量全激动剂阿片类药物的患者戒断，并且不能提供适当的长效基线镇痛。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_rating" value="should"> 应该开</label>
       <label><input type="radio" name="C_rating" value="depends"> 视情况</label>
@@ -367,20 +389,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_context" value="yes"> 是</label>
       <label><input type="radio" name="C_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="D">
+<div class="opt-card gold-incorrect" data-letter="D">
   <div class="opt-header">
     <span class="opt-letter">D.</span>
     <span class="opt-drug">曲马多；每日 100 毫克 ER；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 鉴于地塞米松和放疗可改善症状，减少使用较弱的镇痛药似乎是合理的。</div><div class="row"><span class="label">为何错误:</span> 每天 100 mg 的曲马多缓释片是一种弱阿片类药物，对于需要大剂量长效阿片类药物的阿片类药物耐受患者来说严重不足，导致疼痛控制不良和戒断。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_rating" value="should"> 应该开</label>
       <label><input type="radio" name="D_rating" value="depends"> 视情况</label>
@@ -388,20 +413,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_context" value="yes"> 是</label>
       <label><input type="radio" name="D_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="E">
+<div class="opt-card gold-correct" data-letter="E">
   <div class="opt-header">
     <span class="opt-letter">E.</span>
     <span class="opt-drug">吗啡 SR（MS Contin）； 90毫克；路线=PO</span>
+    <span class="opt-tag tag-correct">AI 标注: 正确</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为什么正确:</span> 吗啡SR 90 mg PO用于维持对脊柱转移性淋巴瘤引起的慢性剧烈疼痛的控制。患者入院前的治疗方案和持续的肿瘤性疼痛证明继续长效阿片类药物治疗是合理的。剂量从 100 毫克略微减少至 90 毫克，表明在类固醇和放射治疗后症状控制得到改善后进行了重新评估。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_rating" value="should"> 应该开</label>
       <label><input type="radio" name="E_rating" value="depends"> 视情况</label>
@@ -409,20 +437,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_context" value="yes"> 是</label>
       <label><input type="radio" name="E_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="F">
+<div class="opt-card gold-incorrect" data-letter="F">
   <div class="opt-header">
     <span class="opt-letter">F.</span>
     <span class="opt-drug">丁丙诺啡； 10 微克/小时贴剂；路线=TD</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 另一种长效阿片类药物似乎适合需要基线镇痛的慢性癌症疼痛。</div><div class="row"><span class="label">为何错误:</span> 透皮丁丙诺啡是一种部分激动剂，不适用于需要高剂量全激动剂阿片类药物的患者，并且在低剂量下会导致戒断并提供不充分的镇痛。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_rating" value="should"> 应该开</label>
       <label><input type="radio" name="F_rating" value="depends"> 视情况</label>
@@ -430,7 +461,7 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_context" value="yes"> 是</label>
       <label><input type="radio" name="F_context" value="no"> 否</label>

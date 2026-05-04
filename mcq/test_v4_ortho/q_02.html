@@ -34,12 +34,25 @@
   .options { margin-top: 24px; }
   .opt-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px;
                padding: 16px 20px; margin-bottom: 14px;
-               box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
-  .opt-card.completed { border-left: 4px solid #38a169; }
-  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.04); border-left-width: 4px; }
+  .opt-card.gold-correct { border-left-color: #38a169; background: #f8fff9; }
+  .opt-card.gold-incorrect { border-left-color: #e53e3e; background: #fffafa; }
+  .opt-card.completed { box-shadow: 0 0 0 2px rgba(56,161,105,0.25), 0 1px 2px rgba(0,0,0,0.04); }
+  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;
                  flex-wrap: wrap; }
   .opt-letter { font-weight: 700; font-size: 16px; color: #2c7a7b; min-width: 24px; }
-  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; }
+  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; flex: 1; }
+  .opt-tag { display: inline-block; padding: 2px 10px; border-radius: 10px;
+              font-size: 11px; font-weight: 700; }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale { background: rgba(255,255,255,0.7); padding: 10px 14px;
+                    border-radius: 4px; margin: 8px 0 12px;
+                    font-size: 13px; color: #4a5568; line-height: 1.55; }
+  .opt-rationale .row { margin: 4px 0; }
+  .opt-rationale .label { font-weight: 700; color: #2d3748; display: inline-block;
+                            min-width: 90px; }
+  .rating-divider { border-top: 1px dashed #e2e8f0; margin: 12px 0 8px; }
   .rating-group { margin-top: 10px; padding-left: 32px; }
   .rating-q { font-size: 13.5px; color: #4a5568; margin-bottom: 6px; }
   .rating-q b { color: #2d3748; font-weight: 600; }
@@ -308,13 +321,16 @@
 
 <h2>请评判每个选项</h2>
 <div class="options">
-<div class="opt-card" data-letter="A">
+<div class="opt-card gold-incorrect" data-letter="A">
   <div class="opt-header">
     <span class="opt-letter">A.</span>
     <span class="opt-drug">葡萄糖; 5%溶于1000毫升水中；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> D5W 是一种常用的维持液，似乎适合术后补水。</div><div class="row"><span class="label">为何错误:</span> D5W 的葡萄糖含量为 197 mg/dL，Na 含量为 133 mEq/L，它提供的游离水会导致低钠血症恶化，而葡萄糖则会加剧 2 型糖尿病患者的高血糖。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_rating" value="should"> 应该开</label>
       <label><input type="radio" name="A_rating" value="depends"> 视情况</label>
@@ -322,20 +338,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_context" value="yes"> 是</label>
       <label><input type="radio" name="A_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="B">
+<div class="opt-card gold-incorrect" data-letter="B">
   <div class="opt-header">
     <span class="opt-letter">B.</span>
     <span class="opt-drug">乳酸林格氏症； 2000毫升（推注）；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 具有中央通路的术后状态可能被误解为需要积极的等渗扩容。</div><div class="row"><span class="label">为何错误:</span> 第 4 步支持维持水合而不是推注复苏； 2 升等渗推注量过多，有液体超负荷的风险，尤其是肌酐 1.6 mg/dL 时。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_rating" value="should"> 应该开</label>
       <label><input type="radio" name="B_rating" value="depends"> 视情况</label>
@@ -343,20 +362,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_context" value="yes"> 是</label>
       <label><input type="radio" name="B_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="C">
+<div class="opt-card gold-incorrect" data-letter="C">
   <div class="opt-header">
     <span class="opt-letter">C.</span>
     <span class="opt-drug">氯化钠； 3% 150 毫升；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 实验室中的轻度低钠和已建立的静脉通路可能会被误认为是用高渗盐水积极提高血清钠的指征。</div><div class="row"><span class="label">为何错误:</span> Na 133 mEq/L 不符合 3% 盐水的适应症（没有严重低钠血症或神经系统紧急情况的记录），高渗盐水存在过度快速校正和渗透性脱髓鞘的风险。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_rating" value="should"> 应该开</label>
       <label><input type="radio" name="C_rating" value="depends"> 视情况</label>
@@ -364,20 +386,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_context" value="yes"> 是</label>
       <label><input type="radio" name="C_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="D">
+<div class="opt-card gold-correct" data-letter="D">
   <div class="opt-header">
     <span class="opt-letter">D.</span>
     <span class="opt-drug">0.45%氯化钠； 1000毫升；路线=IV</span>
+    <span class="opt-tag tag-correct">AI 标注: 正确</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为什么正确:</span> 0.45% 氯化钠 1000mL 静脉注射作为术后维持液，用于口服摄入有限并通过正确定位的 PICC 导管持续静脉注射抗生素治疗的患者。实验室值仅显示轻度低钠血症和肌酐轻微升高，支持使用轻微低渗溶液进行保守液体维持，而不是积极等渗复苏。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_rating" value="should"> 应该开</label>
       <label><input type="radio" name="D_rating" value="depends"> 视情况</label>
@@ -385,20 +410,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_context" value="yes"> 是</label>
       <label><input type="radio" name="D_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="E">
+<div class="opt-card gold-incorrect" data-letter="E">
   <div class="opt-header">
     <span class="opt-letter">E.</span>
     <span class="opt-drug">氯化钾； 1 小时内 40 mEq；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 电解质补充通常与静脉输液搭配使用，并且可能不恰当地用作主动补钾。</div><div class="row"><span class="label">为何错误:</span> 血清钾为 4.0 mEq/L，肌酐为 1.6 mg/dL；在没有低钾血症的情况下，在 1 小时内给予 40 mEq IV 可能会导致高钾血症和心律失常。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_rating" value="should"> 应该开</label>
       <label><input type="radio" name="E_rating" value="depends"> 视情况</label>
@@ -406,20 +434,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_context" value="yes"> 是</label>
       <label><input type="radio" name="E_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="F">
+<div class="opt-card gold-incorrect" data-letter="F">
   <div class="opt-header">
     <span class="opt-letter">F.</span>
     <span class="opt-drug">羟乙基淀粉； 6% 500 毫升；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 可能会错误地选择胶体来通过新确认的中心线提供血管内容量支持。</div><div class="row"><span class="label">为何错误:</span> 羟乙基淀粉不适用于维持水合作用，并且会增加急性肾损伤的风险，这在感染和肌酐 1.6 mg/dL 的情况下令人担忧。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_rating" value="should"> 应该开</label>
       <label><input type="radio" name="F_rating" value="depends"> 视情况</label>
@@ -427,7 +458,7 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_context" value="yes"> 是</label>
       <label><input type="radio" name="F_context" value="no"> 否</label>

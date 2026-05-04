@@ -34,12 +34,25 @@
   .options { margin-top: 24px; }
   .opt-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px;
                padding: 16px 20px; margin-bottom: 14px;
-               box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
-  .opt-card.completed { border-left: 4px solid #38a169; }
-  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.04); border-left-width: 4px; }
+  .opt-card.gold-correct { border-left-color: #38a169; background: #f8fff9; }
+  .opt-card.gold-incorrect { border-left-color: #e53e3e; background: #fffafa; }
+  .opt-card.completed { box-shadow: 0 0 0 2px rgba(56,161,105,0.25), 0 1px 2px rgba(0,0,0,0.04); }
+  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;
                  flex-wrap: wrap; }
   .opt-letter { font-weight: 700; font-size: 16px; color: #b7791f; min-width: 24px; }
-  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; }
+  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; flex: 1; }
+  .opt-tag { display: inline-block; padding: 2px 10px; border-radius: 10px;
+              font-size: 11px; font-weight: 700; }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale { background: rgba(255,255,255,0.7); padding: 10px 14px;
+                    border-radius: 4px; margin: 8px 0 12px;
+                    font-size: 13px; color: #4a5568; line-height: 1.55; }
+  .opt-rationale .row { margin: 4px 0; }
+  .opt-rationale .label { font-weight: 700; color: #2d3748; display: inline-block;
+                            min-width: 90px; }
+  .rating-divider { border-top: 1px dashed #e2e8f0; margin: 12px 0 8px; }
   .rating-group { margin-top: 10px; padding-left: 32px; }
   .rating-q { font-size: 13.5px; color: #4a5568; margin-bottom: 6px; }
   .rating-q b { color: #2d3748; font-weight: 600; }
@@ -309,13 +322,16 @@
 
 <h2>请评判每个选项</h2>
 <div class="options">
-<div class="opt-card" data-letter="A">
+<div class="opt-card gold-incorrect" data-letter="A">
   <div class="opt-header">
     <span class="opt-letter">A.</span>
     <span class="opt-drug">甘露醇； 0.5克/公斤；路线=静脉推注</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 甘露醇是一种渗透剂，常用于快速降低脑水肿患者的颅内压。</div><div class="row"><span class="label">为何错误:</span> 她的影像学显示轻度、稳定的血管源性肿瘤水肿，没有急性颅内高压的迹象，因此不需要渗透性利尿，并且存在液体转移和肾损伤的风险。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_rating" value="should"> 应该开</label>
       <label><input type="radio" name="A_rating" value="depends"> 视情况</label>
@@ -323,20 +339,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_context" value="yes"> 是</label>
       <label><input type="radio" name="A_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="B">
+<div class="opt-card gold-incorrect" data-letter="B">
   <div class="opt-header">
     <span class="opt-letter">B.</span>
     <span class="opt-drug">乙酰唑胺； 250毫克；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 乙酰唑胺用于通过减少特发性颅内高压患者脑脊液的产生来降低颅内压。</div><div class="row"><span class="label">为何错误:</span> 她的水肿是由肿瘤引起的血管源性水肿，而不是由于脑脊液过量产生，因此乙酰唑胺不能解决病理生理学问题，并且对于磺胺类抗生素过敏的患者还具有磺胺类药物相关的过敏风险。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_rating" value="should"> 应该开</label>
       <label><input type="radio" name="B_rating" value="depends"> 视情况</label>
@@ -344,20 +363,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_context" value="yes"> 是</label>
       <label><input type="radio" name="B_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="C">
+<div class="opt-card gold-incorrect" data-letter="C">
   <div class="opt-header">
     <span class="opt-letter">C.</span>
     <span class="opt-drug">甲基泼尼松龙； 1克；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 高剂量甲基强的松龙用于治疗某些急性神经系统疾病，以迅速减少炎症。</div><div class="row"><span class="label">为何错误:</span> 脉冲剂量甲基泼尼松龙（1克/天）不适用于肿瘤相关的血管源性水肿，并且会引起不必要的毒性（严重高血糖、免疫抑制），而中等剂量地塞米松是标准方法。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_rating" value="should"> 应该开</label>
       <label><input type="radio" name="C_rating" value="depends"> 视情况</label>
@@ -365,20 +387,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_context" value="yes"> 是</label>
       <label><input type="radio" name="C_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="D">
+<div class="opt-card gold-correct" data-letter="D">
   <div class="opt-header">
     <span class="opt-letter">D.</span>
     <span class="opt-drug">地塞米松； 4毫克；路线=PO/NG</span>
+    <span class="opt-tag tag-correct">AI 标注: 正确</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为什么正确:</span> 2171-01-29 的影像显示右额叶持续存在血管源性水肿，与患者的胶质母细胞瘤部位相对应，并有轻度神经功能缺损。鉴于持续的脑肿胀和对先前较低剂量的反应不足，地塞米松增加至 4 mg PO/NG，以改善颅内水肿管理和神经系统稳定性。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_rating" value="should"> 应该开</label>
       <label><input type="radio" name="D_rating" value="depends"> 视情况</label>
@@ -386,20 +411,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_context" value="yes"> 是</label>
       <label><input type="radio" name="D_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="E">
+<div class="opt-card gold-incorrect" data-letter="E">
   <div class="opt-header">
     <span class="opt-letter">E.</span>
     <span class="opt-drug">强的松; 60毫克；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 泼尼松是一种全身性皮质类固醇，可以减轻炎症，可能有助于缓解脑水肿。</div><div class="row"><span class="label">为何错误:</span> 对于肿瘤相关的血管源性水肿，首选地塞米松，其中枢神经系统渗透性较好，盐皮质激素作用较低；在这种情况下，泼尼松的效果较差，并且更有可能导致液体潴留和高血糖。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_rating" value="should"> 应该开</label>
       <label><input type="radio" name="E_rating" value="depends"> 视情况</label>
@@ -407,20 +435,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_context" value="yes"> 是</label>
       <label><input type="radio" name="E_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="F">
+<div class="opt-card gold-incorrect" data-letter="F">
   <div class="opt-header">
     <span class="opt-letter">F.</span>
     <span class="opt-drug">贝伐珠单抗； 10毫克/公斤；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 已知贝伐珠单抗可减少胶质母细胞瘤的瘤周水肿和类固醇需求。</div><div class="row"><span class="label">为何错误:</span> 它专门用于治疗类固醇难治性水肿或复发性疾病，而不是用于轻度、稳定的水肿，并且对这位高血压术后患者构成重大风险（例如高血压、血栓形成、伤口愈合受损）。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_rating" value="should"> 应该开</label>
       <label><input type="radio" name="F_rating" value="depends"> 视情况</label>
@@ -428,7 +459,7 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_context" value="yes"> 是</label>
       <label><input type="radio" name="F_context" value="no"> 否</label>

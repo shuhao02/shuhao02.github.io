@@ -34,12 +34,25 @@
   .options { margin-top: 24px; }
   .opt-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px;
                padding: 16px 20px; margin-bottom: 14px;
-               box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
-  .opt-card.completed { border-left: 4px solid #38a169; }
-  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.04); border-left-width: 4px; }
+  .opt-card.gold-correct { border-left-color: #38a169; background: #f8fff9; }
+  .opt-card.gold-incorrect { border-left-color: #e53e3e; background: #fffafa; }
+  .opt-card.completed { box-shadow: 0 0 0 2px rgba(56,161,105,0.25), 0 1px 2px rgba(0,0,0,0.04); }
+  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;
                  flex-wrap: wrap; }
   .opt-letter { font-weight: 700; font-size: 16px; color: #b7791f; min-width: 24px; }
-  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; }
+  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; flex: 1; }
+  .opt-tag { display: inline-block; padding: 2px 10px; border-radius: 10px;
+              font-size: 11px; font-weight: 700; }
+  .tag-correct { background: #c6f6d5; color: #22543d; }
+  .tag-incorrect { background: #fed7d7; color: #742a2a; }
+  .opt-rationale { background: rgba(255,255,255,0.7); padding: 10px 14px;
+                    border-radius: 4px; margin: 8px 0 12px;
+                    font-size: 13px; color: #4a5568; line-height: 1.55; }
+  .opt-rationale .row { margin: 4px 0; }
+  .opt-rationale .label { font-weight: 700; color: #2d3748; display: inline-block;
+                            min-width: 90px; }
+  .rating-divider { border-top: 1px dashed #e2e8f0; margin: 12px 0 8px; }
   .rating-group { margin-top: 10px; padding-left: 32px; }
   .rating-q { font-size: 13.5px; color: #4a5568; margin-bottom: 6px; }
   .rating-q b { color: #2d3748; font-weight: 600; }
@@ -344,13 +357,16 @@
 
 <h2>请评判每个选项</h2>
 <div class="options">
-<div class="opt-card" data-letter="A">
+<div class="opt-card gold-incorrect" data-letter="A">
   <div class="opt-header">
     <span class="opt-letter">A.</span>
     <span class="opt-drug">格列本脲； 5毫克；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 由于患者在家中服用磺酰脲类药物（格列美脲 1 毫克），因此继续使用类似的促分泌剂似乎是合理的。</div><div class="row"><span class="label">为何错误:</span> 最近在 07:00 接受 D50 和胰高血糖素治疗，并且在 06:40 血糖接近正常值 117 mg/dL，表明存在低血糖脆弱性；格列本脲具有长期低血糖的高风险，特别是在可能降低药物清除率的肝胆汁淤积的情况下。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_rating" value="should"> 应该开</label>
       <label><input type="radio" name="A_rating" value="depends"> 视情况</label>
@@ -358,20 +374,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="A_context" value="yes"> 是</label>
       <label><input type="radio" name="A_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="B">
+<div class="opt-card gold-incorrect" data-letter="B">
   <div class="opt-header">
     <span class="opt-letter">B.</span>
     <span class="opt-drug">二甲双胍； 1000毫克；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 鉴于 2 型糖尿病历史上控制不佳，人们可能会寻求标准的口服药物来改善血糖控制。</div><div class="row"><span class="label">为何错误:</span> 在此情况下，开始使用二甲双胍是不安全的，因为存在明显的胆汁淤积性肝功能障碍（直接胆红素 6.8 mg/dL，总胆红素 9.2/7.8 mg/dL，ALP 1136/939 IU/L，MRI 上显示梗阻性胆道扩张），这会增加急症住院患者乳酸性酸中毒的风险。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_rating" value="should"> 应该开</label>
       <label><input type="radio" name="B_rating" value="depends"> 视情况</label>
@@ -379,20 +398,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="B_context" value="yes"> 是</label>
       <label><input type="radio" name="B_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="C">
+<div class="opt-card gold-incorrect" data-letter="C">
   <div class="opt-header">
     <span class="opt-letter">C.</span>
     <span class="opt-drug">胰高血糖素； 1毫克；路线=IM</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 胰高血糖素早些时候被订购用于低血糖预防措施，因此如果人们假设持续存在风险，那么重复这一点似乎是合理的。</div><div class="row"><span class="label">为何错误:</span> 胰高血糖素用于急性严重低血糖；目前，患者并未出现低血糖（06:40 时血糖为 117 mg/dL），因此给予该药会导致血糖不适当地升高，因此不适用。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_rating" value="should"> 应该开</label>
       <label><input type="radio" name="C_rating" value="depends"> 视情况</label>
@@ -400,20 +422,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="C_context" value="yes"> 是</label>
       <label><input type="radio" name="C_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="D">
+<div class="opt-card gold-incorrect" data-letter="D">
   <div class="opt-header">
     <span class="opt-letter">D.</span>
     <span class="opt-drug">吡格列酮； 30毫克；路线=PO</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 对于长期患有不受控制的糖尿病的患者来说，添加另一种口服药物来治疗慢性高血糖似乎很有吸引力。</div><div class="row"><span class="label">为何错误:</span> 吡格列酮会引起液体潴留，且起效缓慢；该患者在检查时已出现+2 下肢水肿，需要可滴定的住院患者控制，因此 TZD 现在不合适。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_rating" value="should"> 应该开</label>
       <label><input type="radio" name="D_rating" value="depends"> 视情况</label>
@@ -421,20 +446,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="D_context" value="yes"> 是</label>
       <label><input type="radio" name="D_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="E">
+<div class="opt-card gold-correct" data-letter="E">
   <div class="opt-header">
     <span class="opt-letter">E.</span>
     <span class="opt-drug">胰岛素; 15 单位；路线=SC</span>
+    <span class="opt-tag tag-correct">AI 标注: 正确</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为什么正确:</span> 长期患有控制不佳的 2 型糖尿病的患者在病情稳定后重新开始皮下注射胰岛素。由于低血糖和肝功能障碍导致的早期低血糖风险需要暂时控制，但一旦血糖恢复到接近预期范围，就恢复 15 单位 SC 胰岛素剂量，以维持血糖控制与长期管理需求一致。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_rating" value="should"> 应该开</label>
       <label><input type="radio" name="E_rating" value="depends"> 视情况</label>
@@ -442,20 +470,23 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="E_context" value="yes"> 是</label>
       <label><input type="radio" name="E_context" value="no"> 否</label>
     </div>
   </div>
 </div>
-<div class="opt-card" data-letter="F">
+<div class="opt-card gold-incorrect" data-letter="F">
   <div class="opt-header">
     <span class="opt-letter">F.</span>
     <span class="opt-drug">葡萄糖; 75 毫升/小时时为 10%；路线=IV</span>
+    <span class="opt-tag tag-incorrect">AI 标注: 错误</span>
   </div>
+  <div class="opt-rationale"><div class="row"><span class="label">为何似是而非:</span> 由于 D50 和胰高血糖素较早使用，人们可能认为持续的葡萄糖支持仍然是有必要的。</div><div class="row"><span class="label">为何错误:</span> 目前血糖为 117 mg/dL (06:40)，并计划恢复胰岛素，因此不需要连续输注 D10，并且会抵消血糖控制。</div></div>
+  <div class="rating-divider"></div>
   <div class="rating-group">
-    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-q"><b>您是否同意 AI 的判断? 该药物处方是否合理?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_rating" value="should"> 应该开</label>
       <label><input type="radio" name="F_rating" value="depends"> 视情况</label>
@@ -463,7 +494,7 @@
     </div>
   </div>
   <div class="rating-group">
-    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-q"><b>判断该选项是否合理是否需要阅读患者 context?</b></div>
     <div class="rating-options">
       <label><input type="radio" name="F_context" value="yes"> 是</label>
       <label><input type="radio" name="F_context" value="no"> 否</label>
