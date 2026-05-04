@@ -5,32 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>骨科 第 4 题</title>
 <style>
+  * { box-sizing: border-box; }
   body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-          max-width: 900px; margin: 0 auto; padding: 24px 24px 64px;
-          color: #1a1a1a; line-height: 1.7; background: #fafafa; }
-  h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 8px; }
-  h2 { color: #34495e; margin-top: 32px; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0; }
-  .meta { background: #ecf0f1; padding: 12px 16px; border-radius: 6px;
-           font-size: 0.95em; margin-bottom: 20px; }
+          max-width: 980px; margin: 0 auto; padding: 16px 20px 80px;
+          color: #1a1a1a; line-height: 1.65; background: #f7f9fc; }
+  .topbar { display: flex; justify-content: space-between; align-items: center;
+             padding: 10px 14px; background: white; border-radius: 8px; margin-bottom: 16px;
+             box-shadow: 0 1px 3px rgba(0,0,0,0.06); flex-wrap: wrap; gap: 8px; }
+  .topbar a { color: #3182ce; text-decoration: none; font-size: 14px; }
+  .topbar a:hover { text-decoration: underline; }
+  .topbar .title { font-weight: 600; color: #2c7a7b; font-size: 15px; }
+  .progress-text { font-size: 13px; color: #718096; }
+  .progress-bar { height: 4px; background: #e2e8f0; border-radius: 2px; overflow: hidden;
+                   margin-bottom: 16px; }
+  .progress-bar > div { height: 100%; background: #2c7a7b; transition: width 0.3s; }
+  h1 { color: #2c7a7b; border-bottom: 3px solid #2c7a7b; padding-bottom: 6px; font-size: 22px;
+        margin-top: 0; }
+  h2 { color: #34495e; margin-top: 28px; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0;
+        font-size: 17px; }
+  .meta { background: #ecf0f1; padding: 10px 14px; border-radius: 6px; font-size: 14px;
+           margin-bottom: 18px; }
   .meta b { color: #2c3e50; }
-  .case { background: #fff; padding: 16px 20px; border-radius: 6px;
-           border: 1px solid #e0e0e0; }
-  .case pre { white-space: pre-wrap; word-wrap: break-word; font-family: inherit;
-                font-size: 0.95em; margin: 0; }
-  .options { background: #fff8e7; padding: 16px 20px; border-radius: 6px;
-              border-left: 4px solid #f39c12; margin-top: 20px; }
-  .options ol { margin: 0; padding-left: 0; list-style: none; }
-  .options li { padding: 8px 0; border-bottom: 1px dashed #eaeaea; font-size: 1.02em; }
-  .options li:last-child { border-bottom: none; }
-  .opt-letter { display: inline-block; width: 28px; font-weight: 700;
-                  color: #c0392b; }
   .question-stem { background: #e8f4f8; padding: 12px 16px; border-radius: 6px;
-                     border-left: 4px solid #3498db; margin-bottom: 16px;
-                     font-weight: 500; }
-  .instruction { font-style: italic; color: #7f8c8d; margin-top: 12px; font-size: 0.92em; }
+                     border-left: 4px solid #3498db; margin-bottom: 16px; font-size: 15px; }
+  .case { background: #fff; padding: 14px 18px; border-radius: 6px; border: 1px solid #e0e0e0; }
+  .case pre { white-space: pre-wrap; word-wrap: break-word; font-family: inherit;
+                font-size: 13.5px; margin: 0; line-height: 1.55; }
+  .options { margin-top: 24px; }
+  .opt-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px;
+               padding: 16px 20px; margin-bottom: 14px;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .opt-card.completed { border-left: 4px solid #38a169; }
+  .opt-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px;
+                 flex-wrap: wrap; }
+  .opt-letter { font-weight: 700; font-size: 16px; color: #2c7a7b; min-width: 24px; }
+  .opt-drug { font-weight: 600; font-size: 14.5px; color: #2d3748; }
+  .rating-group { margin-top: 10px; padding-left: 32px; }
+  .rating-q { font-size: 13.5px; color: #4a5568; margin-bottom: 6px; }
+  .rating-q b { color: #2d3748; font-weight: 600; }
+  .rating-options { display: flex; gap: 14px; flex-wrap: wrap; }
+  .rating-options label { display: inline-flex; align-items: center; gap: 4px;
+                            cursor: pointer; padding: 4px 8px; border-radius: 4px;
+                            transition: background 0.15s; user-select: none;
+                            font-size: 13.5px; }
+  .rating-options label:hover { background: #edf2f7; }
+  .rating-options input[type="radio"] { cursor: pointer; }
+  .rating-options label.checked-should { background: #c6f6d5; color: #22543d; font-weight: 600; }
+  .rating-options label.checked-depends { background: #fefcbf; color: #744210; font-weight: 600; }
+  .rating-options label.checked-shouldnot { background: #fed7d7; color: #742a2a; font-weight: 600; }
+  .rating-options label.checked-yes { background: #bee3f8; color: #2a4365; font-weight: 600; }
+  .rating-options label.checked-no { background: #e9d8fd; color: #44337a; font-weight: 600; }
+  .comment-area { margin-top: 24px; background: white; border: 1px solid #e2e8f0;
+                    border-radius: 8px; padding: 14px 18px; }
+  .comment-area label { display: block; font-weight: 600; margin-bottom: 6px;
+                          font-size: 14px; color: #4a5568; }
+  .comment-area textarea { width: 100%; min-height: 70px; padding: 8px 12px;
+                             border: 1px solid #cbd5e0; border-radius: 4px;
+                             font-family: inherit; font-size: 14px; resize: vertical; }
+  .nav-buttons { display: flex; justify-content: space-between; gap: 12px;
+                   margin-top: 24px; padding-top: 16px; border-top: 1px solid #e2e8f0; }
+  .btn { padding: 10px 24px; border: none; border-radius: 6px; cursor: pointer;
+          font-size: 15px; font-weight: 500; transition: all 0.15s; }
+  .btn-primary { background: #2c7a7b; color: white; }
+  .btn-primary:hover { background: #1d5253; }
+  .btn-primary:disabled { background: #cbd5e0; cursor: not-allowed; }
+  .btn-secondary { background: #edf2f7; color: #2d3748; }
+  .btn-secondary:hover { background: #e2e8f0; }
+  .save-status { font-size: 12px; color: #38a169; margin-left: 8px; opacity: 0; transition: opacity 0.3s; }
+  .save-status.visible { opacity: 1; }
 </style>
 </head>
 <body>
+<div class="topbar">
+  <a href="../test_v4_index.html">← 返回索引</a>
+  <span class="title">骨科 第 4 / 20 题</span>
+  <span class="progress-text" id="progressText">— / 20 已完成</span>
+</div>
+<div class="progress-bar"><div id="progressBar" style="width: 0%"></div></div>
+
 <h1>骨科 第 4 题</h1>
 
 <div class="meta">
@@ -39,9 +91,7 @@
 </div>
 
 <div class="question-stem">
-请阅读以下患者资料和临床时间线,判断在 <b>2145-05-19 13:00</b> 时,下列哪些药物处方是合适的临床决策。
-<br><br>
-<b>请选出您认为正确的所有选项(可多选,不限定数量)。</b>
+请阅读患者资料和临床时间线后,逐项判断每个药物处方是否合理。
 </div>
 
 <h2>患者资料及住院临床时间线</h2>
@@ -193,20 +243,302 @@
 - 华法林； 5毫克；路线=PO/NG</pre>
 </div>
 
-<h2>候选选项</h2>
+<h2>请评判每个选项</h2>
 <div class="options">
-<ol>
-  <li><span class="opt-letter">A.</span> 利伐沙班； 10毫克；路线=PO</li>
-  <li><span class="opt-letter">B.</span> 肝素; 1000台/小时；路线=IV</li>
-  <li><span class="opt-letter">C.</span> 华法林； 7.5毫克；路线=PO/NG</li>
-  <li><span class="opt-letter">D.</span> 凝血酶原复合物浓缩物； 1500 单位；路线=IV</li>
-  <li><span class="opt-letter">E.</span> 植物萘二酮； 2.5毫克；路线=PO</li>
-  <li><span class="opt-letter">F.</span> 氯吡格雷； 75毫克；路线=PO</li>
-</ol>
+<div class="opt-card" data-letter="A">
+  <div class="opt-header">
+    <span class="opt-letter">A.</span>
+    <span class="opt-drug">利伐沙班； 10毫克；路线=PO</span>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="A_rating" value="should"> 应该开</label>
+      <label><input type="radio" name="A_rating" value="depends"> 视情况</label>
+      <label><input type="radio" name="A_rating" value="should_not"> 不应该开</label>
+    </div>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="A_context" value="yes"> 是</label>
+      <label><input type="radio" name="A_context" value="no"> 否</label>
+    </div>
+  </div>
+</div>
+<div class="opt-card" data-letter="B">
+  <div class="opt-header">
+    <span class="opt-letter">B.</span>
+    <span class="opt-drug">肝素; 1000台/小时；路线=IV</span>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="B_rating" value="should"> 应该开</label>
+      <label><input type="radio" name="B_rating" value="depends"> 视情况</label>
+      <label><input type="radio" name="B_rating" value="should_not"> 不应该开</label>
+    </div>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="B_context" value="yes"> 是</label>
+      <label><input type="radio" name="B_context" value="no"> 否</label>
+    </div>
+  </div>
+</div>
+<div class="opt-card" data-letter="C">
+  <div class="opt-header">
+    <span class="opt-letter">C.</span>
+    <span class="opt-drug">华法林； 7.5毫克；路线=PO/NG</span>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="C_rating" value="should"> 应该开</label>
+      <label><input type="radio" name="C_rating" value="depends"> 视情况</label>
+      <label><input type="radio" name="C_rating" value="should_not"> 不应该开</label>
+    </div>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="C_context" value="yes"> 是</label>
+      <label><input type="radio" name="C_context" value="no"> 否</label>
+    </div>
+  </div>
+</div>
+<div class="opt-card" data-letter="D">
+  <div class="opt-header">
+    <span class="opt-letter">D.</span>
+    <span class="opt-drug">凝血酶原复合物浓缩物； 1500 单位；路线=IV</span>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="D_rating" value="should"> 应该开</label>
+      <label><input type="radio" name="D_rating" value="depends"> 视情况</label>
+      <label><input type="radio" name="D_rating" value="should_not"> 不应该开</label>
+    </div>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="D_context" value="yes"> 是</label>
+      <label><input type="radio" name="D_context" value="no"> 否</label>
+    </div>
+  </div>
+</div>
+<div class="opt-card" data-letter="E">
+  <div class="opt-header">
+    <span class="opt-letter">E.</span>
+    <span class="opt-drug">植物萘二酮； 2.5毫克；路线=PO</span>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="E_rating" value="should"> 应该开</label>
+      <label><input type="radio" name="E_rating" value="depends"> 视情况</label>
+      <label><input type="radio" name="E_rating" value="should_not"> 不应该开</label>
+    </div>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="E_context" value="yes"> 是</label>
+      <label><input type="radio" name="E_context" value="no"> 否</label>
+    </div>
+  </div>
+</div>
+<div class="opt-card" data-letter="F">
+  <div class="opt-header">
+    <span class="opt-letter">F.</span>
+    <span class="opt-drug">氯吡格雷； 75毫克；路线=PO</span>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>该药物处方是否合理?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="F_rating" value="should"> 应该开</label>
+      <label><input type="radio" name="F_rating" value="depends"> 视情况</label>
+      <label><input type="radio" name="F_rating" value="should_not"> 不应该开</label>
+    </div>
+  </div>
+  <div class="rating-group">
+    <div class="rating-q"><b>判断该选项是否需要阅读患者 context?</b></div>
+    <div class="rating-options">
+      <label><input type="radio" name="F_context" value="yes"> 是</label>
+      <label><input type="radio" name="F_context" value="no"> 否</label>
+    </div>
+  </div>
+</div>
 </div>
 
-<p class="instruction">
-仔细阅读病历后,请回到问卷中选择您认为正确的选项字母。
-</p>
+<div class="comment-area">
+  <label for="comment">其他意见或观察(选答):</label>
+  <textarea id="comment" placeholder="例如:某选项有 specific 临床细节需说明..."></textarea>
+</div>
+
+<div class="nav-buttons">
+  <button class="btn btn-secondary" id="prevBtn" onclick="goPrev()">← 上一题</button>
+  <span style="flex: 1; text-align: center; align-self: center;">
+    <span class="save-status" id="saveStatus">✓ 已自动保存</span>
+  </span>
+  <button class="btn btn-primary" id="nextBtn" onclick="goNext()">保存并下一题 →</button>
+</div>
+
+<script>
+const SPECIALTY = "ortho";
+const Q_NUM = 4;
+const TOTAL = 20;
+const OPTIONS = ["A", "B", "C", "D", "E", "F"];
+const STORAGE_KEY = "mcq_v4_test";
+
+function loadState() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return { doctor_name: "", specialty: "", started_at: null, answers: {} };
+  try { return JSON.parse(raw); } catch (e) { return { doctor_name: "", specialty: "", started_at: null, answers: {} }; }
+}
+function saveState(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+function qKey(spec, n) { return spec + ":Q" + String(n).padStart(2, "0"); }
+
+function isQuestionDone(spec, n, totalOptionsForQ) {
+  const ans = (loadState().answers || {})[qKey(spec, n)];
+  if (!ans || !ans.options) return false;
+  // Done = every option has both rating + needs_context filled
+  for (const letter of (totalOptionsForQ || [])) {
+    const o = ans.options[letter] || {};
+    if (!o.rating || !o.needs_context) return false;
+  }
+  return true;
+}
+
+function loadAnswerForCurrent() {
+  const ans = (loadState().answers || {})[qKey(SPECIALTY, Q_NUM)] || {};
+  const opts = ans.options || {};
+  for (const letter of OPTIONS) {
+    const o = opts[letter] || {};
+    if (o.rating) {
+      const el = document.querySelector('input[name="' + letter + '_rating"][value="' + o.rating + '"]');
+      if (el) el.checked = true;
+    }
+    if (o.needs_context) {
+      const el = document.querySelector('input[name="' + letter + '_context"][value="' + o.needs_context + '"]');
+      if (el) el.checked = true;
+    }
+    updateOptCardHighlight(letter);
+  }
+  document.getElementById('comment').value = ans.comment || '';
+}
+
+function getCurrentAnswers() {
+  const opts = {};
+  for (const letter of OPTIONS) {
+    const r = document.querySelector('input[name="' + letter + '_rating"]:checked');
+    const c = document.querySelector('input[name="' + letter + '_context"]:checked');
+    opts[letter] = {
+      rating: r ? r.value : null,
+      needs_context: c ? c.value : null
+    };
+  }
+  return { options: opts, comment: document.getElementById('comment').value };
+}
+
+function autoSave() {
+  const s = loadState();
+  if (!s.started_at) s.started_at = new Date().toISOString();
+  if (!s.answers) s.answers = {};
+  const a = getCurrentAnswers();
+  s.answers[qKey(SPECIALTY, Q_NUM)] = {
+    options: a.options, comment: a.comment, updated_at: new Date().toISOString()
+  };
+  saveState(s);
+  flashSaved();
+}
+
+let flashTimer = null;
+function flashSaved() {
+  const el = document.getElementById('saveStatus');
+  el.classList.add('visible');
+  if (flashTimer) clearTimeout(flashTimer);
+  flashTimer = setTimeout(() => el.classList.remove('visible'), 1500);
+}
+
+function updateOptCardHighlight(letter) {
+  const card = document.querySelector('.opt-card[data-letter="' + letter + '"]');
+  if (!card) return;
+  const r = document.querySelector('input[name="' + letter + '_rating"]:checked');
+  const c = document.querySelector('input[name="' + letter + '_context"]:checked');
+  card.classList.toggle('completed', !!(r && c));
+  // Highlight checked label
+  card.querySelectorAll('label').forEach(l => {
+    l.className = '';
+  });
+  if (r) {
+    const lbl = r.parentElement;
+    if (r.value === 'should') lbl.className = 'checked-should';
+    else if (r.value === 'depends') lbl.className = 'checked-depends';
+    else if (r.value === 'should_not') lbl.className = 'checked-shouldnot';
+  }
+  if (c) {
+    const lbl = c.parentElement;
+    if (c.value === 'yes') lbl.className = 'checked-yes';
+    else if (c.value === 'no') lbl.className = 'checked-no';
+  }
+}
+
+function refreshProgress() {
+  // Count completed for this specialty (this needs option lists; we approximate by checking if state has any answer)
+  const s = loadState();
+  let done = 0;
+  for (let i = 1; i <= TOTAL; i++) {
+    const ans = (s.answers || {})[qKey(SPECIALTY, i)];
+    if (ans && ans.options) {
+      // Heuristic: every option in saved answer has rating + needs_context
+      const opts = ans.options;
+      const all = Object.keys(opts).every(k => opts[k].rating && opts[k].needs_context);
+      if (all && Object.keys(opts).length > 0) done++;
+    }
+  }
+  document.getElementById('progressText').textContent = done + ' / ' + TOTAL + ' 已完成';
+  document.getElementById('progressBar').style.width = (done * 100 / TOTAL) + '%';
+}
+
+function goPrev() {
+  autoSave();
+  if (Q_NUM > 1) {
+    location.href = 'q_' + String(Q_NUM - 1).padStart(2, '0') + '.html';
+  }
+}
+
+function goNext() {
+  autoSave();
+  if (Q_NUM < TOTAL) {
+    location.href = 'q_' + String(Q_NUM + 1).padStart(2, '0') + '.html';
+  } else {
+    location.href = '../test_v4_index.html';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadAnswerForCurrent();
+  refreshProgress();
+  if (Q_NUM === 1) document.getElementById('prevBtn').disabled = true;
+  // Auto-save on every change
+  document.querySelectorAll('input[type="radio"]').forEach(el => {
+    el.addEventListener('change', () => {
+      const m = el.name.match(/^([A-Z])_/);
+      if (m) updateOptCardHighlight(m[1]);
+      autoSave();
+    });
+  });
+  const ta = document.getElementById('comment');
+  let saveTimer = null;
+  ta.addEventListener('input', () => {
+    if (saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(autoSave, 600);
+  });
+  ta.addEventListener('blur', autoSave);
+});
+</script>
 </body>
 </html>

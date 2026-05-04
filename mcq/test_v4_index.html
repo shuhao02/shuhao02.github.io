@@ -1,230 +1,466 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>v4 临床用药决策 MCQ 医生测试 — 病例索引</title>
+<title>v4 临床用药决策 MCQ 医生测试</title>
 <style>
-  body {
-    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px;
-    background: #f7f9fc; color: #1a202c; line-height: 1.6;
-  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+         max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px;
+         background: #f7f9fc; color: #1a202c; line-height: 1.6; }
   h1 { color: #2c5282; margin-bottom: 6px; }
-  .sub { color: #718096; margin-bottom: 28px; }
-  h2 {
-    color: #2c5282; margin-top: 36px; padding-bottom: 8px;
-    border-bottom: 3px solid #3182ce;
-  }
-  h2 .badge {
-    background: #3182ce; color: #fff; font-size: 13px;
-    padding: 3px 10px; border-radius: 12px; margin-left: 8px;
-    vertical-align: middle; font-weight: 500;
-  }
-  .grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 12px;
-  }
-  .card {
-    background: white; border: 1px solid #e2e8f0; border-radius: 8px;
-    padding: 14px 18px; text-decoration: none; color: inherit;
-    transition: all 0.15s;
-    display: block;
-  }
+  .sub { color: #718096; margin-bottom: 24px; }
+  .info-card { background: white; padding: 18px 22px; border-radius: 10px;
+               box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 24px; }
+  .info-card h2 { margin: 0 0 14px 0; font-size: 18px; color: #2c5282; }
+  .field { margin-bottom: 12px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .field label { font-weight: 600; min-width: 90px; color: #2d3748; }
+  .field input[type="text"] { flex: 1; min-width: 180px; padding: 7px 10px;
+                              border: 1px solid #cbd5e0; border-radius: 4px;
+                              font-size: 14px; font-family: inherit; }
+  .field .radio-group { display: flex; gap: 16px; }
+  .field .radio-group label { font-weight: 400; cursor: pointer; min-width: auto; }
+  .progress-block { margin-top: 16px; padding-top: 16px; border-top: 1px solid #e2e8f0; }
+  .progress-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; font-size: 14px; }
+  .progress-row .label { min-width: 90px; font-weight: 600; }
+  .pbar { flex: 1; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; }
+  .pbar > div { height: 100%; transition: width 0.3s; }
+  .pbar.ortho > div { background: #2c7a7b; }
+  .pbar.onc > div { background: #b7791f; }
+  .progress-row .text { min-width: 70px; text-align: right; color: #4a5568; }
+  .actions { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { padding: 10px 22px; border: none; border-radius: 6px; cursor: pointer;
+         font-size: 14.5px; font-weight: 500; transition: all 0.15s; }
+  .btn-primary { background: #3182ce; color: white; }
+  .btn-primary:hover { background: #2b6cb0; }
+  .btn-success { background: #38a169; color: white; }
+  .btn-success:hover { background: #2f855a; }
+  .btn-secondary { background: #edf2f7; color: #2d3748; }
+  .btn-secondary:hover { background: #e2e8f0; }
+  .btn-danger { background: #fed7d7; color: #742a2a; }
+  .btn-danger:hover { background: #feb2b2; }
+  h2.section { color: #2c5282; margin-top: 32px; padding-bottom: 8px;
+               border-bottom: 3px solid #3182ce; }
+  h2.section .badge { background: #3182ce; color: #fff; font-size: 13px;
+                      padding: 3px 10px; border-radius: 12px; margin-left: 8px;
+                      vertical-align: middle; font-weight: 500; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 10px; }
+  .card { background: white; border: 1px solid #e2e8f0; border-radius: 8px;
+          padding: 12px 16px; text-decoration: none; color: inherit;
+          transition: all 0.15s; display: block; position: relative; }
   .card:hover { border-color: #3182ce; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(49, 130, 206, 0.15); }
-  .card .num { color: #3182ce; font-weight: 700; font-size: 16px; }
-  .card .meta { color: #718096; font-size: 13px; margin-top: 4px; }
-  .card .meta strong { color: #2d3748; font-weight: 500; }
-  .ortho h2 { border-bottom-color: #2c7a7b; color: #2c7a7b; }
-  .ortho h2 .badge { background: #2c7a7b; }
+  .card .num { font-weight: 700; font-size: 15px; }
+  .card .meta { color: #718096; font-size: 12px; margin-top: 3px; }
+  .card .status { position: absolute; top: 10px; right: 12px; font-size: 11px;
+                  font-weight: 600; padding: 2px 6px; border-radius: 8px; }
+  .status.done { background: #c6f6d5; color: #22543d; }
+  .status.partial { background: #feebc8; color: #744210; }
+  .status.empty { background: #e2e8f0; color: #4a5568; }
+  .ortho h2.section { border-bottom-color: #2c7a7b; color: #2c7a7b; }
+  .ortho h2.section .badge { background: #2c7a7b; }
   .ortho .card .num { color: #2c7a7b; }
-  .ortho .card:hover { border-color: #2c7a7b; box-shadow: 0 4px 12px rgba(44, 122, 123, 0.15); }
-  .onc h2 { border-bottom-color: #b7791f; color: #b7791f; }
-  .onc h2 .badge { background: #b7791f; }
+  .ortho .card:hover { border-color: #2c7a7b; }
+  .onc h2.section { border-bottom-color: #b7791f; color: #b7791f; }
+  .onc h2.section .badge { background: #b7791f; }
   .onc .card .num { color: #b7791f; }
-  .onc .card:hover { border-color: #b7791f; box-shadow: 0 4px 12px rgba(183, 121, 31, 0.15); }
-  .footer {
-    margin-top: 48px; padding-top: 16px; border-top: 1px solid #e2e8f0;
-    color: #a0aec0; font-size: 13px; text-align: center;
-  }
+  .onc .card:hover { border-color: #b7791f; }
+  .info-banner { background: #ebf8ff; border-left: 4px solid #3182ce;
+                 padding: 12px 16px; border-radius: 4px; font-size: 13.5px;
+                 color: #2c5282; margin-bottom: 16px; }
 </style>
 </head>
 <body>
 <h1>v4 临床用药决策 MCQ 医生测试</h1>
-<p class="sub">病例索引 — 共 40 题(骨科 20 题 + 肿瘤科 20 题)。请点击任一卡片查看完整患者病历及候选药物选项。</p>
+<p class="sub">每道题请逐项判断每个药物处方是否合理(应该开 / 视情况 / 不应该开),并标注该选项是否需要阅读患者 context。答案自动保存在浏览器中,完成后请点击"导出我的答案"并将下载的文件发给研究者。</p>
+
+<div class="info-card">
+<h2>① 您的信息</h2>
+<div class="field">
+  <label for="doctorName">姓名 / 工号:</label>
+  <input type="text" id="doctorName" placeholder="例如: 张医生 / 12345">
+</div>
+<div class="field">
+  <label>专科:</label>
+  <div class="radio-group">
+    <label><input type="radio" name="spec" value="ortho"> 骨科</label>
+    <label><input type="radio" name="spec" value="onc"> 肿瘤科</label>
+    <label><input type="radio" name="spec" value="both"> 都答(全部 40 题)</label>
+  </div>
+</div>
+<div class="info-banner" id="resumeHint" style="display:none;">
+  检测到您已有未完成的答题进度。点击下方任一题目卡片继续。
+</div>
+<div class="progress-block">
+  <div class="progress-row">
+    <span class="label">骨科:</span>
+    <div class="pbar ortho"><div id="orthoBar" style="width: 0%"></div></div>
+    <span class="text" id="orthoText">0 / 20</span>
+  </div>
+  <div class="progress-row">
+    <span class="label">肿瘤科:</span>
+    <div class="pbar onc"><div id="oncBar" style="width: 0%"></div></div>
+    <span class="text" id="oncText">0 / 20</span>
+  </div>
+</div>
+<div class="actions">
+  <button class="btn btn-primary" onclick="resumeOrStart()">▶ 开始 / 继续答题</button>
+  <button class="btn btn-success" onclick="exportAll()">⬇ 导出我的答案</button>
+  <button class="btn btn-danger" onclick="resetAll()">🗑 清空所有答案</button>
+</div>
+</div>
 
 <section class="ortho">
-<h2>骨科 <span class="badge">20 题</span></h2>
+<h2 class="section">骨科 <span class="badge">20 题</span></h2>
 <div class="grid">
-<a class="card" href="test_v4_ortho/q_01.html">
+<a class="card" id="ortho-card-1" href="test_v4_ortho/q_01.html">
   <div class="num">第 1 题</div>
-  <div class="meta"><strong>住院号</strong> 20287298 · 2166-04-20 21:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_02.html">
+<a class="card" id="ortho-card-2" href="test_v4_ortho/q_02.html">
   <div class="num">第 2 题</div>
-  <div class="meta"><strong>住院号</strong> 29620586 · 2146-10-03 13:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_03.html">
+<a class="card" id="ortho-card-3" href="test_v4_ortho/q_03.html">
   <div class="num">第 3 题</div>
-  <div class="meta"><strong>住院号</strong> 21311374 · 2195-10-16 19:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_04.html">
+<a class="card" id="ortho-card-4" href="test_v4_ortho/q_04.html">
   <div class="num">第 4 题</div>
-  <div class="meta"><strong>住院号</strong> 21935322 · 2145-05-19 13:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_05.html">
+<a class="card" id="ortho-card-5" href="test_v4_ortho/q_05.html">
   <div class="num">第 5 题</div>
-  <div class="meta"><strong>住院号</strong> 22032218 · 2180-03-10 20:00<br><strong>选项总数</strong> 10</div>
+  <div class="meta">10 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_06.html">
+<a class="card" id="ortho-card-6" href="test_v4_ortho/q_06.html">
   <div class="num">第 6 题</div>
-  <div class="meta"><strong>住院号</strong> 23734768 · 2148-10-11 16:00<br><strong>选项总数</strong> 8</div>
+  <div class="meta">8 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_07.html">
+<a class="card" id="ortho-card-7" href="test_v4_ortho/q_07.html">
   <div class="num">第 7 题</div>
-  <div class="meta"><strong>住院号</strong> 24237911 · 2152-11-05 21:00<br><strong>选项总数</strong> 8</div>
+  <div class="meta">8 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_08.html">
+<a class="card" id="ortho-card-8" href="test_v4_ortho/q_08.html">
   <div class="num">第 8 题</div>
-  <div class="meta"><strong>住院号</strong> 24493538 · 2126-06-08 01:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_09.html">
+<a class="card" id="ortho-card-9" href="test_v4_ortho/q_09.html">
   <div class="num">第 9 题</div>
-  <div class="meta"><strong>住院号</strong> 28705770 · 2182-05-16 08:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_10.html">
+<a class="card" id="ortho-card-10" href="test_v4_ortho/q_10.html">
   <div class="num">第 10 题</div>
-  <div class="meta"><strong>住院号</strong> 26752516 · 2185-09-30 18:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_11.html">
+<a class="card" id="ortho-card-11" href="test_v4_ortho/q_11.html">
   <div class="num">第 11 题</div>
-  <div class="meta"><strong>住院号</strong> 27960220 · 2112-07-29 14:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_12.html">
+<a class="card" id="ortho-card-12" href="test_v4_ortho/q_12.html">
   <div class="num">第 12 题</div>
-  <div class="meta"><strong>住院号</strong> 27640418 · 2154-01-30 05:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_13.html">
+<a class="card" id="ortho-card-13" href="test_v4_ortho/q_13.html">
   <div class="num">第 13 题</div>
-  <div class="meta"><strong>住院号</strong> 27770582 · 2111-10-05 14:00<br><strong>选项总数</strong> 8</div>
+  <div class="meta">8 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_14.html">
+<a class="card" id="ortho-card-14" href="test_v4_ortho/q_14.html">
   <div class="num">第 14 题</div>
-  <div class="meta"><strong>住院号</strong> 28331687 · 2167-12-25 14:00<br><strong>选项总数</strong> 8</div>
+  <div class="meta">8 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_15.html">
+<a class="card" id="ortho-card-15" href="test_v4_ortho/q_15.html">
   <div class="num">第 15 题</div>
-  <div class="meta"><strong>住院号</strong> 28515462 · 2124-06-26 11:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_16.html">
+<a class="card" id="ortho-card-16" href="test_v4_ortho/q_16.html">
   <div class="num">第 16 题</div>
-  <div class="meta"><strong>住院号</strong> 29123011 · 2114-06-23 12:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_17.html">
+<a class="card" id="ortho-card-17" href="test_v4_ortho/q_17.html">
   <div class="num">第 17 题</div>
-  <div class="meta"><strong>住院号</strong> 29130041 · 2148-04-22 02:00<br><strong>选项总数</strong> 9</div>
+  <div class="meta">9 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_18.html">
+<a class="card" id="ortho-card-18" href="test_v4_ortho/q_18.html">
   <div class="num">第 18 题</div>
-  <div class="meta"><strong>住院号</strong> 29144992 · 2151-11-24 20:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_19.html">
+<a class="card" id="ortho-card-19" href="test_v4_ortho/q_19.html">
   <div class="num">第 19 题</div>
-  <div class="meta"><strong>住院号</strong> 29265990 · 2143-08-10 13:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_ortho/q_20.html">
+<a class="card" id="ortho-card-20" href="test_v4_ortho/q_20.html">
   <div class="num">第 20 题</div>
-  <div class="meta"><strong>住院号</strong> 24167197 · 2129-02-09 09:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
 </div>
 </section>
 
 <section class="onc">
-<h2>肿瘤科 <span class="badge">20 题</span></h2>
+<h2 class="section">肿瘤科 <span class="badge">20 题</span></h2>
 <div class="grid">
-<a class="card" href="test_v4_oncology/q_01.html">
+<a class="card" id="onc-card-1" href="test_v4_oncology/q_01.html">
   <div class="num">第 1 题</div>
-  <div class="meta"><strong>住院号</strong> 21343389 · 2129-05-02 18:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_02.html">
+<a class="card" id="onc-card-2" href="test_v4_oncology/q_02.html">
   <div class="num">第 2 题</div>
-  <div class="meta"><strong>住院号</strong> 20496177 · 2172-01-09 10:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_03.html">
+<a class="card" id="onc-card-3" href="test_v4_oncology/q_03.html">
   <div class="num">第 3 题</div>
-  <div class="meta"><strong>住院号</strong> 21202051 · 2163-02-12 10:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_04.html">
+<a class="card" id="onc-card-4" href="test_v4_oncology/q_04.html">
   <div class="num">第 4 题</div>
-  <div class="meta"><strong>住院号</strong> 26828045 · 2118-01-05 20:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_05.html">
+<a class="card" id="onc-card-5" href="test_v4_oncology/q_05.html">
   <div class="num">第 5 题</div>
-  <div class="meta"><strong>住院号</strong> 21368100 · 2178-01-16 22:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_06.html">
+<a class="card" id="onc-card-6" href="test_v4_oncology/q_06.html">
   <div class="num">第 6 题</div>
-  <div class="meta"><strong>住院号</strong> 21841522 · 2160-12-18 10:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_07.html">
+<a class="card" id="onc-card-7" href="test_v4_oncology/q_07.html">
   <div class="num">第 7 题</div>
-  <div class="meta"><strong>住院号</strong> 23256945 · 2171-06-14 12:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_08.html">
+<a class="card" id="onc-card-8" href="test_v4_oncology/q_08.html">
   <div class="num">第 8 题</div>
-  <div class="meta"><strong>住院号</strong> 28142407 · 2151-06-07 20:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_09.html">
+<a class="card" id="onc-card-9" href="test_v4_oncology/q_09.html">
   <div class="num">第 9 题</div>
-  <div class="meta"><strong>住院号</strong> 22312077 · 2187-06-11 20:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_10.html">
+<a class="card" id="onc-card-10" href="test_v4_oncology/q_10.html">
   <div class="num">第 10 题</div>
-  <div class="meta"><strong>住院号</strong> 22622978 · 2150-04-12 14:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_11.html">
+<a class="card" id="onc-card-11" href="test_v4_oncology/q_11.html">
   <div class="num">第 11 题</div>
-  <div class="meta"><strong>住院号</strong> 22848282 · 2166-10-02 07:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_12.html">
+<a class="card" id="onc-card-12" href="test_v4_oncology/q_12.html">
   <div class="num">第 12 题</div>
-  <div class="meta"><strong>住院号</strong> 23818187 · 2146-05-30 08:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_13.html">
+<a class="card" id="onc-card-13" href="test_v4_oncology/q_13.html">
   <div class="num">第 13 题</div>
-  <div class="meta"><strong>住院号</strong> 24568689 · 2171-01-30 06:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_14.html">
+<a class="card" id="onc-card-14" href="test_v4_oncology/q_14.html">
   <div class="num">第 14 题</div>
-  <div class="meta"><strong>住院号</strong> 24931441 · 2124-12-05 04:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_15.html">
+<a class="card" id="onc-card-15" href="test_v4_oncology/q_15.html">
   <div class="num">第 15 题</div>
-  <div class="meta"><strong>住院号</strong> 25053269 · 2159-02-08 14:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_16.html">
+<a class="card" id="onc-card-16" href="test_v4_oncology/q_16.html">
   <div class="num">第 16 题</div>
-  <div class="meta"><strong>住院号</strong> 25214278 · 2154-11-27 14:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_17.html">
+<a class="card" id="onc-card-17" href="test_v4_oncology/q_17.html">
   <div class="num">第 17 题</div>
-  <div class="meta"><strong>住院号</strong> 26371133 · 2120-02-13 16:00<br><strong>选项总数</strong> 7</div>
+  <div class="meta">7 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_18.html">
+<a class="card" id="onc-card-18" href="test_v4_oncology/q_18.html">
   <div class="num">第 18 题</div>
-  <div class="meta"><strong>住院号</strong> 26580643 · 2153-12-29 16:00<br><strong>选项总数</strong> 8</div>
+  <div class="meta">8 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_19.html">
+<a class="card" id="onc-card-19" href="test_v4_oncology/q_19.html">
   <div class="num">第 19 题</div>
-  <div class="meta"><strong>住院号</strong> 26799982 · 2176-09-12 15:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
-<a class="card" href="test_v4_oncology/q_20.html">
+<a class="card" id="onc-card-20" href="test_v4_oncology/q_20.html">
   <div class="num">第 20 题</div>
-  <div class="meta"><strong>住院号</strong> 26859476 · 2157-08-11 14:00<br><strong>选项总数</strong> 6</div>
+  <div class="meta">6 个选项</div>
+  <span class="status empty">○ 未开始</span>
 </a>
 </div>
 </section>
 
-<div class="footer">v4 临床用药决策基准 · 由 MIMIC-IV 数据生成,经 ICD 主诊分类筛选并人工审核</div>
+<script>
+const STORAGE_KEY = "mcq_v4_test";
+const ORTHO_TOTAL = 20;
+const ONC_TOTAL = 20;
+// Each entry maps Q index → list of option letters (so we can check "fully completed")
+const ORTHO_OPT_MAP = {"1": ["A", "B", "C", "D", "E", "F", "G"], "2": ["A", "B", "C", "D", "E", "F"], "3": ["A", "B", "C", "D", "E", "F"], "4": ["A", "B", "C", "D", "E", "F"], "5": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"], "6": ["A", "B", "C", "D", "E", "F", "G", "H"], "7": ["A", "B", "C", "D", "E", "F", "G", "H"], "8": ["A", "B", "C", "D", "E", "F", "G"], "9": ["A", "B", "C", "D", "E", "F"], "10": ["A", "B", "C", "D", "E", "F", "G"], "11": ["A", "B", "C", "D", "E", "F"], "12": ["A", "B", "C", "D", "E", "F"], "13": ["A", "B", "C", "D", "E", "F", "G", "H"], "14": ["A", "B", "C", "D", "E", "F", "G", "H"], "15": ["A", "B", "C", "D", "E", "F", "G"], "16": ["A", "B", "C", "D", "E", "F", "G"], "17": ["A", "B", "C", "D", "E", "F", "G", "H", "I"], "18": ["A", "B", "C", "D", "E", "F", "G"], "19": ["A", "B", "C", "D", "E", "F"], "20": ["A", "B", "C", "D", "E", "F"]};
+const ONC_OPT_MAP = {"1": ["A", "B", "C", "D", "E", "F", "G"], "2": ["A", "B", "C", "D", "E", "F"], "3": ["A", "B", "C", "D", "E", "F", "G"], "4": ["A", "B", "C", "D", "E", "F"], "5": ["A", "B", "C", "D", "E", "F"], "6": ["A", "B", "C", "D", "E", "F"], "7": ["A", "B", "C", "D", "E", "F"], "8": ["A", "B", "C", "D", "E", "F"], "9": ["A", "B", "C", "D", "E", "F"], "10": ["A", "B", "C", "D", "E", "F"], "11": ["A", "B", "C", "D", "E", "F", "G"], "12": ["A", "B", "C", "D", "E", "F"], "13": ["A", "B", "C", "D", "E", "F"], "14": ["A", "B", "C", "D", "E", "F"], "15": ["A", "B", "C", "D", "E", "F", "G"], "16": ["A", "B", "C", "D", "E", "F"], "17": ["A", "B", "C", "D", "E", "F", "G"], "18": ["A", "B", "C", "D", "E", "F", "G", "H"], "19": ["A", "B", "C", "D", "E", "F"], "20": ["A", "B", "C", "D", "E", "F"]};
+
+function loadState() {{
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return {{ doctor_name: "", specialty: "", started_at: null, answers: {{}} }};
+  try {{ return JSON.parse(raw); }} catch (e) {{ return {{ doctor_name: "", specialty: "", started_at: null, answers: {{}} }}; }}
+}}
+function saveState(s) {{ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }}
+function qKey(spec, n) {{ return spec + ":Q" + String(n).padStart(2, "0"); }}
+
+function questionStatus(spec, n, optList) {{
+  const ans = (loadState().answers || {{}})[qKey(spec, n)];
+  if (!ans || !ans.options) return "empty";
+  let filled = 0, partial = false;
+  for (const letter of optList) {{
+    const o = ans.options[letter] || {{}};
+    if (o.rating && o.needs_context) filled++;
+    else if (o.rating || o.needs_context) partial = true;
+  }}
+  if (filled === optList.length) return "done";
+  if (filled > 0 || partial) return "partial";
+  return "empty";
+}}
+
+function refreshProgressAndCards() {{
+  const s = loadState();
+  let oDone = 0, cDone = 0;
+  for (let i = 1; i <= ORTHO_TOTAL; i++) {{
+    const st = questionStatus("ortho", i, ORTHO_OPT_MAP[i] || []);
+    const card = document.getElementById("ortho-card-" + i);
+    if (card) {{
+      const badge = card.querySelector(".status");
+      badge.className = "status " + st;
+      badge.textContent = st === "done" ? "✓ 已完成" : (st === "partial" ? "● 进行中" : "○ 未开始");
+    }}
+    if (st === "done") oDone++;
+  }}
+  for (let i = 1; i <= ONC_TOTAL; i++) {{
+    const st = questionStatus("onc", i, ONC_OPT_MAP[i] || []);
+    const card = document.getElementById("onc-card-" + i);
+    if (card) {{
+      const badge = card.querySelector(".status");
+      badge.className = "status " + st;
+      badge.textContent = st === "done" ? "✓ 已完成" : (st === "partial" ? "● 进行中" : "○ 未开始");
+    }}
+    if (st === "done") cDone++;
+  }}
+  document.getElementById("orthoText").textContent = oDone + " / " + ORTHO_TOTAL;
+  document.getElementById("oncText").textContent = cDone + " / " + ONC_TOTAL;
+  document.getElementById("orthoBar").style.width = (oDone * 100 / ORTHO_TOTAL) + "%";
+  document.getElementById("oncBar").style.width = (cDone * 100 / ONC_TOTAL) + "%";
+
+  if (oDone > 0 || cDone > 0) {{
+    document.getElementById("resumeHint").style.display = "block";
+  }}
+}}
+
+function loadDoctorInfo() {{
+  const s = loadState();
+  document.getElementById("doctorName").value = s.doctor_name || "";
+  if (s.specialty) {{
+    const r = document.querySelector('input[name="spec"][value="' + s.specialty + '"]');
+    if (r) r.checked = true;
+  }}
+}}
+
+function saveDoctorInfo() {{
+  const s = loadState();
+  s.doctor_name = document.getElementById("doctorName").value.trim();
+  const r = document.querySelector('input[name="spec"]:checked');
+  s.specialty = r ? r.value : "";
+  if (!s.started_at && (s.doctor_name || s.specialty)) s.started_at = new Date().toISOString();
+  saveState(s);
+}}
+
+function resumeOrStart() {{
+  saveDoctorInfo();
+  const s = loadState();
+  // Find first non-done question for the chosen specialty (or both)
+  const order = [];
+  if (s.specialty === "ortho" || s.specialty === "both") {{
+    for (let i = 1; i <= ORTHO_TOTAL; i++) order.push(["ortho", i, ORTHO_OPT_MAP[i] || []]);
+  }}
+  if (s.specialty === "onc" || s.specialty === "both") {{
+    for (let i = 1; i <= ONC_TOTAL; i++) order.push(["onc", i, ONC_OPT_MAP[i] || []]);
+  }}
+  if (!order.length) {{
+    alert("请先选择您的专科。");
+    return;
+  }}
+  for (const [spec, n, optList] of order) {{
+    if (questionStatus(spec, n, optList) !== "done") {{
+      const folder = spec === "ortho" ? "test_v4_ortho" : "test_v4_oncology";
+      location.href = folder + "/q_" + String(n).padStart(2, "0") + ".html";
+      return;
+    }}
+  }}
+  alert("您已经完成所选专科的全部题目!请点击下方导出按钮提交答案。");
+}}
+
+function exportAll() {{
+  saveDoctorInfo();
+  const s = loadState();
+  if (!s.doctor_name) {{
+    if (!confirm("尚未填写姓名,确定继续导出?")) return;
+  }}
+  s.exported_at = new Date().toISOString();
+  const blob = new Blob([JSON.stringify(s, null, 2)], {{ type: "application/json" }});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const safeName = (s.doctor_name || "anon").replace(/[^a-zA-Z0-9_\u4e00-\u9fa5]/g, "_");
+  const dateStr = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = "mcq_v4_" + safeName + "_" + dateStr + ".json";
+  a.click();
+  URL.revokeObjectURL(url);
+  setTimeout(() => alert("已下载答案文件,请通过邮件或微信发送给研究者。"), 100);
+}}
+
+function resetAll() {{
+  if (!confirm("确定要清空所有答案?此操作不可恢复。建议先点击\u201c导出我的答案\u201d备份。")) return;
+  if (!confirm("再次确认:这将删除您所有已保存的答案。")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}}
+
+document.addEventListener("DOMContentLoaded", () => {{
+  loadDoctorInfo();
+  refreshProgressAndCards();
+  document.getElementById("doctorName").addEventListener("input", saveDoctorInfo);
+  document.querySelectorAll('input[name="spec"]').forEach(el => el.addEventListener("change", saveDoctorInfo));
+}});
+</script>
 </body>
 </html>
