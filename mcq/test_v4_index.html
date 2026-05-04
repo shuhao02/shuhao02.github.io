@@ -331,112 +331,112 @@ const ONC_TOTAL = 20;
 const ORTHO_OPT_MAP = {"1": ["A", "B", "C", "D", "E", "F", "G"], "2": ["A", "B", "C", "D", "E", "F"], "3": ["A", "B", "C", "D", "E", "F"], "4": ["A", "B", "C", "D", "E", "F"], "5": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"], "6": ["A", "B", "C", "D", "E", "F", "G", "H"], "7": ["A", "B", "C", "D", "E", "F", "G", "H"], "8": ["A", "B", "C", "D", "E", "F", "G"], "9": ["A", "B", "C", "D", "E", "F"], "10": ["A", "B", "C", "D", "E", "F", "G"], "11": ["A", "B", "C", "D", "E", "F"], "12": ["A", "B", "C", "D", "E", "F"], "13": ["A", "B", "C", "D", "E", "F", "G", "H"], "14": ["A", "B", "C", "D", "E", "F", "G", "H"], "15": ["A", "B", "C", "D", "E", "F", "G"], "16": ["A", "B", "C", "D", "E", "F", "G"], "17": ["A", "B", "C", "D", "E", "F", "G", "H", "I"], "18": ["A", "B", "C", "D", "E", "F", "G"], "19": ["A", "B", "C", "D", "E", "F"], "20": ["A", "B", "C", "D", "E", "F"]};
 const ONC_OPT_MAP = {"1": ["A", "B", "C", "D", "E", "F", "G"], "2": ["A", "B", "C", "D", "E", "F"], "3": ["A", "B", "C", "D", "E", "F", "G"], "4": ["A", "B", "C", "D", "E", "F"], "5": ["A", "B", "C", "D", "E", "F"], "6": ["A", "B", "C", "D", "E", "F"], "7": ["A", "B", "C", "D", "E", "F"], "8": ["A", "B", "C", "D", "E", "F"], "9": ["A", "B", "C", "D", "E", "F"], "10": ["A", "B", "C", "D", "E", "F"], "11": ["A", "B", "C", "D", "E", "F", "G"], "12": ["A", "B", "C", "D", "E", "F"], "13": ["A", "B", "C", "D", "E", "F"], "14": ["A", "B", "C", "D", "E", "F"], "15": ["A", "B", "C", "D", "E", "F", "G"], "16": ["A", "B", "C", "D", "E", "F"], "17": ["A", "B", "C", "D", "E", "F", "G"], "18": ["A", "B", "C", "D", "E", "F", "G", "H"], "19": ["A", "B", "C", "D", "E", "F"], "20": ["A", "B", "C", "D", "E", "F"]};
 
-function loadState() {{
+function loadState() {
   const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return {{ doctor_name: "", specialty: "", started_at: null, answers: {{}} }};
-  try {{ return JSON.parse(raw); }} catch (e) {{ return {{ doctor_name: "", specialty: "", started_at: null, answers: {{}} }}; }}
-}}
-function saveState(s) {{ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }}
-function qKey(spec, n) {{ return spec + ":Q" + String(n).padStart(2, "0"); }}
+  if (!raw) return { doctor_name: "", specialty: "", started_at: null, answers: {} };
+  try { return JSON.parse(raw); } catch (e) { return { doctor_name: "", specialty: "", started_at: null, answers: {} }; }
+}
+function saveState(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+function qKey(spec, n) { return spec + ":Q" + String(n).padStart(2, "0"); }
 
-function questionStatus(spec, n, optList) {{
-  const ans = (loadState().answers || {{}})[qKey(spec, n)];
+function questionStatus(spec, n, optList) {
+  const ans = (loadState().answers || {})[qKey(spec, n)];
   if (!ans || !ans.options) return "empty";
   let filled = 0, partial = false;
-  for (const letter of optList) {{
-    const o = ans.options[letter] || {{}};
+  for (const letter of optList) {
+    const o = ans.options[letter] || {};
     if (o.rating && o.needs_context) filled++;
     else if (o.rating || o.needs_context) partial = true;
-  }}
+  }
   if (filled === optList.length) return "done";
   if (filled > 0 || partial) return "partial";
   return "empty";
-}}
+}
 
-function refreshProgressAndCards() {{
+function refreshProgressAndCards() {
   const s = loadState();
   let oDone = 0, cDone = 0;
-  for (let i = 1; i <= ORTHO_TOTAL; i++) {{
+  for (let i = 1; i <= ORTHO_TOTAL; i++) {
     const st = questionStatus("ortho", i, ORTHO_OPT_MAP[i] || []);
     const card = document.getElementById("ortho-card-" + i);
-    if (card) {{
+    if (card) {
       const badge = card.querySelector(".status");
       badge.className = "status " + st;
       badge.textContent = st === "done" ? "✓ 已完成" : (st === "partial" ? "● 进行中" : "○ 未开始");
-    }}
+    }
     if (st === "done") oDone++;
-  }}
-  for (let i = 1; i <= ONC_TOTAL; i++) {{
+  }
+  for (let i = 1; i <= ONC_TOTAL; i++) {
     const st = questionStatus("onc", i, ONC_OPT_MAP[i] || []);
     const card = document.getElementById("onc-card-" + i);
-    if (card) {{
+    if (card) {
       const badge = card.querySelector(".status");
       badge.className = "status " + st;
       badge.textContent = st === "done" ? "✓ 已完成" : (st === "partial" ? "● 进行中" : "○ 未开始");
-    }}
+    }
     if (st === "done") cDone++;
-  }}
+  }
   document.getElementById("orthoText").textContent = oDone + " / " + ORTHO_TOTAL;
   document.getElementById("oncText").textContent = cDone + " / " + ONC_TOTAL;
   document.getElementById("orthoBar").style.width = (oDone * 100 / ORTHO_TOTAL) + "%";
   document.getElementById("oncBar").style.width = (cDone * 100 / ONC_TOTAL) + "%";
 
-  if (oDone > 0 || cDone > 0) {{
+  if (oDone > 0 || cDone > 0) {
     document.getElementById("resumeHint").style.display = "block";
-  }}
-}}
+  }
+}
 
-function loadDoctorInfo() {{
+function loadDoctorInfo() {
   const s = loadState();
   document.getElementById("doctorName").value = s.doctor_name || "";
-  if (s.specialty) {{
+  if (s.specialty) {
     const r = document.querySelector('input[name="spec"][value="' + s.specialty + '"]');
     if (r) r.checked = true;
-  }}
-}}
+  }
+}
 
-function saveDoctorInfo() {{
+function saveDoctorInfo() {
   const s = loadState();
   s.doctor_name = document.getElementById("doctorName").value.trim();
   const r = document.querySelector('input[name="spec"]:checked');
   s.specialty = r ? r.value : "";
   if (!s.started_at && (s.doctor_name || s.specialty)) s.started_at = new Date().toISOString();
   saveState(s);
-}}
+}
 
-function resumeOrStart() {{
+function resumeOrStart() {
   saveDoctorInfo();
   const s = loadState();
   // Find first non-done question for the chosen specialty (or both)
   const order = [];
-  if (s.specialty === "ortho" || s.specialty === "both") {{
+  if (s.specialty === "ortho" || s.specialty === "both") {
     for (let i = 1; i <= ORTHO_TOTAL; i++) order.push(["ortho", i, ORTHO_OPT_MAP[i] || []]);
-  }}
-  if (s.specialty === "onc" || s.specialty === "both") {{
+  }
+  if (s.specialty === "onc" || s.specialty === "both") {
     for (let i = 1; i <= ONC_TOTAL; i++) order.push(["onc", i, ONC_OPT_MAP[i] || []]);
-  }}
-  if (!order.length) {{
+  }
+  if (!order.length) {
     alert("请先选择您的专科。");
     return;
-  }}
-  for (const [spec, n, optList] of order) {{
-    if (questionStatus(spec, n, optList) !== "done") {{
+  }
+  for (const [spec, n, optList] of order) {
+    if (questionStatus(spec, n, optList) !== "done") {
       const folder = spec === "ortho" ? "test_v4_ortho" : "test_v4_oncology";
       location.href = folder + "/q_" + String(n).padStart(2, "0") + ".html";
       return;
-    }}
-  }}
+    }
+  }
   alert("您已经完成所选专科的全部题目!请点击下方导出按钮提交答案。");
-}}
+}
 
-function exportAll() {{
+function exportAll() {
   saveDoctorInfo();
   const s = loadState();
-  if (!s.doctor_name) {{
+  if (!s.doctor_name) {
     if (!confirm("尚未填写姓名,确定继续导出?")) return;
-  }}
+  }
   s.exported_at = new Date().toISOString();
-  const blob = new Blob([JSON.stringify(s, null, 2)], {{ type: "application/json" }});
+  const blob = new Blob([JSON.stringify(s, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   const safeName = (s.doctor_name || "anon").replace(/[^a-zA-Z0-9_\u4e00-\u9fa5]/g, "_");
@@ -446,21 +446,21 @@ function exportAll() {{
   a.click();
   URL.revokeObjectURL(url);
   setTimeout(() => alert("已下载答案文件,请通过邮件或微信发送给研究者。"), 100);
-}}
+}
 
-function resetAll() {{
+function resetAll() {
   if (!confirm("确定要清空所有答案?此操作不可恢复。建议先点击\u201c导出我的答案\u201d备份。")) return;
   if (!confirm("再次确认:这将删除您所有已保存的答案。")) return;
   localStorage.removeItem(STORAGE_KEY);
   location.reload();
-}}
+}
 
-document.addEventListener("DOMContentLoaded", () => {{
+document.addEventListener("DOMContentLoaded", () => {
   loadDoctorInfo();
   refreshProgressAndCards();
   document.getElementById("doctorName").addEventListener("input", saveDoctorInfo);
   document.querySelectorAll('input[name="spec"]').forEach(el => el.addEventListener("change", saveDoctorInfo));
-}});
+});
 </script>
 </body>
 </html>
