@@ -1,0 +1,17 @@
+---
+// Generic section wrapper with a heading. Optional `description` slot
+// renders a small italic line right below the heading.
+interface Props {
+  id?: string;
+  title: string;
+  description?: string;
+}
+
+const { id, title, description } = Astro.props;
+---
+
+<section class="section" id={id}>
+  <h2>{title}</h2>
+  {description && <p class="section-description" set:html={description} />}
+  <slot />
+</section>

@@ -1,0 +1,169 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import PaperEntry from '../components/PaperEntry.astro';
+import {
+  site,
+  bio,
+  contacts,
+  news,
+  education,
+  internships,
+  awards,
+  services,
+} from '../data/site';
+
+// Pull publication entries from the Astro content collection, newest first.
+const publications = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const currentYear = new Date().getFullYear();
+---
+
+<BaseLayout>
+  {/* ------------------ Header: photo (left) + name/title/contacts (right) ------------------ */}
+  <header class="header">
+    <img class="photo" src={site.profileImage} alt="Shuhao Chen" />
+    <div class="header-meta">
+      <h1>Shuhao Chen <span class="name-zh">(陈澍豪)</span></h1>
+      <p class="tagline">{site.tagline}</p>
+      <ul class="contacts">
+        {
+          contacts.map((c) => (
+            <li>
+              <a
+                href={c.url}
+                target={c.url.startsWith('mailto:') ? undefined : '_blank'}
+                rel={c.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+              >
+                {c.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </header>
+
+  {/* -------------------- About me -------------------- */}
+  <Section title="About Me">
+    <p class="bio" set:html={bio}></p>
+  </Section>
+
+  {/* -------------------- News -------------------- */}
+  {
+    news.length > 0 && (
+      <Section title="News">
+        <ul class="news">
+          {news.map((item) => (
+            <li>
+              <span class="news-date">{item.date}</span>
+              <span class="news-body" set:html={item.html} />
+            </li>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+
+  {/* -------------------- Selected Publications -------------------- */}
+  {
+    publications.length > 0 && (
+      <Section
+        title="Selected Publications"
+        description={`The full publication list is available on <a href="https://scholar.google.com.hk/citations?user=YqX_IbAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>. * indicates equal contribution.`}
+      >
+        {publications.map((p) => (
+          <PaperEntry
+            title={p.data.title}
+            authors={p.data.authors}
+            venue={p.data.venue}
+            rating={p.data.rating}
+            tldr={p.data.tldr}
+            links={p.data.links}
+            highlight={p.data.highlight}
+          />
+        ))}
+      </Section>
+    )
+  }
+
+  {/* -------------------- Education -------------------- */}
+  {
+    education.length > 0 && (
+      <Section title="Education">
+        <ul class="timeline">
+          {education.map((e) => (
+            <li>
+              <span class="period">{e.period}</span>
+              <span>
+                <span class="title">{e.degree}</span>
+                <br />
+                <span class="meta">
+                  {e.institution}
+                  {e.detail && <> — {e.detail}</>}
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+
+  {/* -------------------- Internships -------------------- */}
+  {
+    internships.length > 0 && (
+      <Section title="Internships">
+        <ul class="timeline">
+          {internships.map((i) => (
+            <li>
+              <span class="period">{i.period}</span>
+              <span>
+                <span class="title">{i.role}</span>
+                <br />
+                <span class="meta">
+                  {i.org}
+                  {i.detail && <> — {i.detail}</>}
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+
+  {/* -------------------- Awards -------------------- */}
+  {
+    awards.length > 0 && (
+      <Section title="Awards">
+        <ul class="plain-list">
+          {awards.map((a) => (
+            <li>{a}</li>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+
+  {/* -------------------- Academic Service -------------------- */}
+  {
+    services.length > 0 && (
+      <Section title="Academic Service">
+        <ul class="plain-list">
+          {services.map((s) => (
+            <li>{s}</li>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+
+  <footer class="site-footer">
+    <span>© {currentYear} Shuhao Chen</span>
+    <span>Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a></span>
+  </footer>
+</BaseLayout>
