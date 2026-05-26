@@ -183,13 +183,42 @@ a:hover {
 }
 
 /* ------------------------------------------------------------------
- * News list
+ * News list — scrollable, ~3 items visible by default
  * ------------------------------------------------------------------ */
 .news {
   margin: 0;
-  padding: 0;
+  padding: 0 8px 0 0;            /* right-side gutter so scrollbar doesn't overlap text */
   list-style: none;
   font-size: 15px;
+
+  /* Each .news li is ~37px tall (12px padding + ~24px line + 1px border).
+   * 132px shows three full items plus a small peek of the fourth as a
+   * visual cue that more content is below. Tweak this single value to
+   * change how many items show by default. */
+  max-height: 132px;
+  overflow-y: auto;
+
+  /* Subtle bottom edge so the cut-off doesn't look like an accidental crop */
+  border-bottom: 1px solid #eef0f3;
+
+  /* Firefox custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+/* WebKit (Chrome / Safari / Edge) thin scrollbar */
+.news::-webkit-scrollbar {
+  width: 6px;
+}
+.news::-webkit-scrollbar-track {
+  background: transparent;
+}
+.news::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 3px;
+}
+.news::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
 }
 
 .news li {
@@ -213,6 +242,11 @@ a:hover {
   .news li {
     grid-template-columns: 90px 1fr;
     gap: 10px;
+  }
+  /* On narrow screens news items may wrap to two lines, so give a bit
+   * more height to keep "three items" promise visually. */
+  .news {
+    max-height: 168px;
   }
 }
 
