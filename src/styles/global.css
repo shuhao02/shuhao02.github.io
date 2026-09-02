@@ -41,6 +41,12 @@ img {
   display: block;
 }
 
+/* Keep [hidden] authoritative — the visitor counter relies on it to stay
+ * invisible until its number has actually loaded. */
+[hidden] {
+  display: none !important;
+}
+
 a {
   color: #1f6feb;
   text-decoration: none;
@@ -431,4 +437,24 @@ a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* Visitor counter — sits between the copyright and the "Built with" note.
+ * Inherits the footer's size/color so it reads as part of the same line. */
+.visitor-counter {
+  font-variant-numeric: tabular-nums;
+}
+
+.visitor-counter .visitor-count {
+  color: #57606a;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  /* Three items in a 320px-wide row wrap awkwardly; stack them instead. */
+  .site-footer {
+    justify-content: center;
+    text-align: center;
+    gap: 4px 8px;
+  }
 }

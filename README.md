@@ -25,6 +25,7 @@ Everything you'll routinely change lives in two places:
 | Add / remove / reorder a paper                      | A file under `src/content/publications/`      |
 | Visual styling (colors, spacing, fonts)             | [`src/styles/global.css`](src/styles/global.css) |
 | Page layout / section order                         | [`src/pages/index.astro`](src/pages/index.astro) |
+| Visitor counter (enable, label, what it counts)      | `visitorCounter` in [`src/data/site.ts`](src/data/site.ts) |
 
 ### Adding a paper
 
@@ -55,6 +56,46 @@ typos in frontmatter will fail the build with a clear error.
 
 `public/images/profile.png`. Replace the file in place.
 
+### Visitor counter
+
+The footer can show a `Visits · 1,234` counter, powered by
+[GoatCounter](https://www.goatcounter.com) — free for personal sites, sets no
+cookies, and stores neither IP addresses nor User-Agent strings, so there is
+nothing to put behind a consent banner. The same signup also gives you a
+private dashboard (referrers, top pages, countries) at
+`https://<code>.goatcounter.com`.
+
+It ships **disabled**. To turn it on:
+
+1. Sign up at <https://www.goatcounter.com>. The *Code* you choose becomes your
+   subdomain, e.g. `shuhao02` → `https://shuhao02.goatcounter.com`.
+2. In that site's **Settings**, tick **"Allow adding visitor counts on your
+   website"**. Without this the public counter endpoint returns 403 and the
+   footer line stays hidden.
+3. Set the code in [`src/data/site.ts`](src/data/site.ts):
+
+   ```ts
+   export const visitorCounter = {
+     code: 'shuhao02',   // <- was ''
+     ...
+   };
+   ```
+
+4. `git push` — the existing Pages workflow deploys it.
+
+Notes:
+
+- With `code: ''` no tracking script and no footer line are emitted, and
+  GoatCounter is never contacted. That is the intended "off" state, not a
+  broken build.
+- GoatCounter caches counter values for up to **4 hours**, so your own visit
+  will not move the number right away.
+- The number is fetched client-side and the footer line only appears once a
+  real value arrives — if GoatCounter is slow, blocked by an ad blocker, or
+  down, the footer simply renders without it.
+- `path: 'TOTAL'` counts the whole site; change it to `'/'` to count only the
+  home page.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` runs on every push to `main`: builds with Node 20,
@@ -81,7 +122,8 @@ After that, `git push` is the entire deploy story.
 ├── src/
 │   ├── components/
 │   │   ├── PaperEntry.astro       # One paper row (title, authors, venue, links)
-│   │   └── Section.astro          # Heading + slot wrapper
+│   │   ├── Section.astro          # Heading + slot wrapper
+│   │   └── VisitorCounter.astro   # Footer visit counter (GoatCounter)
 │   ├── content/
 │   │   ├── config.ts              # Zod schema for paper entries
 │   │   └── publications/*.md      # Peer-reviewed papers

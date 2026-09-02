@@ -1,0 +1,51 @@
+---
+// Footer visitor counter, backed by GoatCounter's public counter endpoint.
+// Configure it in src/data/site.ts — an empty `code` there renders nothing.
+//
+// The number is fetched as JSON and rendered by us (rather than using
+// GoatCounter's ready-made .html/.png embed) so it inherits the footer's
+// own font, size and color instead of shipping a second set of styles.
+import { visitorCounter, goatCounterOrigin } from '../data/site';
+
+const { label, path } = visitorCounter;
+
+const endpoint = goatCounterOrigin
+  ? `${goatCounterOrigin}/counter/${encodeURIComponent(path)}.json`
+  : '';
+---
+
+{
+  endpoint && (
+    <>
+      {/* Starts hidden and is revealed only once a real number arrives, so a
+          slow, blocked or down counter service leaves no placeholder text
+          stranded in the footer. */}
+      <span class="visitor-counter" hidden data-endpoint={endpoint}>
+        {label} · <span class="visitor-count" />
+      </span>
+
+      {/* `is:inline` keeps this out of Astro's bundle so that turning the
+          counter off emits no dead JavaScript at all. */}
+      <script is:inline>
+        const el = document.querySelector('.visitor-counter');
+        const out = el && el.querySelector('.visitor-count');
+
+        if (el && out && el.dataset.endpoint) {
+          fetch(el.dataset.endpoint)
+            .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+            .then((data) => {
+              // GoatCounter pre-formats with narrow spaces ("1 090 380"), so
+              // strip the separators and re-format to match the rest of the page.
+              const n = Number(String(data.count).replace(/\D/g, ''));
+              if (!Number.isFinite(n) || n === 0) return;
+              out.textContent = n.toLocaleString('en-US');
+              el.hidden = false;
+            })
+            .catch(() => {
+              /* Counter unavailable — leave the footer exactly as it was. */
+            });
+        }
+      </script>
+    </>
+  )
+}

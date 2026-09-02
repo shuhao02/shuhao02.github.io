@@ -122,3 +122,49 @@ export const services: string[] = [
   'Conference Reviewer: ICLR 2025, 2026; NeurIPS 2024, 2025; ICML 2025, 2026.',
   'Journal Reviewer: IEEE Transactions on Neural Networks and Learning Systems; IEEE Transactions on Knowledge and Data Engineering.',
 ];
+
+// ------------------------------------------------------------------
+// Visitor counter (GoatCounter)
+// ------------------------------------------------------------------
+// Renders a "Visits · 1,234" line in the page footer, and counts pageviews
+// on every page. GoatCounter sets no cookies and stores no IP addresses or
+// User-Agent strings, so there is nothing to put behind a consent banner.
+//
+// One-time setup at https://www.goatcounter.com (free for personal sites):
+//   1. Sign up. The "Code" you pick becomes <code>.goatcounter.com — that is
+//      also your private dashboard.
+//   2. In Settings, tick "Allow adding visitor counts on your website".
+//      Without it the public counter returns 403 and the footer line is
+//      silently skipped.
+//   3. Paste the code below and push.
+//
+// Leaving `code` empty disables the whole feature — no tracking script, no
+// footer line — so the site builds fine before you finish signing up.
+//
+// Heads-up: GoatCounter caches counter values for up to 4 hours, so your own
+// visit will not move the number right away. That is not a bug.
+export const visitorCounter: {
+  code: string;
+  origin: string;
+  label: string;
+  path: string;
+} = {
+  // The <code> in https://<code>.goatcounter.com. Empty string = disabled.
+  code: 'shuhochen',
+  // Only needed if you self-host GoatCounter or use a custom domain. When
+  // set, it overrides the URL derived from `code` (e.g. 'https://stats.me').
+  origin: '',
+  // Text shown before the number.
+  label: 'Visits',
+  // 'TOTAL' counts the whole site. Use a path such as '/' to count a single
+  // page instead.
+  path: 'TOTAL',
+};
+
+// Resolved GoatCounter origin, shared by the tracking script (BaseLayout) and
+// the footer counter (VisitorCounter). An empty string turns both off.
+export const goatCounterOrigin: string = visitorCounter.origin
+  ? visitorCounter.origin.replace(/\/$/, '')
+  : visitorCounter.code
+    ? `https://${visitorCounter.code}.goatcounter.com`
+    : '';
