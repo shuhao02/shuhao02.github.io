@@ -36,14 +36,16 @@ const pageDescription = description ?? site.description;
     <title>{pageTitle}</title>
     {
       /* Pageview tracking for every page (the footer counter only shows the
-         number). `is:inline` keeps Astro from trying to bundle a third-party
-         script. No cookies are set; see src/data/site.ts for setup. */
+         number). The script is vendored into public/count.js instead of loaded
+         from //gc.zgo.at/count.js, which is unreachable on some networks and
+         fails silently there. `is:inline` keeps Astro from bundling it.
+         No cookies are set; see src/data/site.ts for setup. */
       goatCounterOrigin && (
         <script
           is:inline
           data-goatcounter={`${goatCounterOrigin}/count`}
           async
-          src="//gc.zgo.at/count.js"
+          src="/count.js"
         />
       )
     }

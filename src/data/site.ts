@@ -143,6 +143,11 @@ export const services: string[] = [
 //
 // Heads-up: GoatCounter caches counter values for up to 4 hours, so your own
 // visit will not move the number right away. That is not a bug.
+//
+// The tracking script is vendored at public/count.js rather than loaded from
+// GoatCounter's //gc.zgo.at/count.js CDN: that domain is unreachable on some
+// networks (mainland China among them), where it fails silently and nothing is
+// ever counted. Beacons still go to <code>.goatcounter.com, which is fine.
 export const visitorCounter: {
   code: string;
   origin: string;
