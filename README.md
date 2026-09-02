@@ -98,8 +98,8 @@ Notes:
 
 ## Deployment
 
-`.github/workflows/deploy.yml` runs on every push to `main`: builds with Node 20,
-then publishes `dist/` via GitHub Pages.
+`.github/workflows/deploy.yml` runs on every push to `master` (or `main`):
+builds with Node 20, then publishes `dist/` via GitHub Pages.
 
 One-time setup on GitHub:
 
@@ -107,6 +107,22 @@ One-time setup on GitHub:
 2. Under **Build and deployment → Source**, choose **GitHub Actions**.
 
 After that, `git push` is the entire deploy story.
+
+### If a red "pages build and deployment" run shows up
+
+That run is GitHub's built-in **Jekyll** builder, not the workflow above. It
+fires when **Settings → Pages → Source** is not set to **GitHub Actions**,
+tries to build this Astro repo as a Jekyll site, and fails. The site itself is
+unaffected — `Deploy to GitHub Pages` is what actually publishes `dist/`, and
+the two runs are independent.
+
+Fix it by setting the source to **GitHub Actions**. If it already says that,
+switch it away and back to clear the stale trigger.
+
+Do **not** silence it by adding a `.nojekyll` file. That makes the Jekyll run
+succeed instead of fail, and a succeeding Jekyll run would publish the raw
+repository source over the Astro build. Its failing is what keeps the deployed
+site correct.
 
 ## Project structure
 
