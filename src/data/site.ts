@@ -45,6 +45,10 @@ export const contacts: Array<{ label: string; url: string }> = [
 // One event per entry; two events in the same month get two entries.
 export const news: Array<{ date: string; html: string }> = [
   {
+    date: 'Sep 2026',
+    html: 'One paper (<em>FrameScout</em>) accepted at <strong>NeurIPS 2026</strong>.',
+  },
+  {
     date: 'May 2026',
     html: 'Two papers (<em>SPARD</em>, <em>MetaMoE</em>) accepted at <strong>ICML 2026</strong>.',
   },
