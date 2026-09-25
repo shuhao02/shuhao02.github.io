@@ -66,7 +66,7 @@ export const news: Array<{ date: string; html: string }> = [
   },
   {
     date: 'Jan 2025',
-    html: 'One paper (<em>DGCDM</em>) accepted by <em>Neural Networks</em>.',
+    html: 'One paper (<em>DGCDM</em>) accepted by <strong>Neural Networks</strong>.',
   },
   {
     date: 'Sep 2024',
