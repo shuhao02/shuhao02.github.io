@@ -3,7 +3,7 @@ title: "FrameScout: Scouting Query-Relevant Frames for Long Video Understanding"
 authors:
   - Haonan Hu*
   - Shuhao Chen*
-  - Weisen Jiang
+  - Weisen Jiang*
   - Lizhao Gao
   - James T. Kwok
   - Yu Zhang
